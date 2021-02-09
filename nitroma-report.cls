@@ -52,10 +52,39 @@
 
 %%% SECTION TITLE FORMAT
 \RequirePackage{titlesec}
-\titleformat{\chapter}{\LARGE\bfseries\scshape\color{color1}}{\thechapter}{1em}{}[\titlerule]
-\titleformat{\section}{\color{color1}\Large\bfseries}{\thesection}{1em}{}[\titlerule]
-\titleformat{\subsection}{\color{color1}\large\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\color{color1}\bfseries}{\thesubsubsection}{1em}{}
+\newcommand{\standardchapterstyle}{
+    \titleformat{\chapter}{\color{color1}\LARGE\bfseries\headingfont\scshape}{\thechapter}{1em}{}[\titlerule]
+}
+\newcommand{\fancychapterstyle}{
+    \titleformat{\chapter}[display]
+    % format for both label and text
+    {\color{color1}\Huge\bfseries\headingfont\scshape\raggedleft}
+    % label
+    {
+        \gradientpagebackground{color2!30}
+        \color{color2}\fontsize{144pt}{144pt}\selectfont
+        \begin{minipage}[b][\fontcharht\font`X][c]{\fontcharht\font`X}
+            \hfill\includegraphics[height=0.5ex]{brand/icon.pdf}
+        \end{minipage}\hspace{0.1em}
+        \thechapter
+    }
+    {0pt}
+    % code before title
+    {
+        % \parbox{0.75\linewidth} % doesn't work with \raggedleft
+    }
+    % code after text
+    [\newpage]
+}
+\standardchapterstyle
+\titleformat{\section}{\color{color1}\Large\bfseries\headingfont}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}{\color{color1}\large\bfseries\headingfont}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\color{color1}\bfseries\headingfont}{\thesubsubsection}{1em}{}
+% original spacing values can be found here https://tex.stackexchange.com/a/48754/135479
+% \titlespacing*{\section}{0pt}{*1}{*1}
+% \titlespacing*{\subsection}{0pt}{2pt plus 4pt}{*0}
+% \titlespacing*{\subsubsection}{0pt}{2pt plus 2pt}{*0}
+% \titlespacing*{\paragraph} {0pt}{2pt plus 1pt minus 1pt}{1em}
 
     \clearpage
 }
