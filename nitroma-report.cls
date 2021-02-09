@@ -86,5 +86,36 @@
 % \titlespacing*{\subsubsection}{0pt}{2pt plus 2pt}{*0}
 % \titlespacing*{\paragraph} {0pt}{2pt plus 1pt minus 1pt}{1em}
 
+%%% NUMBERING
+\RequirePackage[hidelinks]{hyperref} % include formatted page numbers in PDF metadata
+\RequirePackage{chngcntr}
+%% page numbering: front & main content
+\newcommand\frontmatter{
+    \renewcommand\thepage{\roman{page}}
+}
+\newcommand\mainmatter{
     \clearpage
+    % option 1: go back to simple single-digit page numbers
+    % \setcounter{page}{1}
+    % \renewcommand\thepage{\arabic{page}}
+    % option 2: number pages within chapters like 2.1
+    \counterwithin{page}{chapter}
+    % now do fancy chapter pages
+    \fancychapterstyle
+}
+%% float numbering: chapters
+\newcommand\counterallwithin[1]{
+    \counterwithin{figure}{#1}
+    \counterwithin{table}{#1}
+    \counterwithin{equation}{#1}
+}
+\AtBeginDocument{\counterallwithin{chapter}}
+%% float numbering: appendices
+\RequirePackage[titletoc]{appendix}
+\AtBeginEnvironment{subappendices}{
+    \clearpage
+    \counterallwithin{section}
+}
+\AtEndEnvironment{subappendices}{
+    \counterallwithin{chapter}
 }
