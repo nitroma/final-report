@@ -131,3 +131,6 @@
         \setlength{\itemsep}{0em}
         \setlength{\parskip}{0em}
     }
+
+%%% CAPTIONS
+\RequirePackage[font={small,singlespacing},labelfont={bf},skip=2pt]{caption}
