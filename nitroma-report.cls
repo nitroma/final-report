@@ -103,6 +103,8 @@
     % now do fancy chapter pages
     \fancychapterstyle
 }
+\AtBeginEnvironment{appendices}{\clearpage}
+\AtEndEnvironment{appendices}{\clearpage}
 %% float numbering: chapters
 \newcommand\counterallwithin[1]{
     \counterwithin{figure}{#1}
