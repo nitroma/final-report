@@ -119,3 +119,15 @@
 \AtEndEnvironment{subappendices}{
     \counterallwithin{chapter}
 }
+
+%%% REFERENCING
+\RequirePackage[capitalise,noabbrev]{cleveref}   % clever cross-referencing
+\RequirePackage[style=chem-angew,maxnames=3]{biblatex} % references
+    \renewcommand*{\bibfont}{%
+        % \fontsize{6pt}{7pt}\selectfont
+        \small
+    }
+    \AtBeginBibliography{
+        \setlength{\itemsep}{0em}
+        \setlength{\parskip}{0em}
+    }

@@ -1,8 +1,19 @@
 % !TeX root = ../../main.tex
-\chapter{Sample}
+\setcounter{chapter}{-1}
+\chapter{Sample Chapter}
 \label{sec:sample}
 
-Hello world.
+\begin{refsection}
 
 \input{1-foo.tex}
+\cite{childs_temperature}
 \input{2-bar.tex}
+
+\printbibliography[heading=subbibintoc]
+
+\begin{subappendices}
+    \input{A-foo.tex}
+    \input{B-bar.tex}
+\end{subappendices}
+
+\end{refsection}
