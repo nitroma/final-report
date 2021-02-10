@@ -86,11 +86,12 @@
 % \titlespacing*{\subsubsection}{0pt}{2pt plus 2pt}{*0}
 % \titlespacing*{\paragraph} {0pt}{2pt plus 1pt minus 1pt}{1em}
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{1}
 
-%%% NUMBERING
+%%% NUMBERING & CONTENTS
 \RequirePackage[hidelinks]{hyperref} % include formatted page numbers in PDF metadata
 \RequirePackage{chngcntr}
+\setcounter{tocdepth}{1}
+\RequirePackage{etoc}
 %% page numbering: front & main content
 \newcommand\frontmatter{
     \renewcommand\thepage{\roman{page}}
@@ -104,6 +105,9 @@
     \counterwithin{page}{chapter}
     % now do fancy chapter pages
     \fancychapterstyle
+    % switch toc display
+    \etocsettocstyle{\section*{\contentsname{}}}{}
+    \setcounter{tocdepth}{3}
 }
 \AtBeginEnvironment{appendices}{\clearpage}
 \AtEndEnvironment{appendices}{\clearpage}
