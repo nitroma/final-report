@@ -1,7 +1,63 @@
 \documentclass{nitroma-report}
-
+\usepackage[british]{babel}
 \usepackage{import}
+
+% page layout
+\usepackage{pdflscape}  % landscape pages
+\usepackage{afterpage}  % full-page figures at the next opportunity
+\usepackage{pdfpages}   % include other PDF docs
+
+% typography
+\usepackage{csquotes}   % clever quote marks
+    \MakeOuterQuote{"}
+\usepackage[detect-all]{siunitx} % numbers and units
+    \DeclareSIUnit\year{yr}
+    \DeclareSIUnit\USD{\$}
+    \DeclareSIUnit\GBP{£}
+    \DeclareSIUnit\EUR{€}
+    \DeclareSIUnit\JPY{JP¥}
+    \DeclareSIUnit\CNY{CN¥}
+    \DeclareSIUnit\atm{atm}
+    \DeclareSIQualifier\ww{w/w}
+    \sisetup{text-celsius = °C}
+\usepackage{enumitem}   % control list spacing
+    \setlist{nosep}
+% \usepackage{epigraph}
+
+% formulae
+\usepackage{amsmath}
+\usepackage{chemmacros} % Swiss-army knife for chemistry
+\newcommand\dd{\mathrm{d}}
+
+%comment out large sections
+\usepackage{comment}
+
+% graphics
 \usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+
+
+% tables
+\usepackage{tabularx}
+    \newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{colortbl}
+\newcommand{\tabsup}[1]{\textsuperscript{\textit{#1}}}
+\usepackage{adjustbox}
+
+\newcommand{\splitcell}[2][t]{% https://tex.stackexchange.com/a/19678/135479
+    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\rtext}[2][90]{\rotatebox[origin=r]{#1}{#2}}
+\newcommand{\rcell}[2][2cm]{\rtext{\parbox{#1}{\raggedleft #2}}} % ideally should use origin=rt https://tex.stackexchange.com/a/367139/135479 but that goes weird
+
+\newcommand{\gLo}{\cellcolor{green}L}
+\newcommand{\yMe}{\cellcolor{yellow}M}
+\newcommand{\rHi}{\cellcolor{red}H}
 
 \addbibresource{references.bib}
 
