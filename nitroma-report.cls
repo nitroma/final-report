@@ -86,6 +86,7 @@
 % \titlespacing*{\subsubsection}{0pt}{2pt plus 2pt}{*0}
 % \titlespacing*{\paragraph} {0pt}{2pt plus 1pt minus 1pt}{1em}
 \setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{1}
 
 %%% NUMBERING
 \RequirePackage[hidelinks]{hyperref} % include formatted page numbers in PDF metadata
