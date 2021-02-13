@@ -9,12 +9,27 @@
 
 \subsubsection{Nitration reaction}
 
+In line with Nitroma's goal of transitioning from batch to continuous process, packed-bed microreactors with H-Mordenite catalyst are chosen for the nitration of toluene. Due to the high surface area to volume ratio, microreactors have improved heat transfer compared to conventional batch or semi-batch reactors, thus enabling better temperature control \cite{halder_nitration_2007}. This is an essential feature for a nitration reactor as nitration is highly exothermic with a strong risk of thermal runaway. Additionally, the high mass transfer rates within the microreactors prevent the formation of by-products, which complicate the separation process downstream \cite{halder_nitration_2007}.
+Alternative continuous reactors that were considered are in Appendix \ref{nitrationreactor}. 
+
+There has been an increasing interest in deploying microreactors on industrial scale nitration processes, but most plants still use batch and semi-batch processes. Therefore, Nitroma is poised to gain a first mover advantage by scaling up safe, highly-efficient, and novel microreactors to the level of hundreds of \si{\tonne\per\year}.
+
+Toluene (\SI{95}{\percent} molar basis) and nitric acid (\SI{50}{\percent} molar basis) are fed to the isothermal packed-bed microreactor (R101) operating at \SI{333}{\K}, \SI{1}{\atm}, and \SI{90}{\percent} conversion. The reaction produces 3 isomers of nitrotoluene --- o-nitrotoluene (ONT), m-nitrotoluene (MNT) and p-nitrotoluene (PNT) --- at a selectivity ratio of 53:4:44 respectively \cite{smith_novel_1998}.
+
+\nomenclature[A]{MNT}{3-nitrotoluene, \meta-nitrotoluene}
+
 \subsubsection{o-toluidine production}
+
+ONT is mixed with propanol and hydrogenated to o-TOL in a co-current trickle bed reactor (R201) operating at \SI{333}{\K} and \SI{13.6}{\atm} with both gas and liquid in downflow mode. High pressure is used because the low solubility of hydrogen affects the rate of reaction at low pressure \cite{rajadhyaksha_solvent_1986}. Trickle bed reactor is chosen due to the ease of operation at high pressure and the relative slow catalyst deactivation, which is imperative for an expensive catalyst usage of Pd/C \cite{vemala_hydrodynamic_nodate}. Co-current flow reduces the risk of flooding, thus allowing higher flow of products \cite{vemala_hydrodynamic_nodate}. Moreover, the liquid plug flow behaviour in trickle bed reactor allows for high conversion, thus increasing the final production rate of o-TOL. 
+
 
 \subsubsection{4-nitrotoluene oxidation}
 
+Crystallised PNT is fed into two separate oxidation reactors, currently operated in parallel, to produce either 4-NBH or 4-NBA. In an effort of plant modularity, Nitroma aims to redesign the oxidation reactors to be operated in series to reduce the CAPEX and the loss of unreacted reactants. The PNT melts in the reactor and is mixed with air. Oxidation of PNT takes place in packed-bed microreactor with cobalt phthalocyanine catalyst, operating at \SI{750}{\K} and \SI{0.5}{\atm} for 4-NBH production (R301), and \SI{483}{\K} and \SI{0.5}{\atm} for 4-NBA production (R302). The reason for the difference in operating conditions have been detailed earlier in Section \ref{4-NTox}.
+
 \subsubsection{Reduction of 4-nitrobenzaldehyde and 4-nitrobenzoic acid}
 
+Finally, both 4-ABH and 4-ABA are hydrogenated into two separate packed-bed microreactors (R401, R501), using formic acid as the transfer hydrogen donor and Pd/C as catalyst at \SI{298}{\K} and \SI{1}{\atm}. Packed-bed microreactors are selected due to improved heat and mass transfer. Moreover, continuous flow hydrogenation in packed-bed reactor allows for good recovery of catalyst, where investigations have shown that recycled catalyst have similar efficiency as fresh catalyst \cite{rahman_fast_2020}. This is of paramount importance for this reaction as the constant regeneration of expensive Pd catalyst could greatly decrease the economic potential \cite{rahman_fast_2020}. 
 
 \subsection{Separation strategies}
 
@@ -22,11 +37,31 @@
 
 \subsubsection{Nitrotoluene isomers}
 
+The R101 effluent is fed to a decanter (S101) to separate the aqueous nitric acid from the organic phase. Following water evaporation in a distillation column (S102), nitric acid is recycled back into the nitration reactor at a \SI{94}{mol\percent} purity.
+Meanwhile, the organic phase is sent to a distillation column (S103) recovering \SI{99.8}{mol\percent} of toluene from the less volatile nitrotoluenes, which is fed back to the nitration reactor. The nitrotoluenes are sent to a second distillation column (S201) to separate \SI{99.99}{mol\percent} of the more volatile ONT from MNT and PNT. The large difference in the PNT and MNT melting points is exploited in a continuous falling-film crystalliser (S202). 
+The nitrotoluene isomer separation is a crucial step, as it determines the production rate of downstream products. Thus the separation techniques above were carefully selected using both a quantitative method (Jaksland analysis) \cite{jaksland_separation_1995} and sound engineering judgement. Details are available in Appendix \ref{app:ntol separation}. Operating conditions of each separation unit can also be found in \cref{tab:equipment sizing}. 
+
+
 \subsubsection{After 4-nitrotoluene oxidation}
+
+Nitroma's modular reactor design results in two different reactor effluents depending on whether 4-NBH is the major product (ABH scenario) or 4-NBA (ABA scenario). In both scenarios, the effluent from R301/R302 is sent to a flash drum (S301) that removes air and water vapour from the organic stream, which is then fed into a distillation column (S302), where \SI{99.9}{mol\percent} of the unreacted PNT is separated from the less volatile nitroaromatics. 
+
+In the 4-ABA scenario, the separated PNT stream also contains 4-NBH and water. These chemicals are separated in a second distillation column (S303), yielding a \SI{93}{mol\percent} pure PNT stream which can be sold as a by-product and a \SI{58.9}{mol\percent} pure 4-NBH stream. Future work will recycle the 4-NBH to the second oxidation reactor (R302) to be converted to 4-NBA.
+
+The effluent from the 4-NBH reactor (R301) contains \SI{9.7}{mol\percent} of 4-NBA, of which \SI{99.9}{mol\percent} is separated from the more volatile compounds in S302. The lighter PNT, 4-NBA and water are separated in column S303, yielding a \SI{99.9}{mol\percent} pure 4-NBA stream and a waste stream containing PNT and water. Future work will recycle the unreacted PNT into the oxidation reactors.
 
 \subsubsection{Products recovery}
 
+o-TOL is then purified to meet the purity requirement of \SI{98}{mol\percent}.
+The hydrogen gas leaves the reactor via an outlet port, and the effluent enters a distillation column (S602) to separate propanol and water from the less volatile organic compounds.
+Finally, a second distillation column (S603) removes \SI{94.8}{mol\percent} of unreacted ONT, yielding a \SI{99.4}{mol\percent} pure o-TOL product.
+
+In the ABA scenario, the liquid effluent from reactor R401 is sent to a continuous falling-film melt crystalliser (S401) to recover \SI{96}{mol\percent} of 4-ABA in the form of pure solid crystals. It was decided that due to the large amount of water present, a distillation column would require a high heat duty to separate the compounds, hence the choice of crystallisation. 
+
+ In the ABH scenario, the effluent from reactor S501 is sent to a flash drum (S501) to remove air and water vapour. Then, two distillation columns (S502, S503) are employed to remove unreacted 4-NBH and remaining water to yield  \SI{99.9}{mol\percent} pure 4-ABH. On molar basis, \SI{97}{\percent} of the 4-ABH produced in the reactor can be recovered at the end of the separation.
 
 \subsection{Plant modularity}
 
 \subsection{Heat integration}
+
+

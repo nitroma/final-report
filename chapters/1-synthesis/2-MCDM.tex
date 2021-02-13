@@ -3,6 +3,13 @@
 \subsection{Selection of MCDM}
 
 
+
+To make systematic and informed decisions for key aspects of the project, multi-criteria decision making (MCDM) methods were employed. Firstly, pairwise comparison of the criteria was performed with the Analytical Hierarchy Process (AHP) to produce criteria weightings which were fed into the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) analysis. Process alternatives were initially short-listed with qualitative arguments and then ranked with the quantitative processing of all relevant information through AHP and TOPSIS analyses. An initial sensitivity analysis was conducted on the results, and a more robust method will be developed in the next stage of the project.
+
+
+\nomenclature[A]{MCDM}{Multi-criteria decision making}
+\nomenclature[A]{TOPSIS}{Technique for Order of Preference by Similarity to Ideal Solution}
+
 \subsection{AHP and TOPSIS}
 
 
@@ -10,29 +17,120 @@
 
 \subsection{Products selection}
 
+To deliver a multi-purpose plant, Nitroma selected toluene as feedstock due to the industrial importance of its nitration products and their amino derivatives. All three isomeric nitrotoluenes can indeed easily be oxidised and reduced to substituted aromatic amides of significant importance for the pharmaceutical, agrochemical and textile industries \cite{dugal_nitrobenzene_2005}. Six chemicals were initially selected due to their applications in drugs, fertilizers or dyes: 2-aminobenzaldehyde (precursor of quinoline derivatives for polymer, agrochemical, dye, antiviral and anti-malaria drug manufacturing), 4-aminobenzaldehyde (intermediate to pharmaceuticals and vanilin), 4-aminobenzoic acid (production of folic acid/vitamin B9), \ortho-toluidine (intermediate in the manufacture of herbicides), \meta-toluidine (manufacture of  photographic color developer) and \para-toluidine (for dye production) \cite{bowers_toluidines_2000,bruhne_benzaldehyde_2011,maki_benzoic_2000}. To determine the three most advantageous products to produce, AHP/TOPSIS analysis was conducted, giving significant importance to the safety of the compounds and their economic potential. Safety was assessed using the NFPA Hazard Classification for health, flammability and instability, where the smallest value is preferable. The economic potential of each chemical was determined using the average price, the average market share of producers which is an indicator of the market share Nitroma can plan to capture, the global demand and the expected market growth (CAGR). \Cref{tab:product} summarises the results and the complete methodology can be found in \Cref{app:matrix}.   
+
+\nomenclature[A]{NFPA}{National Fire Protection Association}
+\nomenclature[A]{CAGR}{Compound annual growth rate}
+
 \subsubsection{Criteria identification and weighting}
 
 \subsubsection{Uncertainties and assumptions}
 
 \subsubsection{Results}
 
+\begin{table}[h]
+\centering
+    \caption{AHP/TOPSIS results for product selection}
+    \label{tab:product}\footnotesize
+\begin{tabularx}{\linewidth}{l|S[table-format=4.2]S[table-format=1.1]XS[table-format=7.0,round-mode=figures,round-precision=2]|XX|lll|S[table-format=1.3]S[table-format=1.3]c}
+\toprule
+                                          & \multicolumn{4}{c}{Economic potential   (\SI{29}{\percent})}                                & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep}X}{Process   complexity (\SI{14}{\percent})} & \multicolumn{3}{|c|}{EHS (\SI{57}{\percent})}     &                       &                          &                           \\ \cmidrule{2-10}
+                                          & {\splitcell{Price\\(\si{\USD\per\kg})}} & {\splitcell{CAGR\\(\%)}} & \rcell{Average market share of producer (\%)} & {\splitcell{Demand\\(\si{\tonne\per\year})}} & \rcell{Number of reactions} & \rcell{Max selectivity to toluene (\%)} & \rtext{Health} & \rtext{Flammability} & \rtext{Instability} & AHP & TOPSIS & Rank \\ \midrule
+2-aminobenzaldehyde & 133.10          & 5.6 & 0.77                           & 1300                 & 2                & 53                       & 2      & 1            & 1           & 0.124                 & 0.273                    & 6                         \\ 
+4-aminobenzaldehyde & 19.00            & 7.1 & 1.75                           & 34000               & 2                 & 44                       & 2      & 1            & 0           & 0.188                 & 0.563                    & \cellcolor{green}2 \\ 
+o-toluidine         & 10.62           & 7.8 & 0.88                           & 810000              & 1                   & 53                       & 3      & 2            & 0           & 0.210                 & 0.611                    & \cellcolor{green}1 \\ 
+p-toluidine         & 9.00             & 6.3 & 0.50                           & 60000               & 1                   & 44                       & 3      & 2            & 0           & 0.150                 & 0.333                    & 5                         \\ 
+m-toluidine         & 8.90           & 8.2 & 0.57                           & 110000              & 1                   & 3                       & 4      & 2            & 0           & 0.161                 & 0.458                    & 4                         \\ 
+4-aminobenzoic acid & 26.29         & 5.8 & 3.70                           & 3250               & 2                 & 44                       & 2      & 1            & 1           & 0.168                 & 0.478                    & \cellcolor{green}3 \\ \bottomrule
+\end{tabularx}
+\end{table}
+
+Due to their high economic potential and reduced health and fire hazards, 4-aminobenzaldehyde (4-ABH), o-toluidine (o-TOL), and 4-aminobenzoic acid (4-ABA) were found to be the most suitable products. A  summary of the selected products can be found in \Cref{fig:routes-chosen}.
+
+\nomenclature[A]{4-ABH}{4-aminobenzaldehyde}
+\nomenclature[A]{o-TOL}{o-toluidine}
+\nomenclature[A]{4-ABA}{4-aminobenzoic acid}
+
 \subsubsection{Sensitivity}
 
 \subsection{Nitration reaction}
 
+\subsubsection{Choice of nitrating agent}
+Nitric acid (in aqueous solution) has been selected due to its safe and environmentally friendly nature relative to alternatives such as acetone cyanohydrin and dinitrogen tetroxide, which are highly toxic \cite{miller_kinetics_1964,dagade_nitration_2002, sreedhar_scientific_2013}. 
+
+\begin{comment}
+Nitric acid has been selected as the source of nitrogen for the nitration of toluene for its safe and environmentally friendly nature relative to other possible nitrating agents, high availability, and its various favourable properties \cite{miller_kinetics_1964, sreedhar_scientific_2013}. Although nitric acid is a highly acidic and volatile compound, compared to alternatives such as acetone cyanohydrin and dinitrogen tetroxide which are highly toxic, nitric acid is more appropriate for industrial-scale nitration of toluene \cite{dagade_nitration_2002, sreedhar_scientific_2013}. Nitric acid, introduced as an aqueous solution, is the most commonly used and well-studied nitrating agent for this process in industry. \cite{bowers_toluidines_2000} A big advantage of aqueous nitric acid is that it can act as a self-catalyst by self-donating protons. \cite{miller_kinetics_1964} A common alternative to nitric acid is acetyl nitrate which is formed by the reaction of nitric acid with acetic anhydride. \cite{vassena_selective_1999} This reaction yields formic acid as by-product, resulting in a lower atom economy; it also causes unnecessary difficulties in separations downstream by introducing three extra components: acetyl nitrate, acetic anhydride, and formic acid. The same argument can be employed for other alkyl nitrates such as butyl nitrate. To this end, nitric acid is deemed as the most suitable choice among all candidates.
+\end{comment}
+
+\subsubsection{Choice of catalyst}
+Nitration in industry is mainly carried out by a mixed-acid process \cite{halder_nitration_2007}.
+In addition to favouring less economically desirable \textit{ortho} isomers, product separation and acid regeneration are expensive and energy intensive \cite{sreedhar_scientific_2013}.
+These drawbacks are overcome by solid acid catalysts which offer an environmentally friendly and economic alternative \cite{vassena_selective_1999}.
+% The relative benefits and disadvantages of 3 different zeolites were evaluated with the AHP and TOPSIS decision analysis methods.
+The economic potential, performance and safety of zeolites H-ZSM-5, H-Y and H-Mordenite were assessed and compared to the case with no catalyst \cite{jeeru_kinetics_2018}, with H-Mordenite found to be the optimum in both AHP and TOPSIS analysis (see \Cref{tab:nitration}).
+% Consequently, Nitroma will develop a process employing zeolite catalysts for toluene nitration.
+The kinetic model for the reaction was then developed and is presented in \Cref{app:kinetics}.
+
+\begin{comment}
+Nitration in industry is mainly carried out by a mixed-acid process, whereby sulfuric acid donates a proton to nitric acid, yielding a nitronium ion which will then react with toluene []. In addition to favouring less economically desirable \textit{ortho} isomers, product separation from the acid and acid regeneration are expensive and energy intensive \cite{sreedhar_scientific_2013}. These drawbacks can be overcome by using solid acid catalysts which offer an environmentally friendly and economic alternative to sulfuric acid \cite{vassena_selective_1999}. Based on those arguments, Nitroma will develop a safer and low environmental impact process employing zeolite catalysts for toluene nitration. More specifically, the relative benefits and disadvantages of 3 different zeolites were evaluated with the AHP and TOPSIS decision analysis methods to select the optimum catalyst. The economic potential, performance and safety of zeolites H-ZSM-5, H-Y and H-Mordenite were assessed and compared to the case with no catalyst \cite{jeeru_kinetics_2018}. The economic potential was measured with the cost of the catalyst and the percentage of undesirable by-product formed. Conversion and the NFPA score are the KPIs for performance and safety respectively. H-Mordenite was found optimum for the catalytic nitration of toluene by both AHP and TOPSIS analysis (\Cref{app:matrix}). The kinetic model for the reaction was then developed and is presented in \Cref{app:kinetics}.
+\end{comment}
+
 \subsection{o-toluidine production}
+
+The \textit{ortho} isomer of nitrotoluene is reduced to o-TOL using \SI{2}{\percent\ww} palladium-on-carbon (Pd/C) catalyst in the liquid-phase \cite{rajadhyaksha_solvent_1986}. This reaction is carried out in a solvent to dissolve solid reactants and products, absorb the heat of exothermic reaction, and protect the catalyst surface from impurities \cite{yao_kinetics_1959}. Five different solvents were compared using AHP/TOPSIS analysis. The performance of a solvent was measured through the activation energy of the reaction, the reaction rate at \SI{333}{\K}, and the solubility of \ch{H2} in the solvent \cite{rajadhyaksha_solvent_1986}. Nitroma values the importance of using green solvents in its process and evaluated the sustainability of the different solvents using scores developed by GlaxoSmithKline (GSK) to assess the environmental impacts of the chemicals \cite{henderson_expanding_2011}. The GSK scores for health and flammability were also used for safety. If a solvent could be sourced from renewable feed stocks, it was viewed positively \cite{byrne_tools_2016}. Both TOPSIS and AHP analysis found that propanol was the most suitable green solvent for the reduction of 2-nitrotoluene (ONT) (\Cref{tab:solvent}).
+
+\nomenclature[A]{ONT}{2-nitrotoluene, \ortho-nitrotoluene}
+\nomenclature[A]{GSK}{GlaxoSmithKline}
 
 \subsection{4-nitrotoluene oxidation}
 
+In this process 4-nitrotoluene (PNT) is successively oxidised to nitro- benzyl alchohol, benzaldehyde and benzoic acid, as shown in \cref{fig:routes-chosen} \cite{hoorn_modelling_2005}. This reaction can be carried out in the liquid or vapour phase, with the vapour-phase process improving the selectivity towards the more valuable 4-nitrobenzaldehyde (4-NBH) product \cite{bruhne_benzaldehyde_2011}. 
+The extent of oxidation to 4-NBH or 4-nitrobenzoic acid (4-NBA) is controlled via the residence time and the reaction temperature. Lower residence time and reaction temperatures over \SI{730}{\K} favour partial oxidation whereas higher residence time and temperatures below \SI{500}{\K} result in more 4-NBA \cite{bruhne_benzaldehyde_2011,tan_kinetic_2010}.
+The oxidant is either pure molecular oxygen or air. In the interest of safety, air was selected as its large fraction of inert \ch{N2} gas dilutes the nitrotoluene vapour and reduces the risk of explosion \cite{bruhne_benzaldehyde_2011}. 
+The conversion of PNT to 4-NBH is catalysed by cobalt phthalocyanine \cite{wendt_reaction_1986}; bromide compounds may be added to enhance complete oxidation to 4-NBA, however those are known to cause corrosion problems \cite{opgrande_benzoic_2003}.
+Other processes involving manganese dioxide in sulfuric acid or chromyl chloride have been developed but were disregarded due to their higher environmental impact from waste water treatment \cite{bruhne_benzaldehyde_2011}.
+The selected oxidation process is carried out in the vapour phase at \SI{0.5}{\atm} over a solid cobalt phthalocyanine catalyst \cite{chandalia_kinetics_1999}. 
+
+\nomenclature[A]{PNT}{4-nitrotoluene, \para-nitrotoluene}
+\nomenclature[A]{4-NBH}{4-nitrobenzaldehyde}
+\nomenclature[A]{4-NBA}{4-nitrobenzoic acid}
+
 \subsection{Reduction of 4-nitrobenzaldehyde and 4-nitrobenzoic acid}
+
+The amino- substituted products are formed via the direct reduction of their nitro- counterparts.
+Whilst a broad variety of novel processes, catalysts and conditions have been proposed in the literature, the industrial production of aromatic amines focuses almost exclusively on the use of metal catalysts: commonly Pd/C or Pt/C, with some examples using Ni, Co, or Cu \cite{vogt_amines_2000,cartolano_amines_2004}.
+Examples exist for both liquid- and vapour-phase processes, with the former  now preferred for safety reasons as the hydrogenation is highly exothermic \cite{vogt_amines_2000}.
+A broad variety of solvents may be used; short-chain alcohols are a typical example.
+In the interest of modularity, conditions were sought under which both the carboxylic acid- and aldehyde-substituted nitration products could be simultaneously reduced.
+Consequently, a process employing a \SI{5}{\percent\ww} Pt/C catalyst in methanol, with formic acid as the reducing agent was selected.
+This process gives yields of \SIlist{86;80}{\percent} for 4-ABA and 4-ABH respectively \cite{gowda_catalytic_2000}.	
 
 \subsection{Finalized synthesis route} %0.5 page
 %ChemDraw figure 
  
 	 
-	 
 	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 	
 	
 	

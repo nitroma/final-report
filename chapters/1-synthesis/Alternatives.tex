@@ -1,0 +1,133 @@
+
+\section{Process alternatives}
+\label{app:alternatives}
+
+\subsection{Mixed-acid nitration}
+Commercial production of nitrotoluene is mainly carried out by a mixed-acid process, whereby sulfuric acid donates a proton to nitric acid, yielding a nitronium ion which will then react with toluene \cite{halder_nitration_2007}. In a continuous adiabatic process, toluene and nitric acid are fed into a large recycle stream of sulfuric acid. The composition of the mixed-acid is typically \SIrange{28}{32}{\percent} \ch{HNO3}, \SIrange{52}{56}{\percent} \ch{H2SO4} and \SIrange{12}{20}{\percent} \ch{H2O} \cite{dugal_nitrobenzene_2005}. Toluene is in excess of \SI{10}{mol\percent} with respect to nitric acid to completely consume nitric acid, thus avoiding avoid the formation of dinitrotoluene. The reaction takes place in a PFR with static mixers or a cascade of CSTR \cite{dugal_nitrobenzene_2005}. To improve the interfacial area between the two phases formed, vigorous agitation is required. The organic phase is separated in a decantor while the sulfuric acid is regenerated in a reconcentration step. Yields up to \SI{96}{\percent} can be obtain with this process. However the 0.6 \textit{para}/\textit{ortho} ratio is commercially unfavourable. Moreover the energy and cost associated with sulfuric acid regeneration, as well as more difficult by-product separation result in this process being less economically favourable than that with solid-acid catalyst. Therefore, Nitroma decided to implement a novel sulfuric acid-free nitration process.
+
+\subsection{Direct production of 4-aminobenzaldehyde}
+The one-pot conversion of PNT to 4-ABH with sodium polysulfide and \ch{NaOH} in ethanol has been reported \cite{ogata_mechanism_1979}. Sulfur has the ability to simultaneously oxidise and reduce the nitromolecule. 4-ABH yields of up to \SI{75}{\percent} have been achieved \cite{beard_preparation_1944}. Despite the reduced capital expenditure offered by this one-step process, this synthesis route was disregarded due to its unproven industrial application. The reaction mechanism of this process is indeed not yet understood, although many intermediates, including 4-nitrobenzaldehyde, have been discarded \cite{ogata_mechanism_1979}. In addition to poor knowledge on the synthesis route, the reaction usually favours the p-toluidine by-product and many contaminants, such as p-nitrophenylhydrazone are formed \cite{beard_preparation_1944}. Moreover, the use of toxic sodium polysulfide goes against Nitroma's commitment to developing a safer and less hazardous process for health and the environment.
+
+
+\subsection{Nitration reactor}
+\label{nitrationreactor}
+\subsubsection{Packed-bed reactor}
+A conventional packed-bed reactor was considered for the nitration process. This reactor is easy to operate because the packed structure of the catalyst removes the need for catalyst filtration in the outlet stream. The compact catalyst packing also allows for high zeolite catalyst loading, thus speeding up the reaction \cite{kashid_microstructured_2009}. A simple modelling of a packed-bed reactor usually assumes perfect mixing, however, in reality flow maldistribution and hot spot formation occurs \cite{nguyen_flow_1994}. This is dangerous for the nitration process as any hot spots will promote the thermal runaway process that increases the risk of explosion. Conversely, the preferred packed-bed microreactors offer the benefits of a packed-bed reactor, while preventing the possibility of hot spot formation through its enhanced heat transfer ability. Therefore, to increase the inherent safety of Nitroma's plant, this option was not pursued further.
+
+\subsubsection{Stirred slurry reactor}
+Stirred slurry reactor has an automatic agitator that controls the inflow and outflow of the product. This provides a high degree of automation \cite{liu_nitration_2019}, which is particularly useful when the reaction temperature has to be carefully controlled. However, in the presence of solid H-mordenite catalyst, the mechanical agitation will erode the catalyst in the liquid suspension \cite{argyle_heterogeneous_2015}. The catalytic activity decreases over time and needs to be regenerated to achieve the same conversion as fresh catalyst. Further filtration process also needs to be carried out on the reactor effluent to retain the catalyst in the reactor. The drawbacks outweigh the benefits, so this reactor was not chosen.
+
+\subsection{Toluidine hydrogenation reactor}
+
+\subsubsection{Stirred slurry reactor}
+An alternative reactor for toluidine hydrogenation was the slurry reactor. The slurry reactor provides a steady agitation of the reaction, increasing the selectivity \cite{p_a_ramachandran_recent_1987}. Attrition of the solid Pd catalyst will occur in slurry reactors due to the violent agitation in the reactor, therefore damaging the catalyst. As Pd catalyst is considered as a precious metal, catalyst regeneration will be very expensive thus lowering the economic potential (EP) of this plant. Moreover, based on the kinetics of the oxidation reaction from  \Cref{eqn:ONT_k}, the rate constant is strongly dependent on the mass of Pd catalyst, further proving the importance of low catalyst attrition \cite{rajadhyaksha_solvent_1986}.
+The slurry reactor is more suitable for gas-phased hydrogenation with the usage of \ch{H2} gas at lower pressures, which is not applicable in the current liquid-phase hydrogenation operating at high pressures (\SI{14}{\atm}). Therefore, the stirred slurry reactor option was eliminated \cite{ranade_chapter_2011}.
+
+\nomenclature[A]{EP}{Economic potential}
+
+\subsubsection{Counter-current trickle bed reactor}
+A counter-current trickle bed reactor was considered for the increased overall performance of the reactor and improved wetting of catalyst \cite{kundu_novel_2003}. Moreover, a counter-current trickle bed reactor provides the option for in-situ separation for catalyst via catalytic distillation, especially for by-products which may act as catalyst inhibitor. However, in this reaction, the product of o-toluidine shows no signs of catalyst inhibitor, thus disregarding the proposed benefit. The major disadvantage of a counter-current trickle bed reactor was the risk of flooding, where counter-current phase is reversed, caused by the strong interfacial friction between upward moving gas and downward moving liquid \cite{breijer_prevention_2008}. It was later decided that the risk of flooding offsets all benefits provided by counter-current flow, thus the counter-current flow trickle bed reactor was not chosen. 
+
+\subsubsection{Fluidised bed reactor}
+\label{fbr}
+Fluidised bed reactor was considered for its enhanced heat and mass transfer and optimal fluid-solid contact which increased reaction efficiency. However, this benefit was deemed insufficient as a selection factor, due to the risk of catalyst erosion. Again, as mentioned previously, due to the dependence of kinetics on the weight of the catalyst, this option was unsatisfactory. Moreover, the presence of liquid o-nitrotoluene will cause heavy components to deposit on the catalyst, reducing the effectiveness of the Pd catalyst and leading to increased agglomeration. Because of the reasons mentioned, fluidised bed reactor was not chosen for the o-nitrotoluene hydrogenation reactor \cite{farrell_kinetics_1979}.
+
+\subsection{p-Nitrotoluene oxidation reactor}
+\subsubsection{Fluidised bed reactor}
+Similar to Appendix \ref{fbr}, the efficient heating property of a fluidised bed reactor was attractive to be considered for an oxidising reactor. Since cobalt is a relatively expensive metal \cite{saib_fundamental_2014}, the attrition effect of the catalyst will be pronounced especially since there is a large flowrate that flows through the reactor. This problem does not exist in the preferred packed-bed reactor, therefore this option was not chosen.
+
+\subsection{4-Aminobenzaldehyde and 4-aminobenzoic acid hydrogenation reactor}
+\subsubsection{Direct hydrogenation via \ch{H2} gas}
+
+Direct hydrogenation of 4-nitrobenzaldehyde and 4-nitrobenzoic acid using \ch{H2} was considered as an option as pressurised hydrogen gas is readily available commercially. The highly flammable nature hydrogen gas poses a significant hazard to this plant. Furthermore, alternative hydrogen donors such as formic acid and isopropanol are also similarly inexpensive and easily obtainable commercially, offsetting the main benefit of the direct hydrogenation method. As a result, this method was eliminated \cite{wang_golden_nodate}. 
+
+\subsection{Nitrotoluene separation}
+\label{app:ntol separation}
+\subsubsection{Jaksland procedure for ranking separation techniques}
+The Jaksland procedure was chosen as a quantitative method of ranking separation techniques because it is well established and does not require much computation once physical properties of the chemicals are known \cite{jaksland_separation_1995}. The property pair ratios for the compounds are calculated and are shown in \Cref{tab:jaksland}. Separation across different phases such as vapour-vapour, vapour-liquid, liquid-liquid and liquid-solid were considered, as shown in \Cref{tab:separation techniques}.
+
+Decanting of the three nitrotoluene isomers was ruled out as an option because the organic molecules were very likely miscible with each other \cite{merck_solvent_2021}. Although certain adsorbents have proved to be able to preferentially adsorb ONT and PNT, further purification steps would be required to desorb and separate the nitrotoluenes from the desorbent \cite{zhao_new_2016}. The available literature recommends using distillation to remove the desorbent, which seems to make adsorption a redundant step compared to direct distillation of the nitrotoluene isomers \cite{zinnen_ep0181106a2_1984}. Absorption was also not considered as the solubility of the nitrotoluene isomers are likely to be similar across different types of solvents since the functional groups and molecular weights of the isomers are identical. Sedimentation was not considered as the maximum purity achievable is around \SI{70}{\percent} \cite{seider_product_2009}. Crystallisation and membrane technology were relatively new separation techniques that were considered. 
+
+The relevant property pair ratios were compared against the feasible and good bounds for each of the shortlisted techniques, which are tabulated in \Cref{tab:separation-pair-ratio}. The $\mu$ value for each feasible technique is then calculated and tabulated in \Cref{tab:separation-mu}, and the technique with the highest value is considered to be the most optimal. 
+
+\subsubsection{Further considerations}
+Although the Jaksland analysis recommends that distillation be used to separate m and p-nitrotoluene, the boiling point difference between the two compounds at \SI{1}{\atm} was only \SI{7}{\K}. In contrast, their melting points differed by \SI{36}{\K}. The larger difference in melting points suggested that melt crystallisation would be an easier separation, and would potentially provide a cleaner split between the two isomers. This seems to be the reason why crystallisation is a widely adopted strategy to separate m and p-nitrotoluene after distilling off the o-nitrotoluene \cite{weiland_purification_1931,european_chemical_agency_background_2010}. 
+
+\begin{landscape}
+
+\begin{table}[H]
+\centering
+\caption{Separation techniques considered for nitrotoluene isomer separation. Highlighted techniques were not considered in Jaksland analysis for the reasons stated.}
+\label{tab:separation techniques}
+\begin{tabular}{lccll}
+\toprule
+\multicolumn{1}{c}{{Technology}} & {Phases} & {Key Property (relative)} & \multicolumn{1}{c}{{\textbf{Separate ONT}}} & \multicolumn{1}{c}{{\textbf{Separate PNT from MNT}}} \\ \midrule
+Decanting                                                                     & LL                            & Miscibility                                    & \cellcolor[HTML]{F8CBAD}Miscible organic phase                                            & \cellcolor[HTML]{F8CBAD}Miscible organic phase                                                      \\
+Flash                                                                         & LL                            & Bp                                             &                                                                                           &                                                                                                     \\
+Distillation                                                                  & LL                            & Bp                                             &                                                                                           &                                                                                                     \\
+Crystallisation                                                               & LL                            & Mp                                             &                                                                                           &                                                                                                     \\
+Adsorption                                                                    & LL                            & Adsorption Isotherm                            & \cellcolor[HTML]{F8CBAD}Requires further purification                                     & \cellcolor[HTML]{F8CBAD}Requires further purification                                               \\
+Absorption                                                                    & VV                            & Solubility                                     & \cellcolor[HTML]{F8CBAD}Similar functional groups                                         & \cellcolor[HTML]{F8CBAD}Similar functional groups                                                   \\
+LLE (Absorption)                                                              & LL                            & Solubility                                     & \cellcolor[HTML]{F8CBAD}Similar functional groups                                         & \cellcolor[HTML]{F8CBAD}Similar functional groups                                                   \\
+Membrane Separation                                                           & VV/LL                         & Molecular Vol.                                 &                                                                                           &                                                                                                     \\
+Leaching (Absorption)                                                         & LS                            & Solubility                                     & \cellcolor[HTML]{F8CBAD}Similar functional groups                                         & \cellcolor[HTML]{F8CBAD}Similar functional groups                                                   \\
+Sedimentation                                                                 & LS                            & Density                                        & \cellcolor[HTML]{F8CBAD}Max purity \SI{70}{\percent}                                                   & \cellcolor[HTML]{F8CBAD}Max purity \SI{70}{\percent}                                                             \\
+Filtration                                                                    & LS                            & Molecular Weight.                              &                                                                                           &                                                                                                     \\
+Centrifugation                                                                & LS                            & Density                                        &                                                                                           &                                                                                                     \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Property pair ratios for 2-nitrotoluene, 3-nitrotoluene, 4-nitrotoluene and toluene. \texttt{critT} = critical temperature (K), \texttt{bp} = boiling point (K), \texttt{vapP} = vapour pressure (kPa), \texttt{mp} = melting point (K), \texttt{triple} = triple point temperature (K), \texttt{critP} = critical pressure (kPa), \texttt{solH2O} = solubility in H2O (mg/mL), \texttt{Hvap} = heat of vapourisation (kJ/mol), \texttt{mr} = molecular weight (g/mol)}
+\label{tab:jaksland}
+\begin{tabular}{@{}llllS[table-format=4.2]llllll@{}}
+\toprule
+Ref & Pair              & \texttt{r\_critT} & \texttt{r\_bp} & \texttt{r\_vapP} & \texttt{r\_mp} & \texttt{r\_triple} & \texttt{r\_critP} & \texttt{r\_solH20} & \texttt{r\_Hvap} & \texttt{r\_mr} \\ \midrule
+1   & 2-nitro / 4-nitro & 1.03              & 1.03           & 18.10            & 1.21           & 1.00               & 1.72              & 1.26               & 1.03             & 1.00           \\
+2   & 2-nitro / 3-nitro & 1.02              & 1.02           & 21.49            & 1.07           & 1.00               & 1.00              & 1.14               & 1.01             & 1.00           \\
+3   & 4-nitro / 3-nitro & 1.01              & 1.01           & 1.19             & 1.13           & 1.00               & 1.72              & 1.43               & 1.02             & 1.00           \\
+4   & 2-nitro / tol     & 1.21              & 1.29           & 3000.51          & 1.51           & 1.82               & 1.08              & 1.18               & 1.59             & 1.49           \\
+5   & 4-nitro / tol     & 1.25              & 1.33           & 165.80           & 1.82           & 1.82               & 1.86              & 1.49               & 1.63             & 1.49           \\
+6   & 3-nitro / tol     & 1.24              & 1.31           & 139.63           & 1.62           & 1.82               & 1.08              & 1.04               & 1.61             & 1.49           \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Pair ratios for each shortlisted separation technique. A technique for separating a particular pair of chemicals is good if the pair ratio exceeds the 'good' value, and infeasible if it does not exceed the 'feasible' value.}
+\label{tab:separation-pair-ratio}
+\begin{tabular}{llllllll}
+\toprule
+Technique  & Distillation & Distillation & Flash & Flash   & Crystallisation (melt) & Microfiltration & Microfiltration \\ \midrule
+Pair Ratio & \texttt{r\_bp}        & \texttt{r\_vapP}      & \texttt{r\_bp} & \texttt{r\_vapP} & \texttt{r\_mp}                  & \texttt{r\_kd}           & \texttt{r\_mr}           \\
+Feasible   & 1.01         & 1.05         & 1.23  & 10      & 1.2                    & 2               & 1.9             \\
+Good       & 1.02         & 1.5          & 1.4   & 15      & 1.27                   & 3               & 2.4             \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\end{landscape}
+
+\begin{table}[h]
+\centering
+\caption{$\mu$ values for each shortlisted technique.}
+\label{tab:separation-mu}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Pair              & Distillation                 & Distillation                    & Flash      & Flash      & Crystallisation (melt) \\ \midrule
+2-nitro / 4-nitro & 2.23                         & \cellcolor[HTML]{C6E0B4}37.88   & Infeasible & 1.62       & 0.11                   \\
+2-nitro / 3-nitro & 0.89                         & \cellcolor[HTML]{C6E0B4}45.42   & Infeasible & 2.30       & Infeasible             \\
+4-nitro / 3-nitro & \cellcolor[HTML]{C6E0B4}0.32 & 0.31                            & Infeasible & Infeasible & Infeasible             \\
+2-nitro / tol     & 27.97                        & \cellcolor[HTML]{C6E0B4}6665.48 & 0.35       & 598.10     & 4.43                   \\
+4-nitro / tol     & 32.14                        & \cellcolor[HTML]{C6E0B4}366.12  & 0.60       & 31.16      & 8.90                   \\
+3-nitro / tol     & 30.41                        & \cellcolor[HTML]{C6E0B4}307.95  & 0.49       & 25.93      & 6.00                   \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+
+

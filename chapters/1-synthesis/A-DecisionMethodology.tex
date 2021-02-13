@@ -1,0 +1,125 @@
+\section{Decision analysis}
+\label{app:matrix}
+
+\subsection{Sample AHP and TOPSIS calculation for product selection}
+
+\paragraph{1. Pair-wise comparison of criteria}
+The scale developed by Saaty was adopted to assess the relative importance of one criteria compared to another \cite{saaty_analytic_1987}. The fundamental scale is as follows: 1 for equal importance, 3 for moderate importance of one criteria over the other, 5 for essential or strong importance, 7 for very strong importance and 9 for extreme importance. Even numbers can be used as intermediate values. The normalised weightings were then calculated. The results for product selection are shown in \Cref{tab:pairwise}. Environmental and safety considerations were valued as more important than other criteria, in line with Nitroma's commitment to develop an inherently safer process. Process complexity was given the lowest weighting since each route exhibited similar complexities to achieve a multipurpose plant.  
+
+\begin{table}[H]
+\centering
+\caption{Pair-wise criteria comparison for product selection}
+\label{tab:pairwise}
+\begin{tabularx}{\linewidth}{l|XXX|l}
+\toprule
+                                                                & Economic potential & Process complexity & Environmental and safety & Weights \\ \midrule
+Economic potential                        & 1.000              & 3.000              & 0.333                    & 0.286   \\
+Process complexity                      & 0.333              & 1.000              & 0.333                    & 0.14    \\
+Environmental and   safety & 3.000              & 3.000              & 1.000                    & 0.574   \\ \midrule
+Sum                                      & 4.333              & 7.000              & 1.667                    &                              \\ \bottomrule
+\end{tabularx}
+\end{table}
+
+
+\paragraph{2. Validation of consistency}
+The consistency between the weightings was verified with a method proposed by Saaty \cite{saaty_analytic_1987}. The largest eigenvalue ($\lambda_{max}$) was determine with the following formula where $i$ refers to the criteria:
+\begin{equation}
+    \lambda_{max}=\sum_{i} \mathrm{w}_{i}\cdot \mathrm{Sum}(i)
+\end{equation}
+The consistency index (CI) is calculated for the number of criteria $n$:
+\begin{equation}
+   \mathrm{CI} = \frac{\lambda_{max}-n}{n-1}
+\end{equation}
+The consistency ratio CI/RI is then calculated using the Random Consistency Index (RI) retrieved from (Saaty, 1987). 
+For product selection, $\lambda_{max}=3.036$, $\mathrm{CI}=0.018$ and $\mathrm{RI}=0.58$, hence the consistency ratio is 0.03. Weightings are deemed consistent if the ratio is less than \SI{10}{\percent}.
+
+\paragraph{3. AHP score calculation}
+The score for a given alternative is calculated by summing, over all criteria, the normalised score multiplied by the criteria weighting:
+\begin{equation}
+    S=\sum^{i}_{n}(\tilde{p}_{in} \cdot w_{i})
+\end{equation}
+
+\paragraph{4. Weighted normalised matrix for TOPSIS}
+Similarly to AHP analysis, a $n\times k$ matrix is constructed for $n$ criteria and $k$ alternatives. The criteria $X_{ij}$ are normalised and multiplied by their respective weighting $w_i$ as follows:
+\begin{align}
+    \tilde{X}_{ij}&=\frac{X_{ij}}{\sqrt{\sum^{n}_{i=1}X_{ij}^{2}}} &
+    V_{ij}&=\tilde{X}_{ij}\times w_j
+\end{align}
+
+\paragraph{5. Calculation of Euclidean distance from ideal best and ideal worst}
+The ideal best ($V_{j}^{+}$) and ideal worst ($V_{j}^{-}$) are the maximum and minimum values for each criterion. The distance from the ideal best and ideal worst values is calculated as follows:
+\begin{align}
+    S_{i}^{+}&=\sqrt{\sum_{j=1}^{n}(V_{ij}-V_{j}^{+})^2} &
+    S_{i}^{-}&=\sqrt{\sum_{j=1}^{n}(V_{ij}-V_{j}^{-})^2}
+\end{align}
+
+\paragraph{6. Evaluation of performance score and ranking}
+Finally the performance score is the ratio between the Euclidian distance from the ideal worst and the sum of Euclidian distances. The highest score indicates the most optimum solution.
+\begin{equation}
+    P_{i}=\frac{S_{i}^{-}}{S_{i}^{+}+S_{i}^{-}}
+\end{equation}
+
+
+
+
+\subsection{Nitration catalyst selection}
+\begin{table}[H]
+\centering
+    \caption{AHP/TOPSIS results for Nitration Catalyst Selection}
+    \label{tab:nitration}\footnotesize
+\begin{tabular}{l|S[table-format=2.3]S[table-format=1.2]|S[table-format=2.0]|lll|S[table-format=1.3]S[table-format=1.3]c}
+\toprule
+                                          & \multicolumn{2}{c|}{Economic potential   (\SI{14}{\percent})}                                & {Performance (\SI{57}{\percent})} & \multicolumn{3}{c|}{EHS (\SI{29}{\percent})}     &                       &                          &                           \\ \cmidrule{2-7}
+                                          & {\splitcell{Price\\(\si{\EUR\per\g})}} & {\splitcell{By-products\\(\%)}} & {Conversion (\%)}  & \rotatebox[origin=r]{90}{Health} & \rotatebox[origin=r]{90}{Flammability} & \rotatebox[origin=r]{90}{Instability} & AHP & TOPSIS & Rank \\ \midrule
+H-ZSM-5 & 0.734        & 0.5 & 41                             & 2       &  0          &     0       & 0.297                 & 0.752                & 2                         \\ 
+H-Y & 0.696            & 0.48 & 36                           & 2      &        0     & 0           & 0.276                 & 0.705                   & 3 \\ 
+H-Mordenite       & 0.726           & 0.55  & 43                            & 2      &     0        & 0           & 0.303                 & 0.761                  & \cellcolor{green}1 \\ 
+No catalyst         & 0            & 0 & 2                         & 0      & 0            & 0           & 0.124                 & 0.237                    & 4                         \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{Solvent for 2-nitrotoluene hydrogenation}
+\begin{table}[h]
+\centering
+    \caption{AHP/TOPSIS results for o-nitrotoluene hydrogenation solvent selection}
+    \label{tab:solvent}\footnotesize
+\begin{tabularx}{\linewidth}{l|X|S[table-format=2.2]S[table-format=1.2]S[table-format=1.3]|ll|llll|S[table-format=1.3]S[table-format=1.3]c}
+\toprule
+                                          & Economic potential   (\SI{11}{\percent})                                & \multicolumn{3}{c|}{Performance (\SI{24}{\percent})} & \multicolumn{2}{c|}{\splitcell{Safety\\ (\SI{52}{\percent})}}     & \multicolumn{4}{c|}{Sustainability (\SI{13}{\percent})}                        &                          &                           \\ \cmidrule{2-11}
+                                          & \splitcell{Price\\ (\si{\GBP\per\L})} & {\splitcell{Activation\\ energy\\ (\si{\kJ\per\mol})}} & {\splitcell{Reaction\\ rate\\  (\si{\mol\per\s})}}  & {\splitcell{\ch{H2} solubility\\ (\si{\mL\of{\ch{H2}}\per\mL\of{solution}})}}& \rotatebox[origin=r]{90}{Health} & \rotatebox[origin=r]{90}{Flammability} & \rotatebox[origin=r]{90}{Renewability} & \rotatebox[origin=r]{90}{Environment} & \rotatebox[origin=r]{90}{Waste} & \rotatebox[origin=r]{90}{LCA} & AHP & TOPSIS & Rank \\ \midrule
+Methanol & 28.6       & 34.36 & 2.14     & 0.809       &  5          &     5      & 3 & 9 & 4 & 9 & 0.212                 & 0.531                & 2                        \\ 
+Propanol & 39           & 45.52 & 1.34  & 0.825     &        6     & 8           & 2 & 9 & 3 & 4 & 0.213                 & 0.707                   & \cellcolor{green}1 \\ 
+Butanol      & 47.8         & 50.08  & 1.31      & 0.844      &     8        & 6    & 3 & 7 & 5 & 5       & 0.211                & 0.701                  & 3 \\ 
+Cyclohexanol       & 37.6            & 60.48 & 0.51   & 0.325      & 9            & 7      & 1 & 6 & 6 & 8     & 0.207                & 0.631                    & 4                        \\ 
+Hexane     & 60           & 66.21 & 1.29      &   1.981    & 2            & 4 & 1 & 3 & 5 & 7         & 0.157                 & 0.362                    & 5                        \\ 
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Plant location}
+
+
+\begin{table}[H]
+\centering
+    \caption{AHP/TOPSIS results for plant location selection}
+    \label{tab:location-selection}\footnotesize
+\adjustbox{max width=\textwidth}{
+\begin{tabular}{l|ll|lll|ll|lll|l|l|llc}
+%S[table-format=2.2]S[table-format=1.2]S[table-format=1.3]
+\toprule
+                                          & \multicolumn{2}{c|}{\splitcell{Local supply chain\\ (\SI{34}{\percent})}}                               & \multicolumn{3}{c|}{\splitcell{Country economics\\ (\SI{17}{\percent})}} & \multicolumn{2}{c|}{\splitcell{Trade\\ (\SI{4}{\percent})}}     & \multicolumn{3}{c|}{Operating costs (\SI{28}{\percent})}   & \splitcell{Competitive\\ Landscape (\SI{9}{\percent})} & \splitcell{Political\\ stability (\SI{7}{\percent})}  &     &                      \\ \cmidrule{2-13}
+                                          
+                                      & {\rcell{Toluene production (\si{\kilo\tonne\per\year})}} & {\rcell{Market size of products (\si[prefixes-as-symbols=false]{\giga\USD})}} & \rtext{Interest rate (\%)}  & \rcell{Corporate tax rate (\%)} & \rtext{Inflation (\%)} & \rtext{Import duties (\%)} & \rtext{Export duties (\%)} & {\rcell{Electricity cost (\si{\USD\per\kWh})}} & {\rcell{Minimum wage (\si{\USD\per\hour})}} & {\rcell{Cooling water cost (\si{\USD\per\l})}} &  {\rcell{Number competitors}} & {\rcell{Corruption perception index}} & AHP & TOPSIS & Rank \\ \midrule
+India & 923       & 20 & 4.00     & 30       &  7.35          &     4.9      & 7.50 & 0.08 & 1.00 & 0.20 & 2                 & 41                & 0.193 & 0.536 &    3              \\ 
+China & 4314          & 95 & 3.85  & 12     &       1.60     & 3.4           & 6.50 & 0.08 & 1.68 & 0.33 & 48                 & 41                 & 0.284 & 0.922 & \cellcolor{green}1  \\ 
+USA     & 4992        & 501  & 0.25      & 21      &     1.20        & 1.6    & 5.25 & 0.15 & 7.30 & 1.53       & 157               & 69                 & 0.218 & 0.659 & 2 \\ 
+Germany      & 930            & 47 & 0.00   & 30      & -0.30            & 1.7      & 6.50 & 0.38 & 10.97 & 2.46     & 33               & 80                   & 0.182         & 0.485 &  4          \\ 
+Poland    & 285           & 7.9 & 0.10      &   19   & 12.60            & 2.5 & 6.50 & 0.19 & 3.35 & 0.93         & 0                 & 39                  &    0.123         & 0.290 &     5      \\ 
+\bottomrule
+\end{tabular}
+} % adjustbox
+\end{table}
