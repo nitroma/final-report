@@ -135,7 +135,7 @@
 }
 
 %%% REFERENCING
-\RequirePackage[capitalise,noabbrev]{cleveref}   % clever cross-referencing
+\RequirePackage[capitalise,noabbrev,nameinlink]{cleveref}   % clever cross-referencing
 \RequirePackage[style=chem-angew,maxnames=3]{biblatex} % references
     \renewcommand*{\bibfont}{%
         % \fontsize{6pt}{7pt}\selectfont
