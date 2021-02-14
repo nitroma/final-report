@@ -1,16 +1,31 @@
 \section{Multi-criteria decision analysis for process selection}
 
-\subsection{Selection of MCDM} %~0.5 page
-
-
-
-To make systematic and informed decisions for key aspects of the project, multi-criteria decision making (MCDM) methods were employed. Firstly, pairwise comparison of the criteria was performed with the Analytical Hierarchy Process (AHP) to produce criteria weightings which were fed into the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) analysis. Process alternatives were initially short-listed with qualitative arguments and then ranked with the quantitative processing of all relevant information through AHP and TOPSIS analyses. An initial sensitivity analysis was conducted on the results, and a more robust method will be developed in the next stage of the project.
-
+Chemical process development and especially synthesis route selection are regarded as the most critical conceptual design step since those major decisions affect the whole process lifecycle []. Locating one optimum solution from several non-dominating plausible alternatives is challenging due to the necessity of considering various, and often conflicting, criteria. To help stakeholders make systematic and informed decisions for key aspects of the process, multi-criteria decision making (MCDM) methods have been developed. Those tools provide a quantitative and comparative evaluation of alternatives meeting design requirements, thus minimising subjectivity and bias []. 
+This section discusses Nitroma's selection procedure for the three products to be produced in its multi-purpose plant, and their associated synthesis routes. Employing both a qualitative approach and MCDM methods, greater importance was given to safety and environmental concerns, technical performance and economic potential of different options.
 
 \nomenclature[A]{MCDM}{Multi-criteria decision making}
+
+\subsection{Selection of MCDM} %~0.5 page
+
+Numerous computer-based MCDM methods have been developed over the last few decades to respond to the need for systematic decision making tools. Based on different theories and assumptions, those methods have unique characteristics which render them more suited for certain areas of application. Several well-known MCDM methods were initially considered, including multi-attribute methods: Weighted Sum method (WSM), Multi-Attribute Utility Theory (MAUT) and Analytic Hierarchy Process (AHP); and outranking methods: Elimination and Choice Expressing Reality (ELECTRE),  Technique for the Order Preference by Similarity to Ideal Solution (TOPSIS) and Preference ranking organization method for enrichment evaluation (PROMETHEE) []. 
+
+Due to inherent limitations of all methods, a combination of at least two methods will be used to ensure a more accurate decision is made []. AHP and TOPSIS were found to be the most suited methods after consideration of the advantages and disadvantages of each technique. Despite its straightforward application, WSM is not capable of handling multi-dimensional decision-making problems, thus leading to results always not reflecting the real situation []. AHP provides an easy to use and scalable hierarchical structure which can accommodate multiple options and criteria, but which is not as data intensive as MAUT []. Moreover, as opposed to MAUT which requires very precise input data, AHP can handle problems with  non-monetary criteria when limited information can be found in literature []. ELECTRE was eliminated due to its inapplicability to criteria with different ranges []. In addition to the difficulties in strength and weakness identification for alternatives, PROMETHEE does not provide a clear procedure to assign weights to criteria []. On the other hand, TOPSIS presents a simple process which is easy to use and program []. Nonetheless, AHP and TOPSIS have limitations which can be overcome by combining the two methods, as discussed in the following section.
+
+\nomenclature[A]{WSM}{Weighted Sum method}
+\nomenclature[A]{MAUT}{Multi-Attribute Utility Theory}
+\nomenclature[A]{AHP}{Analytic Hierarchy Process}
+\nomenclature[A]{ELECTRE}{Elimination and Choice Expressing Reality}
+\nomenclature[A]{PROMETHEE}{Preference ranking organization method for enrichment evaluation }
 \nomenclature[A]{TOPSIS}{Technique for Order of Preference by Similarity to Ideal Solution}
 
-\subsection{AHP and TOPSIS} %~0.5 page
+\subsection{Combined AHP and TOPSIS analysis} %~0.5 page
+
+The decision-making process using MCDM methods follows six steps []: (1) identify the options to be appraised, (2) identify criteria to asses the performance of each option, (3) scoring each option against a criteria, (4) assign criteria weightings, (5) compute, analyse and compare the weighted scores of each options, and (6) perform sensitivity analysis to evaluate the robustness of the final decision.
+Process alternatives were initially short-listed with qualitative arguments (step 1) and then ranked with the quantitative processing of all relevant information against selection criteria (step 2) through AHP and TOPSIS analyses (step 5). 
+
+AHP decomposes complex problems into structure hierarchies to find a unique optimum solution meeting the overall objective []. The analysis focus is broken down in categories made of several criteria which can be quantified with information available in literature. The categories and the criteria are independently compared pairwise using a 1-9 scale to assess the relative signification of one category/criteria over another \cite{saaty_analytic_1987}. Following the procurement of a set of category and criterion weights with pairwise comparison, the performance of each alternative is computed and a final ranking of solutions is obtained. The option with the highest sum of normalised scores is recommended. Several flaws of AHP have been identified, notably the ‘rank reversal’ phenomenon which occurs when the introduction of new options changes the relative ranking of some of the original options []. Moreover uncertainty is not directly accounted for and significant bias is introduced due to human judgement for the pairwise comparison []. Those drawbacks can be addressed with built-in consistency checks of criteria weightings and combination with TOPSIS for quantitative reinforcement []. Nevertheless, AHP can produce solid weight estimation for categories which can then be fed into TOPSIS. 
+
+On the contrary, criteria weightings and the associated inconsistency index can not be derived with TOPSIS alone []. The basis concept of the TOPSIS method is that the best alternative is the one which has the shortest distance to the ideal solution and longest distance to negative ideal solution []. The positive and negative ideal solutions are computed by respectively combining the best and worst performances for each criteria []. It is assumed that each criteria varies monotonically. The decision matrix of M alternatives and N criteria is normalised and the alternatives are ranked through comparing the Euclidean distances to the ideal best and worst solutions. This method allow for trade-off between criteria and distinguish between criteria that needed to be maximised and ones that needed to be minimised []. TOPSIS evaluation with criteria weightings derived from AHP is thus a suitable MDCM method for selecting the optimum products and synthesis routes.
 
 
 \subsection{Sensitivity} %~0.5 page
@@ -28,6 +43,7 @@ To deliver a multi-purpose plant, Nitroma selected toluene as feedstock due to t
 
 \subsubsection{Results}
 
+
 \begin{table}[h]
 \centering
     \caption{AHP/TOPSIS results for product selection}
@@ -44,6 +60,7 @@ m-toluidine         & 8.90           & 8.2 & 0.57                           & 11
 4-aminobenzoic acid & 26.29         & 5.8 & 3.70                           & 3250               & 2                 & 44                       & 2      & 1            & 1           & 0.168                 & 0.478                    & \cellcolor{green}3 \\ \bottomrule
 \end{tabularx}
 \end{table}
+
 
 Due to their high economic potential and reduced health and fire hazards, 4-aminobenzaldehyde (4-ABH), o-toluidine (o-TOL), and 4-aminobenzoic acid (4-ABA) were found to be the most suitable products. A  summary of the selected products can be found in \Cref{fig:routes-chosen}.
 

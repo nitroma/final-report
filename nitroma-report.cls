@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{nitroma-report}[2020/01/27 LaTeX class for Nitroma reports]
-\LoadClass[a4paper,12pt]{report}
+\LoadClass[a4paper,10pt]{report}
 
 \RequirePackage[margin=20mm]{geometry}
 \RequirePackage{etoolbox}
