@@ -139,7 +139,7 @@
 \RequirePackage[style=chem-angew,maxnames=3]{biblatex} % references
     \renewcommand*{\bibfont}{%
         % \fontsize{6pt}{7pt}\selectfont
-        \small
+        % \small
     }
     \AtBeginBibliography{
         \setlength{\itemsep}{0em}
