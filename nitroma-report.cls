@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{nitroma-report}[2020/01/27 LaTeX class for Nitroma reports]
-\LoadClass[a4paper,11pt]{report}
+\LoadClass[a4paper,12pt]{report}
 
 \RequirePackage[margin=20mm]{geometry}
 \RequirePackage{etoolbox}
@@ -94,7 +94,7 @@
 \setcounter{secnumdepth}{3}
 
 %%% NUMBERING & CONTENTS
-\RequirePackage[hidelinks]{hyperref} % include formatted page numbers in PDF metadata
+\RequirePackage[hidelinks,bookmarksnumbered]{hyperref} % include formatted page numbers in PDF metadata
 \RequirePackage{chngcntr}
 \setcounter{tocdepth}{1}
 \RequirePackage{etoc}
