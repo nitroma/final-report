@@ -36,23 +36,28 @@ Significant bias is introduced when deriving criteria weightings in AHP. The dec
 
 \subsection{Products selection}
 
-To deliver a multi-purpose plant, Nitroma selected toluene as feedstock due to the industrial importance of its nitration products and their amino derivatives. All three isomeric nitrotoluenes can indeed easily be oxidised and reduced to substituted aromatic amides of significant importance for the pharmaceutical, agrochemical and textile industries \cite{dugal_nitrobenzene_2005}. Six chemicals were initially selected due to their applications in drugs, fertilizers or dyes: 2-aminobenzaldehyde (precursor of quinoline derivatives for polymer, agrochemical, dye, antiviral and anti-malaria drug manufacturing), 4-aminobenzaldehyde (intermediate to pharmaceuticals and vanilin), 4-aminobenzoic acid (production of folic acid/vitamin B9), \ortho-toluidine (intermediate in the manufacture of herbicides), \meta-toluidine (manufacture of  photographic color developer) and \para-toluidine (for dye production) \cite{bowers_toluidines_2000,bruhne_benzaldehyde_2011,maki_benzoic_2000}. To determine the three most advantageous products to produce, AHP/TOPSIS analysis was conducted, giving significant importance to the safety of the compounds and their economic potential. Safety was assessed using the NFPA Hazard Classification for health, flammability and instability, where the smallest value is preferable. The economic potential of each chemical was determined using the average price, the average market share of producers which is an indicator of the market share Nitroma can plan to capture, the global demand and the expected market growth (CAGR). \Cref{tab:product} summarises the results and the complete methodology can be found in \Cref{app:matrix}.   
+To deliver a multi-purpose plant, Nitroma selected toluene as feedstock due to the industrial importance of its nitration products and their amino derivatives. All three isomeric nitrotoluenes can indeed easily be oxidised and reduced to substituted aromatic amides of significant importance for the pharmaceutical, agrochemical and textile industries \cite{dugal_nitrobenzene_2005}. Six chemicals were initially selected due to their applications in drugs, fertilizers or dyes: 2-aminobenzaldehyde (precursor of quinoline derivatives for polymer, agrochemical, dye, antiviral and anti-malaria drug manufacturing), 4-aminobenzaldehyde (intermediate to pharmaceuticals and vanilin), 4-aminobenzoic acid (production of folic acid/vitamin B9), \ortho-toluidine (intermediate in the manufacture of herbicides), \meta-toluidine (manufacture of  photographic color developer) and \para-toluidine (for dye production) \cite{bowers_toluidines_2000,bruhne_benzaldehyde_2011,maki_benzoic_2000}. To determine the three most advantageous products to produce, AHP/TOPSIS analysis was conducted.
+
+\subsubsection{Criteria identification and weighting}
+
+
+
+, giving significant importance to the safety of the compounds and their economic potential. Safety was assessed using the NFPA Hazard Classification for health, flammability and instability, where the smallest value is preferable. The economic potential of each chemical was determined using the average price, the average market share of producers which is an indicator of the market share Nitroma can plan to capture, the global demand and the expected market growth (CAGR). \Cref{tab:product} summarises the results and the complete methodology can be found in \Cref{app:matrix}.   
 
 \nomenclature[A]{NFPA}{National Fire Protection Association}
 \nomenclature[A]{CAGR}{Compound annual growth rate}
-
-\subsubsection{Criteria identification and weighting}
 
 \subsubsection{Uncertainties and assumptions}
 
 \subsubsection{Results}
 
+Due to their high economic potential and reduced health and fire hazards, 4-aminobenzaldehyde (4-ABH), o-toluidine (o-TOL), and 4-aminobenzoic acid (4-ABA) were found to be the most suitable products. A  summary of the selected products can be found in \Cref{fig:routes-chosen}.
 
 \begin{table}[h]
 \centering
     \caption{AHP/TOPSIS results for product selection}
     \label{tab:product}\footnotesize
-\begin{tabularx}{\linewidth}{l|S[table-format=4.2]S[table-format=1.1]XS[table-format=7.0,round-mode=figures,round-precision=2]|XX|lll|S[table-format=1.3]S[table-format=1.3]c}
+\begin{tabularx}{\linewidth}{l|S[table-format=4.2]S[table-format=1.1]XS[table-format=7.0,round-mode=figures,round-precision=2]|XX|lll|S[table-format=1]S[table-format=1]c}
 \toprule
                                           & \multicolumn{4}{c}{Economic potential   (\SI{29}{\percent})}                                & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep}X}{Process   complexity (\SI{14}{\percent})} & \multicolumn{3}{|c|}{EHS (\SI{57}{\percent})}     &                       &                          &                           \\ \cmidrule{2-10}
                                           & {\splitcell{Price\\(\si{\USD\per\kg})}} & {\splitcell{CAGR\\(\%)}} & \rcell{Average market share of producer (\%)} & {\splitcell{Demand\\(\si{\tonne\per\year})}} & \rcell{Number of reactions} & \rcell{Max selectivity to toluene (\%)} & \rtext{Health} & \rtext{Flammability} & \rtext{Instability} & AHP & TOPSIS & Rank \\ \midrule
@@ -66,7 +71,7 @@ m-toluidine         & 8.90           & 8.2 & 0.57                           & 11
 \end{table}
 
 
-Due to their high economic potential and reduced health and fire hazards, 4-aminobenzaldehyde (4-ABH), o-toluidine (o-TOL), and 4-aminobenzoic acid (4-ABA) were found to be the most suitable products. A  summary of the selected products can be found in \Cref{fig:routes-chosen}.
+
 
 \nomenclature[A]{4-ABH}{4-aminobenzaldehyde}
 \nomenclature[A]{o-TOL}{o-toluidine}
@@ -74,7 +79,7 @@ Due to their high economic potential and reduced health and fire hazards, 4-amin
 
 \subsubsection{Sensitivity}
 
-The weightings of the three criteria were varied from 0 to 1 simultaneously to map out the range of validity for each combination of products. It was found that 7 combinations of three products could be optimum depending on the relative importance given to each criteria. \Cref{fig:sensitivity_product} shows for which criteria weightings each combination was returned by AHP and TOPSIS analysis as optimum. Nitroma's selected combination of product, in red, is located in the centre of the ternary diagrams, indicating that it represents a good compromise between all criteria with moderate relative importance. The combination excluding toluidine isomers (in dark blue) is optimum when safety and environmental considerations are highly valued compared the economic potential. This combination was not selected due to the impossible  reflects the 
+The weightings of the three criteria were varied from 0 to 1 simultaneously to map out the range of validity for each combination of products. It was found that 7 combinations of three products could be optimum depending on the relative importance given to each criteria. \Cref{fig:sensitivity_product} shows for which criteria weightings each combination was returned by AHP and TOPSIS analysis as optimum. Nitroma's selected combination of product, in red, is located in the centre of the ternary diagrams, indicating that it represents a good compromise between all criteria with moderate relative importance. The combination excluding toluidine isomers (in dark blue) is optimum when safety and environmental considerations are highly valued compared to the economic potential, reflecting the more benign nature for aminobenzaldehydes and amino benzoic acid. 
 
 \begin{figure}[H]
     \centering
