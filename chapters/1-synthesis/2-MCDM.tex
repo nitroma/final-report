@@ -83,7 +83,7 @@ m-toluidine         & 8.90           & 8.2 & 0.57                           & 11
 
 The weightings of the three criteria were varied from 0 to 1 simultaneously to map out the range of validity for each combination of products. It was found that 7 combinations of three products could be optimum depending on the relative importance given to each criteria. \Cref{fig:sensitivity_product} shows for which criteria weightings each combination was returned by AHP and TOPSIS analysis as optimum. Nitroma's selected combination of product, in red, is located in the centre of the ternary diagrams, indicating that it represents a good compromise between all criteria with moderate relative importance. The combination excluding toluidine isomers (in dark blue) is optimum when safety and environmental considerations are highly valued compared to the economic potential, reflecting the more benign nature for aminobenzaldehydes and amino benzoic acid. 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \subfloat[AHP]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/AHP_product.pdf} }}
     \qquad
@@ -102,30 +102,9 @@ Nitric acid has been selected as the source of nitrogen for the nitration of tol
 
 \subsubsection{Choice of catalyst}
 
-Commercial production of nitrotoluene is mainly carried out by a mixed-acid process, whereby sulfuric acid donates a proton to nitric acid, yielding a nitronium ion which will then react with toluene \cite{halder_nitration_2007}. In a continuous adiabatic process, toluene and nitric acid are fed into a large recycle stream of sulfuric acid. The composition of the mixed-acid is typically \SI{20}{\percent} \ch{HNO3}, \SI{60}{\percent} \ch{H2SO4} and \SI{20}{\percent} \ch{H2O} \cite{pande_nitration_2010}. Toluene is in excess of \SI{10}{mol\percent} with respect to nitric acid to completely consume nitric acid, thus avoiding avoid the formation of dinitrotoluene. The reaction takes place in a PFR with static mixers or a cascade of CSTR \cite{dugal_nitrobenzene_2005}. The organic phase is separated in a decantor while the sulfuric acid is regenerated in a reconcentration step. Yields up to \SI{96}{\percent} can be obtain with this process. However the 0.6 \textit{para}/\textit{ortho} ratio is commercially unfavourable. In addition to favouring less economically desirable \textit{ortho} isomers, more complex product separation and acid regeneration are expensive and energy intensive \cite{sreedhar_scientific_2013}. Moreover, the E-factor of the reaction is i 
+Commercial production of nitrotoluene is mainly carried out by a mixed-acid process, whereby sulfuric acid donates a proton to nitric acid, yielding a nitronium ion which will then react with toluene \cite{halder_nitration_2007}. In a continuous adiabatic process, toluene and nitric acid are fed into a large recycle stream of sulfuric acid. The composition of the mixed-acid is typically \SI{20}{\percent} \ch{HNO3}, \SI{60}{\percent} \ch{H2SO4} and \SI{20}{\percent} \ch{H2O} \cite{pande_nitration_2010}. Toluene is in excess of \SI{10}{mol\percent} with respect to nitric acid to completely consume nitric acid, thus avoiding avoid the formation of dinitrotoluene. The reaction takes place in a PFR with static mixers or a cascade of CSTR \cite{dugal_nitrobenzene_2005}. The organic phase is separated in a decantor while the sulfuric acid is regenerated in a reconcentration step. Yields up to \SI{96}{\percent} can be obtain with this process. However the 0.6 \textit{para}/\textit{ortho} ratio is commercially unfavourable. In addition to favouring less economically desirable \textit{ortho} isomers, more complex product separation and acid regeneration are expensive and energy intensive \cite{sreedhar_scientific_2013}. Moreover, the high E-factor of the reaction, resulting from the large amount of 'spent acid', attests of the environmentally unfriendly nature of this process catalysted by hazardeous and corrosive sulfuric acid \cite{pande_nitration_2010}. These drawbacks can be overcome by solid acid catalysts which offer an environmentally friendly and economic alternative to mixed-acid processes \cite{vassena_selective_1999}.
 
-Thus a large excess of sulfuric acid is required as the water formed as a by product slows the reaction by diluting the acid. At the end of the reaction, a large amount of ‘spent acid’ is obtained which increases the E-factor of the reaction. Moreover, Sulfuric acid is corrosive and is dangerous to transport and handle. Hence, nitration of aromatics avoiding sulfuric acid appears to be an attractive alternative
-
-These drawbacks are overcome by solid acid catalysts which offer an environmentally friendly and economic alternative \cite{vassena_selective_1999}.
-
- Based on those arguments, Nitroma will develop a safer and low environmental impact process employing zeolite catalysts for toluene nitration. More specifically, the relative benefits and disadvantages of 3 different zeolites were evaluated with the AHP and TOPSIS decision analysis methods to select the optimum catalyst. The economic potential, performance and safety of zeolites H-ZSM-5, H-Y and H-Mordenite were assessed and compared to the case with no catalyst \cite{jeeru_kinetics_2018}. 
- 
- 
- The economic potential was measured with the cost of the catalyst and the percentage of undesirable by-product formed. Conversion and the NFPA score are the KPIs for performance and safety respectively. H-Mordenite was found optimum for the catalytic nitration of toluene by both AHP and TOPSIS analysis (\Cref{app:matrix}). The kinetic model for the reaction was then developed and is presented in \Cref{app:kinetics}.
-
-
-
-
-
-
-
-
-
-% The relative benefits and disadvantages of 3 different zeolites were evaluated with the AHP and TOPSIS decision analysis methods.
-The economic potential, performance and safety of zeolites H-ZSM-5, H-Y and H-Mordenite were assessed and compared to the case with no catalyst \cite{jeeru_kinetics_2018}, with H-Mordenite found to be the optimum in both AHP and TOPSIS analysis (see \Cref{tab:nitration}).
-% Consequently, Nitroma will develop a process employing zeolite catalysts for toluene nitration.
-The kinetic model for the reaction was then developed and is presented in \Cref{app:kinetics}.
-
+ Based on those arguments, Nitroma will develop a safer and low environmental impact process employing zeolite catalysts for toluene nitration. More specifically, the relative benefits and disadvantages of 3 different zeolites were evaluated with the AHP and TOPSIS decision analysis methods to select the optimum catalyst. The economic potential, performance and safety of zeolites H-ZSM-5, H-Y and H-Mordenite were assessed and compared to the case with no catalyst \cite{jeeru_kinetics_2018}.  The economic potential was measured with the cost of the catalyst and the percentage of undesirable dinitrotoluene by-product formed. Conversion and the NFPA score are the KPIs for performance and safety respectively. The scores and criteria weightings are displayed in \Cref{tab:nitration}. Catalyst performance was deemed priority by the decision makers since the cost of the different catalysts are fairy similar and that their EHS impact is comparable. Based on those weightings, H-Mordenite was found optimum for the catalytic nitration of toluene by both AHP and TOPSIS analysis.
 
 
 \begin{table}[H]
@@ -144,13 +123,15 @@ No catalyst         & 0            & 0 & 2                         & 0      & 0 
 \end{tabular}
 \end{table}
 
+Sensitivity analysis of the criteria weightings was then carried out to ensure the robustness of the decision. \Cref{fig:catalyst} shows the weighting ranges where each alternative is found optimum by AHP and TOPSIS analysis. 
+
 \begin{figure}[H]
     \centering
     \subfloat[AHP]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/AHP_nitration.pdf} }}
     \qquad
     \subfloat[TOPSIS]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/TOPSIS_nitration.pdf} }}
     \caption{Sensitivity analysis of AHP and TOPSIS results for nitration catalyst selection.}%
-    \label{b}%
+    \label{fig:catalyst}%
 \end{figure}
 
 
