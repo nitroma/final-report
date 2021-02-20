@@ -1,11 +1,21 @@
-\section{Process intensification and flowsheeting}
+\section{Process development and flowsheeting}
 
-\subsection{Process overview and operating mode}
+
+
+\subsection{Process overview}
 %BFD
 
-\subsection{Reactor choices}
+\subsubsection{Operating mode} % batch vs continuous
 
-\subsubsection{Guiding principles}
+\subsubsection{Plant modularity} % oxidation
+
+\subsection{Process intensification principles}
+
+%
+%
+%
+
+\subsection{Reactor choices}
 
 \subsubsection{Nitration reaction}
 
@@ -18,18 +28,52 @@ Toluene (\SI{95}{\percent} molar basis) and nitric acid (\SI{50}{\percent} molar
 
 \nomenclature[A]{MNT}{3-nitrotoluene, \meta-nitrotoluene}
 
+\subsubsection{Packed-bed reactor}
+A conventional packed-bed reactor was considered for the nitration process. This reactor is easy to operate because the packed structure of the catalyst removes the need for catalyst filtration in the outlet stream. The compact catalyst packing also allows for high zeolite catalyst loading, thus speeding up the reaction \cite{kashid_microstructured_2009}. A simple modelling of a packed-bed reactor usually assumes perfect mixing, however, in reality flow maldistribution and hot spot formation occurs \cite{nguyen_flow_1994}. This is dangerous for the nitration process as any hot spots will promote the thermal runaway process that increases the risk of explosion. Conversely, the preferred packed-bed microreactors offer the benefits of a packed-bed reactor, while preventing the possibility of hot spot formation through its enhanced heat transfer ability. Therefore, to increase the inherent safety of Nitroma's plant, this option was not pursued further.
+
+\subsubsection{Stirred slurry reactor}
+Stirred slurry reactor has an automatic agitator that controls the inflow and outflow of the product. This provides a high degree of automation \cite{liu_nitration_2019}, which is particularly useful when the reaction temperature has to be carefully controlled. However, in the presence of solid H-mordenite catalyst, the mechanical agitation will erode the catalyst in the liquid suspension \cite{argyle_heterogeneous_2015}. The catalytic activity decreases over time and needs to be regenerated to achieve the same conversion as fresh catalyst. Further filtration process also needs to be carried out on the reactor effluent to retain the catalyst in the reactor. The drawbacks outweigh the benefits, so this reactor was not chosen.
+
+
 \subsubsection{o-toluidine production}
 
 ONT is mixed with propanol and hydrogenated to o-TOL in a co-current trickle bed reactor (R201) operating at \SI{333}{\K} and \SI{13.6}{\atm} with both gas and liquid in downflow mode. High pressure is used because the low solubility of hydrogen affects the rate of reaction at low pressure \cite{rajadhyaksha_solvent_1986}. Trickle bed reactor is chosen due to the ease of operation at high pressure and the relative slow catalyst deactivation, which is imperative for an expensive catalyst usage of Pd/C \cite{vemala_hydrodynamic_nodate}. Co-current flow reduces the risk of flooding, thus allowing higher flow of products \cite{vemala_hydrodynamic_nodate}. Moreover, the liquid plug flow behaviour in trickle bed reactor allows for high conversion, thus increasing the final production rate of o-TOL. 
+
+\subsubsection{Stirred slurry reactor}
+An alternative reactor for toluidine hydrogenation was the slurry reactor. The slurry reactor provides a steady agitation of the reaction, increasing the selectivity \cite{p_a_ramachandran_recent_1987}. Attrition of the solid Pd catalyst will occur in slurry reactors due to the violent agitation in the reactor, therefore damaging the catalyst. As Pd catalyst is considered as a precious metal, catalyst regeneration will be very expensive thus lowering the economic potential (EP) of this plant. Moreover, based on the kinetics of the oxidation reaction from  \Cref{eqn:ONT_k}, the rate constant is strongly dependent on the mass of Pd catalyst, further proving the importance of low catalyst attrition \cite{rajadhyaksha_solvent_1986}.
+The slurry reactor is more suitable for gas-phased hydrogenation with the usage of \ch{H2} gas at lower pressures, which is not applicable in the current liquid-phase hydrogenation operating at high pressures (\SI{14}{\atm}). Therefore, the stirred slurry reactor option was eliminated \cite{ranade_chapter_2011}.
+
+\nomenclature[A]{EP}{Economic potential}
+
+\subsubsection{Counter-current trickle bed reactor}
+A counter-current trickle bed reactor was considered for the increased overall performance of the reactor and improved wetting of catalyst \cite{kundu_novel_2003}. Moreover, a counter-current trickle bed reactor provides the option for in-situ separation for catalyst via catalytic distillation, especially for by-products which may act as catalyst inhibitor. However, in this reaction, the product of o-toluidine shows no signs of catalyst inhibitor, thus disregarding the proposed benefit. The major disadvantage of a counter-current trickle bed reactor was the risk of flooding, where counter-current phase is reversed, caused by the strong interfacial friction between upward moving gas and downward moving liquid \cite{breijer_prevention_2008}. It was later decided that the risk of flooding offsets all benefits provided by counter-current flow, thus the counter-current flow trickle bed reactor was not chosen. 
+
+\subsubsection{Fluidised bed reactor}
+\label{fbr}
+Fluidised bed reactor was considered for its enhanced heat and mass transfer and optimal fluid-solid contact which increased reaction efficiency. However, this benefit was deemed insufficient as a selection factor, due to the risk of catalyst erosion. Again, as mentioned previously, due to the dependence of kinetics on the weight of the catalyst, this option was unsatisfactory. Moreover, the presence of liquid o-nitrotoluene will cause heavy components to deposit on the catalyst, reducing the effectiveness of the Pd catalyst and leading to increased agglomeration. Because of the reasons mentioned, fluidised bed reactor was not chosen for the o-nitrotoluene hydrogenation reactor \cite{farrell_kinetics_1979}.
+
 
 
 \subsubsection{4-nitrotoluene oxidation}
 
 Crystallised PNT is fed into two separate oxidation reactors, currently operated in parallel, to produce either 4-NBH or 4-NBA. In an effort of plant modularity, Nitroma aims to redesign the oxidation reactors to be operated in series to reduce the CAPEX and the loss of unreacted reactants. The PNT melts in the reactor and is mixed with air. Oxidation of PNT takes place in packed-bed microreactor with cobalt phthalocyanine catalyst, operating at \SI{750}{\K} and \SI{0.5}{\atm} for 4-NBH production (R301), and \SI{483}{\K} and \SI{0.5}{\atm} for 4-NBA production (R302). The reason for the difference in operating conditions have been detailed earlier in Section \ref{4-NTox}.
 
+\subsubsection{Fluidised bed reactor}
+Similar to Appendix \ref{fbr}, the efficient heating property of a fluidised bed reactor was attractive to be considered for an oxidising reactor. Since cobalt is a relatively expensive metal \cite{saib_fundamental_2014}, the attrition effect of the catalyst will be pronounced especially since there is a large flowrate that flows through the reactor. This problem does not exist in the preferred packed-bed reactor, therefore this option was not chosen.
+
 \subsubsection{Reduction of 4-nitrobenzaldehyde and 4-nitrobenzoic acid}
 
 Finally, both 4-ABH and 4-ABA are hydrogenated into two separate packed-bed microreactors (R401, R501), using formic acid as the transfer hydrogen donor and Pd/C as catalyst at \SI{298}{\K} and \SI{1}{\atm}. Packed-bed microreactors are selected due to improved heat and mass transfer. Moreover, continuous flow hydrogenation in packed-bed reactor allows for good recovery of catalyst, where investigations have shown that recycled catalyst have similar efficiency as fresh catalyst \cite{rahman_fast_2020}. This is of paramount importance for this reaction as the constant regeneration of expensive Pd catalyst could greatly decrease the economic potential \cite{rahman_fast_2020}. 
+
+
+\subsubsection{Direct hydrogenation via \ch{H2} gas}
+
+Direct hydrogenation of 4-nitrobenzaldehyde and 4-nitrobenzoic acid using \ch{H2} was considered as an option as pressurised hydrogen gas is readily available commercially. The highly flammable nature hydrogen gas poses a significant hazard to this plant. Furthermore, alternative hydrogen donors such as formic acid and isopropanol are also similarly inexpensive and easily obtainable commercially, offsetting the main benefit of the direct hydrogenation method. As a result, this method was eliminated \cite{wang_golden_nodate}. 
+
+
+
+
+
 
 \subsection{Separation strategies}
 
@@ -40,6 +84,17 @@ Finally, both 4-ABH and 4-ABA are hydrogenated into two separate packed-bed micr
 The R101 effluent is fed to a decanter (S101) to separate the aqueous nitric acid from the organic phase. Following water evaporation in a distillation column (S102), nitric acid is recycled back into the nitration reactor at a \SI{94}{mol\percent} purity.
 Meanwhile, the organic phase is sent to a distillation column (S103) recovering \SI{99.8}{mol\percent} of toluene from the less volatile nitrotoluenes, which is fed back to the nitration reactor. The nitrotoluenes are sent to a second distillation column (S201) to separate \SI{99.99}{mol\percent} of the more volatile ONT from MNT and PNT. The large difference in the PNT and MNT melting points is exploited in a continuous falling-film crystalliser (S202). 
 The nitrotoluene isomer separation is a crucial step, as it determines the production rate of downstream products. Thus the separation techniques above were carefully selected using both a quantitative method (Jaksland analysis) \cite{jaksland_separation_1995} and sound engineering judgement. Details are available in Appendix \ref{app:ntol separation}. Operating conditions of each separation unit can also be found in \cref{tab:equipment sizing}. 
+
+\label{app:ntol separation}
+\subsubsection{Jaksland procedure for ranking separation techniques}
+The Jaksland procedure was chosen as a quantitative method of ranking separation techniques because it is well established and does not require much computation once physical properties of the chemicals are known \cite{jaksland_separation_1995}. The property pair ratios for the compounds are calculated and are shown in \Cref{tab:jaksland}. Separation across different phases such as vapour-vapour, vapour-liquid, liquid-liquid and liquid-solid were considered, as shown in \Cref{tab:separation techniques}.
+
+Decanting of the three nitrotoluene isomers was ruled out as an option because the organic molecules were very likely miscible with each other \cite{merck_solvent_2021}. Although certain adsorbents have proved to be able to preferentially adsorb ONT and PNT, further purification steps would be required to desorb and separate the nitrotoluenes from the desorbent \cite{zhao_new_2016}. The available literature recommends using distillation to remove the desorbent, which seems to make adsorption a redundant step compared to direct distillation of the nitrotoluene isomers \cite{zinnen_ep0181106a2_1984}. Absorption was also not considered as the solubility of the nitrotoluene isomers are likely to be similar across different types of solvents since the functional groups and molecular weights of the isomers are identical. Sedimentation was not considered as the maximum purity achievable is around \SI{70}{\percent} \cite{seider_product_2009}. Crystallisation and membrane technology were relatively new separation techniques that were considered. 
+
+The relevant property pair ratios were compared against the feasible and good bounds for each of the shortlisted techniques, which are tabulated in \Cref{tab:separation-pair-ratio}. The $\mu$ value for each feasible technique is then calculated and tabulated in \Cref{tab:separation-mu}, and the technique with the highest value is considered to be the most optimal. 
+
+\subsubsection{Further considerations}
+Although the Jaksland analysis recommends that distillation be used to separate m and p-nitrotoluene, the boiling point difference between the two compounds at \SI{1}{\atm} was only \SI{7}{\K}. In contrast, their melting points differed by \SI{36}{\K}. The larger difference in melting points suggested that melt crystallisation would be an easier separation, and would potentially provide a cleaner split between the two isomers. This seems to be the reason why crystallisation is a widely adopted strategy to separate m and p-nitrotoluene after distilling off the o-nitrotoluene \cite{weiland_purification_1931,european_chemical_agency_background_2010}. 
 
 
 \subsubsection{After 4-nitrotoluene oxidation}
@@ -60,55 +115,9 @@ In the ABA scenario, the liquid effluent from reactor R401 is sent to a continuo
 
  In the ABH scenario, the effluent from reactor S501 is sent to a flash drum (S501) to remove air and water vapour. Then, two distillation columns (S502, S503) are employed to remove unreacted 4-NBH and remaining water to yield  \SI{99.9}{mol\percent} pure 4-ABH. On molar basis, \SI{97}{\percent} of the 4-ABH produced in the reactor can be recovered at the end of the separation.
 
-\subsection{Plant modularity}
+
+
+
+
 
 \subsection{Heat integration}
-
-
-
-
-
-\subsection{Nitration reactor}
-\label{nitrationreactor}
-\subsubsection{Packed-bed reactor}
-A conventional packed-bed reactor was considered for the nitration process. This reactor is easy to operate because the packed structure of the catalyst removes the need for catalyst filtration in the outlet stream. The compact catalyst packing also allows for high zeolite catalyst loading, thus speeding up the reaction \cite{kashid_microstructured_2009}. A simple modelling of a packed-bed reactor usually assumes perfect mixing, however, in reality flow maldistribution and hot spot formation occurs \cite{nguyen_flow_1994}. This is dangerous for the nitration process as any hot spots will promote the thermal runaway process that increases the risk of explosion. Conversely, the preferred packed-bed microreactors offer the benefits of a packed-bed reactor, while preventing the possibility of hot spot formation through its enhanced heat transfer ability. Therefore, to increase the inherent safety of Nitroma's plant, this option was not pursued further.
-
-\subsubsection{Stirred slurry reactor}
-Stirred slurry reactor has an automatic agitator that controls the inflow and outflow of the product. This provides a high degree of automation \cite{liu_nitration_2019}, which is particularly useful when the reaction temperature has to be carefully controlled. However, in the presence of solid H-mordenite catalyst, the mechanical agitation will erode the catalyst in the liquid suspension \cite{argyle_heterogeneous_2015}. The catalytic activity decreases over time and needs to be regenerated to achieve the same conversion as fresh catalyst. Further filtration process also needs to be carried out on the reactor effluent to retain the catalyst in the reactor. The drawbacks outweigh the benefits, so this reactor was not chosen.
-
-\subsection{Toluidine hydrogenation reactor}
-
-\subsubsection{Stirred slurry reactor}
-An alternative reactor for toluidine hydrogenation was the slurry reactor. The slurry reactor provides a steady agitation of the reaction, increasing the selectivity \cite{p_a_ramachandran_recent_1987}. Attrition of the solid Pd catalyst will occur in slurry reactors due to the violent agitation in the reactor, therefore damaging the catalyst. As Pd catalyst is considered as a precious metal, catalyst regeneration will be very expensive thus lowering the economic potential (EP) of this plant. Moreover, based on the kinetics of the oxidation reaction from  \Cref{eqn:ONT_k}, the rate constant is strongly dependent on the mass of Pd catalyst, further proving the importance of low catalyst attrition \cite{rajadhyaksha_solvent_1986}.
-The slurry reactor is more suitable for gas-phased hydrogenation with the usage of \ch{H2} gas at lower pressures, which is not applicable in the current liquid-phase hydrogenation operating at high pressures (\SI{14}{\atm}). Therefore, the stirred slurry reactor option was eliminated \cite{ranade_chapter_2011}.
-
-\nomenclature[A]{EP}{Economic potential}
-
-\subsubsection{Counter-current trickle bed reactor}
-A counter-current trickle bed reactor was considered for the increased overall performance of the reactor and improved wetting of catalyst \cite{kundu_novel_2003}. Moreover, a counter-current trickle bed reactor provides the option for in-situ separation for catalyst via catalytic distillation, especially for by-products which may act as catalyst inhibitor. However, in this reaction, the product of o-toluidine shows no signs of catalyst inhibitor, thus disregarding the proposed benefit. The major disadvantage of a counter-current trickle bed reactor was the risk of flooding, where counter-current phase is reversed, caused by the strong interfacial friction between upward moving gas and downward moving liquid \cite{breijer_prevention_2008}. It was later decided that the risk of flooding offsets all benefits provided by counter-current flow, thus the counter-current flow trickle bed reactor was not chosen. 
-
-\subsubsection{Fluidised bed reactor}
-\label{fbr}
-Fluidised bed reactor was considered for its enhanced heat and mass transfer and optimal fluid-solid contact which increased reaction efficiency. However, this benefit was deemed insufficient as a selection factor, due to the risk of catalyst erosion. Again, as mentioned previously, due to the dependence of kinetics on the weight of the catalyst, this option was unsatisfactory. Moreover, the presence of liquid o-nitrotoluene will cause heavy components to deposit on the catalyst, reducing the effectiveness of the Pd catalyst and leading to increased agglomeration. Because of the reasons mentioned, fluidised bed reactor was not chosen for the o-nitrotoluene hydrogenation reactor \cite{farrell_kinetics_1979}.
-
-\subsection{p-Nitrotoluene oxidation reactor}
-\subsubsection{Fluidised bed reactor}
-Similar to Appendix \ref{fbr}, the efficient heating property of a fluidised bed reactor was attractive to be considered for an oxidising reactor. Since cobalt is a relatively expensive metal \cite{saib_fundamental_2014}, the attrition effect of the catalyst will be pronounced especially since there is a large flowrate that flows through the reactor. This problem does not exist in the preferred packed-bed reactor, therefore this option was not chosen.
-
-\subsection{4-Aminobenzaldehyde and 4-aminobenzoic acid hydrogenation reactor}
-\subsubsection{Direct hydrogenation via \ch{H2} gas}
-
-Direct hydrogenation of 4-nitrobenzaldehyde and 4-nitrobenzoic acid using \ch{H2} was considered as an option as pressurised hydrogen gas is readily available commercially. The highly flammable nature hydrogen gas poses a significant hazard to this plant. Furthermore, alternative hydrogen donors such as formic acid and isopropanol are also similarly inexpensive and easily obtainable commercially, offsetting the main benefit of the direct hydrogenation method. As a result, this method was eliminated \cite{wang_golden_nodate}. 
-
-\subsection{Nitrotoluene separation}
-\label{app:ntol separation}
-\subsubsection{Jaksland procedure for ranking separation techniques}
-The Jaksland procedure was chosen as a quantitative method of ranking separation techniques because it is well established and does not require much computation once physical properties of the chemicals are known \cite{jaksland_separation_1995}. The property pair ratios for the compounds are calculated and are shown in \Cref{tab:jaksland}. Separation across different phases such as vapour-vapour, vapour-liquid, liquid-liquid and liquid-solid were considered, as shown in \Cref{tab:separation techniques}.
-
-Decanting of the three nitrotoluene isomers was ruled out as an option because the organic molecules were very likely miscible with each other \cite{merck_solvent_2021}. Although certain adsorbents have proved to be able to preferentially adsorb ONT and PNT, further purification steps would be required to desorb and separate the nitrotoluenes from the desorbent \cite{zhao_new_2016}. The available literature recommends using distillation to remove the desorbent, which seems to make adsorption a redundant step compared to direct distillation of the nitrotoluene isomers \cite{zinnen_ep0181106a2_1984}. Absorption was also not considered as the solubility of the nitrotoluene isomers are likely to be similar across different types of solvents since the functional groups and molecular weights of the isomers are identical. Sedimentation was not considered as the maximum purity achievable is around \SI{70}{\percent} \cite{seider_product_2009}. Crystallisation and membrane technology were relatively new separation techniques that were considered. 
-
-The relevant property pair ratios were compared against the feasible and good bounds for each of the shortlisted techniques, which are tabulated in \Cref{tab:separation-pair-ratio}. The $\mu$ value for each feasible technique is then calculated and tabulated in \Cref{tab:separation-mu}, and the technique with the highest value is considered to be the most optimal. 
-
-\subsubsection{Further considerations}
-Although the Jaksland analysis recommends that distillation be used to separate m and p-nitrotoluene, the boiling point difference between the two compounds at \SI{1}{\atm} was only \SI{7}{\K}. In contrast, their melting points differed by \SI{36}{\K}. The larger difference in melting points suggested that melt crystallisation would be an easier separation, and would potentially provide a cleaner split between the two isomers. This seems to be the reason why crystallisation is a widely adopted strategy to separate m and p-nitrotoluene after distilling off the o-nitrotoluene \cite{weiland_purification_1931,european_chemical_agency_background_2010}. 
-
