@@ -43,9 +43,12 @@
 }
 
 %%% FONTS
-\RequirePackage{fontspec}
-    \setmainfont{Fira Sans}
-    \setmonofont{inconsolata}
+% \RequirePackage{fontspec} % this method works everywhere except GH Actions...
+%     \setmainfont{Fira Sans}
+%     \setmonofont{inconsolata}
+\RequirePackage[default]{FiraSans}
+    \renewcommand{\rmdefault}{\firafamily} % force "roman" (serif) text to use Fira Sans too
+\RequirePackage{FiraMono}
 \RequirePackage[usefilenames]{firamath-otf}
 \RequirePackage{raleway}
 \newcommand{\headingfont}{\ralewayextra}
