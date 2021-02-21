@@ -287,4 +287,4 @@ TSWLatexianTemp*
 *.abs
 
 # output
-*.pdf
+main.pdf

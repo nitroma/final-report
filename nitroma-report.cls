@@ -97,7 +97,8 @@
 \setcounter{secnumdepth}{3}
 
 %%% NUMBERING & CONTENTS
-\RequirePackage[hidelinks,bookmarksnumbered]{hyperref} % include formatted page numbers in PDF metadata
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[numbered]{bookmark}
 \RequirePackage{chngcntr}
 \setcounter{tocdepth}{1}
 \RequirePackage{etoc}
