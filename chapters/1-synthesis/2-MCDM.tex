@@ -155,12 +155,13 @@ As displayed in \Cref{tab:solvent}, both TOPSIS and AHP analysis found that prop
 \nomenclature[A]{ONT}{2-nitrotoluene, \ortho-nitrotoluene}
 \nomenclature[A]{GSK}{GlaxoSmithKline}
 
-\resizebox{\linewidth}{!}{
+
 \begin{table}[h]
 \centering
     \caption{AHP/TOPSIS results for o-nitrotoluene hydrogenation solvent selection}
     \label{tab:solvent}\footnotesize
-\begin{tabular}{\linewidth}{l|X|S[table-format=2.2]S[table-format=1.2]S[table-format=1.3]|ll|llll|S[table-format=1.3]S[table-format=1.3]c}
+
+\begin{tabularx}{l|X|S[table-format=2.2]S[table-format=1.2]S[table-format=1.3]|ll|llll|S[table-format=1.3]S[table-format=1.3]c}
 \toprule
                                           & Economic potential   (\SI{11}{\percent})                                & \multicolumn{3}{c|}{Performance (\SI{24}{\percent})} & \multicolumn{2}{c|}{\splitcell{Safety\\ (\SI{52}{\percent})}}     & \multicolumn{4}{c|}{Sustainability (\SI{13}{\percent})}                        &                          &                           \\ \cmidrule{2-11}
                                           & \splitcell{Price\\ (\si{\GBP\per\L})} & {\splitcell{Activation\\ energy\\ (\si{\kJ\per\mol})}} & {\splitcell{Reaction\\ rate\\  (\si{\mol\per\s})}}  & {\splitcell{\ch{H2} solubility\\ (\si{\mL\of{\ch{H2}}\per\mL\of{solution}})}}& \rotatebox[origin=r]{90}{Health} & \rotatebox[origin=r]{90}{Flammability} & \rotatebox[origin=r]{90}{Renewability} & \rotatebox[origin=r]{90}{Environment} & \rotatebox[origin=r]{90}{Waste} & \rotatebox[origin=r]{90}{LCA} & AHP & TOPSIS & Rank \\ \midrule
@@ -170,9 +171,9 @@ Butanol      & 47.8         & 50.08  & 1.31      & 0.844      &     8        & 6
 Cyclohexanol       & 37.6            & 60.48 & 0.51   & 0.325      & 9            & 7      & 1 & 6 & 6 & 8     & 0.207                & 0.631                    & 4                        \\ 
 Hexane     & 60           & 66.21 & 1.29      &   1.981    & 2            & 4 & 1 & 3 & 5 & 7         & 0.157                 & 0.362                    & 5                        \\ 
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
-}
+
 
 \subsection{4-nitrotoluene oxidation}
 
