@@ -24,6 +24,7 @@
 \newcommand\subtitle[1]{\newcommand\@subtitle{#1}}
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
+    \currentpdfbookmark{\@title}{titlepage}
     % \geometry{margin=10mm} % doesn't work
     \gradientpagebackground{color2!50}
     \hfill
