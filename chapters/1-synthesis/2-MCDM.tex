@@ -85,9 +85,14 @@ The weightings of the three criteria were varied from 0 to 1 simultaneously to m
 
 \begin{figure}[h]
     \centering
-    \subfloat[AHP]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/AHP_product.pdf} }}
-    \qquad
-    \subfloat[TOPSIS]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/TOPSIS_product.pdf} }}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{chapters/1-synthesis/1-Figures/AHP_product.pdf}
+        \caption{AHP}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{chapters/1-synthesis/1-Figures/TOPSIS_product.pdf}
+        \caption{TOPSIS}
+    \end{subfigure}
     \caption{Sensitivity analysis of AHP and TOPSIS results for product selection. Legend: (1) 2-ABH, 4-ABH, o-TOL; (2) 2-ABH, 4-ABH, 4-ABA; (3) 2-ABH, o-TOL, p-TOL; (4) 2-ABH, o-TOL, 4-ABA; (5) 4-ABH, o-TOL, p-TOL; (6) 4-ABH, o-TOL, 4-ABA; (7) o-TOL, p-TOL, 4-ABA}%
     \label{fig:sensitivity_product}%
 \end{figure}
@@ -98,7 +103,8 @@ Nitration is a highly exothermic reaction between a nitration agent and an organ
 
 \subsubsection{Choice of nitrating agent}
 
-Nitric acid has been selected as the source of nitrogen for the nitration of toluene for its safe and environmentally friendly nature relative to other possible nitrating agents and its high availability \cite{miller_kinetics_1964, sreedhar_scientific_2013}. Although nitric acid is a highly acidic and volatile compound, compared to alternatives such as acetone cyanohydrin and dinitrogen tetroxide which are highly toxic, nitric acid is more appropriate for industrial-scale nitration of toluene \cite{dagade_nitration_2002, sreedhar_scientific_2013}. Nitric acid, introduced as an aqueous solution, is the most commonly used and well-studied nitrating agent for this process in industry. \cite{bowers_toluidines_2000}. A common alternative to nitric acid is acetyl nitrate which is formed by the reaction of nitric acid with acetic anhydride \cite{vassena_selective_1999}. This reaction however yields formic acid, acetyl nitrate and acetic anhydride as by-product, resulting in a lower atom economy and additional difficulties in separations downstream. The same argument can be employed for other alkyl nitrates such as butyl nitrate. To this end, nitric acid is deemed as the most suitable choice among all candidates.
+Nitric acid has been selected as the source of nitrogen for the nitration of toluene for its safe and environmentally friendly nature relative to other possible nitrating agents and its high availability \cite{miller_kinetics_1964, sreedhar_scientific_2013}. Although nitric acid is a highly acidic and volatile compound, compared to alternatives such as acetone cyanohydrin and dinitrogen tetroxide which are highly toxic, nitric acid is more appropriate for industrial-scale nitration of toluene \cite{dagade_nitration_2002, sreedhar_scientific_2013}. Nitric acid, introduced as an aqueous solution, is the most commonly used and well-studied nitrating agent for this process in industry. \cite{bowers_toluidines_2000}. A common alternative to nitric acid is acetyl nitrate which is formed by the reaction of nitric acid with acetic anhydride \cite{vassena_selective_1999}. The conversion of toluene is limited by the temperature which must be kept below \SI{60}{\celsius}, the explosion point of acetyl nitrate []. Moreover, this reaction yields formic acid, acetyl nitrate and acetic anhydride as by-product, resulting in a lower atom economy and additional difficulties in separations downstream. The same argument can be employed for other alkyl nitrates such as butyl nitrate. To this end, nitric acid is deemed as the most suitable choice among all candidates.
+
 
 \subsubsection{Choice of catalyst}
 
@@ -127,16 +133,28 @@ Sensitivity analysis of the criteria weightings was then carried out to ensure t
 
 \begin{figure}[h]
     \centering
-    \subfloat[AHP]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/AHP_nitration.pdf} }}
-    \qquad
-    \subfloat[TOPSIS]{{\includegraphics[width=.46\linewidth]{chapters/1-synthesis/1-Figures/TOPSIS_nitration.pdf} }}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{chapters/1-synthesis/1-Figures/AHP_nitration.pdf}
+        \caption{AHP}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{chapters/1-synthesis/1-Figures/TOPSIS_nitration.pdf}
+        \caption{TOPSIS}
+    \end{subfigure}
     \caption{Sensitivity analysis of AHP and TOPSIS results for nitration catalyst selection.}%
     \label{fig:catalyst}%
 \end{figure}
 
+%qu'est ce qui ne vas pas avec mes figures?
+% working out why there are 2 figure 1.1s
+% wondering if this subfloat thing might be to do with it
+% I prefer using subfigure
+%sure, sorry if I didn't use the correct command, thanks for fixing it!
+%t'aimes bien le BFD? ça m'a pris tt la matinée...
+
 \subsubsection{NOx emission mitigation}
 
-Nitrogen oxides are poisonous and highly reactive compounds which often appear as brownish gas. NOx can react with chemicals in the atmosphere, mailny water and oxygen to form acid rain which causes forest decline and fish mortality in sensitive ecosystems []. Due to its oxidative nature, NOx also plays a major role in photochemical ozone creation, resulting in smog on hot summer days []. Additionally, nitrogen oxides are known to have adverse effects on  health, causing respiratory conditions and  inflammation of the airways []. 
+Nitrogen oxides are poisonous and highly reactive compounds which often appear as brownish gas. NOx can react with chemicals in the atmosphere, mailny water and oxygen to form acid rain which causes forest decline and fish mortality in sensitive ecosystems \cite{us_epa_basic_2016}. Due to its oxidative nature, NOx also plays a major role in photochemical ozone creation, resulting in smog on hot summer days \cite{us_epa_nitrogen_nodate}. Additionally, nitrogen oxides are known to have adverse effects on  health, causing respiratory conditions and  inflammation of the airways \cite{us_epa_basic_2016}. 
 
 Emissions of NOx during nitration has been widely reported for mixed-acid processes\cite{halder_nitration_2007,processes_research_inc_air_1972}. \ch{HNO3} in sulfuric acid solutions is indeed known to decompose at high temperature to nitrogen oxides via a mechanism involving \ch{N2O5} \cite{robertson_kinetics_1955, kazakov_kinetics_1987}. However, to the best of our knowledge, no evidence of NOx emissions for processes with zeolite catalysts have been reported in literature \cite{vassena_selective_1999,sreedhar_scientific_2013}. The hypothesis for this observation is that the NOx formed from nitric acid decomposition is quickly reacted with zeolites to participate as a nitrating agent for toluene nitration \cite{akolekar_high_1995}. \textcite{akolekar_high_1995} indeed proposed a reaction mechanism whereby \ch{NO2} is at equilibrium with \ch{N2O4}, which then reacts with the protons from the zeolites to give \ch{NO+} and nitric acid. While the reformed nitric acid nitrates toluene with the help of the solid acid catalyst, \ch{NO+} bonds with aromatic ring and is later substituted by \ch{NO2}. Since the \ch{NO2}/\ch{N2O4} equilibrium leans towards \ch{N2O4}, we can assume that this reaction mechanism is very fast, thus comforting the experimental observations \cite{university_of_texas_chapter_nodate}. Furthermore, recent research on toluene nitration with NOx as nitrating agent over zeolites has been carried out. Publications have reported \SI{100}{\percent} and \SI{90}{\percent} toluene conversion with respectievly H-Beta and H-ZSM-5 zeolites \cite{pande_nitration_2010, peng_zeolite-assisted_2001}.
 
@@ -144,7 +162,7 @@ Owing to the decision of using a solid acid catalyst instead of sulfuric acid, N
 
 \subsection{o-toluidine production}
 
-Catalytic hydrogenation is the most efficient process for the large-scale reduction of nitrocompounds to their aromatic amines \cite{cartolano_amines_2004}. In the Béchamp process, the oldest commercial process for preparing amines, reduction takes place in the presence of iron and hydrochloric acid \cite{bowers_toluidines_2000}. This process has now widely been replaced by continuous high pressure catalytic hydrogenation in the vapour or liquid phase, either with or without a solvent. Liquid phase reaction is the most common process for the manufacturing of toluidine which are too thermally sensitive for vapour-phase reactions \cite{cartolano_amines_2004}. For this reason, Nitroma concentrated its efforts at developing a continuous liquid-phase hydrogenation process. The choice of reducing agent was straight forward since very high conversion can be achieved with pure hydrogen, compared to liquid alternatives such as formic acid and ammonium formate \cite{gowda_catalytic_2000}. Downstream processing is also facilitated as gaseous \ch{H2} can directly be vented from the liquid-phase reactor. Different catalysts, including palladium on carbon, Raney nickler and copper have been used for nitroluene reduction \cite{zhao_new_2016}. Due to its proven effectiveness, it was decided to use a \SI{2}{\percent\ww} palladium-on-carbon (Pd/C) catalyst in the liquid-phase \cite{rajadhyaksha_solvent_1986}. 
+Catalytic hydrogenation is the most efficient process for the large-scale reduction of nitrocompounds to their aromatic amines \cite{cartolano_amines_2004}. In the Béchamp process, the oldest commercial process for preparing amines, reduction takes place in the presence of iron and hydrochloric acid \cite{bowers_toluidines_2000}. This process has now widely been replaced by continuous high pressure catalytic hydrogenation in the vapour or liquid phase, either with or without a solvent. Liquid phase reaction is the most common process for the manufacturing of toluidine which are too thermally sensitive for vapour-phase reactions \cite{cartolano_amines_2004}. For this reason, Nitroma concentrated its efforts at developing a continuous liquid-phase hydrogenation process. The choice of reducing agent was straight forward since very high conversion can be achieved with pure hydrogen, compared to liquid alternatives such as formic acid and ammonium formate \cite{gowda_catalytic_2000}. Downstream processing is also facilitated as gaseous \ch{H2} can directly be vented from the liquid-phase reactor. Different catalysts, including palladium on carbon, Raney nickel and copper have been used for nitroluene reduction \cite{zhao_new_2016}. Due to its proven effectiveness, it was decided to use a \SI{2}{\percent\ww} palladium-on-carbon (Pd/C) catalyst in the liquid-phase \cite{rajadhyaksha_solvent_1986}. 
 
 The use of a solvent has significant effect on the rate and selectivity of the hydrogenation \cite{bowers_toluidines_2000}. Despite reducing the productivity of the reactor, the improved rates of reaction outweigh the additional costs of separating and recycling the solvent. Nitroma's reaction is carried out in a solvent to dissolve solid reactants and products, absorb the heat of exothermic reaction, and protect the catalyst surface from impurities \cite{yao_kinetics_1959}. The solubility of hydrogen in the solvent is critical to accelerate the rate of reaction. Low molecular weight alcohols are the preferred solvent used in industry \cite{cartolano_amines_2004}. Recent studies have employed supercritical fluids as solvents for hydrogenations. However, the benefits offered by the high concentrations of hydrogen at the catalyst surface cannot balance the increased capital and operating costs arising from much higher pressures required \cite{bowers_toluidines_2000}. 
 
@@ -204,38 +222,12 @@ This process gives yields of \SIlist{86;80}{\percent} for 4-ABA and 4-ABH respec
 
 An alternative process for 4-aminobenzaldehyde production is the one-pot conversion of PNT to 4-ABH with sodium polysulfide and \ch{NaOH} in ethanol has been reported \cite{ogata_mechanism_1979}. Sulfur has the ability to simultaneously oxidise and reduce the nitromolecule. 4-ABH yields of up to \SI{75}{\percent} have been achieved \cite{beard_preparation_1944}. Despite the reduced capital expenditure offered by this one-step process, this synthesis route was disregarded due to its unproven industrial application. The reaction mechanism of this process is indeed not yet understood, although many intermediates, including 4-nitrobenzaldehyde, have been discarded \cite{ogata_mechanism_1979}. In addition to poor knowledge on the synthesis route, the reaction usually favours the p-toluidine by-product and many contaminants, such as p-nitrophenylhydrazone are formed \cite{beard_preparation_1944}. Moreover, the use of toxic sodium polysulfide goes against Nitroma's commitment to developing a safer and less hazardous process for health and the environment.
 
-\subsection{Finalized synthesis route} %0.5 page
+\subsection{Finalised synthesis route} %0.5 page
 %ChemDraw figure 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{chapters/1-synthesis/1-Figures/routes-chosen_20210220.png}
+    \includegraphics[width=\linewidth]{1-Figures/routes-chosen_20210220.png}
     \caption{Selected synthesis routes}
     \label{fig:routes}
 \end{figure}
  
-	 
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-	
-	
-	
