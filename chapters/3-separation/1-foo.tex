@@ -82,10 +82,26 @@ C_l= \frac{\rho_s}{\rho_l}C_s
 The amount of crystallised material was calculated based on a heat balance and temperature difference between the feed and the melt. This assumes the total cooling capacity of the crystals is used to crystallise the wash liquid. 
 
 \begin{equation}
-C_s= \frac{c_p(T_melt-T_feed)}{\deltaH_m}Q_s,filters
+C_s= \frac{c_p(T_{melt}-T_{feed})}{\delta H_m}Q_{s,filters}
 \end{equation}
 
 The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes the wash liquid is not loss through the filters. This is ensured by positioning the filters above the wash section. 
+
+At steady state, the wash section is constant therefore there is no flow of mother liquor into or out of the bottom section. 
+
+The mother liquor at the top section leaves the column through the filter and split into residual and steer flow. 
+
+\begin{equation}
+\phi_residue= \phi_ml,filters - \phi_steer
+\end{equation}
+
+The volume balance at the melting circuit is based on the assumption that crystals are molten at the moment they enter the melting circuit. 
+
+\begin{equation}
+\frac{\rho_s}{\rho_l}\phi_s,knife= \phi_wl,knife - \phi_product
+\end{equation}
+
+\textbf{Force Balance}
 
 
 
