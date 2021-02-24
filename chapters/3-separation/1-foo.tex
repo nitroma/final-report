@@ -48,11 +48,11 @@ Alternatives considered..
 Commonly used solid-liquid separators are not continuous processes, typically batch or semi-batch. Wash column does wash and continuous transport in one process. Whereas, for example a centrifuge would require  melting the crystals and a means of solid transport by conveyor belt. Different type of wash columns include gravity, hydraulic and mechanical. Hydraulic was chosen because of shorter residence time and less moving mechanical parts. 
 
 \subsection{Steady State Model}
-The hydraulic wash column was modelled based on volume and force balance using initial dimensions from ---. Following this method, the initial dimensions were varied to determine the performance of the column as key variables were varied.  
+Generally, the design of a hydraulic wash column will be based on pilot-scale experiments to determine appropriate dimensions at varying operating conditions. Instead, a dynamic model from literature --- was used to estimate the performance of the column. The hydraulic wash column was modelled based on volume and force balance using initial dimensions from ---. Following this method, the initial dimensions were varied to determine the performance of the column as key variables were varied.  
 
-Assumes 100 \% solid-liquid separation in the wash column therefore no presence of liquid in the product flow rate since mother liquor will not enter the wash front. However, if impurities are entrapped in the crystal lattice during crystallisation, these will not be removed. This highlights the disadvantage of hydraulic wash column compared to gravity wash column. Gravity wash column allows some impurities to be removed from the crystals during the long residence time. 
+The model 100 \% solid-liquid separation in the wash column therefore no presence of liquid in the product flow rate since mother liquor will not enter the wash front. However, if impurities are entrapped in the crystal lattice during crystallisation, these will not be removed. This highlights the disadvantage of hydraulic wash column compared to gravity wash column. Gravity wash column allows some impurities to be removed from the crystals during the long residence time. 
 
-The steady state model for the hydraulic wash column consists of a volume and force balance with the following assumptions:
+The steady state model for the hydraulic wash column was formulated based on the following assumptions:
 ** a diagram of the wash column
 \\ 1) The column is filled with incompressible liquid and crystals. 
 \\ 2) Viscosity of the liquids are temperature independent for simplicity. 
@@ -85,20 +85,22 @@ The amount of crystallised material was calculated based on a heat balance and t
 C_s= \frac{c_p(T_{melt}-T_{feed})}{\delta H_m}Q_{s,filters}
 \end{equation}
 
-The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes the wash liquid is not loss through the filters. This is ensured by positioning the filters above the wash section. 
-
-At steady state, the wash section is constant therefore there is no flow of mother liquor into or out of the bottom section. 
-
-The mother liquor at the top section leaves the column through the filter and split into residual and steer flow. 
+The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes the wash liquid is not loss through the filters which is ensured by positioning the filters above the wash section.
 
 \begin{equation}
-\phi_residue= \phi_ml,filters - \phi_steer
+\epsilon_w A_c \frac{dL_{wash}}{dt}= \phi_{wl,knife}-C_l
+\end{equation}
+
+At steady state, the wash section is constant therefore there is no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and split into residual and steer flow. 
+
+\begin{equation}
+\phi_{residue}= \phi_{ml,filters} - \phi_{steer}
 \end{equation}
 
 The volume balance at the melting circuit is based on the assumption that crystals are molten at the moment they enter the melting circuit. 
 
 \begin{equation}
-\frac{\rho_s}{\rho_l}\phi_s,knife= \phi_wl,knife - \phi_product
+\frac{\rho_s}{\rho_l}\phi_{s,knife}= \phi_{wl,knife} - \phi_{product}
 \end{equation}
 
 \textbf{Force Balance}
