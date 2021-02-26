@@ -171,11 +171,12 @@ The linear system of equations from the steady state model were solved using the
 \caption{Input variables and parameters}
 \label{tab:inputsparameters}
 \begin{tabular}{llll}
-\multicolumn{2}{c}{Inputs}         & \multicolumn{2}{c}{Parameters}           \\
-Feed Flow (m3/s)                &  & Porosity, epsilon                     &  \\
-Steer Flow (m3/s)               &  & Filtration Permeability Constant (m2) &  \\
-Crystal concentration (v/v)     &  & Wash Permeability Constant (m2)       &  \\
-Flow resistance factor (Pas/m3) &  &                                       & 
+\hline
+\multicolumn{2}{|c|}{Inputs}       & \multicolumn{2}{c|}{Parameters}          \\ \toprule
+\phi_{feed} (m^{3}/s)         & $4.27\times10^{5}$ & Porosity, epsilon                     &  0.6 \\ \hline
+\phi_{steer} (m^{3}/s)    & $2.84\times10^{5}$ & B_{filtration} (m^{2}) & $7.87\times10^{-14}$ \\ \hline
+Crystal concentration (v/v)     &  & B_{wash} (m^{2})    & $6.75\times10^{-14}$ \\ \hline
+K_{w} (Pas/m^{3}) &  $2.20\times10^{10}$  &                                       &  \\ \bottomrule
 \end{tabular}
 \end{table}
 
