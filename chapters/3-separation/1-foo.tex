@@ -79,7 +79,7 @@ The model assumes 100 \% solid-liquid separation in the wash column therefore no
 ** a diagram of the wash column
 
 \textbf{Volume balance} 
-This model was based on the assumption that the liquid and solid in the system were incompressible. For simplicity density and viscosity were assumed to be independent of temperature. 
+\\This model was based on the assumption that the liquid and solid in the system were incompressible. For simplicity density and viscosity were assumed to be independent of temperature. 
 
 \\Overall volume balance at the top section 
 \begin{equation}
@@ -130,7 +130,7 @@ The volume balance at the melting circuit is based on the assumption that crysta
 
 
 \textbf{Force balance}
-The liquid pressure drop across each zones were calculated with a modified Darcy equation. 
+\\The liquid pressure drop across each zones were calculated with a modified Darcy equation. 
 
 \begin{equation}
 \frac{\Delta P_{l,filtration}}{L_{filtration}}=\frac{\epsilon \eta_{l}}{B_{filtration}}\left(\frac{\phi_{ml,filters}}{\epsilon A_c} - \frac{\phi_{s,filters}}{1-\epsilon A_c}\right)
@@ -144,9 +144,27 @@ The liquid pressure drop across each zones were calculated with a modified Darcy
 \frac{\Delta P_{l,wash}}{L_{wash}}=\frac{\epsilon \eta_{l}}{B_{wash}}\left(-\frac{\phi_{wl,knife}}{\epsilon_w A_c} - \frac{\phi_{s,knife}}{1-\epsilon_w A_c}\right)
 \end{equation}
 
+The liquid pressure gradient at each zones are assumed to be constant due to the incompressibilty assumption of the packed bed. The liquid pressure at the top in the slurry section is based on the pressure at the filter and the pressure drop over the filtration section. 
 
+\begin{equation}
+P_{top} = P_{filters} + \Delta P_{l,filtration}
+\end{equation}
+
+
+The pressure at the bottom is equal to the pressure drop in the valve of the melting circuit. This pressure drop across the valve is determined through a linear relation with the product flow rate. 
+
+\begin{equation}
+P_{bottom}=\Delta P_{valve} = K_w\phi_{product}
+\end{equation}
+
+The pressure after the valve is atmospheric.The pressure in the melting circuit is calculated using the equation below. 
+
+\begin{equation}
+\Delta P_{valve} = \Delta P_{l,stagnant} + \Delta P_{l,wash} + P_{filters}
+\end{equation}
 
 \subsection{Dimensions} 
+The linear system of equations from the steady state model were solved using the following input variables and parameters shown in Table --. 
 
 Inputs and parameters table. 
 
