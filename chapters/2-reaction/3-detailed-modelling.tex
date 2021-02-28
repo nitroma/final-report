@@ -48,8 +48,16 @@ For the ease of modelling, the pellets were assumed to be perfectly spherical. T
     \eta = \frac{3}{\phi_{sphere}} \bigg(\frac{1}{tanh \phi_{sphere}} - \frac{1}{\phi_{sphere}}\bigg)
 \end{equation}
 
-The pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. The radius of the pellet is chosen to be 4 \times 10\textsuperscript{-4} m, giving an effectiveness factor of 0.99. The Weisz-Prater criterion is used to evaluate the effect of diffusional limitation within the pellet. It can be assumed that there is negligible diffusional limitations within the pellet if \tezPhi
-At this pellet radius, the Weisz-Prater  it can be considered that there are no diffusional limitations in the catalyst, and no concentration gradient. This pellet size 
+The pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1.
+
+
+The radius of the pellet is chosen to be 4 \times 10\textsuperscript{-4} m, giving an effectiveness factor of 0.99. The Weisz-Prater criterion is used to evaluate the effect of diffusional limitation within the pellet:
+\begin{equation}
+    \Phi = \eta \phi^2
+\end{equation}
+It can be assumed that there is negligible diffusional limitations within the pellet if the Weisz-Prater number is \ll 1.
+
+Using the chosen pellet radius, the Weisz-Prater is found to be 0.199, therefore it can be considered that there is no concentration gradient within the pellet.
 
 
 \subsection{Axial dispersion}
