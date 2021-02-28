@@ -1,15 +1,18 @@
 % !TeX root = ../../main.tex
 \section{Detailed reactor modelling}
 \subsection{Heat of reaction}
-To understand the thermal effects of the reaction, the enthalpy of reaction was initially calculated using the enthalpy of formation for each compound participating in the reaction. Data on the standard heat of formation for the compounds were sourced from the NIST website and literature papers. A full table of the source of each enthalpy can be found in [link to appendix/ supporting info].  Since the reaction was carried out at 330K,
+To understand the thermal effects of the reaction, the enthalpy of reaction was initially calculated using the enthalpy of formation for each compound participating in the reaction. Data on the standard heat of formation for the compounds were sourced from the NIST website and literature papers. A full table of the source of each enthalpy can be found in [link to appendix/ supporting info]. 
 
-
-The enthalpy of reaction was calculated using Hess Law, using the equation below:
+The enthalpy of reaction was calculated using Hess Law, as shown in the equation below:
 \begin{equation}
-  \Delta H_{r} = \Delta H_{f,nitrotoluene} + \Delta H_{f,water} - \Delta H_{f,toluene} - \Delta H_{f,nitric acid}
+  \Delta H_{r}^{T} = \Delta H_{f,nitrotoluene}^{T} + \Delta H_{f,water}^{T} - \Delta H_{f,toluene}^{T} - \Delta H_{f,nitric acid}^{T}
 \end{equation}
 
- 
+Since the reaction was carried out at 330K, the heat of reaction was adjusted to the operating temperature by using the heat capacities of the compounds.
+\begin{equation}
+  \Delta H_{r}^{330K} = \Delta H_{r}
+\end{equation}
+The final enthalpy of reaction at 330K is -116 kJ/mol. At the specified flowrates of the reactant, the heat duty of the reactor is -63.4 kW.
 \subsection{Effectiveness factor}
 
 \subsection{Axial dispersion}
