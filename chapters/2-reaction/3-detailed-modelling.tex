@@ -16,7 +16,7 @@ Since the reaction was carried out at 330K, the enthalpy of reaction was adjuste
 
 P-nitrotoluene is an exception, because it is a solid at standard state. Therefore, the latent heat of fusion needs to be included when adjusting the enthalpy of reaction to the operating temperature. 
 
-The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactant, the heat duty of the reactor is -63.4 kW.
+The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactants, the heat duty of the reactor is -63.4 kW.
 
 \begin{table}[H]
 \centering
@@ -25,17 +25,24 @@ The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the s
 \begin{tabularx}{\linewidth}{l|XXX}
 \toprule
                                                                 & Standard enthalpy of formation (298K, 1 atm) [kJ/mol] & Heat Capacity [J/mol K] & Enthalpy of formation (330K, 1 atm) [kJ/mol] \\ \midrule
-Toluene                        & 12              & 157.09              & 17.00                     \\
-Nitric acid                      & -207.36              & 109.89              & -203.86                       \\
-O-nitrotoluene & -21.7             & 202.5              & -15.25              \\ 
-M-Nitrotoluene                      & -30.4              & 202.1             & -23.96                       \\
-P-Nitrotoluene                      & -46.3              & 172.3 (solid), 214 (liquid)             & -23.89                        \\
-H2O                      & -285.83              & 75.26              & -283.43                        \\
+Toluene                        & 12.0              & 157.1              & 17.0                     \\
+Nitric acid                      & -207.4              & 109.9              & -203.9                       \\
+O-nitrotoluene & -21.7             & 202.5              & -15.3              \\ 
+M-Nitrotoluene                      & -30.4              & 202.1             & -24.0                       \\
+P-Nitrotoluene                      & -46.3              & 172.3 (solid), 214.0 (liquid)             & -23.9                        \\
+Water                     & -285.8              & 75.3              & -283.4                        \\
 \bottomrule
 \end{tabularx}
 \end{table}
 \subsection{Effectiveness factor}
+H-Mordenite catalyst particles are used in the reaction. This creates a possibility of 
 
+For the ease of modelling, the pellets were assumed to be perfectly spherical. Therefore, the effectiveness factor is calculated as 
+\begin{equation}
+    \eta = \frac{3}{\phi}
+\end{equation}
+
+The tortuosity of the pellet 
 \subsection{Axial dispersion}
 The axial dispersion was calculated as it is an important parameter in affecting the performance and conversion of the packed-bed reactor. 
 
@@ -49,8 +56,8 @@ The values of $D_{ab}$ was calculated using the Wilke-Chang correlation.
     D_{ab}=\frac{7.4\cdot 10^{-8}(\phi M_2)^{0.5}T}{\mu V_1^{0.6}}
     \label{wilkechang}
 \end{equation}
-where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient $u$ is the superficial velocity, $\phi$ is the association parameter which is estimated to be 1 for toluene, $M_2$ is the molecular weight of the solvent which is calculated based on the volumetric ratio of nitric acid and water, 
+where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient $u$ is the superficial velocity, $\phi$ is the association parameter which is estimated to be 1 for toluene, $M_2$ is the molecular weight of the solvent which is calculated based on the volumetric ratio of nitric acid and water, $V_1$ is the molar volume of toluene at boiling point.
 The axial dispersion coefficient ($D_z$) was calculated to for various diameters and plotted based on the equations \ref{axial dispersion coefficient} and \ref{wilkechang}.
 \textcolor{red}{Insert Dz vs diameter graph here} 
-From the graph, a diameter of 20cm has been selected as the optimal diameter based on graph X as minimal axial dispersion is preferred. 
+From the graph, a diameter of 20cm has been selected as the optimal diameter based on graph X as minimal axial dispersion is preferred. Moreover, any further increase in the diameter does not warrant the drawback of the increasing pressure drop ($\delta P$).
 \subsection{Adiabatic temperature}
