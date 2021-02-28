@@ -35,15 +35,19 @@ Water                     & -285.8              & 75.3              & -283.4    
 \end{tabularx}
 \end{table}
 \subsection{Effectiveness factor}
-H-Mordenite catalyst particles are used in the reaction. From the rate equation, it can be assumed that all of the nitration reaction takes place in the solid-fluid interface. Hence, it is important to understand the effect of external and internal diffusional limitation of the catalys
+H-Mordenite catalyst is used in the nitration reaction. From the rate equation, the concentration of nitric acid is in excess it can be assumed that all of the nitration reaction takes place in the solid-fluid interface. Hence, it is important to understand the effect of external and internal diffusional limitation of the reaction depending on the size of the catalyst pellet. This section outlines the steps used to determine the suitable pellet size to be used in the reactor.
 
-The effective diffusional coefficient $D_e$ is calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [ref]: 
+The effective diffusional coefficient $D_e$ is first calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [ref]: 
 \begin{equation}
     D_e = \frac{\epsilon_p D_p}{\tau_p}
 \end{equation}
 where the intraparticle void fraction for H-mordenite is 0.463 from (saleman et al), the pore diffusion coefficient is 1.56 \times 10\textsuperscript{-9} and the tortuosity of the pellet was found to be 1.63 using the equation given in [ref]. 
 
-The effective diffusional coefficient is used to calculate Thiele modulus $\phi$, which is needed to calculate the effectiveness factor $\eta$. For the ease of modelling, the pellets are assumed to be perfectly spherical, and therefore the effectiveness factor is calculated as: 
+The effective diffusional coefficient is used to calculate Thiele modulus $\phi$ through the equation:
+\begin{equation}
+    \phi = r_p \sqrt{\frac{k_v}{D_e}}
+\end{equation}
+which is subsequently used to determine the effectiveness factor $\eta$. For the ease of modelling, the pellets are assumed to be perfectly spherical, and therefore the effectiveness factor is calculated as: 
 \begin{equation}
     \eta = \frac{3}{\phi_{sphere}} \bigg(\frac{1}{tanh \phi_{sphere}} - \frac{1}{\phi_{sphere}}\bigg)
 \end{equation}
