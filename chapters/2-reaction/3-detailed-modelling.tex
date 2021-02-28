@@ -47,17 +47,15 @@ For the ease of modelling, the pellets were assumed to be perfectly spherical. T
 \begin{equation}
     \eta = \frac{3}{\phi_{sphere}} \bigg(\frac{1}{tanh \phi_{sphere}} - \frac{1}{\phi_{sphere}}\bigg)
 \end{equation}
+An effectiveness factor of $\approx$ 1 means that the external film resistance of the catalyst pellet is negligible
 
-The pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1 between 10\textsuperscript{-6} to 10\textsuperscript{-3} m, before dropping sharply at larger radius size. Thus, the range of possible pellet radius
+The pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1 between 10\textsuperscript{-6} to 10\textsuperscript{-3} m, before dropping sharply at larger radius size. Thus, the range of possible pellet radius is narrowed to between 10\textsuperscript{-4} to 10\textsuperscript{-3} m. 
 
-
-The radius of the pellet is chosen to be 4 \times 10\textsuperscript{-4} m, giving an effectiveness factor of 0.99. The Weisz-Prater criterion is used to evaluate the effect of diffusional limitation within the pellet [ref]:
+To select the suitable pellet size, the Weisz-Prater criterion is used. This criterion evaluates the effect of diffusional limitation within the pellet [ref] :
 \begin{equation}
     \Phi = \eta \phi^2
 \end{equation}
-It can be assumed that there is negligible diffusional limitations within the pellet if the Weisz-Prater number is $\ll$ 1.
-
-Using the chosen pellet radius, the Weisz-Prater is found to be 0.199, which can be considered as having no concentration gradient within the pellet.
+It can be assumed that there is negligible diffusional limitations within the pellet if the Weisz-Prater number is $\ll$ 1. From Fig. [Weisz graph], the Weisz-Prater number falls steadily as the pellet size decreases. The final radius of the pellet is chosen to be 4 \times 10\textsuperscript{-4} m, giving an effectiveness factor of 0.99, and Weisz-Prater number of 0.199, which suggests that there is no concentration gradient within the pellet.
 
 
 \subsection{Axial dispersion}
