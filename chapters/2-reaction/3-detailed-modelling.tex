@@ -8,11 +8,16 @@ The enthalpy of reaction was calculated using Hess Law, as shown in the equation
   \Delta H_{r}^{T} = \Delta H_{f,nitrotoluene}^{T} + \Delta H_{f,water}^{T} - \Delta H_{f,toluene}^{T} - \Delta H_{f,nitric acid}^{T}
 \end{equation}
 
-Since the reaction was carried out at 330K, the heat of reaction was adjusted to the operating temperature by using the heat capacities of the compounds. 
+Since the reaction was carried out at 330K, the heat of reaction was adjusted to the operating temperature by using the heat capacities of the compounds using the equation below. 
+
 \begin{equation}
   \Delta H_{r}^{330K} = \Delta H_{r}^{Standard \ state} + C_p \Delta T
 \end{equation}
+
+The enthalpy of reaction was not further adjusted to capture the effects of pressure because pressure has a negligible effect on the overall enthalpy.
+
 The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactant, the heat duty of the reactor is -63.4 kW.
+
 \subsection{Effectiveness factor}
 
 \subsection{Axial dispersion}
@@ -28,7 +33,7 @@ The values of $D_{ab}$ was calculated using the Wilke-Chang correlation.
     D_{ab}=\frac{7.4\cdot 10^{-8}(\phi M_2)^{0.5}T}{\mu V_1^{0.6}}
     \label{wilkechang}
 \end{equation}
-where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient $u$ is the superficial velocity, $$
+where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient $u$ is the superficial velocity, $\phi$ is the association parameter which is estimated to be 1 for toluene, $M_2$ is the molecular weight of the solvent which is calculated based on the volumetric ratio of nitric acid and water, 
 The axial dispersion coefficient ($D_z$) was calculated to for various diameters and plotted based on the equations \ref{axial dispersion coefficient} and \ref{wilkechang}.
 \textcolor{red}{Insert Dz vs diameter graph here} 
 From the graph, a diameter of 20cm has been selected as the optimal diameter based on graph X as minimal axial dispersion is preferred. 
