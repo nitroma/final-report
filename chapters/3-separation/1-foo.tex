@@ -179,11 +179,11 @@ The linear system of equations from the steady state model were solved using inp
 \multicolumn{3}{|c|}{Inputs}          & \multicolumn{3}{c|}{Parameters}             \\ \toprule
 $\phi_{feed}$  & $4.27\times10^{5}$ & m^{3}/s &
 $\epsilon$  & 0.45  & - \\ \hline
-$\phi_{steer}$    & $2.84\times10^{5}$ & m^{3}/s &
+$\phi_{steer}$    & $1.75\times10^{5}$ & m^{3}/s &
 B_{filtration}  & $7.87\times10^{-14}$ & m^{2} \\ \hline
 $\alpha_1$ & 0.791  & v/v &
 B_{wash}  & $6.75\times10^{-14}$ & m^{2} \\ \hline
-K_{w} &  $2.20\times10^{10}$ & Pas/m^{3}  & &  &  \\ \bottomrule
+K_{w} &  $3.0\times10^{10}$ & Pas/m^{3}  & &  &  \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -193,10 +193,13 @@ During operation of the hydraulic column  variations in the length of the filtra
 In the design of the hydraulic column there are many variables. Therefore, the length of the variable was fixed at 1 m following the literature. Instead, the diameter of the column was varied. Figure -- shows the impact diameter has on the column's performance. Below 0.125 m the model showed negative pressure at the filter implying instead of mother liquor flowing up through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative implying the column could be malfunctioning. A suitable diameter was chosen at 0.18 m allowing for variations in the column. 
 
 *graph on effect of varying steer flow 
-Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some liquor are removed as residual flow. In order to find the appropriate steer flow, it was varied from 4.5e-6 to 3.5e-5 m3/s. 
+Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some liquor are removed as residual flow. In order to find the appropriate steer flow, it was varied from 4.5e-6 to 3.45e-5 m3/s. Figure -- shows the unfeasible and feasible region of operation. Above a steer flow 2e-5, the column starts exhibiting negative filter pressures. However, at lower steer flow such as 4.5e-6 the filter pressure increases significantly to more than 15 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 1.75 e-5 seemed reasonable.  
 
 
 *graph on effect of varying permeability constant
+Once the steer flow and diameter of the column were concluded. A sensitivity analysis on the permeability constant was conducted by varying the Kozenzy constant, K. 
+
+
 
 Final dimension table - Length of bed, height, diameter, number of filter tubes etc. 
 
