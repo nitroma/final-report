@@ -128,19 +128,19 @@ The length of the wash section is related to the wash-liquid flow entering the k
 \epsilon_w A_c \frac{dL_{wash}}{dt}= \phi_{wl,knife}-C_l
 \end{equation}
 
-The wash column during operation shows 3 layers of filtration, stagnant and wash zones. Within the filtration and stagnant it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was taken as 0.6. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability is considered. The consolidation of the crystal bed were neglected in this model. The porosity in the wash zone was calculated from the equation below. 
+The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was taken as 0.45. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be further evaluated in a pilot scale experiment. The porosity in the wash zone was calculated from the equation below. 
 
 \begin{equation}
 \epsilon_{w}= \epsilon-(1-\epsilon)\left(\frac{c_p(T_{melt}-T_{feed})}{\Delta H_m}\right)
 \end{equation}
 
-At steady state, the wash section is constant therefore there is no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and split into residual and steer flow. 
+At steady state, the wash section is constant therefore there  would be no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and splits into residual and steer flow. 
 
 \begin{equation}
 \phi_{residue}= \phi_{ml,filters} - \phi_{steer}
 \end{equation}
 
-The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at melting temperature. 
+The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at the melting temperature. 
 
 \begin{equation}
 \frac{\rho_s}{\rho_l}\phi_{s,knife}= \phi_{wl,knife} - \phi_{product}
@@ -148,7 +148,7 @@ The volume balance at the melting circuit is based on the assumption that crysta
 
 
 \textbf{Force balance}
-\\The liquid pressure drop across each zones were calculated with a modified Darcy equation. 
+\\The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. 
 
 \begin{equation}
 \frac{\Delta P_{l,filtration}}{L_{filtration}}=\frac{\epsilon \eta_{l}}{B_{filtration}}\left(\frac{\phi_{ml,filters}}{\epsilon A_c} - \frac{\phi_{s,filters}}{1-\epsilon A_c}\right)
@@ -162,7 +162,7 @@ The volume balance at the melting circuit is based on the assumption that crysta
 \frac{\Delta P_{l,wash}}{L_{wash}}=\frac{\epsilon \eta_{l}}{B_{wash}}\left(-\frac{\phi_{wl,knife}}{\epsilon_w A_c} - \frac{\phi_{s,knife}}{1-\epsilon_w A_c}\right)
 \end{equation}
 
-The liquid pressure gradient at each zones are assumed to be constant due to the incompressibilty assumption of the packed bed. The liquid pressure at the top in the slurry section is based on the pressure at the filter and the pressure drop over the filtration section. 
+The liquid pressure gradient at each section were assumed to be constant due to the incompressibilty assumption of the packed bed. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 
 \begin{equation}
 P_{top} = P_{filters} + \Delta P_{l,filtration}
