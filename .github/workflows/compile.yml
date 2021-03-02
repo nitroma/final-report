@@ -20,3 +20,9 @@ jobs:
         with:
           name: compiled-pdf
           path: main.pdf
+      - name: Upload logs on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: run-log
+          path: main.log
