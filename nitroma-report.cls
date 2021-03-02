@@ -92,7 +92,7 @@
 \setcounter{secnumdepth}{3}
 
 %%% NUMBERING & CONTENTS
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[hidelinks,pdfusetitle]{hyperref}
 \RequirePackage[numbered]{bookmark}
 \RequirePackage{chngcntr}
 \setcounter{tocdepth}{1}
