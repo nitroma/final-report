@@ -2,7 +2,7 @@
 \section{Detailed reactor modelling: Nitration of toluene}
 The nitration of toluene in the packed-bed reactor R101 has been chosen to be designed in detail for a few reasons. Firstly, the nitration process is highly exothermic with risk of thermal runaway, thus an inherently safe design of this reactor is imperative for a continuous nitration process. Moreover, transitioning from the traditionally batch nitration process into a continuous process offers the opportunity to innovate and investigate the yield between heat transfer effects and conversion. Next, the multiphase reaction of liquid-liquid-solid with the usage of solid H-Modernite zeolite as catalyst in this reactor provides a new avenue of modelling with the inclusion of solid zeolite properties such as diffusional limitation. 
 
-- add a table summary of our design - refer to reactor choices (pressure drop tab) \textcolor{red}{here or appendix?}
+- add a table summary of our design - refer to reactor choices (pressure drop tab) \textcolor{red}{here or appendix? To include comments or not?}
 \textcolor{red}{also check: why is the table so different???}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -33,7 +33,7 @@ Total pressure drop          & 1.41 x 10^-1 & bar   &          \\ \bottomrule
 \subsection{Preliminary reactor design}
 %The few reactor choices that were considered, packed-bed microreactor, coated wall reactor, static mixer, and etc.
 %This was mentioned in synthesis team by marie
-Several reactors for this reaction was considered for this nitration process including microreactor, coated wall reactor and static mixer. The choice of reactors was discussed in detail in section \textcolor{red}{Reactor choices from Synthesis}.
+Several reactors for this reaction was considered for this nitration process including microreactor, coated wall reactor and static mixer. The choice of reactors was discussed in detail in the Synthesis section \textcolor{red}{Reactor choices from Synthesis}.
 
 \subsection{Heat of reaction}
 To understand the thermal effects of the reaction, the enthalpy of reaction was initially calculated using the enthalpy of formation for each compound participating in the reaction. Data on the standard heat of formation for the compounds were sourced from the NIST website and literature papers. A full table of the source of each enthalpy can be found in [link to appendix/ supporting info]. 
@@ -113,6 +113,7 @@ It can be assumed that there is negligible diffusional limitations within the pe
 
 
 \subsection{Axial dispersion}
+\label{sec:axialdispersion}
 The axial dispersion was calculated as it is an important parameter in affecting the performance and conversion of the packed-bed reactor. 
 
 The axial dispersion coefficient ($D_z$) can be calculated using the Taylor expression: 
@@ -128,7 +129,9 @@ The values of $D_{ab}$ was calculated using the Wilke-Chang correlation.
 where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient $u$ is the superficial velocity, $\phi$ is the association parameter which is estimated to be 1 for toluene, $M_2$ is the molecular weight of the solvent which is calculated based on the volumetric ratio of nitric acid and water, $V_1$ is the molar volume of toluene at boiling point.
 The axial dispersion coefficient ($D_z$) was calculated to for various diameters and plotted based on the equations \ref{axial dispersion coefficient} and \ref{wilkechang}.
 \textcolor{red}{Insert Dz vs diameter graph here} 
-From the graph, it can be observed that the dispersion coefficient decreases sharply after after ~10cm. Thus, a diameter of 20cm has been selected as any further increase in the diameter does not warrant the drawback of the increasing pressure drop ($\Delta P$).
+
+
+From the graph, it can be observed that the dispersion coefficient decreases sharply after after ~10cm. Thus, a diameter of 20cm has been selected as any further increase in the diameter does not warrant the drawback of the increasing pressure drop ($\Delta P$), as the $d_p$ is inversely proportional to $\Delta P$ based on equation \ref{eqn:pressuredrop}.
 \subsection{Adiabatic temperature}
 \subsection{Pressure drop}
 The pressure drop of is a significant consideration in during the selection and modelling of this reactor as the packed-bed reactor shows the 
@@ -149,7 +152,7 @@ In lieu with the pressure drop criteria, an iterative approach was taken to defi
     Aspect ratio = \frac{L}{d_t}
     \label{eqn:pressuredrop}
 \end{equation}
-where the diameter of the tube ($d_t$) was determined to be 0.2m from Section (axial dispersion), volume of reactor required ($V$) was modelled to be 0.924 $m^3$ based on Aspen. Moreover, 
+where the diameter of the tube ($d_t$) was determined to be 0.2m from Section \ref{sec:axialdispersion}, volume of reactor required ($V$) was modelled to be 0.924 $m^3$ based on Aspen. Moreover, 
 
 \textcolor{red}{include Andreas fancy matlab plot here}
 
