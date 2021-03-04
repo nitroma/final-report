@@ -103,24 +103,42 @@ Liquid-phase hydrogenation of 4-NBH and 4-NBA using formic acid as the transfer 
 
 \subsection{Separation strategies}
 
-To select the optimum separation techniques for its continuous process, Nitroma ranked the different options using the Jaksland procedure. 
+To select the optimum separation techniques for its continuous process, Nitroma ranked the different options using the Jaksland procedure. This method was chosen as a quantitative method of ranking separation techniques because it is well established and does not require much computation once physical properties of the chemicals are known \cite{jaksland_separation_1995}. 
 
 \subsubsection{Nitrotoluene isomers}
 
-The R101 effluent is fed to a decanter (S101) to separate the aqueous nitric acid from the organic phase. Following water evaporation in a distillation column (S102), nitric acid is recycled back into the nitration reactor at a \SI{94}{mol\percent} purity.
-Meanwhile, the organic phase is sent to a distillation column (S103) recovering \SI{99.8}{mol\percent} of toluene from the less volatile nitrotoluenes, which is fed back to the nitration reactor. The nitrotoluenes are sent to a second distillation column (S201) to separate \SI{99.99}{mol\percent} of the more volatile ONT from MNT and PNT. The large difference in the PNT and MNT melting points is exploited in a continuous falling-film crystalliser (S202). 
-The nitrotoluene isomer separation is a crucial step, as it determines the production rate of downstream products. Thus the separation techniques above were carefully selected using both a quantitative method (Jaksland analysis) \cite{jaksland_separation_1995} and sound engineering judgement. Details are available in Appendix \ref{app:ntol separation}. Operating conditions of each separation unit can also be found in \cref{tab:equipment sizing}. 
+The first separation step of the process is the recovery of spend  aqueous nitric acid from the organic phase in a decanter. Following water evaporation in a distillation column (S102), nitric acid is recycled back into the nitration reactor at a \SI{94}{mol\percent} purity. Nitroma decided to employ the most common acid regenartion process employed by industry \cite{dugal_nitrobenzene_2005}. Meanwhile, the organic phase is sent to a distillation column (S103) recovering \SI{99.8}{mol\percent} of toluene from the less volatile nitrotoluenes, which is fed back to the nitration reactor, following standard industrial procedures \cite{bowers_toluidines_2000}.
 
-\label{app:ntol separation}
-\subsubsection{Jaksland procedure for ranking separation techniques}
-The Jaksland procedure was chosen as a quantitative method of ranking separation techniques because it is well established and does not require much computation once physical properties of the chemicals are known \cite{jaksland_separation_1995}. The property pair ratios for the compounds are calculated and are shown in \Cref{tab:jaksland}. Separation across different phases such as vapour-vapour, vapour-liquid, liquid-liquid and liquid-solid were considered, as shown in \Cref{tab:separation techniques}.
+The nitrotoluene isomer separation is a crucial step, as it determines the production rate of downstream products. Thus the separation techniques above were carefully selected using both the Jaksland quantitative analysis \cite{jaksland_separation_1995} and sound engineering judgement. Separation across different phases such as vapour-vapour, vapour-liquid, liquid-liquid and liquid-solid were considered, as shown in \Cref{tab:separation techniques} in Appendix \Cref{app:jaksland}. Based on thermodynamic insights, a binary ratio matrix was computed using literature retrieved physical data. The property pair ratios for the compounds involved in this section of Nitroma's process are  shown in \Cref{tab:jaksland}. Properties investigated include critical and triple point temperatures, boiling and melting points, vapour pressure, critical pressure, water solubility, molecular weight and heat of vapourisation \cite{jaksland_separation_1995}. The relevant property pair ratios were then compared against the feasible and good bounds for each of the shortlisted techniques, which are tabulated in \Cref{tab:separation-pair-ratio}. Finally, the $\mu$ value for each feasible technique is calculated and tabulated in \Cref{tab:separation-mu}, and the technique with the highest value is considered to be the most optimal. 
 
-Decanting of the three nitrotoluene isomers was ruled out as an option because the organic molecules were very likely miscible with each other \cite{merck_solvent_2021}. Although certain adsorbents have proved to be able to preferentially adsorb ONT and PNT, further purification steps would be required to desorb and separate the nitrotoluenes from the desorbent \cite{zhao_new_2016}. The available literature recommends using distillation to remove the desorbent, which seems to make adsorption a redundant step compared to direct distillation of the nitrotoluene isomers \cite{zinnen_ep0181106a2_1984}. Absorption was also not considered as the solubility of the nitrotoluene isomers are likely to be similar across different types of solvents since the functional groups and molecular weights of the isomers are identical. Sedimentation was not considered as the maximum purity achievable is around \SI{70}{\percent} \cite{seider_product_2009}. Crystallisation and membrane technology were relatively new separation techniques that were considered. 
+\begin{table}[h]
+\centering
+\caption{$\mu$ values for each shortlisted technique.}
+\label{tab:separation-mu}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Pair              & Distillation                 & Distillation                    & Flash      & Flash      & Crystallisation (melt) \\ \midrule
+Criteria             & Boiling point                &                & Boiling point       & Vapour pressure          & Melting point \\ \midrule
+ONT / PNT & 2.23                         & \cellcolor[HTML]{C6E0B4}37.88   & Infeasible & 1.62       & 0.11                   \\
+ONT / MNT & 0.89                         & \cellcolor[HTML]{C6E0B4}45.42   & Infeasible & 2.30       & Infeasible             \\
+PNT/ MNT & \cellcolor[HTML]{C6E0B4}0.32 & 0.31                            & Infeasible & Infeasible & Infeasible             \\
+ONT / tol     & 27.97                        & \cellcolor[HTML]{C6E0B4}6665.48 & 0.35       & 598.10     & 4.43                   \\
+PNT / tol     & 32.14                        & \cellcolor[HTML]{C6E0B4}366.12  & 0.60       & 31.16      & 8.90                   \\
+MNT / tol     & 30.41                        & \cellcolor[HTML]{C6E0B4}307.95  & 0.49       & 25.93      & 6.00                   \\ \bottomrule
+\end{tabular}
+\end{table}
 
-The relevant property pair ratios were compared against the feasible and good bounds for each of the shortlisted techniques, which are tabulated in \Cref{tab:separation-pair-ratio}. The $\mu$ value for each feasible technique is then calculated and tabulated in \Cref{tab:separation-mu}, and the technique with the highest value is considered to be the most optimal. 
+Decanting of the three nitrotoluene isomers was ruled out as an option because the organic molecules were very likely miscible with each other \cite{merck_solvent_2021}. Although certain adsorbents have proved to be able to preferentially adsorb ONT and PNT, further purification steps would be required to desorb and separate the nitrotoluenes from the desorbent \cite{zhao_new_2016}. The available literature recommends using distillation to remove the desorbent, which seems to make adsorption a redundant step compared to direct distillation of the nitrotoluene isomers \cite{zinnen_ep0181106a2_1984}. Absorption was also not considered as the solubility of the nitrotoluene isomers are likely to be similar across different types of solvents since the functional groups and molecular weights of the isomers are identical. Sedimentation was not considered as the maximum purity achievable is around \SI{70}{\percent} \cite{seider_product_2009}. Instead, crystallisation is a relatively new separation technique which was considered. 
 
-\subsubsection{Further considerations}
-Although the Jaksland analysis recommends that distillation be used to separate m and p-nitrotoluene, the boiling point difference between the two compounds at \SI{1}{\atm} was only \SI{7}{\K}. In contrast, their melting points differed by \SI{36}{\K}. The larger difference in melting points suggested that melt crystallisation would be an easier separation, and would potentially provide a cleaner split between the two isomers. This seems to be the reason why crystallisation is a widely adopted strategy to separate m and p-nitrotoluene after distilling off the o-nitrotoluene \cite{weiland_purification_1931,european_chemical_agency_background_2010}. 
+From the shortlisted techniques presented in \Cref{tab:separation-mu}, distillation based on vapour pressure differences appears as optimum for most pairs of components. Although the Jaksland analysis recommends that distillation be used to separate m and p-nitrotoluene, the boiling point difference between the two compounds at \SI{1}{\atm} was only \SI{7}{\K}. In contrast, their melting points differed by \SI{36}{\K}. The larger difference in melting points suggested that melt crystallisation would be an easier separation, and would potentially provide a cleaner split between the two isomers. This seems to be the reason why crystallisation is a widely adopted strategy to separate MNT and PNT after distilling off ONT \cite{weiland_purification_1931,european_chemical_agency_background_2010}. 
+
+Based on these considerations, Nitroma decided to implement the following separation sequence for nitrotoluene isomers: the nitrotoluenes are sent to a distillation column to separate \SI{99.99}{mol\percent} of the more volatile ONT from MNT and PNT which are then separated by crystallisation, thus exploiting the large difference between their melting points.
+
+Two main types of crystallisation techniques were explored: melt crystallisers and solution crystallisers. In both cases, crystal growth rate are relatively fast resulting in high product purity which is economically favourable. From an environmental point of view, solution crystallisation is less favourable as it often involves the addition of a solvent which is usually treated as impurity, whereas melt crystallisation does not require any additional substance. However Nitroma aims at developing a continuous process and as such a suspension crystalliser which can be operated continuously was preferred. Further considerations for the choice of crystallisation equipment can be found in \Cref{sec:separation}. A novel crystalliser known as mixed-suspension mixed-product removal (MSMPR) was finally chosen. A slurry of PNT crystals and MNT liquid is continuously produced, followed by liquid separation in a hydraulic wash column to attain purified molten p-nitrotoluene. 
+
+%more details on the technology please!
+
+
 
 
 \subsubsection{After 4-nitrotoluene oxidation}
@@ -148,9 +166,7 @@ In the ABA scenario, the liquid effluent from reactor R401 is sent to a continuo
 
 
 
-
-
-\subsection{Heat integration}
+\subsection{Heat integration}%Bryan %0.5-1page
 
 
 \section{Points of innovation}
