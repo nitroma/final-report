@@ -35,7 +35,17 @@ The minimum calculated thickness of shell plate ($e_{cylinder}$) was calculated 
 The calculated shell volume is ...
 \subsubsection{Head dimensions}
 A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
-Based on BS5500 (), the limitation of uisng torispherical head were checked and 
+Based on BS5500 (), the limitation of uisng torispherical head were checked and met in equations \ref{eqn:torispherical} and ref tori calculation:
+\begin{equation}
+    \begin{split}
+        0.02D \leq e \leq 0.12D \\
+        r \geq 0.06D \\
+        r \geq 2e \\
+        R \leq D
+    \end{split}
+    \label{eqn:torispherical}
+\end{equation}
+-add another equation with real values
 -refer BS5500 page 78 of the pdf
 \subsection{Ports and flanges}
 \subsection{Skirt support}
