@@ -69,9 +69,10 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
 \end{figure}
 
 \subsubsection{Bottom stream composition control}
-A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve on the saturated steam. 
+A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
 
-A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. 
+A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. Figure \ref{fig:S203-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-CC.pdf}
@@ -79,9 +80,8 @@ A composition analyser was chosen to allow direct online measurements of the o-t
     \label{fig:S203-CC}
 \end{figure}
 
-
 \subsubsection{Distillation column S201 level control}
-The level of liquid in the bottom of the distillation column S201 is an important inventory to control in order to prevent the reboiler from drying up and weeping to occur in the column. 
+The liquid level at the bottom of the distillation column S201 is an important inventory to control in order to prevent the reboiler from drying up and weeping to occur in the column. Stable column operation depends on a certain level of liquid pooling at the bottom of the column. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-LC.pdf}
