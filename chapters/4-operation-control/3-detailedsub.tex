@@ -5,7 +5,7 @@
 The agreed subsection begins with a gaseous \ch{H2} stream and liquid methanol and o-nitrotoluene stream. The \ch{H2} stream is driven through a fan and preheated by an electric heater (H201) before being fed to a trickle bed reactor (R201). The liquid stream is pumped through P201 and also preheated by an electric heater (H202) and then enters R201. The reactor has a gaseous effluent which is split into a recycle and purge stream. The liquid effluent enters a packed distillation column (S201), where methanol is separated from the heavier organics. The methanol-rich vapour from the column is partially condensed and split into a gaseous and liquid product in a reflux drum (S204), while the bottoms stream containing valuable o-toluidine product is sent to downstream purification units.
 
 \subsection{Key control loops}
-Table XXX shows a summary of the control loops in the plant sub-section. A total of 11 variables were controlled using a variety of strategies such as feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
+Table XXX shows a summary of the control loops in the plant sub-section. A total of 11 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
 
 \subsubsection{Reactor R201 temperature control}
 \begin{figure}[H]
@@ -50,15 +50,6 @@ Table XXX shows a summary of the control loops in the plant sub-section. A total
 \end{figure}
 
 
-\subsubsection{Control of pressure reduction valve V201}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
-    \caption{}
-    \label{fig:V201-PC}
-\end{figure}
-
-
 \subsubsection{Distillation column S201 pressure control}
 Pressure in distillation columns is regarded as one of the most important parameters to control well, as it not only affects the relative volatilities of the heavy and light keys, but also the shape of the vapour-liquid phase equilibrium curves which determine the compositions of the top and bottoms products of the distillation column. There are several options for for pressure control, such as controlling the vapour flow that is vented from the reflux drum, condenser duty, reboiler duty, recirculation of cooling fluid in the condenser or addition of inerts. Hence the choice of manipulated variable needs to be made carefully considering the relative direct impacts and time delays of each manipulated variable. Controlling the vapour flow that is vented from the reflux drum is the simplest control to implement and usually provides the fastest response as the amount of gas holdup in the column directly affects its pressure. In addition, the amount of vapours in the reflux drum S204 is much larger compared to the condensed liquid flow, so the direct impact of vapour flowrate on column pressure would be large. This avoids a situation where the flow control valve becomes saturated and unable to regulate pressure effectively. 
 
@@ -69,6 +60,17 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-PC.pdf}
     \caption{}
     \label{fig:S203-PC}
+\end{figure}
+
+
+\subsubsection{Control of pressure reduction valve V201}
+To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the pressure of the feed to the column (see Figure \ref{fig:V201-PC}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
+    \caption{}
+    \label{fig:V201-PC}
 \end{figure}
 
 
