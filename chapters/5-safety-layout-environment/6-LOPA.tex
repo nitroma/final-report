@@ -14,26 +14,24 @@ There are three main initiating causes (ICs) which can lead to overpressurizatio
  
 Whilst there will be flammable material present in R102 which could lead to an explosion in the event of overpressure arising, the presence of hydrogen gas means that an ignition source is not necessary for an explosion to occur. Thus, the probability of ignition was taken to be 100\%, with the probability that ignition would lead to an explosion being taken as 1. As the process is continuous, there will be minimal human involvement in the operation during steady state and thus the the probability of exposure was taken as 0.1. 
  
- There are numerous  independent protection layers (IPLs) surrounding R201 in relation to overpressure. These are as follows;
+ %Alarm and Operator Response Independent of BPCS Shut Down
+
+ 
+ There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
  
  \begin{itemize}
 \item  \textbf{IPL1} - pressure controller (PIC201), responding to pressure increase in R201
-\item  \textbf{IPL2} - pressure relief device (PRV-1)
+\item  \textbf{IPL2} - pressure relief device (PRV-1), with no fouling in the device assumed 
 \item  \textbf{IPL3} - independent high pressure executive (high high) alarm PZAHH204 and corresponding trip
  \end{itemize}
 
 %check is level exec alarm would be IPL
 
 
-The applicability of each IPL 
+The applicability of each IPL varied with the three ICs. For IC1, all of the IPLs were relevant. For IC2, all IPLs applied except IPL1 as it is a fault in the pressure controller itself that initiates overpressure. 
 
 
 
-
-
-For each of the IC's the pressure relief valve, PRV-1, will be available to respond in the event of overpressure (with no fouling in the device assumed in each case). 
-
-%Alarm and Operator Response Independent of BPCS Shut Down
 
 
 
