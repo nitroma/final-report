@@ -127,35 +127,30 @@ Final dimension table - Length of bed, height, diameter, number of filter tubes 
 
 During operation of the hydraulic column  variations in the length of the filtration, stagnant and wash section with time was expected. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different points in the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore the range for variation in filtration and wash section were taken between 0.28 to 0.30 m.  
 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/diameter.jpg}
-  \caption{Effect of varying diameter.}
-  \label{fig:dia_col}
-\end{figure}
-\end{comment}
-
-*graph on effect of varying diameter 
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/diameter.jpg}
+\caption{ Effect of varying diameter}
+\label{fig:dia_col}
+\end{wrapfigure}
 
 In the design of the hydraulic column there are many variables included. Therefore, the length of the variable was fixed at 1 m following the literature. Instead, the diameter of the column was varied. Figure -- shows the impact diameter has on the column's performance. Below 0.165 m the model showed negative pressure at the filter implying instead of mother liquor flowing up through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation. 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/steerflow.jpg}
-  \caption{Effect of varying steer flowrate}
-  \label{fig:steer_col}
-\end{figure}
-\end{comment}
-*graph on effect of varying steer flow 
 
-Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. In order to find the appropriate steer flow, it was varied from 4.5e-6 to 3.45e-5 m3/s. Figure -- shows the unfeasible and feasible region of operation. Above a steer flow 2e-5, the column starts exhibiting negative liquid pressure drop at the filter. However, at lower steer flow such as 4.5e-6 the filter pressure increases significantly to more than 15 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 1.8 e-5 was chosen as reasonable. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/kozeny.jpg}
-  \caption{Effect of varying Kozeny constant}
-  \label{fig:koz_col}
-\end{figure}
-\end{comment}
-*graph on effect of varying permeability constant
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/steerflow.jpg}
+\caption{ Effect of varying steer flow rate}
+\label{fig:steer_col}
+\end{wrapfigure}
+
+Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. In order to find the appropriate steer flow, it was varied from 4.5e-6 to 3.45e-5 m3/s. Figure -- shows the unfeasible and feasible region of operation. Above a steer flow 2e-5, the column starts exhibiting negative liquid pressure drop at the filter. However, at lower steer flow such as 4.5e-6 the filter pressure increases significantly to more than 15 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 1.8 e-5 was chosen as reasonable. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region.
+
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/kozeny.jpg}
+\caption{ Effect of varying Kozeny constant}
+\label{fig:koz_col}
+\end{wrapfigure}
 
 A sensitivity analysis on the permeability constant was conducted by varying the Kozeny constant, K. 
 
