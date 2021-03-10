@@ -41,7 +41,7 @@ To understand the thermal effects of the reaction, the enthalpy of reaction was 
 
 The enthalpy of reaction was calculated using Hess Law, as shown in the equation below:
 \begin{equation}
-  \Delta H_{r}^{T} = \Delta H_{f,nitrotoluene}^{T} + \Delta H_{f,water}^{T} - \Delta H_{f,toluene}^{T} - \Delta H_{f,nitric acid}^{T}
+  \Delta H_{r}^{T} = \Delta H_{f,\mathrm{nitrotoluene}}^{T} + \Delta H_{f,\mathrm{water}}^{T} - \Delta H_{f,\mathrm{toluene}}^{T} - \Delta H_{f,\mathrm{nitric acid}}^{T}
 \end{equation}
 
 Since the reaction was carried out at 330K, the enthalpy of reaction was adjusted to the operating temperature by using the heat capacities of the compounds using the equation below. The enthalpy of reaction was not further adjusted to capture the effects of pressure because pressure has a negligible effect on the overall enthalpy. 
@@ -102,7 +102,7 @@ The effective diffusional coefficient is used to calculate Thiele modulus $\phi$
 \end{equation}
 which is subsequently used to determine the effectiveness factor $\eta$. For the ease of modelling, the pellets are assumed to be perfectly spherical, and therefore the effectiveness factor is calculated as: 
 \begin{equation}
-    \eta = \frac{3}{\phi_{sphere}} \bigg(\frac{1}{tanh \phi_{sphere}} - \frac{1}{\phi_{sphere}}\bigg)
+    \eta = \frac{3}{\phi_{\mathrm{sphere}}} \bigg(\frac{1}{\tanh \phi_{\mathrm{sphere}}} - \frac{1}{\phi_{\mathrm{sphere}}}\bigg)
 \end{equation}
 An effectiveness factor of $\approx$ 1 means that external and internal mass transfer resistances of the catalyst pellet are negligible. Ideally, the effectiveness factor should be kept at $\approx$ 1 to ensure the actual rate of reaction is not lowered by mass transfer resistances. This can be done by decreasing the size of the pellets, however, that would come at the expense of large pressure drop across the reactor. Therefore, careful consideration needs to be made to ensure the pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1 between 10\textsuperscript{-6} to 10\textsuperscript{-3} m, before dropping sharply at larger pellet radius size. Thus, the range of possible pellet radius is narrowed to between 10\textsuperscript{-4} to 10\textsuperscript{-3} m. 
 
