@@ -9,10 +9,10 @@ A table of comparison
 
 Typically, the design of a hydraulic wash column will be based on pilot-scale experiments to determine appropriate dimensions at varying operating conditions. Instead, a  model from literature \cite{van_oord-knol_hydraulic_2000} was used to estimate the performance of the column at steady state. The hydraulic wash column was modelled based on volume and force balance using initial dimensions \cite{oordknol_dynamic_2002}. The initial dimensions were varied to determine the performance of the column handling the output from the MSMPR crystalliser. The aim of this model was to determine an appropriate steer flow rate, feasible column diameter and determine the pressure at different sections of the wash column.
 
-\begin{wrapfigure}{L}{0.5\linewidth}
+\begin{wrapfigure}{R}{0.5\linewidth}
 \centering
 \includegraphics[width=0.5\textwidth]{figures/hydraulic.jpg}
-\caption{A schematic diagram of the hydraulic wash column:1) steer flow pump 2) column wall 3)bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) rotating knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant sectino D) wash front section \cite{van_oord-knol_hydraulic_2000}}
+\caption{A schematic diagram of the hydraulic wash column: 1) steer flow pump 2) column wall 3) bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) rotating knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant section D) wash front section \cite{van_oord-knol_hydraulic_2000}}
 \label{fig:hydraulic}
 \end{wrapfigure}
 
@@ -107,28 +107,28 @@ $\mathrm{K_{w}}$        & 1.9e10 & \pascal\s\per\cubic\m &                      
  
 During operation of the hydraulic column  variations in the length of the filtration, stagnant and wash section is possible. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different sections of the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore variation in filtration and wash section would be designed to be between 0.27 to 0.30 m.  
 
-\begin{wrapfigure}{L}{0.5\linewidth}
+\begin{wrapfigure}{R}{0.5\linewidth}
 \centering
-\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/diameter.jpg}
-\caption{ Effect of varying diameter}
+\includegraphics[width=\linewidth]{chapters/3-separation/figures/diameter.jpg}
+\caption{Effect of varying diameter}
 \label{fig:dia_col}
 \end{wrapfigure}
 
 The length of the column was fixed at 0.8 m. The diameter of the column was varied from 0.1 m to 0.3 m to observe the impact it has on the pressure across the column. Figure \ref{fig:dia_col} indicates below 0.165 m the model suggests negative pressure at the filter which could imply instead of mother liquor flowing up through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation.
 
-\begin{wrapfigure}{L}{0.5\linewidth}
+\begin{wrapfigure}{R}{0.5\linewidth}
 \centering
-\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/steerflow.jpg}
-\caption{ Effect of varying steer flow rate}
+\includegraphics[width=\linewidth]{chapters/3-separation/figures/steerflow.jpg}
+\caption{Effect of varying steer flow rate}
 \label{fig:steer_col}
 \end{wrapfigure}
 
 Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. The filtrate being recycled back into the column increases the transport force. Steer flowrate was varied from 1.5e-5 to 3.5e-5 m3/s. Figure \ref{fig:steer_col} shows the unfeasible and feasible region of operation. Above a steer flow 2.7e-5, the column starts exhibiting negative liquid pressure drop at the filter. However, at lower steer flow such as 1.5e-5 the filter pressure increases significantly to more than 10 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 2.65 e-5 was chosen. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. The steer flow has no impact on the bottom pressure and the top pressure. This is because the bottom pressure relies on the valve resistance coefficient. 
 
-\begin{wrapfigure}{L}{0.5\linewidth}
+\begin{wrapfigure}{R}{0.5\linewidth}
 \centering
-\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/kozeny.jpg}
-\caption{ Effect of varying Kozeny constant}
+\includegraphics[width=\linewidth]{chapters/3-separation/figures/kozeny.jpg}
+\caption{Effect of varying Kozeny constant}
 \label{fig:koz_col}
 \end{wrapfigure}
 
