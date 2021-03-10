@@ -43,8 +43,10 @@ The bundle of 7 tubes was arranged in such a manner with a pitch of X distance b
 
 -include tube arrangement here (to be done in solidworks)
 \subsubsection{Shell dimensions}
+Similarly, minimum thickness of the shell ($e_{shell}$) was calculated using equation \ref{eqn:minthicknessreactor}, with $D_i$ set as 1.5m, $d_p$ as 1.1bar, $f$ of 
 - do the same thing as reactor dimension here, but based on pressure and temperature of cooling water from the reactor model. Mi
 The calculated shell volume is ...
+- require dimension of 
 \subsubsection{Head dimensions}
 A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
 Based on BS5500 (), the limitation of using torispherical head were checked and %\begin{equation}
@@ -67,8 +69,8 @@ Based on BS5500 (), the limitation of using torispherical head were checked and 
 \subsection{Ports and flanges}
 A total of 5 ports were design on the reactor according to BS 5500:1997 and BS 1600:1991 standards. The 5 port were inlet and outlet ports for feed reactants, and one pressure relief valve (PRV). PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event (). 
 \textcolor{red}{-include port sizing here, include feed rate}
-The inlet and outlet reactant ports were calculated to be X () from Section \ref{sec:reactordimensions} and were located on the leftmost and the rightmost part of the horizontal vessel respectively. 
-The inlet of the cooling water flow is situated at the top of the vessel and the outlet of the cooling water flow is situated at the bottom of the vessel, .  \textcolor{red}{tbc}
+The inlet and outlet reactant ports were calculated to be X () from Section \ref{sec:reactordimensions} and were located on the top and the bottom part of the vertical vessel respectively. 
+The inlet and outlet of the cooling water flow is situated at both sides of the reactor.\textcolor{red}{tbc}
 
 %- Inlet of water on top, outlet of water at the bottom. Size the water
 
@@ -80,7 +82,8 @@ The minimum distance between ports were calculated using the equation xx below
 \begin{equation}
     L_m = \sqrt{(2r_{im}+e_{m})e_m}
 \end{equation}
-where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the 
+where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the shell. 
+
 -label and explain this equation
 
 \subsubsection{Flange types and dimension}
