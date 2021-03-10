@@ -1,7 +1,9 @@
 % !TeX root = ../../main.tex
 \section{Hydraulic wash column design}
 
-Commonly used solid-liquid separators are not continuous processes, typically batch or semi-batch. Wash column does wash and continuous transport in one process. Whereas, for example a centrifuge would require  melting the crystals and a means of solid transport by conveyor belt. Different type of wash columns include gravity, hydraulic and mechanical. Hydraulic was chosen because of shorter residence time and less moving mechanical parts. 
+Commonly used solid-liquid separators are not continuous processes, typically batch or semi-batch. Hydraulic wash column combines continuous solid-liquid separation with counter current washing. Whereas, for example a centrifuge would require  melting the crystals and a means of solid transport on a conveyor belt. Three types of wash column were considered: gravity, hydraulic and mechanical. Hydraulic was chosen because of shorter residence time and less moving mechanical parts. 
+
+A table of comparison
 
 \subsection{Steady State Model}   
 
@@ -10,13 +12,13 @@ Typically, the design of a hydraulic wash column will be based on pilot-scale ex
 \begin{wrapfigure}{L}{0.5\linewidth}
 \centering
 \includegraphics[width=0.5\textwidth]{figures/hydraulic.jpg}
-\caption{A schematic diagram of the hydraulic wash column:1) steer flow pump 2) column wall 3)bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant sectino D) wash front section}
+\caption{A schematic diagram of the hydraulic wash column:1) steer flow pump 2) column wall 3)bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant sectino D) wash front section \cite{van_oord-knol_hydraulic_2000}}
 \label{fig:hydraulic}
 \end{wrapfigure}
 
-The model assumes 100 \% solid-liquid separation in the wash column therefore no presence of liquid in the product flow rate since the pressure difference is large enough to ensure no mother liquor enters the wash front. However, if impurities are entrapped in the crystal lattice during crystallisation, these will not be removed. This highlights the disadvantage of hydraulic wash column compared to gravity wash column. Gravity wash column allows some impurities to be removed from the crystals during the long residence time. 
+Purification in the hydraulic column occurs through displacement and crystallisation of wash liquid on the crystals. This model assumes 100 \% solid-liquid separation in the wash column therefore no presence of liquid in the product flow rate as the pressure difference is large enough to ensure no mother liquor enters the wash front. TNO had developed the TNO HWC which provides chemicals with purity greater than 99.9\% (TNO melt crystallisation). However, if impurities are entrapped in the crystal lattice during crystallisation, these will not be removed. This highlights the disadvantage of hydraulic wash column compared to gravity wash column. Gravity wash column allows some impurities to be removed from the crystals during the long residence time. 
 
-Figure \ref{fig:hydraulic} illustrates the different components in the hydraulic column. The different sections in the column are characteristic of the column. The feed slurry contains a mixture of m-nitrotoluene (mother liquor) and p-nitrotoluene (solid crystals) from the MSMPR crystalliser. This enters the column in slurry section. Due to difference in density the solid crystals will begin to fall down the column. As the crystals move down the column it forms a packed bed of solid. The filter in the filter tube removes the mother liquor from the filtration section. A part of the mother liquor gets recycled back into the column by the steer pump, known as steer flow and some mother liquor is purged out as residue flow. The pressure drop across the filter drives the solids down and the mother liquor up the filter tube allowing for solid-liquid separation. The solid deposits as densely packed moving bed in the wash front section with no mother liquor present. The knife at the bottom will cut the bottom of the packed bed so pure p-nitrotoluene solids will fall into the bottom section. The melter at the bottom melts the p-nitrotoluene solids and forms what is known as the washing liquid. The washing liquid gets recycled around the bottom section. Due to the pressure drop at the valve when the product gets purged out, the washing liquid gets pushed up into the washing section of the column where counter current washing occurs. The solid crystals are of a lower temperature and causes the washing liquid to crystallise on the solid particles leading to a frozen wash front level. This counter current washing allows for almost 100 \% separation. 
+Figure \ref{fig:hydraulic} illustrates the different sections characteristic of the hydraulic column and the components needed. The feed slurry contains a mixture of m-nitrotoluene (mother liquor) and p-nitrotoluene (solid crystals) from the MSMPR crystalliser. This enters the column in slurry section. Due to difference in density the solid crystals will begin to fall down the column. As the crystals move down the column it forms a packed bed of solid. The filter in the filter tube removes the mother liquor from the filtration section. A part of the mother liquor gets recycled back into the column by the steer pump, known as steer flow and some mother liquor is purged out as residue flow. The pressure drop across the filter drives the solids down and the mother liquor up the filter tube allowing for solid-liquid separation. The solid deposits as densely packed moving bed in the wash front section with no mother liquor present. The knife at the bottom will cut the bottom of the packed bed so pure p-nitrotoluene solids will fall into the bottom section. The melter at the bottom melts the p-nitrotoluene solids and forms what is known as the washing liquid. The washing liquid gets recycled around the bottom section. Due to the pressure drop at the valve when the product gets purged out, the washing liquid gets pushed up into the washing section of the column where counter current washing occurs. The solid crystals are of a lower temperature and causes the washing liquid to crystallise on the solid particles leading to a frozen wash front level. This counter current washing allows for almost 100 \% separation. 
 
 \subsubsection{Volume balance} 
 This model was based on the assumption that the liquid and solid in the system were incompressible. For simplicity density and viscosity were assumed to be independent of temperature. 
@@ -106,62 +108,58 @@ The pressure in the melting circuit was calculated using the equation below.
 
 
 \subsection{Results and Discussion}
-The linear system of equations from the steady state model were solved using input variables and parameters shown in Table --. 
+The linear system of equations from the steady state model were solved using input variables and parameters shown in Table \ref{tab:inputsparameters}. 
 
 \begin{table}[h]
 \centering
 \caption{Input variables and parameters}
 \label{tab:inputsparameters}
-\begin{tabular}{lS[table=format=1.3e2]s|lS[table=format=1.2e+2]s}
+\begin{tabular}{lS[table-format=1.3e2]s|lS[table-format=1.3e2]s}
 \toprule
 \multicolumn{3}{c|}{\textbf{Inputs}}                     & \multicolumn{3}{c}{\textbf{Parameters}}          \\ \midrule
 $\phi_{\mathrm{feed}}$  & 4.27e5 & \cubic\m\per\s        & $\epsilon$                & 0.45     &           \\
-$\phi_{\mathrm{steer}}$ & 1.8e5  & \cubic\m\per\s        & $\mathrm{B_{filtration}}$ & 7.87e-14 & \square\m \\
-$\alpha_1$              & 0.801  & v/v                   & $\mathrm{B_{wash}}$       & 6.75e-14 & \square\m \\
-$\mathrm{K_{w}}$        & 2.8e10 & \pascal\s\per\cubic\m &                           &          &           \\ \bottomrule
+$\phi_{\mathrm{steer}}$ & 2.65e5 & \cubic\m\per\s        & $\mathrm{B_{filtration}}$ & 1.37e-13 & \square\m \\
+$\alpha_1$              & 0.906  & v/v                   & $\mathrm{B_{wash}}$       & 1.01e-13 & \square\m \\
+$\mathrm{K_{w}}$        & 1.9e10 & \pascal\s\per\cubic\m &                           &          &           \\ \bottomrule
 \end{tabular}
 \end{table}
 
+During operation of the hydraulic column  variations in the length of the filtration, stagnant and wash section is possible. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different sections of the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore variation in filtration and wash section would be designed to be between 0.27 to 0.30 m.  
 
-Final dimension table - Length of bed, height, diameter, number of filter tubes etc. 
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/diameter.jpg}
+\caption{ Effect of varying diameter}
+\label{fig:dia_col}
+\end{wrapfigure}
 
-During operation of the hydraulic column  variations in the length of the filtration, stagnant and wash section with time was expected. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different points in the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore the range for variation in filtration and wash section were taken between 0.28 to 0.30 m.  
+The length of the column was fixed at 0.8 m. The diameter of the column was varied from 0.1 m to 0.3 m to observe the impact it has on the pressure across the column. Figure \ref{fig:dia_col} indicates below 0.165 m the model suggests negative pressure at the filter which could imply instead of mother liquor flowing up through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation.
 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/diameter.jpg}
-  \caption{Effect of varying diameter.}
-  \label{fig:dia_col}
-\end{figure}
-\end{comment}
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/steerflow.jpg}
+\caption{ Effect of varying steer flow rate}
+\label{fig:steer_col}
+\end{wrapfigure}
 
-*graph on effect of varying diameter 
+Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. The filtrate being recycled back into the column increases the transport force. Steer flowrate was varied from 1.5e-5 to 3.5e-5 m3/s. Figure \ref{fig:steer_col} shows the unfeasible and feasible region of operation. Above a steer flow 2.7e-5, the column starts exhibiting negative liquid pressure drop at the filter. However, at lower steer flow such as 1.5e-5 the filter pressure increases significantly to more than 10 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 2.65 e-5 was chosen. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. The steer flow has no impact on the bottom pressure and the top pressure. This is because the bottom pressure relies on the valve resistance coefficient. 
 
-In the design of the hydraulic column there are many variables included. Therefore, the length of the variable was fixed at 1 m following the literature. Instead, the diameter of the column was varied. Figure -- shows the impact diameter has on the column's performance. Below 0.165 m the model showed negative pressure at the filter implying instead of mother liquor flowing up through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation. 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/steerflow.jpg}
-  \caption{Effect of varying steer flowrate}
-  \label{fig:steer_col}
-\end{figure}
-\end{comment}
-*graph on effect of varying steer flow 
+\begin{wrapfigure}{L}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\textwidth]{chapters/3-separation/figures/kozeny.jpg}
+\caption{ Effect of varying Kozeny constant}
+\label{fig:koz_col}
+\end{wrapfigure}
 
-Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. In order to find the appropriate steer flow, it was varied from 4.5e-6 to 3.45e-5 m3/s. Figure -- shows the unfeasible and feasible region of operation. Above a steer flow 2e-5, the column starts exhibiting negative liquid pressure drop at the filter. However, at lower steer flow such as 4.5e-6 the filter pressure increases significantly to more than 15 bar. In order to attain a lower pressure but also ensure the column is in a feasible region, the steer flow at 1.8 e-5 was chosen as reasonable. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. 
-\begin{comment}
-\begin{figure}[h]
-  \includegraphics[scale=0.5]{chapters/3-separation/figures/kozeny.jpg}
-  \caption{Effect of varying Kozeny constant}
-  \label{fig:koz_col}
-\end{figure}
-\end{comment}
-*graph on effect of varying permeability constant
+A sensitivity analysis on the permeability constant was conducted by varying the Kozeny constant, K". For this column design K" was considered to be 5 based on the assumption that the crystal is spherical. Figure \ref{fig:koz_col} shows when K">6.5, the design becomes infeasible reaching negative filter pressures.The sensitivity analysis was conducted with the filtration and wash section varying between 0.27 and 0.3 m to observe the range of pressure in the column. It is evident, the hydraulic column is sensitive to the kozenzy constant and therefore permeability of the packed bed, which is expected... Pilot-scale experiments should be conducted on the column to obtain more accurate values of the kozeny constant and to get a reliable observation of the column's performance. 
 
-A sensitivity analysis on the permeability constant was conducted by varying the Kozeny constant, K. 
+Based on literature (jansen) the temperature profile at the wash front was found to be independent of the axial and radial position in the column if the distance of the wash front from the filter is greater than 0.1 m. In this design the filter tube was positioned 0.1 m above the wash front. The temperature profile was also found to be independent of the product throughput. 
+
+Could include a compressive stress profile across the column. Compressive stress impacts the permeability of the bed and causes deformation of the crystal particles.
 
 
 \subsection{Materials Choice}
 - material for the column itself 
 
 \subsection{Mechanical Design}
--BS standard has to be followed since column maximum operating pressure is 9.8 bar. It is a pressure vessel.  
+-BS standard has to be followed since column maximum operating pressure is 7.36 bar. It is a pressure vessel.  

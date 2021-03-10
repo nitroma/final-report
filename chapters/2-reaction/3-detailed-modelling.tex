@@ -4,28 +4,29 @@ The nitration of toluene in the packed-bed reactor R101 was chosen to be designe
 
 - add a table summary of our design - refer to reactor choices (pressure drop tab) \textcolor{red}{here or appendix? To include comments or not?}
 \textcolor{red}{also check: why is the table so different???}
+\textcolor{red}{CHECK TABLE ONCE MODELLING DONE}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[H]
 \centering
 \caption{Reactor overview}
 \label{tab:reactoroverview}
-\begin{tabular}{@{}llll@{}}
-\toprule
-Criteria                     & Value        & Units & Comments \\ \midrule
-Overall volumetric flowrate  & 1.32 x 10^-4 & m^3/s &          \\
-Number of tubes              & 19           & -     &          \\
-Diameter of each channel     & 0.2          & m     &          \\
-Area of each channel         & 3.14 x 10^-2 & m^2   &          \\
-Length of reactor            & 3.97         & m     &          \\
-Aspect ratio                 & 19.8         & -     &          \\
-Bed voidage                  & 0.39         & -     &          \\
-Particle diameter            & 2 x 10^-4    & m     &          \\
-Mass of H-mordenite required & 277          & kg    &          \\
-Mass of inert SiC            & 4215         & kg    &          \\
-Volume of liquid in reactor  & 9.24 x 10^-1 & m^3   &          \\
-Total reactor volume         & 2.37         & m^3   &          \\
-Total pressure drop          & 1.41 x 10^-1 & bar   &          \\ \bottomrule
+\begin{tabular}{@{}lS[table-format=4.2e1]sl@{}}
+    \toprule
+    Criteria                     & {Value} & {Units}        & Comments \\ \midrule
+    Overall volumetric flowrate  & 1.32e-4 & \cubic\m\per\s &          \\
+    Number of tubes              & 19      &                &          \\
+    Diameter of each channel     & 0.2     & \m             &          \\
+    Area of each channel         & 3.14e-2 & \square\m      &          \\
+    Length of reactor            & 3.97    & \m             &          \\
+    Aspect ratio                 & 19.8    &                &          \\
+    Bed voidage                  & 0.39    &                &          \\
+    Particle diameter            & 2e-4    & \m             &          \\
+    Mass of H-mordenite required & 277     & \kg            &          \\
+    Mass of inert SiC            & 4215    & \kg            &          \\
+    Volume of liquid in reactor  & 9.24e-1 & \cubic\m       &          \\
+    Total reactor volume         & 2.37    & \cubic\m       &          \\
+    Total pressure drop          & 1.41e-1 & \bar           &          \\ \bottomrule
 \end{tabular}
 \end{table}
 %tbc inclusion of all the values 
@@ -136,7 +137,7 @@ From the graph, it can be observed that the dispersion coefficient decreases sha
 
 \textcolor{red}{Include adiabatic temp rise with and without cooling water }
 
-The nitration reactor cannot be assumed to be isothermal because nitration is a highly exothermic process. As seen in Fig. [], the temperature rises sharply in the first xxx meters before plateauing at xxx K for an adiabatic reactor. Even by cooling the reactor with a cooling jacket, the exit temperature remains at xxx. The temperature of the reaction needs to kept below 140 \degrees \celsius. At temperatures higher than that, thermal decomposition of nitric acid occurs, which releases nitrogen dioxide and produces even more heat, leading to thermal runaway. Additionally, the possibility of hotspot as shown in Fig [] will speed up the deactivation of catalyst, but more importantly, it poses safety concerns through the risk of thermal runaway [ref]. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled.
+The nitration reactor cannot be assumed to be isothermal because nitration is a highly exothermic process. As seen in Fig. [], the temperature rises sharply in the first xxx meters before plateauing at xxx K for an adiabatic reactor. Even by cooling the reactor with a cooling jacket, the exit temperature remains at xxx. The temperature of the reaction needs to kept below 140 °C. At temperatures higher than that, thermal decomposition of nitric acid occurs, which releases nitrogen dioxide and produces even more heat, leading to thermal runaway. Additionally, the possibility of hotspot as shown in Fig [] will speed up the deactivation of catalyst, but more importantly, it poses safety concerns through the risk of thermal runaway [ref]. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled.
 
 
 

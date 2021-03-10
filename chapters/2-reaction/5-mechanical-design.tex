@@ -1,6 +1,6 @@
 % !TeX root = ../../main.tex
 \section{Mechanical design}
-\subsection{Reactor material}
+\subsection{Material selection}
 Temperature, max allowable pressure, ability to handle xxx pressure gradient, 
 
 Due to the strong oxidising property, nitric acid is very corrosive at 70 mass\% and has poses a significant safety threat to the plant. According to ref, an increase in corrosion potential with increase in acid concentration can be attributed to the autocatalytic reduction of nitric acid. 
@@ -16,15 +16,19 @@ Stainless steel type 304 have higher levels of carbon, which are not stabilised 
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
+\subsubsection{Reactor}
 According to section X, the reactor must operate within the temperature range of 330K to 378K and pressure gradient of y atm to z atm. The design temperature is set as XXK and design pressure ($d_p$) is calculated to be YYY bar, using the equation \ref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9}
     \label{eqn:designpressure}
 \end{equation}
+\subsubsection{Shell}
+Similarly, using the equation \ref{eqn:designpressure} above, the design pressure ($d_p$) for the cooling water vessel was calculated to be 1.1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
-\subsection{Reactor dimensions}
+\subsection{Dimensions}
 \label{sec:reactordimensions}
 
+\subsubsection{Reactor dimensions}
 \begin{equation}
     e_{cylinder} = \frac{p_dD_i}{2f-p_d}
     \label{eqn:minthicknessreactor}
@@ -32,6 +36,12 @@ According to section X, the reactor must operate within the temperature range of
 where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards (), yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$. 
 
 The minimum calculated thickness of shell plate ($e_{cylinder}$) was calculated to be YY mm. An addition of 1.5mm for corrosion allowance is added to ($e_{cylinder}$), making the final cylindrical thickness XXXmm.
+
+The bundle of 7 tubes was arranged in such a manner with a pitch of X distance between each tubes to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. 
+
+-refer to excel on tube pitch
+
+-include tube arrangement here (to be done in solidworks)
 \subsubsection{Shell dimensions}
 - do the same thing as reactor dimension here, but based on pressure and temperature of cooling water from the reactor model. Mi
 The calculated shell volume is ...
