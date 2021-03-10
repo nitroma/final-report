@@ -145,5 +145,6 @@
         \setlength{\parskip}{0em}
     }
 
-%%% CAPTIONS
+%%% FLOATS
 \RequirePackage[font={small,singlespacing},labelfont={bf},skip=2pt]{caption}
+\AtBeginEnvironment{}
