@@ -147,4 +147,5 @@
 
 %%% FLOATS
 \RequirePackage[font={small,singlespacing},labelfont={bf},skip=2pt]{caption}
-\AtBeginEnvironment{table}{\@minipagetrue}
+\AtBeginEnvironment{tabular}{\@minipagetrue\setlist{nosep}}
+\newcommand*{\compress}{\@minipagetrue}
