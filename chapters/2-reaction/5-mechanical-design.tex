@@ -47,15 +47,19 @@ The bundle of 7 tubes was arranged in such a manner with a pitch of X distance b
 The calculated shell volume is ...
 \subsubsection{Head dimensions}
 A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
-Based on BS5500 (), the limitation of using torispherical head were checked and met in equations \ref{eqn:torispherical} and ref tori calculation:
+Based on BS5500 (), the limitation of using torispherical head were checked and %\begin{equation}
+    %\begin{split}
+       % 0.02D \leq e \leq 0.12D \\
+        %r \geq 0.06D \\
+        %r \geq 2e \\
+        %R \leq D
+    %\end{split}
+    %\label{eqn:torispherical}
+%\end{equation}
+
 \begin{equation}
-    \begin{split}
-        0.02D \leq e \leq 0.12D \\
-        r \geq 0.06D \\
-        r \geq 2e \\
-        R \leq D
-    \end{split}
-    \label{eqn:torispherical}
+    e = \frac{pD_i}{4f-1.2p}
+    \label{eqn:hemisphericalend}
 \end{equation}
 -add another equation with real values
 -refer BS5500 page 78 of the pdf
@@ -76,6 +80,7 @@ The minimum distance between ports were calculated using the equation xx below
 \begin{equation}
     L_m = \sqrt{(2r_{im}+e_{m})e_m}
 \end{equation}
+where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the 
 -label and explain this equation
 
 \subsubsection{Flange types and dimension}
