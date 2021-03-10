@@ -6,7 +6,7 @@
 \RequirePackage{etoolbox}
 
 %%% COLOURS
-\RequirePackage[table,xcdraw]{xcolor}
+\RequirePackage[table]{xcolor}
 \definecolor{color1}{HTML}{2D4F6C}
 \definecolor{color2}{HTML}{8BDBDE}
 \definecolor{red}{HTML}{EF476F}
