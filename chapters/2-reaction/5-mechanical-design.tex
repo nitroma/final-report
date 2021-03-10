@@ -43,7 +43,6 @@ The bundle of 7 tubes was arranged in such a manner with a pitch of X distance b
 
 -include tube arrangement here (to be done in solidworks)
 \subsubsection{Shell dimensions}
-\subsubsection{Reactor dimensions}
 \begin{equation}
     e_{cylinder} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 Nmm^{-2}\times 1500mm}{2 \times 143Nmm^{-2} - 0.11Nmm^{-2}}
     \label{eqn:minthicknessreactor}
@@ -71,6 +70,15 @@ The minimum thickness ($e_{head}$)of the hemispherical head was calculated using
 with $p$ set as 1.1bar, $D_i$ set as 1500mm, $f$ value set as 143$Nmm^{-2}$.  The minimum thickness of the hemispherical end was calculated to be 0.26mm, but a final head thickness of 5mm was chosen to complement the thickness of the shell for ease of welding. 
 -add another equation with real values
 -refer BS5500 page 78 of the pdf
+
+The minimum distance between ports were calculated using the equation \ref{eqn:mindistance} below:
+\begin{equation}
+    L_m = \sqrt{(2r_{im}+e_{m})e_m} = \sqrt{(2 \times 1500 + 5)5} = 122.6mm
+    \label{eqn:mindistance}
+\end{equation}
+where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the shell. The minimum distance between ports on the dome was calculated to be 122.6mm apart. 
+
+-label and explain this equation
 %rewrite based on hemispherical
 \subsection{Ports and flanges}
 A total of 5 ports were design on the reactor according to BS 5500:1997 and BS 1600:1991 standards. The 5 port were inlet and outlet ports for feed reactants, and one pressure relief valve (PRV). PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event (). 
@@ -84,13 +92,7 @@ The inlet and outlet of the cooling water flow is situated at both sides of the 
 
 
 
-The minimum distance between ports were calculated using the equation xx below
-\begin{equation}
-    L_m = \sqrt{(2r_{im}+e_{m})e_m} = \sqrt{(2 \times 1500 + 5)5} = 122.6mm
-\end{equation}
-where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the shell. The minimum distance between ports on the dome was calculated from
 
--label and explain this equation
 
 \subsubsection{Flange types and dimension}
 Class 150 flanges was chosen from Table 16 of BS 1560:1989, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating. Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution ().
