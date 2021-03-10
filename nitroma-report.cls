@@ -148,3 +148,8 @@
 %%% FLOATS
 \RequirePackage[font={small,singlespacing},labelfont={bf},skip=2pt]{caption}
 \newcommand*{\compress}{\@minipagetrue} % https://tex.stackexchange.com/a/6454/135479
+\BeforeBeginEnvironment{itemize}{
+    \ifx\@currenvir\@tabular
+        \compress
+    \fi
+}
