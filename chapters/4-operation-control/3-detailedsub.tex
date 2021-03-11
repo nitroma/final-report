@@ -18,12 +18,13 @@ To understand the number of variables that can be simultaneously manipulated to 
 \begin{tabular}{p{3cm}|p{3cm}|p{4cm}|p{5cm}|p{6cm}}
 \toprule
 \textbf{Unit}                               & \textbf{Controlled Variable}                & \textbf{Manipulated Variable}                           & \textbf{Sensor/Actuator}                                                   & \textbf{Control Strategy}                                                                                                            \\ \midrule
-\multirow{6}{*}{Reactor (R201)}             & Temperature of reactor                      & Cooling water flowrate in reactor jacket                & Temperature sensor (TT-201) / Flow control valve (FCV-201)                 & Feedforward control mitigates temperature disturbances and cascade   control counters flow disturbances in cooling water.            \\
+\multirow{7}{*}{Reactor (R201)}             & Temperature of reactor                      & Cooling water flowrate in reactor jacket                & Temperature sensor (TT-201) / Flow control valve (FCV-201)                 & Feedforward control mitigates temperature disturbances and cascade   control counters flow disturbances in cooling water.            \\
                                             & Pressure of reactor                         & Pressure of the fresh hydrogen                          & Pressure sensor (PT-201) / Pressure control valve (PCV-202)                & Feedforward control mitigates disturbances in upstream fresh H­2 pressure and recycle H2 pressure.                                   \\
                                             & Ratio of reactants                          & Flowrate of fresh methanol                              & Flow sensors (FT-202, FT-203) / Pump speed (P201)                          & Ratio control ensures the H2 and liquid feed enter the reactor in fixed proportions.                                                 \\
                                             & Composition of gas feed to reactor          & Flowrate of purge                                       & Composition analyser (AT-203) / Flow control valve (FCV-203)               & Cascade control allows composition to be manipulated using the purge   flowrate which is a slave control to smooth any disturbances. \\
                                             & Level                                       & Flowrate of reactor outlet                              & Level transmitter (LT-208) / Flow control valve (FCV-203)                  & Level control is cascaded to flow control.                                                                                           \\
                                                                                         & Hydrogen flowrate                                     & Fan motor speed                              & Flow transmitter (LT-208) / Fan motor (F201)                  & Feedback control to maintain stable unit operation.                                                                                           \\
+                                                                                                       & Hydrogen feed composition                                    & Purge fraction                              & Composition analyser (AT-203) / Flow control valve (FCV-202)                  & Composition control is cascaded to flow control in order to maniupulate the purge ration of recycled hydrogen.                                                                                          \\
                                                                                         \midrule
 Electric Heaters (H201 / H202)              & Temperature of outlet streams               & Electrical input to heater                              & Temperature sensor (TT-202, TT-212) / Heaters (H201, H202)                 & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
 \multirow{3}{*}{Distillation Column (S203)} & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\
@@ -65,10 +66,9 @@ Partial Condenser (H203)                    & Condenser duty                    
 \subsubsection{Hydrogen feed flowrate} %R201-HFC
 %no graph
 
-\subsubsection{Reactor feed temperature control}%H201 and H202-TC 
-%no graph
 
-\subsubsection{Hydrogen recycle control}
+
+\subsubsection{Hydrogen recycle control}%V202-CC
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
@@ -82,6 +82,21 @@ Partial Condenser (H203)                    & Condenser duty                    
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-FC.pdf}
     \caption{}
     \label{fig:V201-FC}
+\end{figure}
+
+\subsubsection{Reactor feed temperature control}%H201 and H202-TC 
+%no graph
+
+\subsubsection{Bottom stream composition control} %S201-CC
+A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
+
+A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. Figure \ref{fig:S203-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-CC.pdf}
+    \caption{}
+    \label{fig:S203-CC}
 \end{figure}
 
 
@@ -110,35 +125,27 @@ To further ensure tight control of pressure in the column, a feedback control lo
 \end{figure}
 
 
-\subsubsection{Bottom stream composition control}
-A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
-
-A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. Figure \ref{fig:S203-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-CC.pdf}
-    \caption{}
-    \label{fig:S203-CC}
-\end{figure}
 
 
-\subsubsection{Distillation column S201 level control}
-The liquid level at the bottom of the distillation column S201 is an important inventory to control to to prevent the reboiler from drying up and weeping to occur in the column. Since the reboiler duty is already being used in composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Since the column and reboiler are connected, draining more liquid from the reboiler would draw more liquid from the column and vice versa. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see Figure \ref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
+%\subsubsection{Distillation column S201 level control}
+%The liquid level at the bottom of the distillation column S201 is an important inventory to control to to prevent the reboiler from drying up and weeping to occur in the column. Since the reboiler duty is already being used in composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Since the column and reboiler are connected, draining more liquid from the reboiler would draw more liquid from the column and vice versa. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see Figure \ref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-LC.pdf}
-    \caption{}
-    \label{fig:S203-LC}
-\end{figure}
+%\begin{figure}[H]
+   % \centering
+   % \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-LC.pdf}
+  %  \caption{}
+  %  \label{fig:S203-LC}
+%\end{figure}
+
+\subsubsection{Reboiler H204 level control} %H204-LC
+%no graph
 
 
-\subsubsection{Reflux drum S204 level control}
+\subsubsection{Reflux drum S204 level control}%S204-LC
 Similar to the level control in the column, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. A level transmitter (LT-203) sends a signal to the level controller (LIC-203) which controls a flow control valve (FCV-206) on the tops outlet stream, as shown on the P\&ID. 
 
 
-\subsubsection{Heat duty of condenser H203 control}
+\subsubsection{Heat duty of condenser H203 control}%H203-TC
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
 \begin{figure}[H]
