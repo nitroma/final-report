@@ -23,7 +23,7 @@ To understand the number of variables that can be simultaneously manipulated to 
                                             & Ratio of reactants                          & Flowrate of fresh methanol                              & Flow sensors (FT-202, FT-203) / Pump speed (P201)                          & Ratio control ensures the H2 and liquid feed enter the reactor in fixed proportions.                                                 \\
                                             & Composition of gas feed to reactor          & Flowrate of purge                                       & Composition analyser (AT-203) / Flow control valve (FCV-203)               & Cascade control allows composition to be manipulated using the purge   flowrate which is a slave control to smooth any disturbances. \\
                                             & Level                                       & Flowrate of reactor outlet                              & Level transmitter (LT-208) / Flow control valve (FCV-203)                  & Level control is cascaded to flow control.                                                                                           \\
-                                                                                        & Hydrogen flowrate                                     & Flowrate of reactor outlet                              & Flow transmitter (LT-208) / Fan motor (F201)                  & Level control is cascaded to flow control.                                                                                           \\
+                                                                                        & Hydrogen flowrate                                     & Fan motor speed                              & Flow transmitter (LT-208) / Fan motor (F201)                  & Feedback control to maintain stable unit operation.                                                                                           \\
                                                                                         \midrule
 Electric Heaters (H201 / H202)              & Temperature of outlet streams               & Electrical input to heater                              & Temperature sensor (TT-202, TT-212) / Heaters (H201, H202)                 & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
 \multirow{3}{*}{Distillation Column (S203)} & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\
@@ -38,7 +38,7 @@ Partial Condenser (H203)                    & Condenser duty                    
 \end{table}
 
 
-\subsubsection{Reactor R201 temperature control}
+\subsubsection{Reactor R201 temperature control} %R201-TC
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
@@ -46,7 +46,7 @@ Partial Condenser (H203)                    & Condenser duty                    
     \label{fig:R201-TC}
 \end{figure}
 
-\subsubsection{Reactor R201 pressure control}
+\subsubsection{Reactor R201 pressure control} %R201-PC
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
@@ -54,7 +54,7 @@ Partial Condenser (H203)                    & Condenser duty                    
     \label{fig:R201-PC}
 \end{figure}
 
-\subsubsection{Reactor R201 level control}
+\subsubsection{Reactor R201 level control} % R201-LC
 %\begin{figure}[H]
  %   \centering
   %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-LC.pdf}
@@ -62,7 +62,11 @@ Partial Condenser (H203)                    & Condenser duty                    
     %\label{fig:R201-LC}
 %\end{figure}
 
-\subsubsection{Reactor feed temperature control}
+\subsubsection{Hydrogen feed flowrate} %R201-HFC
+%no graph
+
+\subsubsection{Reactor feed temperature control}%H201 and H202-TC 
+%no graph
 
 \subsubsection{Hydrogen recycle control}
 \begin{figure}[H]
@@ -81,17 +85,18 @@ Partial Condenser (H203)                    & Condenser duty                    
 \end{figure}
 
 
-\subsubsection{Distillation column S201 pressure control}
+\subsubsection{Distillation column S201 pressure control} %S201-PC
 Pressure in distillation columns is regarded as one of the most important parameters to control well, as it not only affects the relative volatilities of the heavy and light keys, but also the shape of the vapour-liquid phase equilibrium curves which determine the compositions of the top and bottoms products of the distillation column. There are several options for for pressure control, such as controlling the vapour flow that is vented from the reflux drum, condenser duty, reboiler duty, recirculation of cooling fluid in the condenser or addition of inerts. Hence the choice of manipulated variable needs to be made carefully considering the relative direct impacts and time delays of each manipulated variable. Controlling the vapour flow that is vented from the reflux drum is the simplest control to implement and usually provides the fastest response as the amount of gas holdup in the column directly affects its pressure. In addition, the amount of vapours in the reflux drum S204 is much larger compared to the condensed liquid flow, so the direct impact of vapour flowrate on column pressure would be large. This avoids a situation where the flow control valve becomes saturated and unable to regulate pressure effectively. 
 
 An optimal feedback control was designed with the vapour flowrate from the reflux drum as the manipulated variable. A pressure transmitter (PT-206) measures the pressure in the column, which is monitored by a pressure controller (PIC-206) that regulates a flow control valve (FCV-205) on the vent stream from the reflux (Figure \ref{fig:S203-PC}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-PC.pdf}
-    \caption{}
-    \label{fig:S203-PC}
-\end{figure}
+%no graph
+%\begin{figure}[H]
+ %   \centering
+  %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-PC.pdf}
+   % \caption{}
+    %\label{fig:S203-PC}
+%\end{figure}
 
 
 \subsubsection{Control of pressure reduction valve V201}
