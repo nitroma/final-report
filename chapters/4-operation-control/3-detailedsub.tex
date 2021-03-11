@@ -24,7 +24,7 @@ To understand the number of variables that can be simultaneously manipulated to 
                                             & Composition of gas feed to reactor          & Flowrate of purge                                       & Composition analyser (AT-203) / Flow control valve (FCV-203)               & Cascade control allows composition to be manipulated using the purge   flowrate which is a slave control to smooth any disturbances. \\
                                             & Level                                       & Flowrate of reactor outlet                              & Level transmitter (LT-208) / Flow control valve (FCV-203)                  & Level control is cascaded to flow control.                                                                                           \\
                                                                                         & Hydrogen flowrate                                     & Fan motor speed                              & Flow transmitter (LT-208) / Fan motor (F201)                  & Feedback control to maintain stable unit operation.                                                                                           \\
-                                                                                                       & Hydrogen feed composition                                    & Purge fraction                              & Composition analyser (AT-203) / Flow control valve (FCV-202)                  & Composition control is cascaded to flow control in order to maniupulate the purge ration of recycled hydrogen.                                                                                          \\
+                                                                   
                                                                                         \midrule
 Electric Heaters (H201 / H202)              & Temperature of outlet streams               & Electrical input to heater                              & Temperature sensor (TT-202, TT-212) / Heaters (H201, H202)                 & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
 \multirow{3}{*}{Distillation Column (S203)} & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\
@@ -55,6 +55,16 @@ Partial Condenser (H203)                    & Condenser duty                    
     \label{fig:R201-PC}
 \end{figure}
 
+\subsubsection{Ratio control of reactants} %R201-CC
+
+\subsubsection{Hydrogen recycle control}%V202-CC
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
+    \caption{}
+    \label{fig:V202-CC}
+\end{figure}
+
 \subsubsection{Reactor R201 level control} % R201-LC
 %\begin{figure}[H]
  %   \centering
@@ -68,21 +78,10 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 
-\subsubsection{Hydrogen recycle control}%V202-CC
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
-    \caption{}
-    \label{fig:V202-CC}
-\end{figure}
 
-\subsubsection{Reactor outlet flow control}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-FC.pdf}
-    \caption{}
-    \label{fig:V201-FC}
-\end{figure}
+
+
+
 
 \subsubsection{Reactor feed temperature control}%H201 and H202-TC 
 %no graph
@@ -114,15 +113,15 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
 %\end{figure}
 
 
-\subsubsection{Control of pressure reduction valve V201}
-To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the pressure of the feed to the column (see Figure \ref{fig:V201-PC}).
+\subsubsection{Control of pressure reduction valve V201} %V201-PC
+To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the pressure of the feed to the column (see Figure \ref{fig:V201-PC}). %no graph
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
-    \caption{}
-    \label{fig:V201-PC}
-\end{figure}
+%\begin{figure}[H]
+ %   \centering
+  %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
+   % \caption{}
+    %\label{fig:V201-PC}
+%\end{figure}
 
 
 
@@ -156,7 +155,6 @@ The condenser in a distillation column provides cooling to condense the vapour e
 \end{figure}
 
 
-\subsubsection{}
 
 \subsection{Safety design}
 
