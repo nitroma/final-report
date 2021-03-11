@@ -56,6 +56,12 @@ Partial Condenser (H203)                    & Condenser duty                    
 \end{figure}
 
 \subsubsection{Ratio control of reactants} %R201-CC
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
+    \caption{}
+    \label{fig:R201-FC}
+\end{figure} 
 
 \subsubsection{Hydrogen recycle control}%V202-CC
 \begin{figure}[H]
@@ -66,12 +72,7 @@ Partial Condenser (H203)                    & Condenser duty                    
 \end{figure}
 
 \subsubsection{Reactor R201 level control} % R201-LC
-%\begin{figure}[H]
- %   \centering
-  %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-LC.pdf}
-   % \caption{}
-    %\label{fig:R201-LC}
-%\end{figure}
+
 
 \subsubsection{Hydrogen feed flowrate} %R201-HFC
 %no graph
@@ -91,12 +92,6 @@ A composition control loop in the distillation column is also necessary to ensur
 
 A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. Figure \ref{fig:S203-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-CC.pdf}
-    \caption{}
-    \label{fig:S203-CC}
-\end{figure}
 
 
 \subsubsection{Distillation column S201 pressure control} %S201-PC
@@ -149,7 +144,7 @@ The condenser in a distillation column provides cooling to condense the vapour e
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203C-TC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
     \caption{}
     \label{fig:S203C-TC}
 \end{figure}
