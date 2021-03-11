@@ -157,9 +157,10 @@
 {
   \str_case:onF { \@currenvir }% check current environment
   {
-      {array}    { \bool_set_true:N \l_clement_if_in_table_bool  }
-      {tabular}  { \bool_set_true:N \l_clement_if_in_table_bool  }
-      {tabularx} { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {array}     { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {tabular}   { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {tabularx}  { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {longtable} { \bool_set_true:N \l_clement_if_in_table_bool  }
   }{               \bool_set_false:N \l_clement_if_in_table_bool }
   \bool_if:NTF \l_clement_if_in_table_bool {#1} {#2}
 }
