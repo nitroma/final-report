@@ -147,9 +147,23 @@
 
 %%% FLOATS
 \RequirePackage[font={small,singlespacing},labelfont={bf},skip=2pt]{caption}
-\newcommand*{\compress}{\@minipagetrue} % https://tex.stackexchange.com/a/6454/135479
-\BeforeBeginEnvironment{itemize}{
-    \ifx\@currenvir\@tabular
-        \compress
-    \fi
+% command to remove extra spacing before lists inside tabular environments - https://tex.stackexchange.com/a/6454/135479
+\newcommand*{\compress}{\@minipagetrue}
+% set up method to detect tabular environments automatically - https://tex.stackexchange.com/a/557166/135479
+\usepackage{expl3}
+\ExplSyntaxOn
+\bool_new:N \l_clement_if_in_table_bool% a boolean for table manners
+\newcommand\IfInTableTF[2]
+{
+  \str_case:onF { \@currenvir }% check current environment
+  {
+      {array}    { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {tabular}  { \bool_set_true:N \l_clement_if_in_table_bool  }
+      {tabularx} { \bool_set_true:N \l_clement_if_in_table_bool  }
+  }{               \bool_set_false:N \l_clement_if_in_table_bool }
+  \bool_if:NTF \l_clement_if_in_table_bool {#1} {#2}
 }
+\ExplSyntaxOff
+% apply spacing removal automatically
+\BeforeBeginEnvironment{itemize}{\IfInTableTF{\compress}{}}
+\BeforeBeginEnvironment{enumerate}{\IfInTableTF{\compress}{}}
