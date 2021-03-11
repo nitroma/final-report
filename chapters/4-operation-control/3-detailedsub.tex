@@ -17,9 +17,9 @@ Table XXX shows a summary of the control loops in the plant sub-section. A total
 \begin{table}[]
 \centering
     \caption{AHP/TOPSIS results for plant location selection}
-    \label{tab:controls}\footnotesize
+    \label{tab:controls}%\footnotesize
 \adjustbox{max width=\textwidth}{
-\begin{tabular}{@{}l|l|l|l|l@{}}
+\begin{tabular}{@{}p{3cm}|p{3cm}|p{4cm}|p{5cm}|p{6cm}@{}}
 \toprule
 \textbf{Unit}                               & \textbf{Controlled Variable}                & \textbf{Manipulated Variable}                           & \textbf{Sensor/Actuator}                                                   & \textbf{Control Strategy}                                                                                                            \\ \midrule
 \multirow{5}{*}{Reactor (R201)}             & Temperature of reactor                      & Cooling water flowrate in reactor jacket                & Temperature sensor (TT-201) / Flow control valve (FCV-201)                 & Feedforward control mitigates temperature disturbances and cascade   control counters flow disturbances in cooling water.            \\
