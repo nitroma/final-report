@@ -8,18 +8,14 @@ The agreed subsection begins with a gaseous \ch{H2} stream and liquid methanol a
 To understand the number of variables that can be simultaneously manipulated to maintain stable operation, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of variables from the total number of equations in a dynamic model of each process unit, however creating a dynamic model is often impractical and error-prone for complex plants with specialised units. Instead, the simpler and straightforward method presented by \textcite{} is used, and the results are presented in Table XX.
 
 \subsection{Key control loops}
-Table XXX shows a summary of the control loops in the plant sub-section. A total of 11 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
+\Cref{tab:controls} shows a summary of the control loops in the plant sub-section. A total of 11 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
 
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage{multirow}
-\begin{table}[]
+\begin{table}[h]
 \centering
-    \caption{AHP/TOPSIS results for plant location selection}
-    \label{tab:controls}%\footnotesize
+    \caption{Summary of control loops}
+    \label{tab:controls}\footnotesize
 \adjustbox{max width=\textwidth}{
-\begin{tabular}{@{}p{3cm}|p{3cm}|p{4cm}|p{5cm}|p{6cm}@{}}
+\begin{tabular}{p{3cm}|p{3cm}|p{4cm}|p{5cm}|p{6cm}}
 \toprule
 \textbf{Unit}                               & \textbf{Controlled Variable}                & \textbf{Manipulated Variable}                           & \textbf{Sensor/Actuator}                                                   & \textbf{Control Strategy}                                                                                                            \\ \midrule
 \multirow{5}{*}{Reactor (R201)}             & Temperature of reactor                      & Cooling water flowrate in reactor jacket                & Temperature sensor (TT-201) / Flow control valve (FCV-201)                 & Feedforward control mitigates temperature disturbances and cascade   control counters flow disturbances in cooling water.            \\
@@ -29,11 +25,11 @@ Table XXX shows a summary of the control loops in the plant sub-section. A total
                                             & Level                                       & Flowrate of reactor outlet                              & Level transmitter (LT-208) / Flow control valve (FCV-203)                  & Level control is cascaded to flow control.                                                                                           \\ \midrule
 Electric Heaters (H201 / H202)              & Temperature of outlet streams               & Electrical input to heater                              & Temperature sensor (TT-202, TT-212) / Heaters (H201, H202)                 & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
 \multirow{4}{*}{Distillation Column (S203)} & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\
-                                            & \multirow{2}{*}{Pressure of column}         & \multirow{2}{*}{Gas   flowrate vented from reflux drum} & \multirow{2}{*}{Pressure   sensor (PT-206) / Flow control valve (FCV-205)} & \multirow{2}{*}{Feedback   control maintains stable unit operation.}                                                                 \\
+                                            & Pressure of column        & Gas   flowrate vented from reflux drum & Pressure   sensor (PT-206) / Flow control valve (FCV-205) & Feedback   control maintains stable unit operation.                                                                \\
                                             &                                             &                                                         &                                                                            &                                                                                                                                      \\
                                             & Feed   pressure                             & Valve position                                          & Pressure sensor (PT-208) / Pressure control valve (PCV-201)                & Feedback control minimises pressure disturbances to the column.                                                                      \\ \midrule
 Reboiler (H204)                             & Level in the reboiler                       & Flowrate of bottoms product                             & Level sensor (LT-202) / Flow control valve (FCV-208)                       & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
-\multirow{2}{*}{Reflux Drum (S204)}         & \multirow{2}{*}{Level in   the reflux drum} & \multirow{2}{*}{Flowrate   of tops product}             & \multirow{2}{*}{Level   sensor (LT-203) / Flow control valve (FCV-206)}    & \multirow{2}{*}{Feedback   control is coupled with feedforward control to smooth disturbances in feed   flowrate.}                   \\
+Reflux Drum (S204)        & Level in   the reflux drum & Flowrate   of tops product            & Level   sensor (LT-203) / Flow control valve (FCV-206)   & Feedback   control is coupled with feedforward control to smooth disturbances in feed flowrate.                   \\
                                             &                                             &                                                         &                                                                            &                                                                                                                                      \\ \midrule
 Partial Condenser (H203)                    & Condenser duty                              & Temperature of cooling water                            & Temperature sensor (TT-208) / Flow control valve (FCV-204)                 & Temperature control is cascaded to flow control to smooth upstream   disturbances from the cooling water.                            \\ \bottomrule
 \end{tabular}}
