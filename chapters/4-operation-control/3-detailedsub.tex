@@ -123,9 +123,9 @@ A composition analyser was chosen to allow direct online measurements of the con
 
 
 \subsubsection{Distillation column S201 pressure control} %S201-PC
-Pressure in distillation columns is one of the most important parameters to control as it not only affects the relative volatilities of the heavy and light keys, but also the shape of the vapour-liquid phase equilibrium curves which determine the compositions of the top and bottoms products. The manipulated variable for pressure control needs to be ade car are several options for pressure control, such as controlling the vapour flow that is vented from the reflux drum, condenser duty, reboiler duty, recirculation of cooling fluid in the condenser or addition of inerts. Hence the choice of manipulated variable needs to be made carefully considering the relative direct impacts and time delays of each manipulated variable. Controlling the vapour flow that is vented from the reflux drum is the simplest control to implement and usually provides the fastest response as the amount of gas holdup in the column directly affects its pressure. In addition, the amount of vapours in the reflux drum S204 is much larger compared to the condensed liquid flow, so the direct impact of vapour flowrate on column pressure would be large. This avoids a situation where the flow control valve becomes saturated and unable to regulate pressure effectively. 
+Pressure in distillation columns is one of the most important parameters to control as it not only affects the relative volatilities of the heavy and light keys, but also the shape of the vapour-liquid phase equilibrium curves which determine the compositions of the top and bottoms products. The manipulated variable for pressure control needs to be made carefully from several options, such as controlling the vapour flow that is vented from the reflux drum, condenser duty, reboiler duty, recirculation of cooling fluid in the condenser or addition of inerts. Controlling the vapour flow that is vented from the reflux drum is the simplest control to implement and usually provides the fastest response as the amount of gas holdup in the column directly affects its pressure. In addition, the vapour flow rate from the condenser is large, making it easier to effect a change in pressure from a small change in valve position. This avoids a situation where the flow control valve becomes saturated when mitigating a large disturbance to pressure. 
 
-An optimal feedback control was designed with the vapour flowrate from the reflux drum as the manipulated variable. A pressure transmitter (PT-206) measures the pressure in the column, which is monitored by a pressure controller (PIC-206) that regulates a flow control valve (FCV-205) on the vent stream from the reflux (Figure \ref{fig:S203-PC}.
+An optimal feedback control was designed with the vapour flowrate from the reflux drum as the manipulated variable. A pressure transmitter (PT-206) measures the pressure in the column, which is monitored by a pressure controller (PIC-206) that regulates a flow control valve (FCV-205) on the vent stream from the reflux.
 
 %no graph
 %\begin{figure}[H]
@@ -137,16 +137,15 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
 
 
 \subsubsection{Control of pressure reduction valve V201} %V201-PC
-To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the pressure of the feed to the column (see Figure \ref{fig:V201-PC}). %no graph
+To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the feed pressure of the column.
 
+%no graph
 %\begin{figure}[H]
  %   \centering
   %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
    % \caption{}
     %\label{fig:V201-PC}
 %\end{figure}
-
-
 
 
 %\subsubsection{Distillation column S201 level control}
