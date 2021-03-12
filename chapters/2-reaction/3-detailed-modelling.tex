@@ -85,10 +85,10 @@ A novel idea of including an additional concentric cooling tube running in the m
 
 
 
-\subsection{Catalyst pellet size}
+\subsection{Catalyst pellet size (to be changed)}
 H-Mordenite catalyst is used in the nitration reaction. 
-\includecomment{From the rate equation, the concentration of nitric acid is in excess so it is assumed to be constant throughout the reaction.}
-It can be assumed that all of the nitration reaction takes place in the solid-fluid interface. Hence, it is important to understand the effect of external and internal diffusional limitation of the reaction depending on the size of the catalyst pellet. This section outlines the steps used to determine the suitable pellet size to be used in the reactor.
+\includecomment{From the rate equation, the concentration of nitric acid is in excess so it is assumed to be constant throughout the reaction.
+It can be assumed that all of the nitration reaction takes place in the solid-fluid interface} Hence, it is important to understand the effect of external and internal diffusional limitation of the reaction depending on the size of the catalyst pellet. This section outlines the steps used to determine the suitable pellet size to be used in the reactor.
 
 The effective diffusional coefficient $D_e$ is first calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [ref]: 
 \begin{equation}
@@ -135,11 +135,12 @@ The axial dispersion coefficient ($D_z$) was calculated to for various diameters
 From the graph, it can be observed that the dispersion coefficient decreases sharply after after ~10cm. Thus, a diameter of 20cm has been selected as any further increase in the diameter does not warrant the drawback of the increasing pressure drop ($\Delta P$), as the $d_p$ is inversely proportional to $\Delta P$ based on equation \ref{eqn:pressuredrop}.
 \subsection{Adiabatic temperature}
 
-\textcolor{red}{Include adiabatic temp rise with and without cooling water }
+\textcolor{red}{Include adiabatic temp rise with and without cooling water}
 
 The nitration reactor cannot be assumed to be isothermal because nitration is a highly exothermic process. As seen in Fig. [adibatic], the temperature rises sharply in the first xxx meters before plateauing at xxx K for an adiabatic reactor. Even by cooling the reactor with a cooling jacket, the exit temperature remains at xxx. The temperature of the reaction needs to kept below 140 °C. At temperatures higher than that, thermal decomposition of nitric acid occurs, which releases nitrogen dioxide and produces even more heat, leading to thermal runaway. Additionally, the possibility of hotspot as shown in Fig [hotspot] will speed up the deactivation of catalyst, but more importantly, it poses safety concerns through the risk of thermal runaway [ref]. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled.
 
-Two options that were considered were: 1) Using Silicon Carbide as H-mordenite support; 2) Using Silicon Carbide as H-mordenite support, plus an additional concentric cooling flow through each channel. Silicon Carbide (SiC) was chosen as the catalyst support owing to its high thermal conductivity (100-200 W m \textsuperscript{-1} K \textsuperscript{-1} as compared to 3 W m \textsuperscript{-1} K \textsuperscript{-1} for H-mordenite). This helps to reduce the overall temperature in the reactor by reducing the catalyst surface temperature [ref]. Although as a result, the rate of reaction and conversion are lower, using SiC keeps the temperature below the critical temperature before thermal runaway happens. 
+\subsection{Catalyst support}
+Two options that were considered were: 1) Using Silicon Carbide as H-mordenite support; 2) Using Silicon Carbide as H-mordenite support, with an additional concentric cooling flow through each channel. Silicon Carbide (SiC) was chosen as the catalyst support owing to its high thermal conductivity (100-200 W m \textsuperscript{-1} K \textsuperscript{-1} as compared to 3 W m \textsuperscript{-1} K \textsuperscript{-1} for H-mordenite). This helps to reduce the overall temperature in the reactor by reducing the catalyst surface temperature [ref]. Although as a result, the rate of reaction and conversion are lower, using SiC keeps the temperature below the critical temperature before thermal runaway happens. 
 
 add why concentric tube is good and catalyst ref
 The subsequent modelling of the nitration reactor will include the use of concentric annular cooling flow through each channel length. 
