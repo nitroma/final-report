@@ -149,7 +149,7 @@ To further ensure tight control of pressure in the column, a feedback control lo
 
 
 %\subsubsection{Distillation column S201 level control}
-%The liquid level at the bottom of the distillation column S201 is an important inventory to control to to prevent the reboiler from drying up and weeping to occur in the column. Since the reboiler duty is already being used in composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Since the column and reboiler are connected, draining more liquid from the reboiler would draw more liquid from the column and vice versa. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see Figure \ref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
+%The liquid level at the bottom of the distillation column S201 is an important inventory to control to prevent the reboiler from drying up. This would also result in weeping in the column and decreased performance. Since the reboiler duty is used for composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see Figure \ref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
 
 %\begin{figure}[H]
    % \centering
@@ -160,10 +160,10 @@ To further ensure tight control of pressure in the column, a feedback control lo
 
 \subsubsection{Reboiler H204 level control} %H204-LC
 %no graph
-
+The liquid level in the reboiler H204 is an important inventory to control to prevent the reboiler from drying up. This would also result in weeping (a lack of vapour flow) in the column and decreased performance of the separation unit. Since the reboiler duty is used for composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. A simple feedback controller is used. 
 
 \subsubsection{Reflux drum S204 level control}%S204-LC
-Similar to the level control in the column, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. A level transmitter (LT-203) sends a signal to the level controller (LIC-203) which controls a flow control valve (FCV-206) on the tops outlet stream, as shown on the P\&ID. 
+Similar to the level control in the reboiler, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. In order to account for disturbances to the column performance because of variations in feed flowrate, a feedforward controller was implemented to adjust the tops product flowrate based on the feed flowrate. This prevents material and energy buildup in the column. 
 
 
 \subsubsection{Heat duty of condenser H203 control}%H203-TC
@@ -175,7 +175,6 @@ The condenser in a distillation column provides cooling to condense the vapour e
     \caption{}
     \label{fig:S203C-TC}
 \end{figure}
-
 
 
 \subsection{Safety design}
