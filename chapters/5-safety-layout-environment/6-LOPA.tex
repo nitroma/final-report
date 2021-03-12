@@ -18,22 +18,21 @@ The first three ICs can be classified as basic process control system failures, 
 Nitroma's plant will operate for 24 hours a day for 7 days a week, which is a common industry standard \cite{job_guide_chemical_2021}. In total, the plant will be operating for 6600 hours (or 275 days) a year, meaning the risk of an explosion in R102 caused by overpressure is present for 75.3\% of the year (equivalent to a frequency of 7.53E-01).  
  
 Whilst there will be flammable material present in R102 which could lead to an explosion in the event of overpressure arising, the presence of hydrogen gas means that an ignition source is not necessary for an explosion to occur. Thus, the probability of ignition was taken to be 100\%, with the probability that ignition would lead to an explosion being taken as 1. As the process is continuous, there will be minimal human involvement in the operation during steady state and thus the the probability of exposure was taken as 0.1. 
- 
- %Alarm and Operator Response Independent of BPCS Shut Down
 
- 
- There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
+There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
  
  \begin{itemize}
-\item  \textbf{IPL1} - pressure controller (PIC201), responding to pressure increase in R201
-\item  \textbf{IPL2} - pressure relief device (PRV-1), with no fouling in the device assumed
-\item 
+\item \textbf{IPL1} - high pressure alarm (PAH 201), which has a defined operator response
+\item  \textbf{IPL2} - pressure controller (PIC201), responding to pressure increase in R201
+\item  \textbf{IPL3} - pressure relief device (PRV-1), with no fouling in the device assumed
  \end{itemize}
 
-%check is level exec alarm would be IPL
+% insert table 
+
+There was an existing safety instrument function in the original design, which was a high pressure executive alarm system which consists of a sensor, a switch (the logic element) and an interlock which triggers an automatic response. This SIF was applicable to all four of the ICs. Whilst IC3 did not require any further SIFs to meet the TMEL, IC4 required a SIF with SIL-
 
 
-The applicability of each IPL varied with the three ICs. For IC1, all of the IPLs were relevant. For IC2, all IPLs applied except IPL1 as it is a fault in the pressure controller itself that initiates overpressure. 
+
 
 
 
