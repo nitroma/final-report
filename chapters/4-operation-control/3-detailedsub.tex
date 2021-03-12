@@ -70,16 +70,17 @@ The ONT reduction reactor is operated under pressure at 5 atm. To maintain this 
 \end{figure} 
 
 \subsubsection{Hydrogen recycle control}%V202-CC
-To control the composition of the gas feed to teh reactor 
+The composition of the gas feed to the reactor is controlled via the purge fraction of the gas recycle, composed of a mixture of unreacted hydrogen and vaporised methanol solvent. A master composition controller infers a set point to a slave flow controller which acts on a flow control valve installed in the recycle purge stream. To know how much recycled gas should be purged to meet the required gas feed composition, the recycle composition is analysed and accounted for with feedforward control. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
-    \caption{}
+    \caption{Gas feed composition control with recycle purge}
     \label{fig:V202-CC}
 \end{figure}
 
 \subsubsection{Reactor R201 level control} % R201-LC
+The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce.
 
 
 \subsubsection{Hydrogen feed flowrate} %R201-HFC
