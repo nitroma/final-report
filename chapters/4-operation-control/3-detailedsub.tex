@@ -41,10 +41,10 @@ Redundancies                        & 3           &           &           &     
                                                                    
                                                                                         \midrule
 Electric Heaters (H201 / H202)              & Temperature of outlet streams               & Electrical input to heater                              & Temperature sensor (TT-202, TT-212) / Heaters (H201, H202)                 & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
-\multirow{3}{*}{Distillation Column (S203)} & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\
+\multirow{3}{*}{Distillation Column (S203)}
                                             & Pressure of column        & Gas   flowrate vented from reflux drum & Pressure   sensor (PT-206) / Flow control valve (FCV-205) & Feedback   control maintains stable unit operation.                                                                \\
-                                            &                                             &                                                         &                                                                            &                                                                                                                                      \\
-                                            & Feed   pressure                             & Valve position                                          & Pressure sensor (PT-208) / Pressure control valve (PCV-201)                & Feedback control minimises pressure disturbances to the column.                                                                      \\ \midrule
+                                            & Feed   pressure                             & Valve position                                          & Pressure sensor (PT-208) / Pressure control valve (PCV-201)                & Feedback control minimises pressure disturbances to the column.\\
+                                           & Bottoms composition                         & Steam flowrate to reboiler (reboiler duty)              & Composition analyser (AT-205) / Flow control valve (FCV-207)               & Composition control is cascaded to inferential temperature control to   increase the responsiveness of control.                      \\\midrule
 Reboiler (H204)                             & Level in the reboiler                       & Flowrate of bottoms product                             & Level sensor (LT-202) / Flow control valve (FCV-208)                       & Feedback control maintains stable unit operation.                                                                                    \\ \midrule
 Reflux Drum (S204)        & Level in   the reflux drum & Flowrate   of tops product            & Level   sensor (LT-203) / Flow control valve (FCV-206)   & Feedback   control is coupled with feedforward control to smooth disturbances in feed flowrate.                   \\
                                             &                                             &                                                         &                                                                            &                                                                                                                                      \\ \midrule
@@ -108,18 +108,6 @@ The liquid level at the bottom of the reactor operating co-currently and with do
 \subsubsection{Reactor feed temperature control}%H201 and H202-TC 
 %no graph
 
-\subsubsection{Bottom stream composition control} %S201-CC
-A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
-
-A composition analyser was chosen to allow direct online measurements of the concentration of o-toluidine, one of the end products of our plant. However, composition analysers often have a slow dynamic response because of long measurement times. There would be delays in the controller response that would lead to a poor control of product quality. To mitigate this, the temperature of the column is used as an inferential measurement to control the product composition. Temperature sensors have quicker dynamic responses, and the temperature profile in the column directly affects product compositions. A calibration curve can be established using phase equilibrium data of methanol and o-toluidine to allow temperature to act as a proxy for composition control. An added benefit of controlling temperature is to also prevent accumulation of thermal energy in the column that would be a safety hazard. Figure \ref{fig:S201-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
-    \caption{}
-    \label{fig:S201-CC}
-\end{figure}
-
 
 
 \subsubsection{Distillation column S201 pressure control} %S201-PC
@@ -148,6 +136,18 @@ To further ensure tight control of pressure in the column, a feedback control lo
 %\end{figure}
 
 
+\subsubsection{Bottom stream composition control} %S201-CC
+A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
+A composition analyser was chosen to allow direct online measurements of the concentration of o-toluidine, one of the end products of our plant. However, composition analysers often have a slow dynamic response because of long measurement times. There would be delays in the controller response that would lead to a poor control of product quality. To mitigate this, the temperature of the column is used as an inferential measurement to control the product composition. Temperature sensors have quicker dynamic responses, and the temperature profile in the column directly affects product compositions. A calibration curve can be established using phase equilibrium data of methanol and o-toluidine to allow temperature to act as a proxy for composition control. An added benefit of controlling temperature is to also prevent accumulation of thermal energy in the column that would be a safety hazard. Figure \ref{fig:S201-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
+    \caption{}
+    \label{fig:S201-CC}
+\end{figure}
+
+
 %\subsubsection{Distillation column S201 level control}
 %The liquid level at the bottom of the distillation column S201 is an important inventory to control to prevent the reboiler from drying up. This would also result in weeping in the column and decreased performance. Since the reboiler duty is used for composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see Figure \ref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
 
@@ -157,6 +157,7 @@ To further ensure tight control of pressure in the column, a feedback control lo
   %  \caption{}
   %  \label{fig:S203-LC}
 %\end{figure}
+
 
 \subsubsection{Reboiler H204 level control} %H204-LC
 %no graph
@@ -184,3 +185,4 @@ The condenser in a distillation column provides cooling to condense the vapour e
 \subsubsection{Alarms and safety interlocks design}
 
 \subsubsection{Recommendations from LOPA} %Stephen
+%link to safety
