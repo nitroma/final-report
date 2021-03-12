@@ -31,12 +31,38 @@ Then, the crystal population density, $n$, defined as the number of crystals per
 
 The crystallisation cooling is achieved by a half pipe coil jacketed vessel configuration. These vessels exhibit excellent heat transfer capability especially when the service side fluid is a liquid. An impeller would also ensure good mixing, assumed to be perfect, to have uniform temperature within the crystalliser.
 
-\begin{equation}
-    Nu = ARe^{\frac{2}{3}}Pr^{\frac{1}{3}}\frac{\eta}{\eta_w}
-\end{equation}
+\begin{table}
+\caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
+\label{tab:heatransfermethodstype}
+\begin{tabularx}{\linewidth}{lXX}
+\toprule
+Type & Advantages                 & Disadvantages                               \\ \midrule
+Conventional Jacket & \begin{itemize}[label=+,leftmargin=1em]
+  \item Poor heat transfer
+  \item Controllable crystal growth rate 
+  \item No slurry handling, easy to operate
+\end{itemize} & \begin{itemize}[label=-,leftmargin=1em]
+  \item The surface area is a limiting factor so bigger plant sizes required, high investment costs
+  \item Multistage process, increases energy consumption and plant size 
+  \item Commonly batch process
+\end{itemize} \\\midrule 
+Suspension &  \begin{itemize}[label=+,leftmargin=1em]
+  \item Moderate crystal growth and large surface areas 
+  \item High purity product in one step, less energy consumption
+  \item Relatively compact process
+  \item Continuous process
+\end{itemize} & \begin{itemize}[label=-,leftmargin=1em]
+  \item Slurry handling, stirrers required to avoid sedimentation
+  \item High purity product in one step so less energy consumption
+  \item Encrustation issues 
+  \item Solid-liquid separation required, an additional operation cost
+\end{itemize}
+\\\bottomrule
+\end{tabularx}
+\end{table}
+
 
 \begin{equation}
-    e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = 0.577mm
-    \label{eqn:minthicknessshell}
+    Nu = ARe^{\frac{2}{3}}Pr^{\frac{1}{3}}\frac{\eta}{\eta_w}
 \end{equation}
 
