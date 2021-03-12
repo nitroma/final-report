@@ -40,37 +40,37 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure originate fromAs demand for cooling water on the plant is
-high, an inner, cascade, loop is added to the control system to account for disturbances in cooling
-water feed pressure (flow disturbance)
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
-    \caption{}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+    \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
 \end{figure}
 
 \subsubsection{Reactor R201 pressure control} %R201-PC
-\begin{figure}[H]
+The ONT reduction reactor is operated under pressure at 5 atm. To maintain this optimum operating condition and most importantly reduce the risk of overpressure and explosion, the pressure within the reactor is closely monitored and controlled. The manipulated va 
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
-    \caption{}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
+    \caption{Pressure control loop for reactor R201}
     \label{fig:R201-PC}
 \end{figure}
 
 \subsubsection{Ratio control of reactants} %R201-CC
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
     \caption{}
     \label{fig:R201-FC}
 \end{figure} 
 
 \subsubsection{Hydrogen recycle control}%V202-CC
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
     \caption{}
     \label{fig:V202-CC}
 \end{figure}
@@ -96,9 +96,9 @@ A composition control loop in the distillation column is also necessary to ensur
 
 A composition analyser was chosen to allow direct online measurements of the o-toluidine concentration, providing primary data to plant operators regarding this important performance indicator. However, composition analysers often have a slow dynamic response, leading to long measurement lags that result in a delay in the response of the control system. This sluggish behaviour would lead to the concentration of the bottoms fluctuating. To mitigate this, the temperature of the column is used as an inferential sensor to control the product composition, and is assigned as a slave controller under the master composition controller. Temperature sensors have quicker dynamic responses and can be correlated well to product composition. Controlling the temperature of the column is also crucial to a safe operation of the plant. Figure \ref{fig:S201-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
     \caption{}
     \label{fig:S201-CC}
 \end{figure}
@@ -153,9 +153,9 @@ Similar to the level control in the column, controlling the level of liquid in t
 \subsubsection{Heat duty of condenser H203 control}%H203-TC
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
     \caption{}
     \label{fig:S203C-TC}
 \end{figure}
