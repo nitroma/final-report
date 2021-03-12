@@ -5,10 +5,8 @@
 The agreed subsection has a gaseous \ch{H2} feed and liquid feed consisting of methanol and o-nitrotoluene entering the top of a trickle bed reactor (R201). The streams are preheated electric heaters H201 and H202. The reactor has a gaseous effluent which is split into a recycle and purge stream. The liquid effluent enters a packed distillation column (S201), where methanol is separated from the heavier organics. The methanol-rich vapour from the column is partially condensed and split into a gaseous and liquid product in a reflux drum (S204), while the bottoms stream containing valuable o-toluidine product is sent to downstream purification units.
 
 \subsection{Degree of freedom analysis}
-To determine the number of variables that can be simultaneously manipulated to maintain stable operation in our sub-section, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of variables from the total number of equations in a dynamic model of each process unit, however creating such models are often impractical and error-prone for complex plants with specialised units. Instead, the simpler and straightforward method presented by \textcite{} showed that there are a maximum of 14 variables that could be manipulated for control (see Table \ref{tab:dof}).
 
-\begin{wraptable}{r}{0.9\linewidth}
-\begin{table}[]
+\begin{wraptable}{r}{0.5\linewidth}
 \centering
     \caption{Degree of freedom analysis}
     \label{tab:dof}
@@ -20,8 +18,9 @@ Sum of mechanical agitators         & 2           &           &           &     
 Redundancies                        & 3           &           &           &           \\ \midrule
 \textbf{Control degrees of freedom} & \textbf{14} & \textbf{} & \textbf{} & \textbf{} \\ \bottomrule
 \end{tabular}
-\end{table}
 \end{wraptable}
+
+To determine the number of variables that can be simultaneously manipulated to maintain stable operation in our sub-section, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of variables from the total number of equations in a dynamic model of each process unit, however creating such models are often impractical and error-prone for complex plants with specialised units. Instead, the simpler and straightforward method presented by \textcite{} showed that there are a maximum of 14 variables that could be manipulated for control (see Table \ref{tab:dof}).
 
 \subsection{Key control loops}
 \Cref{tab:controls} shows a summary of the control loops in the plant sub-section. A total of 14 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
@@ -66,13 +65,15 @@ Robust control of the reactor temperature is essential to minimise the risk of t
 \end{figure}
 
 \subsubsection{Reactor R201 pressure control} %R201-PC
-The ONT reduction reactor is operated under pressure at 5 atm. To maintain this optimum operating condition and most importantly reduce the risk of overpressure and explosion, the pressure within the reactor is closely monitored and controlled. The manipulated variable is the pressure of the gas feed to the reactor, which should also be maintained at 5 atm. A pressure control is installed onto the fresh hydrogen feed line. To account for disturbances in the pressure of the recycled gas and in the pressure of the hydrogen coming from a pressurized storage tank, feedforward control was added. 
-\begin{wrapfigure}{r}{0.7\linewidth}
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.68\linewidth]{chapters/3-separation/figures/diameter.jpg}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
     \caption{Pressure control loop for reactor R201}
     \label{fig:R201-PC}
 \end{wrapfigure}
+The ONT reduction reactor is operated under pressure at 5 atm. To maintain this optimum operating condition and most importantly reduce the risk of overpressure and explosion, the pressure within the reactor is closely monitored and controlled. The manipulated variable is the pressure of the gas feed to the reactor, which should also be maintained at 5 atm. A pressure control is installed onto the fresh hydrogen feed line. To account for disturbances in the pressure of the recycled gas and in the pressure of the hydrogen coming from a pressurized storage tank, feedforward control was added. 
+
+
 
 \subsubsection{Ratio control of reactants} %R201-CC
 \begin{figure}[H]
@@ -83,14 +84,15 @@ The ONT reduction reactor is operated under pressure at 5 atm. To maintain this 
 \end{figure} 
 
 \subsubsection{Hydrogen recycle control}%V202-CC
-The composition of the gas feed to the reactor is controlled via the purge fraction of the gas recycle, composed of a mixture of unreacted hydrogen and vaporised methanol solvent. A master composition controller infers a set point to a slave flow controller which acts on a flow control valve installed in the recycle purge stream. To know how much recycled gas should be purged to meet the required gas feed composition, the recycle composition is analysed and accounted for with feedforward control. 
-
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V202-CC.pdf}
     \caption{Gas feed composition control with recycle purge}
     \label{fig:V202-CC}
-\end{figure}
+\end{wrapfigure}
+The composition of the gas feed to the reactor is controlled via the purge fraction of the gas recycle, composed of a mixture of unreacted hydrogen and vaporised methanol solvent. A master composition controller infers a set point to a slave flow controller which acts on a flow control valve installed in the recycle purge stream. To know how much recycled gas should be purged to meet the required gas feed composition, the recycle composition is analysed and accounted for with feedforward control. 
+
+
 
 \subsubsection{Reactor R201 level control} % R201-LC
 The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce.
@@ -138,15 +140,16 @@ To further ensure tight control of pressure in the column, a feedback control lo
 
 
 \subsubsection{Bottom stream composition control} %S201-CC
+\begin{wrapfigure}{r}{0.6\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
+    \caption{}
+    \label{fig:S201-CC}
+\end{wrapfigure}
 A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
 A composition analyser was chosen to allow direct online measurements of the concentration of o-toluidine, one of the end products of our plant. However, composition analysers often have a slow dynamic response because of long measurement times. There would be delays in the controller response that would lead to a poor control of product quality. To mitigate this, the temperature of the column is used as an inferential measurement to control the product composition. Temperature sensors have quicker dynamic responses, and the temperature profile in the column directly affects product compositions. A calibration curve can be established using phase equilibrium data of methanol and o-toluidine to allow temperature to act as a proxy for composition control. An added benefit of controlling temperature is to also prevent accumulation of thermal energy in the column that would be a safety hazard. Figure \ref{fig:S201-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
-    \caption{}
-    \label{fig:S201-CC}
-\end{figure}
+
 
 
 %\subsubsection{Distillation column S201 level control}
@@ -169,14 +172,15 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 
 
 \subsubsection{Heat duty of condenser H203 control}%H203-TC
-The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
-
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
     \caption{}
     \label{fig:S203C-TC}
-\end{figure}
+\end{wrapfigure}
+The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
+
+
 
 
 \subsection{Safety design} %mention HAZOP recommendations
