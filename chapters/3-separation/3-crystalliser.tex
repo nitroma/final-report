@@ -3,23 +3,17 @@
 
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
-The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such a system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{} is a schematic of the phase diagram of a eutectic-forming system. Here, the 
+The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such a system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of the phase diagram of a eutectic-forming system. Here, the 
 
-\begin{wrapfigure}{R}{0.5\linewidth}
+\begin{figure}{h}
     \centering
     \includesvg[scale=0.45,inkscapelatex=false]{figures/Eutectic_schematic.svg}
     \caption{Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour.}
     \label{fig:eutectic schematic}
-\end{wrapfigure}
+\end{figure}
 
-Figure \ref{fig:p-NT_m-NT_phase equilibrium} is a plot of the solid-liquid phase diagram of the (p-NT + m-NT) system, where the experimental data, marked as blue circles, in Figure \ref{fig:p-NT_m-NT_phase equilibrium} were obtained from DETHERM. Initially, van't Hoff's equation was used to predict 
+Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram of the (p-NT + m-NT) system, where the experimental data, marked as blue circles, in Figure \ref{fig:eutectic schematic}b were obtained from DETHERM. Initially, van't Hoff's equation was used to predict 
 
-\begin{wrapfigure}{L}{0.5\linewidth}
-    \centering
-    \includesvg[scale=0.45,inkscapelatex=false]{figures/Eutectic_schematic.svg}
-    \caption{The eutectic-forming solid-liquid phase behaviour of the (p-Nitrotoluene + m-nitrotoluene) system. The experimental data are collected from DETHERM. van't Hoff's equation and a fitted correlation have been used to predict the }
-    \label{fig:p-NT_m-NT_phase equilibrium}
-\end{wrapfigure}
 \subsection{Population balance of MSMPR crystallisation}
 In order to specify a MSMPR crystallisation process, it is important to determine the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where information about the kinetics of crystal formation is contained. The population balance has been a central focus in the works of Randoph and Larson. 
 
@@ -45,19 +39,6 @@ Then, the crystal population density, $n$, defined as the number of crystals per
 \subsection{Heat transfer}
 
 The crystallisation cooling is achieved by a half pipe coil jacketed vessel configuration. This method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid, . An impeller would also ensure good mixing, assumed to be perfect, to have uniform temperature within the crystalliser. \ref{tab:heatransfermethodstype} outline the properties of each heat transfer method.
-
-To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
-
-\begin{equation} \label{eq:energy balance}
-    Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
-\end{equation}
-
-\noindent where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
-
-
-
-
-
 
 \begin{table}
 \caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
@@ -89,6 +70,26 @@ Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
 \\\bottomrule
 \end{tabularx}
 \end{table}
+
+
+
+
+To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
+
+\begin{equation} \label{eq:energy balance}
+    Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
+\end{equation}
+
+\noindent where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
+
+
+
+
+
+
+
+
+
 
 
 \begin{equation}
