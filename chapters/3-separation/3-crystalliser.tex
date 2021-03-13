@@ -3,14 +3,13 @@
 
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
-The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A at equilibrium would be given by
+The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
 
 \begin{equation}\label{eq:amount solid A equilibrium}
-    \dot{M_solid} = \dot{M_total} (x_1 - x_2)
+    \dot{M_{solid}} = \frac{\dot{M_{total}} (x_1 - x_2)}{1 - x_2}
 \end{equation}
 
-\noindent where
-
+\noindent where $\dot{M_solid}$ is the equilibrium mass flow rate of crystal solid A and $\dot{M_{total}}$ is the total mass flow rate of A and B. 
 
 \begin{figure}[h]
     \centering
@@ -84,7 +83,7 @@ Dimple Jacket & \begin{itemize}[label=+,leftmargin=1em]
 \end{itemize} \\\midrule
 Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
   \item Excellent heat transfer
-  \item Higher pressure limits
+  \item Withstands higher jacket pressures
 \end{itemize} & \begin{itemize}[label=-,leftmargin=1em]
   \item Problematic when trying to route around ports and supports 
   \item More expensive than conventional jackets
