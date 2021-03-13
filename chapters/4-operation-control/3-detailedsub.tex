@@ -55,14 +55,15 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
-
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
     \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
-\end{figure}
+\end{wrapfigure}
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+
+
 
 \subsubsection{Reactor R201 pressure control} %R201-PC
 \begin{wrapfigure}{r}{0.6\linewidth}
@@ -76,12 +77,12 @@ The ONT reduction reactor is operated under pressure at 5 atm. To maintain this 
 
 
 \subsubsection{Ratio control of reactants} %R201-CC
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
     \caption{Ratio control of reactants to reactor R201}
     \label{fig:R201-FC}
-\end{figure} 
+\end{wrapfigure} 
 Ratio control is a special type of feedforward control whose objective is to maintain a specified ratio between two process streams. It is used in Nitroma's plant to maintain a stoichiometric ratio of reactants to reactor R201. Two different control schemes are proposed by \textcite{}: for both, one of the stream is treated as a disturbance which is measured by a transmitter. In the most classic scheme, the ratio of signals from the two transmitters are sent to a ratio controller acting on a flow control valve. In the more advance control scheme, the measurement from the disturbance stream is fed into a ratio station which calculates what the set point of the manipulated variable. This set point is sent to a flow controller acting on a valve. The advantage of the first method is that the ratio is actually calculated. However the inclusion of the divider element in the control loop introduces non-linearity in the process gain, thus the second method is preferred. Since the system is required to operate at a 1:4 molar ratio of ONT to hydrogen, the ratio controller must be given molar flowrates for those two species. A flow and composition transmitters are installed on both the gas and liquid stream. The flow and composition signals are multiplied to obtain the molar flowrates of hydrogen and ONT. The hydrogen gas stream is assumed to be the disturbance and its molar flowrate is sent to a ratio station sending the set point to a flow controller acting on the liquid pump speed. One inevitable drawback with ratio control is that the liquid feed flowrate (manipulated variable) will require some time to reach its new set point after a step change in the gas flowrate. However, flow control loops are relatively quick to respond to changes and the time delay is usually acceptable [].
 
 
@@ -220,6 +221,12 @@ g_{DC1}(s)=-\frac{g_{12}(s)}{g_{11}(s)}
 \subsubsection{Alarms and emergency trips strategy}
 
 \subsubsection{Alarms and safety interlocks design}
+
+\begin{table}[H]
+\label{tab:alarms}
+  \caption{Summary of regular and executive alarms}
+\includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
+\end{table}
 
 \subsubsection{Recommendations from LOPA} %Stephen
 %link to safety
