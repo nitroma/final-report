@@ -106,13 +106,13 @@ To calculate the required length of half coil piping, the total heat transfer ne
 The overall heat transfer coefficient consist of 4 resistance terms; $R_1$,$R_w$,$R_2$ and $R_f$.
 
 \begin{equation} \label{eq:resistht}
-    R_O = R_1 + R_{fp} + R_2 + R_w + R_{fs}
+    R_O = R_1 + R_{fp} + R_w + R_{fs} + R_2
 \end{equation}
 
 where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side heat transfer and $R_f$ is additional resistance due to fouling. For initial calculations, resistance due to fouling will not be accounted for.
 
 \begin{equation} \label{eq:energy balance}
-    U = \frac{1}{\alpha A_i} + \frac{k}{L} + \frac{1}{\alpha A_o} 
+    U = \frac{1}{h_1 A_i} + \frac{1}{\pi Lk} ln \left(\frac{r_o}{r_i} \right) + \frac{1}{h_2 A_o} 
 \end{equation}
 
 

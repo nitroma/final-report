@@ -21,17 +21,17 @@ Figure \ref{fig:hydraulic} illustrates the characteristics of the hydraulic colu
 \subsubsection{Volume balance} 
 This model was based on the assumption that the liquid and solid in the system were incompressible. For simplicity, density and viscosity were assumed to be independent of temperature. 
 
-Overall volume balance at the top section 
+Overall volume balance at the top section:  
 \begin{equation}
 \phi_{\mathrm{feed}}+\phi_{\mathrm{steer}}=\phi_{s,\mathrm{filters}}+\phi_{ml.\mathrm{filters}}
 \end{equation}
 
-The total length of the top section is constant. The length of the filtration section was derived from the solid balance in the top section. 
+The total length of the top section remains constant. The length of the filtration section was derived from the solid balance in the top section. 
 \begin{equation}
 \frac{\dd L_{\mathrm{filtration}}}{\dd t} = \frac{1}{A_c(1-\alpha_2-\epsilon)}(\alpha_1\phi_{\mathrm{feed}}-\phi_{s,\mathrm{filters}})
 \end{equation}
 
-In the bottom section, there is the stagnant zone with the crystals. Then there is the wash zone with only the crystal and the wash liquid at steady state. The wash liquid crystallises due to the low temperature at the wash front. The crystallisation of the wash liquid can be related to the disappearance of the wash liquid by difference in density of the solid and liquid.
+In the bottom section, there is the stagnant zone with the crystals. Then there is the wash zone with only the crystal and the wash liquid at steady state. The wash liquid crystallises due to low temperature at the wash front. The crystallisation of the wash liquid can be related to the disappearance of the wash liquid by difference in density of the solid and liquid.
 \begin{equation}
 C_l= \frac{\rho_s}{\rho_l}C_s
 \end{equation}
@@ -41,17 +41,17 @@ The amount of crystallised material was calculated based on a heat balance and t
 C_s= \frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}Q_{s,\mathrm{filters}}
 \end{equation}
 
-The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes the wash liquid is not loss through the filters which is ensured by positioning the filters above the wash section.
+The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes the wash liquid is not lost through the filters which is ensured by positioning the filters above the wash section.
 \begin{equation}
 \epsilon_w A_c \frac{\dd L_{\mathrm{wash}}}{\dd t}= \phi_{wl,\mathrm{knife}}-C_l
 \end{equation}
 
-The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was taken as 0.45. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be further evaluated in a pilot scale experiment. The porosity in the wash zone was calculated from the equation below. 
+The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was approximated at 0.45 \cite{jansens_furification_1995}. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be explored further through experiments. The porosity in the wash zone was calculated from the equation below. 
 \begin{equation}
 \epsilon_{w}= \epsilon-(1-\epsilon)\left(\frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}\right)
 \end{equation}
 
-At steady state, the wash section is constant therefore there  would be no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and splits into residual and steer flow. 
+At steady state, the wash section is constant with no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and splits into residual and steer flow. 
 \begin{equation}
 \phi_{\mathrm{residue}}= \phi_{ml,\mathrm{filters}} - \phi_{\mathrm{steer}}
 \end{equation}
@@ -70,7 +70,7 @@ The liquid pressure drop across each section were calculated with the following 
     \frac{\Delta P_{l,\mathrm{wash}}}{L_{\mathrm{wash}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{wash}}}\left(-\frac{\phi_{wl,\mathrm{knife}}}{\epsilon_w A_c} - \frac{\phi_{s,\mathrm{knife}}}{1-\epsilon_w A_c}\right)
 \end{align}
 
-The liquid pressure gradient at each section were assumed to be constant due to the incompressibilty assumption of the packed bed. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
+The liquid pressure gradient at each section were assumed to be constant since the packed bed is treated as bein incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 \begin{equation}
 P_{\mathrm{top}} = P_{\mathrm{filters}} + \Delta P_{l,\mathrm{filtration}}
 \end{equation}
