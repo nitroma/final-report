@@ -1,5 +1,27 @@
 \section{Sample calculations}
 \label{app:samplecal}
+
+\subsection{Degree of freedom analysis}
+
+\begin{table}[]
+\label{tab:dof-restraining-no.}
+\caption{Restraining numbers for each unit based on Table 1 in \textcite{}}
+\begin{tabular}{lllll}
+\cline{1-4}
+Unit                                                                          & Unit Tag                  & Restraining Number                       & Notes                    &  \\ \cline{1-4}
+Pump                                                                          & P201                      & 1                                        & Mechanical agitator (+1) &  \\
+Electrical heater                                                             & H201                      & 1                                        &                          &  \\
+Mixing point                                                                  & V201                      & 1                                        &                          &  \\
+Electrical heater                                                             & H202                      & 1                                        &                          &  \\
+Trickle bed reactor                                                           & R201                      & 1 (cooling water material balance C1=C2) &                          &  \\
+Splitter                                                                      & FCV-202                   & 1                                        &                          &  \\
+Fan                                                                           & F201                      & 1                                        & Mechanical agitator (+1) &  \\
+Pressure reduction valve                                                      & PCV-201                   & 1                                        &                          &  \\
+Distillation column (with kettle reboiler, partial condenser and reflux drum) & S201 (H204,   H203, S204) & 3                                        & Redundancies (-3)        &  \\
+\textbf{Total}                                                                & \textbf{}                 & \textbf{13}                              & \textbf{-1}              &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
+
 \subsection{For executive alarms}
 
 \subsection{For start-up and shutdown procedures}
