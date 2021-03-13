@@ -24,17 +24,19 @@ Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram
     ln(x) = \frac{H_f}{R T}(\frac{T}{T^*} - 1)
 \end{equation}
 
-\noindent where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, $T$ is the equilibrium temperature, and $T^*$ is the melting point of pure p-NT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions of van't Hoff's equation, shown as the red curve, are quite off from experimental data. In particular, van't Hoff over-predicts the melting temperature at compositions around the eutectic point. Hence, a van't Hoff-type power-law fit has been used instead in the form of 
+\noindent where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, $T$ is the equilibrium temperature, and $T^*$ is the melting point of pure p-NT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions of Moyers and Rousseau's van't Hoff relation, shown as the red curve, are quite off from experimental data. In particular, this relation over-predicts the melting temperature at compositions around the eutectic point. Hence, a van't Hoff-type power-law fit has been used instead in the form of 
 
 \begin{equation}
      ln(x) = \frac{T - 323.87}{50.259}
 \end{equation}
 
-\noindent It has been found that this correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results and hence has been used in the design.
+\noindent It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results. Hence it has been used for the design.
 
-In reality, however, the system needs time to reach thermodynamic equilibrium, which is why a crystalliser is needed. Kinetics of crystal formation in a MSMPR crystalliser will be explained in the following sections.
+In reality, however, the system needs time to reach thermodynamic equilibrium, which is why a physical crystalliser is needed. Kinetics of crystal formation in a MSMPR crystalliser will be explained in the following sections.
 
-\subsection{Population and mass balances of MSMPR crystallisation}
+\subsection{Kinetics of MSMPR crystallisation}
+The kinetics of MSMPR crystallisation is governed by two processes: nucleation and growth. Nucleation is the creation of embryo-sized crystals (known as nuclei) due to supersaturation. It is further classifed
+
 In order to specify the kinetics of a MSMPR crystallisation process, it is important to determine the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where information about the kinetics of crystal formation is contained. The population balance has been a central focus in the works of Randoph and Larson. \cite{randolph larson}
 
 First, for many commercial crystallisation processes, McCabe's $\Delta$ L law is a general constraint applied,
@@ -111,16 +113,19 @@ The overall heat transfer coefficient consist of 4 resistance terms; $R_1$,$R_w$
     R_O = R_1 + R_{fp} + R_w + R_{fs} + R_2
 \end{equation}
 
-where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side convective heat transfer, $R_fs$ AND $R_fp$ are the additional resistance due to fouling on the service side and process side respectively. In these calculations, resistance due to fouling on the service side was assumed negligible, whereas the effects of fouling on the process side was investigated further in section %label section with fouling sensitiivty%.
+where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side convective heat transfer, $R_{fs}$ AND $R_{fp}$ are the additional resistance due to fouling on the service side and process side respectively. In these calculations, resistance due to fouling on the service side was assumed negligible, whereas the effects of fouling on the process side was investigated further in section %label section with fouling sensitiivty%.
+
+Accounting fr all these resistances n series, the overall heat transfer coefficient is obtained  
 
 \begin{equation} \label{eq:energy balance}
-    U = \left(\frac{1}{h_1} + \frac{L}{k}   + \frac{1}{h_2 } \right)^{-1}
+    U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
 \end{equation}
 
-
+l is the thickness of the half coil pipe, k is the thermal conductivity of pipe material (steel)
 
 
 To determine the heat transfer coefficients on both the process side,\ref{eq:processsideht},  and service side, \ref{eq:servicesideht} of the heat transfer steps, experimentally obtained Nusselt numbers were obtained. 
+
 
 
 \begin{equation} \label{eq:processsideht}
