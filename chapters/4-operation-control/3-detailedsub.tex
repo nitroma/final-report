@@ -179,22 +179,23 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
 \subsection{Process and control loop interactions}
-The established controls so far have assumed a single-input, single-output (SISO) system, where one manipulated variable (mv) only affects one control variable (cv). In reality, it is likely that manipulating one variable will affect multiple controlled variables and we have a multiple-input, multiple-output (MIMO) system. For example, controlling reboiler duty would directly affect the column temperature, but would also indirectly affect the bottoms flow rate as more vapour is generated and less liquid is left. 
+The established controls so far have assumed that one manipulated variable (mv) only affects one control variable (cv). In reality, it is likely that manipulating one variable will affect multiple controlled variables and we have a multiple-input, multiple-output (MIMO) system. For example, reducing reboiler duty would directly affect the column temperature, but would also indirectly affect the pressure as less vapour is produced, which in turn . 
 
 In principle, good control of MIMO systems will require knowledge about the dynamics of the system to choose the best mv-cv pairings and minimise interactions between control loops. This was beyond the scope of this report, however a more advanced controller design would be feasible once experimental work on a pilot scale plant was carried out to determine the dynamic responses of various mvs to the cvs.
 
 \subsubsection{Relative Gain Array}
-Process dynamics data can be utilised by the Relative Gain Array method to deduce the best manipulated variable pairing for each controlled variable. This is determined by the relative gain between a controlled variable and manipulated variable, which is defined as the ratio of the steady state open-loop gain and closed-loop gain (see Equation \ref{eqn:relative-gain}). This indicates the ratio of the direct effect to the total effect of changing mv on cv (see. A good controller is one with the highest relative gain, because it means the 
+Process dynamics data can be utilised by the Relative Gain Array method to deduce the best manipulated variable pairing for each controlled variable. This is determined by the relative gain between a controlled variable and manipulated variable, which is defined as the ratio of the steady state open-loop gain and closed-loop gain (see Equation \ref{eqn:relative-gain}). This indicates the ratio of the direct effect to the total effect of changing mv on cv (see Figure \ref{fig:RGA-block-di}). A good controller is one with the highest relative gain, because it means the direct effect dominates over the indirect effect which allows for a fast controller response.
+
 \begin{equation}
 \label{eqn:relative-gain}
 \lambda_{ij}=\frac{(\partial y_i / \partial u_j)_u}{(\partial y_i / \partial u_j)_y}=\frac{open-loop\;gain}{closed-loop\;gain}
 \end{equation}
 
-\begin{wrapfigure}{r}{0.6\linewidth}
+\begin{wrapfigure}{r}{0.5\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
-    \caption{Block diagram showing the effect of changing }
-    \label{fig:S203C-TC}
+    \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path.}
+    \label{fig:RGA-block-di}
 \end{wrapfigure}
 
 It is desirable to choose 
