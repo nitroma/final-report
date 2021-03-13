@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -151,12 +151,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3384px;line-height:0;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.336919"
-       x="119.69621"
+       x="112.87249"
        y="133.15587"
        id="text843-83-4"
        transform="scale(0.98702633,1.0131442)"><tspan
          sodipodi:role="line"
-         x="119.69621"
+         x="112.87249"
          y="133.15587"
          style="font-size:6.3384px;line-height:1;stroke-width:0.336919"
          id="tspan845-0-3">Solid A + Solid B</tspan></text>
