@@ -6,17 +6,17 @@ A HAZOP was carried out on the identified on the section of the plant in which o
  
 
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \caption{The design intent of nodes from HAZOP study}
 \label{tab:nodes}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}cll@{}}
-\toprule
-\textbf{Node}                                            & \multicolumn{1}{c}{\textbf{1}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       & \multicolumn{1}{c}{\textbf{2}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\ \midrule
-\begin{tabular}[c]{@{}c@{}}Design \\ Intent\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Production of o-toluidine via hydrogenation of o-nitrotoluene}     \\     \\  Methanol and o-nitrotoluene feed (from mixer M201) \\ pass through pump P201a/P201b \\ and heat exchanger H202 (to reach the \\ required reaction temperature 333 K) before entering R201.\\      \\ Hydrogen is transferred from the storage tank, \\ passing through a fan F201a/F201b and heat \\ exchanger before entering   R201. Reduction \\ of o-nitrotoluene in R201 occurs at 333 K, 5 atm. \\ Hydrogen gas is recycled back into R201, whilst \\ o-toluidine, by-products and unreacted\\ substances are transferred for separation.\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Purification of o-nitrotoluene and recycle of  methanol}  \\ \\ The outlet stream of R201 is transferred to the distillation \\ column, S203 via V201   (which reduces the pressure \\ of the stream from 5 atm to 1 atm). Within S203,   \\ o-toluidine (bottoms stream) separated from unreacted \\ o-nitrotoluene,   by-products and unreacted substances, \\ sent to reboiler, H204. \\ \\ The top, vapour stream (by-products and unreacted \\ substances), is transferred from S203 to H203 for partial \\ condensation. Following liquidation, the stream is \\ sent to flash drum, S204, to separate non-condensable \\ and condensable compounds.\end{tabular} \\ \bottomrule
-\end{tabular}%
-}
+% \resizebox{\textwidth}{!}{%
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+    \toprule
+    \textbf{Node}         & \textbf{1: Production of o-toluidine via hydrogenation of o-nitrotoluene}                                                                                                                                                                                                                                                                                                                                                                                                                                 & \textbf{2: Purification of o-nitrotoluene and recycle of methanol}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \midrule
+    Design Intent         & Methanol and o-nitrotoluene feed (from mixer M201) pass through pump P201a/P201b and heat exchanger H202 (to reach the required reaction temperature 333 K) before entering R201. Hydrogen is transferred from the storage tank, passing through a fan F201a/F201b and heat exchanger before entering R201. Reduction of o-nitrotoluene in R201 occurs at 333 K, 5 atm. Hydrogen gas is recycled back into R201, whilst o-toluidine, by-products and unreacted substances are transferred for separation. & The outlet stream of R201 is transferred to the distillation column, S203 via V201 (which reduces the pressure of the stream from 5 atm to 1 atm). Within S203, o-toluidine (bottoms stream) separated from unreacted o-nitrotoluene, by-products and unreacted substances, sent to reboiler, H204. The top, vapour stream (by-products and unreacted substances), is transferred from S203 to H203 for partial condensation. Following liquidation, the stream is sent to flash drum, S204, to separate non-condensable and condensable compounds. \\ \bottomrule
+\end{tabularx}
+% }
 \end{table}
 
 
@@ -26,7 +26,7 @@ Following the review of the HAZOP study, several of the recommendations suggeste
 % \usepackage{booktabs}
 % \usepackage{multirow}
 % \usepackage{graphicx}
-\begin{table}[]
+\begin{table}[h]
 \centering
 \caption{Changes to P\&ID}
 \label{tab:PIDchanges}
