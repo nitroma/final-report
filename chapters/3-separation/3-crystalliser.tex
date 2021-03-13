@@ -3,18 +3,28 @@
 
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
-The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such a system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process; here, starting from point 1 with temperature at $T_1$ and fraction of component A at $f_1$ on the solid-liquid phase boundary, when the mixture is cooled down to $T_2$, the liquid phase composition will become $f_2$ at equilibrium. Since $f_2$ is lower than $f_1$, this means pure solid A would crystallise out from the liquid, and its amount would be given by 
+The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $f_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $f_2$. Since $f_2$ is lower than $f_1$, this means pure solid A would crystallise out from the liquid, and its amount at equilibrium would be given by
+
+\begin{equation}
+    
+\end{equation}
 
 
 
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.45,inkscapelatex=false]{figures/Eutectic_schematic.svg}
-    \caption{Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour.}
+    \caption{(a) Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour. (b) Solid-liquid phase diagram for the (p-NT + m-NT) system.}
     \label{fig:eutectic schematic}
 \end{figure}
 
-Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram of the (p-NT + m-NT) system, where the experimental data, marked as blue circles, in Figure \ref{fig:eutectic schematic}b were obtained from DETHERM. Initially, van't Hoff's equation was used to predict 
+Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram for the (p-NT + m-NT) system, where component fraction on the horizontal axis has been defined for p-NT. Experimental data were obtained from DETHERM and are marked on this Figure as green circles. Initially, van't Hoff's equation was used to give continuous predictions of the solid-liquid phase boundary on the right-hand-side of the eutectic point,
+
+\begin{equation}
+    
+\end{equation}
+
+\noindent However, as can be seen on Figure \ref{fig:eutectic schematic}b, 
 
 \subsection{Population balance of MSMPR crystallisation}
 In order to specify a MSMPR crystallisation process, it is important to determine the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where information about the kinetics of crystal formation is contained. The population balance has been a central focus in the works of Randoph and Larson. 
@@ -84,10 +94,18 @@ To calculate the required length of half coil piping, the total heat transfer ne
 
 \noindent where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
 
-The overall heat transfer coefficient consist of 4 resistance terms; R_1,R_w,R2 and R_f as the process side convective heat transfer, 
 
+The overall heat transfer coefficient consist of 4 resistance terms; $R_1$,$R_w$,$R_2$ and $R_f$.
 
+\begin{equation} \label{eq:resistht}
+    R_O = R_1 + R_2 + R_w + R_f
+\end{equation}
 
+where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side heat transfer and $R_f$ is additional resistance due to fouling.
+
+\begin{equation} \label{eq:energy balance}
+    U =  \left(\Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta \right) H_{C}\Dot{m}_{c}
+\end{equation}
 
 
 
