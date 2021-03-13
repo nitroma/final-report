@@ -1,2 +1,16 @@
 % !TeX root = ../../main.tex
 \section{Non-detailed reactor modelling}
+\section{Appendix}
+The effective diffusional coefficient is used to calculate Thiele modulus $\phi$ through the equation:
+\begin{equation}
+    \phi = r_p \sqrt{\frac{k_v}{D_e}}
+\end{equation}
+which is subsequently used to determine the effectiveness factor $\eta$. The catalysts are assumed to be perfectly spherical, and therefore the effectiveness factor is calculated as: 
+\begin{equation}
+\eta=\frac{3}{\phi_{\text {sphere }}}\left(\frac{1}{\tanh \phi_{\text {sphere }}}-\frac{1}{\phi_{\text {sphere }}}\right)
+\end{equation}
+
+To select the suitable catalyst size, the Weisz-Prater criterion is used. This criterion evaluates the effect of diffusional limitation within the pellet [ref] :
+\begin{equation}
+    \Phi = \eta \phi^2
+\end{equation}
