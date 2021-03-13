@@ -101,13 +101,13 @@ The composition of the gas feed to the reactor is controlled via the purge fract
 The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce.
 
 
-\subsubsection{Hydrogen feed flowrate} %R201-HFC
+\subsubsection{Hydrogen feed flowrate control} %R201-HFC
 The flowrate of hydrogen feed to the reactor R201 is adjusted by the speed of the fan F201. A feedback control loop acts on the motor of the fan to change this power and thus the fan speed according to the gas flowrate measured downstream of the fan with a flow transmitter. The main identified disturbances are the pressure of the fresh hydrogen and the flowrate of recycled gas. Those disturbances are already accounted for in the reactor pressure control loop and the hydrogen recycle control. 
 
 
 
 
-\subsubsection{Reactor feed temperature control}%H201 and H202-TC 
+\subsubsection{Reactor R201 feed temperature control}%H201 and H202-TC 
 %no graph
 The reactor gas and liquid feeds are heated by electric heaters, numbered respectively H201 and H202. Feedback control loops are installed to adjust the power of the electric heater to meet the required feed temperature. Feedforward control to account for disturbances in the temperature of the streams before entering the heaters was judged unnecessary since the electric heaters can quickly adjust the heat duty, usually in the order of seconds. This is one of the advantage of using electric heaters instead of heat exchangers with high or low  pressure steam.
 
@@ -125,7 +125,7 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
 %\end{figure}
 
 
-\subsubsection{Control of pressure reduction valve V201} %V201-PC
+\subsubsection{S201 feed pressure control} %V201-PC
 To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the feed pressure of the column.
 
 %no graph
@@ -169,7 +169,7 @@ The liquid level in the reboiler H204 is an important inventory to control to pr
 Similar to the level control in the reboiler, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. In order to account for disturbances to the column performance because of variations in feed flowrate, a feedforward controller was implemented to adjust the tops product flowrate based on the feed flowrate. This prevents material and energy buildup in the column. 
 
 
-\subsubsection{Heat duty of condenser H203 control}%H203-TC
+\subsubsection{Condenser H203 heat duty control}%H203-TC
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
@@ -177,8 +177,6 @@ Similar to the level control in the reboiler, controlling the level of liquid in
     \label{fig:S203C-TC}
 \end{wrapfigure}
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
-
-
 
 
 \subsection{Safety design} %mention HAZOP recommendations
