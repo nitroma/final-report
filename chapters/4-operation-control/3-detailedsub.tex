@@ -179,7 +179,9 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
 \subsection{Process and control loop interactions}
+The established controls so far have assumed a single-input, single-output (SISO) system, where one manipulated variable only affects one control variable. In reality, it is likely that manipulating one variable will affect multiple controlled variables. For example, controlling reboiler duty would affect both the column temperature and bottoms flow rate. 
 
+In principle, good control of 
 
 \subsection{Safety design} %mention HAZOP recommendations
 
