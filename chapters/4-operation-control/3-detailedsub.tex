@@ -184,16 +184,24 @@ The established controls so far have assumed that one manipulated variable (mv) 
 In principle, good control of MIMO systems requires quantitative information about the dynamics of the system to choose the best mv-cv pairings and minimise control loop interactions. This was beyond the scope of this report, however a more advanced controller design would be feasible once experimental work on a pilot scale plant was carried out to determine the dynamic responses of various mvs to the cvs.
 
 \subsubsection{Relative Gain Array}
+
+\begin{wrapfigure}{r}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
+    \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path. Image adapted from \textcite{}}
+    \label{fig:RGA-block-di}
+\end{wrapfigure}
+
 The Relative Gain Array (RGA) method decides the best control loop pairings based on the steady state gains of each mv-cv pair. This is determined by the relative gain, which is the ratio of the direct effect to the total effect of changing mv on cv (see Figure \ref{fig:RGA-block-di}). A good controller is one with the highest relative gain, because it means that the direct effect dominates over the indirect effect which allows for the fastest controller response and minimal disturbance to other cvs. However, while RGA analysis does suggest the best loop pairings, it does not present a solution to interactions between control loops due to the indirect effects of mvs on cvs.
 
 \subsubsection{Controller Decoupling}
 Decoupling controllers can be designed to reduce loop pairings which have significant indirect effects on other controlled variables. For example, the indirect effect of reboiler duty on column temperature as a consequence of changes to the reflux is likely to be significant. Significant interactions from different mv on a cv will be apparent if the relative gains of the particular cv are much lower than 1. 
 
-Decoupling controllers aim to cancel the indirect effect on a cv by sending a compensating signal through the direct path. Their design requires knowledge about the dynamic behaviour of the process, in order to deduce the transfer functions between each mv-cv pairing. This can be obtained experimentally, after which the controller transfer function needs to give an equal but opposite effect to the indirect effect. In Figure \ref{fig:RGA-block-di}, controller gDC1(s) is a detuning controller to mitigate the indirect effect of mv1 on cv1 (blue path). Equation \ref{det
+Decoupling controllers aim to cancel the indirect effect on a cv by sending a compensating signal through the direct path. Their design requires knowledge about the dynamic behaviour of the process, in order to deduce the transfer functions between each mv-cv pairing. This can be obtained experimentally, after which the controller transfer function needs to give an equal but opposite effect to the indirect effect. In Figure \ref{fig:RGA-block-di}, controller gDC1(s) is a detuning controller to mitigate the indirect effect of mv1 on cv1 (blue path), with transfer function according to Equation \ref{eqn:detuning}.
 
 \begin{equation}
 \label{eqn:detuning}
-\lambda_{ij}=\frac{(\partial y_i / \partial u_j)_u}{(\partial y_i / \partial u_j)_y}=\frac{open-loop\;gain}{closed-loop\;gain}
+g_{DC1}(s)=-\frac{g_{12}(s)}{g_{11}(s)}
 \end{equation}
 
 % relative gain equation
@@ -205,14 +213,6 @@ Decoupling controllers aim to cancel the indirect effect on a cv by sending a co
 \end{comment}
 % end comment
 
-\begin{wrapfigure}{r}{0.5\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
-    \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path. Image taken from \textcite{}}
-    \label{fig:RGA-block-di}
-\end{wrapfigure}
-
-It is desirable to choose 
 
 \subsection{Safety design} %mention HAZOP recommendations
 
@@ -222,3 +222,4 @@ It is desirable to choose
 
 \subsubsection{Recommendations from LOPA} %Stephen
 %link to safety
+From the layers of protection analysis in the Safety Report, it was determined that overpressure of reactor R201 was a major hazard and that aside from the existing executive alarm and interlock, an additional safety instrumented function (SIF) with a SIL-3 rating was required. To improve the safe operation of the plant, a two-out-of-three logic system was designed 
