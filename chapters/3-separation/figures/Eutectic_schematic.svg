@@ -38,9 +38,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="705.49273"
-     inkscape:cy="178.80216"
+     inkscape:zoom="1"
+     inkscape:cx="768.94908"
+     inkscape:cy="358.08352"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -127,13 +127,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3384px;line-height:0;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.336919"
-       x="-110.05807"
-       y="25.900736"
+       x="-101.56364"
+       y="25.521641"
        id="text843-8-4"
        transform="matrix(0,-1.0131442,0.98702633,0,0,0)"><tspan
          sodipodi:role="line"
-         x="-110.05807"
-         y="25.900736"
+         x="-101.56364"
+         y="25.521641"
          style="font-size:6.3384px;line-height:1;stroke-width:0.336919"
          id="tspan845-1-7">Temperature</tspan></text>
     <text
@@ -175,18 +175,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3384px;line-height:0;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.336918"
-       x="135.53735"
-       y="92.632271"
+       x="132.50459"
+       y="101.49603"
        id="text843-0"
        transform="scale(0.98702633,1.0131442)"><tspan
          sodipodi:role="line"
-         x="135.53735"
-         y="92.632271"
+         x="132.50459"
+         y="101.49603"
          style="font-size:6.3384px;line-height:1;stroke-width:0.336918"
          id="tspan845-7">Solid A</tspan><tspan
          sodipodi:role="line"
-         x="135.53735"
-         y="98.970673"
+         x="132.50459"
+         y="107.83443"
          style="font-size:6.3384px;line-height:1;stroke-width:0.336918"
          id="tspan1026">+ Liquid</tspan></text>
     <text
@@ -4947,19 +4947,19 @@
            id="tspan2299">Fraction of p-nitrotoluene</tspan></tspan></text>
     <circle
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#008000;stroke-width:0.653139px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       cx="240.78444"
-       cy="31.086229"
+       cx="244.28955"
+       cy="55.714317"
        id="ellipse2305"
        r="1.1859639" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.3384px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.539437"
-       x="247.84908"
-       y="33.268967"
+       x="251.35419"
+       y="57.897057"
        id="text2313"><tspan
          sodipodi:role="line"
-         x="247.84908"
-         y="33.268967"
+         x="251.35419"
+         y="57.897057"
          id="tspan2311"
          style="stroke-width:0.539437"><tspan
            dx="0"
@@ -4972,23 +4972,23 @@
            id="tspan2309">Experimental</tspan></tspan></text>
     <path
        style="fill:none;stroke:#f14040;stroke-width:0.859394px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       d="m 233.75424,38.871904 h 14.09483"
+       d="m 237.25934,63.5 h 14.09483"
        id="path2315" />
     <circle
        style="fill:none;stroke:none;stroke-width:0.539437"
-       cx="240.78444"
-       cy="38.854717"
+       cx="244.28955"
+       cy="63.482811"
        id="ellipse2317"
        r="1.3922184" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.3384px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.539437"
-       x="247.84908"
-       y="41.03746"
+       x="251.35419"
+       y="65.66555"
        id="text2325"><tspan
          sodipodi:role="line"
-         x="247.84908"
-         y="41.03746"
+         x="251.35419"
+         y="65.66555"
          id="tspan2323"
          style="stroke-width:0.539437"><tspan
            dx="0"
@@ -5001,21 +5001,21 @@
            id="tspan2321">van't Hoff</tspan></tspan></text>
     <path
        style="fill:none;stroke:#1a6fdf;stroke-width:0.859394px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       d="m 233.75424,46.640395 h 14.09483"
+       d="m 237.25934,71.26849 h 14.09483"
        id="path2327" />
     <path
        style="fill:none;stroke:none;stroke-width:0.539437"
-       d="m 240.80166,44.715458 1.65012,2.887407 h -3.33464 z"
+       d="m 244.30676,69.34355 1.65012,2.88741 h -3.33464 z"
        id="path2329" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.3384px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.539437"
-       x="247.84908"
-       y="48.80595"
+       x="251.35419"
+       y="73.434052"
        id="text2337"><tspan
          sodipodi:role="line"
-         x="247.84908"
-         y="48.80595"
+         x="251.35419"
+         y="73.434052"
          id="tspan2335"
          style="stroke-width:0.539437"><tspan
            dx="0"
@@ -5033,12 +5033,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.3384px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.539437"
-       x="340.90939"
-       y="135.66869"
+       x="316.03857"
+       y="134.61035"
        id="text2345"><tspan
          sodipodi:role="line"
-         x="340.90939"
-         y="135.66869"
+         x="316.03857"
+         y="134.61035"
          id="tspan2343"
          style="stroke-width:0.539437"><tspan
            dx="0"
@@ -5072,15 +5072,20 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3384px;line-height:0;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.336918"
-       x="135.80553"
-       y="118.17744"
+       x="9.9457827"
+       y="119.28541"
        id="text843-7"
        transform="scale(0.98702633,1.0131442)"><tspan
          sodipodi:role="line"
-         x="135.80553"
-         y="118.17744"
+         x="9.9457827"
+         y="119.28541"
          style="font-size:6.3384px;line-height:1;stroke-width:0.336918"
-         id="tspan845-3">Eutectic line</tspan></text>
+         id="tspan845-3">Eutectic</tspan><tspan
+         sodipodi:role="line"
+         x="9.9457827"
+         y="125.62381"
+         style="font-size:6.3384px;line-height:1;stroke-width:0.336918"
+         id="tspan1621">line</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:400;font-size:8.81944px;line-height:125%;font-family:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.539438"
@@ -5103,5 +5108,42 @@
          y="14.120378"
          id="tspan2301-1-2"
          style="font-size:8.81944px;stroke-width:0.539438">(b)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.33841px;line-height:0;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.336918"
+       x="41.956039"
+       y="141.22778"
+       id="text843-0-9"
+       transform="matrix(0.78875206,-0.5933727,0.60907403,0.80962336,0,0)"><tspan
+         sodipodi:role="line"
+         x="41.956039"
+         y="141.22778"
+         style="font-size:6.33841px;line-height:1;stroke-width:0.336918"
+         id="tspan1026-1">Solid-liquid</tspan><tspan
+         sodipodi:role="line"
+         x="41.956039"
+         y="147.56619"
+         style="font-size:6.33841px;line-height:1;stroke-width:0.336918"
+         id="tspan1619">phase boundary</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.447;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.447,0.447;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 227.54167,123.29583 h 63.5"
+       id="path2339-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.447;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.447,0.447;stroke-opacity:1;stroke-dashoffset:0"
+       d="M 227.54167,44.979167 H 357.1875"
+       id="path2339-7-3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.447;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.447,0.447;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 357.1875,148.16667 0,-103.187503"
+       id="path2339-7-3-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.447;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.447,0.447;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 291.04167,147.9021 0,-24.87085"
+       id="path2339-7-3-1-8"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
