@@ -123,15 +123,18 @@ Besides, an important feature of the SiC catalyst support is that the tortuosity
 Additionally, the nitration reactor would require 270 kg of H-mordenite catalyst to achieve the desired rate and conversion. However, this could lead to collapse of the catalyst bed due to its weight, which could lead to significant attrition of catalyst and severe pressure drop [ref]. The mechanical strength of the SiC support will ensure the catalyst is strongly kept in place when fluid flows through it. The strength of the SiC catalyst support does not decrease over time because SiC forms a silica film when in contact with HNO3 solution, therefore rendering it passive against corrosion [ref]. The strength and durability of SiC makes it an ideal material as a catalyst support. The SiC catalyst support used will be fabricated using the partial sintering process with 30 \% porosity before coating it with H-mordenite catalyst.
 
 \subsubsection{Catalyst size}
-H-Mordenite catalyst is used in the nitration reaction. The catalyst is deposited on the SiC foam by washcoating. 
-\includecomment{From the rate equation, the concentration of nitric acid is in excess so it is assumed to be constant throughout the reaction.
-It can be assumed that all of the nitration reaction takes place in the solid-fluid interface} Hence, it is important to understand the effect of external and internal diffusional limitation of the reaction depending on the size of the catalyst pellet. This section outlines the steps used to determine the suitable pellet size to be used in the reactor.
+H-Mordenite catalyst used in the nitration reaction is deposited on the SiC foam by washcoating. The catalyst particle has a size of 2 µm. At this particle size, the effectiveness factor is $\approx$ 1. An effectiveness factor of $\approx$ 1 suggests that external and internal mass transfer resistances of the catalyst pellet are negligible and the actual rate of reaction is not lowered by mass transfer resistances.  The diffusional limitations within the catalyst can also be assumed to be negligible, since the Weisz-Prater criterion of the chosen catalyst size is $\ll$ 1.
 
-The effective diffusional coefficient $D_e$ is first calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [ref]: 
+Typically, grains, pellets and beads of this diameter would result in a huge pressure drop across the reactor. However, due to the open structure of SiC foam, the pressure drop is significantly reduced. The small catalyst size used in the reaction can therefore reap the benefits of negligible diffusional limitations while avoiding any significant pressure drop.
+
+\includecomment{From the rate equation, the concentration of nitric acid is in excess so it is assumed to be constant throughout the reaction.
+It can be assumed that all of the nitration reaction takes place in the solid-fluid interface} Hence, it is important to understand the effect of external and internal diffusional limitation of the reaction depending on the size of the catalyst pellet. This section outlines the steps used to determine the suitable pellet size to be used in the reactor. 
+
+The effective diffusional coefficient $D_e$ is first calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [levenspiel]: 
 \begin{equation}
     D_e = \frac{\epsilon_p D_p}{\tau_p}
 \end{equation}
-where the intraparticle void fraction for H-mordenite is 0.463 from (saleman et al), the pore diffusion coefficient is 1.56 \times 10\textsuperscript{-9} and the tortuosity of the pellet was found to be 1.63 using the equation given in [ref]. 
+where the intraparticle void fraction for H-mordenite is 0.463 from (saleman et al), the pore diffusion coefficient is 1.56 \times 10\textsuperscript{-9} and the tortuosity of the pellet was found to be 1.63 using the equation given in [lanfrey et al]. 
 
 The effective diffusional coefficient is used to calculate Thiele modulus $\phi$ through the equation:
 \begin{equation}
@@ -141,15 +144,14 @@ which is subsequently used to determine the effectiveness factor $\eta$. For the
 \begin{equation}
     \eta = \frac{tanh \phi }{\phi} 
 \end{equation}
-An effectiveness factor of $\approx$ 1 means that external and internal mass transfer resistances of the catalyst pellet are negligible. Ideally, the effectiveness factor should be kept at $\approx$ 1 to ensure the actual rate of reaction is not lowered by mass transfer resistances. This can be done by decreasing the size of the pellets, however, that would come at the expense of large pressure drop across the reactor. Therefore, careful consideration needs to be made to ensure the pellet size needs to be large enough to prevent a large pressure drop in the reactor while being small enough to maintain a negligible diffusional resistance within the pellet. As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1 between 10\textsuperscript{-6} to 10\textsuperscript{-3} m, before dropping sharply at larger pellet radius size. Thus, the range of possible pellet radius is narrowed to between 10\textsuperscript{-4} to 10\textsuperscript{-3} m. 
+  As seen in Fig. [ref], the effectiveness factor holds constant at $\approx$ 1 between 10\textsuperscript{-6} to 10\textsuperscript{-3} m, before dropping sharply at larger pellet radius size. Thus, the range of possible pellet radius is narrowed to between 10\textsuperscript{-4} to 10\textsuperscript{-3} m. 
 
 To select the suitable pellet size, the Weisz-Prater criterion is used. This criterion evaluates the effect of diffusional limitation within the pellet [ref] :
 \begin{equation}
     \Phi = \eta \phi^2
 \end{equation}
-It can be assumed that there is negligible diffusional limitations within the pellet if the Weisz-Prater number is $\ll$ 1. From Fig. [Weisz graph], the Weisz-Prater number falls steadily as the pellet size decreases. The final radius of the pellet is chosen to be 2 \times 10\textsuperscript{-4} m, giving an effectiveness factor of 0.99, and Weisz-Prater number of 0.05, which suggests that there is no diffusional limitation within the pellet.
 
-Typically, grains, pellets and beads of this diameter would result in a huge pressure drop across the reactor. However, due to the open structure of SiC foam, the pressure drop is significantly reduced. The small catalyst size used in the reaction can therefore reap the benefits of negligible diffusional limitations while avoiding any significant pressure drop.
+
 \subsection{Triple concentric tubes}
 Triple concentric tubes heat exchanger (TCTHE) was considered to allow for better temperature control in the reactor. It increases the heat transfer rate through the larger heat exchange area between the fluid and both the inner and outer side of the annulus [ref]. An enhanced heat exchange network within the reactor maintains the temperature in the desirable temperature range of < 90°C for the reaction, which will be detailed in Section [xxx]. Furthermore, a higher heat transfer rate per unit length from the reaction to the cooling fluid in the TCTHE reduces the overall size of the reactor, therefore leading to space and cost savings. The cooling water used in the nitration reactor will be reused from xxx reactor at xxx K to maximise the energy recovery in Nitroma's plant. 
 
