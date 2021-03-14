@@ -1,2 +1,22 @@
 % !TeX root = ../../main.tex
 \section{Non-detailed reactor modelling}
+\section{Appendix}
+The effective diffusional coefficient $D_e$ is first calculated to be 4.42 \times 10\textsuperscript{-10} using the widely-used equation from [levenspiel]: 
+\begin{equation}
+    D_e = \frac{\epsilon_p D_p}{\tau_p}
+\end{equation}
+where the intraparticle void fraction for H-mordenite is 0.463 from (saleman et al), the pore diffusion coefficient is 1.56 \times 10\textsuperscript{-9} and the tortuosity of the pellet was found to be 1.63 using the equation given in [lanfrey et al]. 
+
+The effective diffusional coefficient is used to calculate Thiele modulus $\phi$ through the equation:
+\begin{equation}
+    \phi = r_p \sqrt{\frac{k_v}{D_e}}
+\end{equation}
+which is subsequently used to determine the effectiveness factor $\eta$. The catalysts are assumed to be perfectly spherical, and therefore the effectiveness factor is calculated as: 
+\begin{equation}
+\eta=\frac{3}{\phi_{\text {sphere }}}\left(\frac{1}{\tanh \phi_{\text {sphere }}}-\frac{1}{\phi_{\text {sphere }}}\right)
+\end{equation}
+
+To select the suitable catalyst size, the Weisz-Prater criterion is used. This criterion evaluates the effect of diffusional limitation within the pellet [lanfrey et al] :
+\begin{equation}
+    \Phi = \eta \phi^2
+\end{equation}

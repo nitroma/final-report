@@ -6,17 +6,17 @@ The agreed subsection has a gaseous \ch{H2} feed and liquid feed consisting of m
 
 \subsection{Degree of freedom analysis}
 
-\begin{wraptable}{r}{0.5\linewidth}
+\begin{wraptable}{r}{0.55\linewidth}
 \centering
     \caption{Degree of freedom analysis}
     \label{tab:dof}
 \begin{tabular}{@{}lllll@{}}
 \toprule
-Total number of process streams     & 27          &           &           &           \\
-Sum of restraining numbers          & 12          &           &           &           \\
-Sum of mechanical agitators         & 2           &           &           &           \\
-Redundancies                        & 3           &           &           &           \\ \midrule
-\textbf{Control degrees of freedom} & \textbf{14} & \textbf{} & \textbf{} & \textbf{} \\ \bottomrule
+Total number of process streams (+) & 28 &  &  &  \\ \midrule
+Sum of restraining numbers (-)      & 11 &  &  &  \\
+Sum of mechanical agitators (+)     & 2  &  &  &  \\
+Redundancies (-)                    & 3  &  &  &  \\
+Control degrees of freedom          & 16 &  &  &  \\ \bottomrule
 \end{tabular}
 \end{wraptable}
 
@@ -55,14 +55,15 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
-
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
     \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
-\end{figure}
+\end{wrapfigure}
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+
+
 
 \subsubsection{Reactor R201 pressure control} %R201-PC
 \begin{wrapfigure}{r}{0.6\linewidth}
@@ -76,12 +77,16 @@ The ONT reduction reactor is operated under pressure at 5 atm. To maintain this 
 
 
 \subsubsection{Ratio control of reactants} %R201-CC
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.6\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
     \caption{Ratio control of reactants to reactor R201}
     \label{fig:R201-FC}
-\end{figure} 
+\end{wrapfigure} 
+Ratio control is a special type of feedforward control whose objective is to maintain a specified ratio between two process streams. It is used in Nitroma's plant to maintain a stoichiometric ratio of reactants to reactor R201. Two different control schemes are proposed by \textcite{}: for both, one of the stream is treated as a disturbance which is measured by a transmitter. In the most classic scheme, the ratio of signals from the two transmitters are sent to a ratio controller acting on a flow control valve. In the more advance control scheme, the measurement from the disturbance stream is fed into a ratio station which calculates what the set point of the manipulated variable. This set point is sent to a flow controller acting on a valve. The advantage of the first method is that the ratio is actually calculated. However the inclusion of the divider element in the control loop introduces non-linearity in the process gain, thus the second method is preferred. Since the system is required to operate at a 1:4 molar ratio of ONT to hydrogen, the ratio controller must be given molar flowrates for those two species. A flow and composition transmitters are installed on both the gas and liquid stream. The flow and composition signals are multiplied to obtain the molar flowrates of hydrogen and ONT. The hydrogen gas stream is assumed to be the disturbance and its molar flowrate is sent to a ratio station sending the set point to a flow controller acting on the liquid pump speed. One inevitable drawback with ratio control is that the liquid feed flowrate (manipulated variable) will require some time to reach its new set point after a step change in the gas flowrate. However, flow control loops are relatively quick to respond to changes and the time delay is usually acceptable [].
+
+
+
 
 \subsubsection{Hydrogen recycle control}%V202-CC
 \begin{wrapfigure}{r}{0.6\linewidth}
@@ -98,24 +103,19 @@ The composition of the gas feed to the reactor is controlled via the purge fract
 The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce.
 
 
-\subsubsection{Hydrogen feed flowrate} %R201-HFC
+\subsubsection{Hydrogen feed flowrate control} %R201-HFC
+The flowrate of hydrogen feed to the reactor R201 is adjusted by the speed of the fan F201. A feedback control loop acts on the motor of the fan to change this power and thus the fan speed according to the gas flowrate measured downstream of the fan with a flow transmitter. The main identified disturbances are the pressure of the fresh hydrogen and the flowrate of recycled gas. Those disturbances are already accounted for in the reactor pressure control loop and the hydrogen recycle control. 
+
+
+
+
+\subsubsection{Reactor R201 feed temperature control}%H201 and H202-TC 
 %no graph
-
-
-
-
-
-
-
-
-\subsubsection{Reactor feed temperature control}%H201 and H202-TC 
-%no graph
-
+The reactor gas and liquid feeds are heated by electric heaters, numbered respectively H201 and H202. Feedback control loops are installed to adjust the power of the electric heater to meet the required feed temperature. Feedforward control to account for disturbances in the temperature of the streams before entering the heaters was judged unnecessary since the electric heaters can quickly adjust the heat duty, usually in the order of seconds. This is one of the advantage of using electric heaters instead of heat exchangers with high or low  pressure steam.
 
 
 \subsubsection{Distillation column S201 pressure control} %S201-PC
 Pressure in distillation columns is one of the most important parameters to control as it not only affects the relative volatilities of the heavy and light keys, but also the shape of the vapour-liquid phase equilibrium curves which determine the compositions of the top and bottoms products. The manipulated variable for pressure control needs to be made carefully from several options, such as controlling the vapour flow that is vented from the reflux drum, condenser duty, reboiler duty, recirculation of cooling fluid in the condenser or addition of inerts. Controlling the vapour flow that is vented from the reflux drum is the simplest control to implement and usually provides the fastest response as the amount of gas holdup in the column directly affects its pressure. In addition, the vapour flow rate from the condenser is large, making it easier to effect a change in pressure from a small change in valve position. This avoids a situation where the flow control valve becomes saturated when mitigating a large disturbance to pressure. 
-
 An optimal feedback control was designed with the vapour flowrate from the reflux drum as the manipulated variable. A pressure transmitter (PT-206) measures the pressure in the column, which is monitored by a pressure controller (PIC-206) that regulates a flow control valve (FCV-205) on the vent stream from the reflux.
 
 %no graph
@@ -127,7 +127,7 @@ An optimal feedback control was designed with the vapour flowrate from the reflu
 %\end{figure}
 
 
-\subsubsection{Control of pressure reduction valve V201} %V201-PC
+\subsubsection{S201 feed pressure control} %V201-PC
 To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the feed pressure of the column.
 
 %no graph
@@ -171,7 +171,7 @@ The liquid level in the reboiler H204 is an important inventory to control to pr
 Similar to the level control in the reboiler, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. In order to account for disturbances to the column performance because of variations in feed flowrate, a feedforward controller was implemented to adjust the tops product flowrate based on the feed flowrate. This prevents material and energy buildup in the column. 
 
 
-\subsubsection{Heat duty of condenser H203 control}%H203-TC
+\subsubsection{Condenser H203 heat duty control}%H203-TC
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
@@ -180,14 +180,64 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 \end{wrapfigure}
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
+\subsection{Process and control loop interactions}
+The established controls so far have assumed that one manipulated variable (mv) only affects one control variable (cv). In reality, it is likely that manipulating one variable will affect multiple controlled variables and we have a multiple-input, multiple-output (MIMO) system. For example, reducing reboiler duty would directly reduce column temperature because of reduced vapour flow, but this would also indirectly affect the temperature of the reflux that gets sent back to the column. 
 
+In principle, good control of MIMO systems requires quantitative information about the dynamics of the system to choose the best mv-cv pairings and minimise control loop interactions. This was beyond the scope of this report, however a more advanced controller design would be feasible once experimental work on a pilot scale plant was carried out to determine the dynamic responses of various mvs to the cvs.
+
+\subsubsection{Relative Gain Array}
+
+\begin{wrapfigure}{r}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
+    \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path. Image adapted from \textcite{}}
+    \label{fig:RGA-block-di}
+\end{wrapfigure}
+
+The Relative Gain Array (RGA) method decides the best control loop pairings based on the steady state gains of each mv-cv pair. This is determined by the relative gain, which is the ratio of the direct effect to the total effect of changing mv on cv (see Figure \ref{fig:RGA-block-di}). A good controller is one with the highest relative gain, because it means that the direct effect dominates over the indirect effect which allows for the fastest controller response and minimal disturbance to other cvs. However, while RGA analysis does suggest the best loop pairings, it does not present a solution to interactions between control loops due to the indirect effects of mvs on cvs.
+
+\subsubsection{Controller Decoupling}
+Decoupling controllers can be designed to reduce loop pairings which have significant indirect effects on other controlled variables. For example, the indirect effect of reboiler duty on column temperature as a consequence of changes to the reflux is likely to be significant. Significant interactions from different mv on a cv will be apparent if the relative gains of the particular cv are much lower than 1. 
+
+Decoupling controllers aim to cancel the indirect effect on a cv by sending a compensating signal through the direct path. Their design requires knowledge about the dynamic behaviour of the process, in order to deduce the transfer functions between each mv-cv pairing. This can be obtained experimentally, after which the controller transfer function needs to give an equal but opposite effect to the indirect effect. In Figure \ref{fig:RGA-block-di}, controller gDC1(s) is a detuning controller to mitigate the indirect effect of mv1 on cv1 (blue path), with transfer function according to Equation \ref{eqn:detuning}.
+
+\begin{equation}
+\label{eqn:detuning}
+g_{DC1}(s)=-\frac{g_{12}(s)}{g_{11}(s)}
+\end{equation}
+
+% relative gain equation
+\begin{comment}
+\begin{equation}
+\label{eqn:relative-gain}
+\lambda_{ij}=\frac{(\partial y_i / \partial u_j)_u}{(\partial y_i / \partial u_j)_y}=\frac{open-loop\;gain}{closed-loop\;gain}
+\end{equation}
+\end{comment}
+% end comment
 
 
 \subsection{Safety design} %mention HAZOP recommendations
 
 \subsubsection{Alarms and emergency trips strategy}
+The control loops discussed previously aim at maintaining optimum process conditions, however they might be insufficient to bring the system back to its set point following large and unexpected disturbances. To account for significant deviations from steady-state operation causing hazardous situations, additional control structures are put in place.  
 
+Firstly regular alarms are triggered when the value from the transmitter for the normal control loop reaches a set high or low level. Those alarms notify the operators that a process variable such as temperature, pressure or flowrate is not correctly managed by the regular control system and that manual actions need to be taken to return the plant to normal operation. The regular alarms are ranked by their priority level which is determined by the severity of the critical event which could occur if the operator fails to take action, and by the urgency to respond which is defined as the time between the operator's acknowledgement of the alarm and the critical event. 
+
+
+
+ However, a large shock or disturbance might occur in a short timeframe and significantly increase the potential for hazardous events, and in this case alarms and manual action by the operators might not be sufficient to ensure the safety of the plant. Hence, emergency trips are designed and implemented to bring the plant into a safe state without any need for manual intervention when extremely hazardous conditions are detected in the plant and the risk of an incident is high.
+ 
+ Alarms also act as a layer of protection to ensure the risk is as low as reasonably practicable (ALARP) (see LOPA in Safety Section 3.6). 
+
+There are two main types of emergency trips designed for our selected plant: (a) production shutdown by cutting the feed to the reactor but maintaining the salt circulation loop and reducing heat supply to furnace; (b) full plant shutdown by cutting feed, stopping salt circulation by draining all the salts into the shutdown tank, and shutdown of the furnace. The partial shutdown trip is selected for events that can put to a safe state by cutting feed and stopping the reaction, such as high pressure and level in the cyclone. This allows the plant to restart relatively easily, as the salt circulation loop is the most involved part of the plant start-up. However, for the majority of emergency trips a full shutdown was selected, as tripping only the affected piece of equipment might result in sequential trips for the other equipment which must be avoided.
 \subsubsection{Alarms and safety interlocks design}
+
+\begin{table}[H]
+\label{tab:alarms}
+  \caption{Summary of regular and executive alarms}
+\includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
+\end{table}
 
 \subsubsection{Recommendations from LOPA} %Stephen
 %link to safety
+From the layers of protection analysis in the Safety Report, it was determined that overpressure of reactor R201 was a major hazard and that aside from the existing executive alarm and interlock, an additional safety instrumented function (SIF) with a SIL-3 rating was required. To improve the safe operation of the plant, a two-out-of-three logic system (2oo3) was designed. Three independent pressure transmitters (PT-214a,b,c) measure reactor pressure, and only send a signal to the pressure controller PIC-214 if at least two pressure readings indicate a serious overpressure (>6atm). The controller will process a high pressure signal and increase the outlet gas flowrate through two flow control valves (FCV-209 and FCV-210) which are maintained regularly. The redundancies in transmitters and actuators reduce the risk of a mechanical or electrical failure rendering the SIF inoperable, thus guaranteeing a SIL-3 rating. As a final layer of protection, a pressure relief valve was installed and set to burst at the critical pressure of 7.5atm.

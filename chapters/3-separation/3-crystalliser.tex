@@ -1,22 +1,51 @@
 % !TeX root = ../../main.tex
-\section{Theory of crystallisation}
+\section{Crystalliser design}
 
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
-The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such a system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when cooled below thermodynamic equilibrium. Figure [] is a plot of the solid-liquid phase diagram of the (p-NT + m-NT) system. 
+The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
 
+\begin{equation}\label{eq:amount solid A equilibrium}
+    \dot{M}_{solid} = \frac{\dot{M}_{total} (x_1 - x_2)}{1 - x_2}
+\end{equation}
 
+\noindent where $\dot{M}_{solid}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{total}$ is the total mass flow rate of A and B. 
 
-\subsection{Population balance of MSMPR crystallisation}
-In order to specify a MSMPR crystallisation process, it is important to determine the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where information about the kinetics of crystal formation is contained. The population balance has been a central focus in the works of Randoph and Larson. 
+\begin{figure}[h]
+    \centering
+    \includesvg[scale=0.45,inkscapelatex=false]{figures/Eutectic_schematic.svg}
+    \caption{(a) Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour. (b) Solid-liquid phase diagram for the (p-NT + m-NT) system.}
+    \label{fig:eutectic schematic}
+\end{figure}
 
-First, for many commercial crystallisation processes, McCabe's $\Delta$ L law is generally applied, 
+Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram for the (p-NT + m-NT) system, where the component fraction on the horizontal axis has been defined for p-NT. Experimental data were obtained from \cite{detherm} and are marked on this Figure as green circles. For the purpose of design, a model that is able to continuously predict the phase behaviour is needed. Initially, a van't Hoff-type relation from Moyers and Rousseau was used to give continuous predictions of the solid-liquid phase boundary on the right-hand-side of the eutectic point, \cite{Moyers and Rousseau}
+
+\begin{equation}
+    ln(x) = \frac{H_f}{R T}(\frac{T}{T^*} - 1)
+\end{equation}
+
+\noindent where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, $T$ is the equilibrium temperature, and $T^*$ is the melting point of pure p-NT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions of Moyers and Rousseau's van't Hoff relation, shown as the red curve, are quite off from experimental data. In particular, this relation over-predicts the melting temperature at compositions around the eutectic point. Hence, a van't Hoff-type power-law fit has been used instead in the form of 
+
+\begin{equation}
+     ln(x) = \frac{T - 323.87}{50.259}
+\end{equation}
+
+\noindent It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results. Hence it has been used for the design.
+
+In reality, however, the system needs time to reach thermodynamic equilibrium, which is why a physical crystalliser is needed. Kinetics of crystal formation in a MSMPR crystalliser will be explained in the following sections.
+
+\subsection{Kinetics of MSMPR crystallisation}
+The kinetics of MSMPR crystallisation is governed by two processes: nucleation and growth. Nucleation is the creation of embryo-sized crystals (known as nuclei) due to supersaturation. \cite{richardson} It is further classified into primary and secondary nucleation. Growth is where 
+
+In order to specify the kinetics of a MSMPR crystallisation process, it is important to determine the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where information about the kinetics of crystal formation is contained. The population balance has been a central focus in the works of Randoph and Larson. \cite{randolph larson}
+
+First, for many commercial crystallisation processes, McCabe's $\Delta$ L law is a general constraint applied,
 
 \begin{equation} \label{eq: McCabe deltaL}
     \Delta L = G \Delta t
 \end{equation}
 
-\noindent where $L$ is the characteristic size of crystal, $t$ is time, and $G$ is the growth rate whose dimensions are length per unit time. The main assumption is that the crystal growth rate is independent of crystal size. 
+\noindent where $L$ is the characteristic size of crystal, $t$ is time, and $G$ is the growth rate whose dimensions are length per unit time. The main underlying assumption is that the crystal growth rate is independent of crystal size. 
 
 Then, the crystal population density, $n$, defined as the number of crystals per unit size per unit volume, is expressed as 
 
@@ -31,13 +60,7 @@ Then, the crystal population density, $n$, defined as the number of crystals per
 
 \subsection{Heat transfer}
 
-The crystallisation cooling is achieved by a half pipe coil jacketed vessel configuration. This method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid, . An impeller would also ensure good mixing, assumed to be perfect, to have uniform temperature within the crystalliser.
-
-To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
-
-\begin{equation} \label{eq:crystal population density definition}
-    Q =  C_{pi}(T_{in}-T_{out})+
-\end{equation}
+The crystallisation cooling can be implemented many different ways and must be chosen based on the conditions of the crystalliser. Table \ref{tab:heatransfermethodstype} outline the properties of each heat transfer method. A half pipe coil jacketed vessel configuration was implemented as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid, and despite usually costing 30-35\% more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect, to have uniform temperature within the crystalliser. 
 
 \begin{table}
 \caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
@@ -62,16 +85,56 @@ Dimple Jacket & \begin{itemize}[label=+,leftmargin=1em]
 \end{itemize} \\\midrule
 Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
   \item Excellent heat transfer
+  \item Withstands higher jacket pressures
 \end{itemize} & \begin{itemize}[label=-,leftmargin=1em]
   \item Problematic when trying to route around ports and supports 
+  \item More expensive than conventional jackets
 
 \end{itemize}
 \\\bottomrule
 \end{tabularx}
 \end{table}
 
+The following equation were solved simulantaneously in MATLAB 
 
-\begin{equation}
-    Nu = ARe^{\frac{2}{3}}Pr^{\frac{1}{3}}\frac{\eta}{\eta_w}
+
+To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
+
+\begin{equation} \label{eq:energy balance}
+    Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
 \end{equation}
+
+\noindent where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
+
+
+The overall heat transfer coefficient consist of 4 resistance terms; $R_1$,$R_w$,$R_2$ and $R_f$.
+
+\begin{equation} \label{eq:resistht}
+    R_O = R_1 + R_{fp} + R_w + R_{fs} + R_2
+\end{equation}
+
+where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side convective heat transfer, $R_{fs}$ AND $R_{fp}$ are the additional resistance due to fouling on the service side and process side respectively. In these calculations, resistance due to fouling on the service side was assumed negligible, whereas the effects of fouling on the process side was investigated further in section %label section with fouling sensitiivty%.
+
+Accounting fr all these resistances n series, the overall heat transfer coefficient is obtained  
+
+\begin{equation} \label{eq:energy balance}
+    U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
+\end{equation}
+
+l is the thickness of the half coil pipe, k is the thermal conductivity of pipe material (steel)
+
+
+To determine the heat transfer coefficients on both the process side,\ref{eq:processsideht},  and service side, \ref{eq:servicesideht} of the heat transfer steps, experimentally obtained Nusselt numbers were obtained. 
+
+
+
+\begin{equation} \label{eq:processsideht}
+    Nu = ARe^{\frac{2}{3}}Pr^{\frac{1}{3}}\left( \frac{\eta}{\eta_w} \right)^{0.14}
+\end{equation}
+
+\begin{equation} \label{eq:servicesideht}
+    Nu = 0.023Re^{0.8}Pr^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14}
+\end{equation}
+
+
 
