@@ -73,7 +73,7 @@ Primary nucleation involves nucleation occurring in absence of crystals. \cite{s
 
 \subsubsection{Secondary nucleation}
 
-Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_nodate} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_nodate} The phenomenon of secondary nucleation is commonly correlated by empirical correlations in the form of, \cite{richardson_chemical_nodate}
+Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_nodate} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_nodate} The phenomenon of secondary nucleation is complex and lacks a comprehensive theoretical description. It is commonly correlated by empirical correlations in the form of, \cite{seader_separation_2011}
 
 \begin{equation} \label{eq:secondary nucleation general}
     B = K_B \rho^j_m N^l (\Delta C)^b 
@@ -81,7 +81,13 @@ Secondary nucleation takes place with the presence of other crystals. \cite{rich
 
 \noindent where $B$ is the secondary nucleation rate or birth rate in m$^{-3}$ s$^{-1}$, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density, and $N$ is the term that gives measure of the intensity of agitation in the system such as the speed of rotation of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
-From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary nucleation can be expressed as 
+From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary nucleation can be expressed in the form of 
+
+\begin{equation}
+    d J_{c-i} = k_{i} (\Delta C)^b \omega_L E_L n dL
+\end{equation}
+
+\noindent where $J_{c-i}$ is the contribution from the collision between crystal and object $i$, $\omega_L$ $E_L$ $dL$ 
 
 \subsubsection{Crystal growth}
 
@@ -157,9 +163,10 @@ Accounting for all these resistances in series, the overall heat transfer coeffi
 \begin{equation} \label{eq:energy balance}
     U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
 \end{equation}
-where l is the thickness of the half coil pipe, k is the thermal conductivity of pipe material (steel)
+where l is the thickness of the half coil pipe and k is the thermal conductivity of pipe material (steel)
 
-To determine the heat transfer coefficients on both the process side, Equation \ref{eq:processsideht}, and service side, Equation \ref{eq:servicesideht}, Nusselt number for a jacketed vessel with impeller agitator was used.
+To determine the heat transfer coefficients on both the process side, Equation \ref{eq:processsideht}, and service side, Equation \ref{eq:servicesideht}, the Nusselt number for a jacketed vessel with impeller agitator %reference
+was used.
 \begin{align} 
     \mathrm{Nu} &= A\mathrm{Re}^{\frac{2}{3}}\mathrm{Pr}^{\frac{1}{3}}\left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:processsideht} \\
     \mathrm{Nu} &= 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:servicesideht}
