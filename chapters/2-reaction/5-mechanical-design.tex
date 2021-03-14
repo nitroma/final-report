@@ -19,36 +19,48 @@ Stainless steel type 304 have higher levels of carbon, which are not stabilised 
 \subsubsection{Reactor}
 According to section X, the reactor must operate within the temperature range of 330K to 378K and pressure gradient of y atm to z atm. The design temperature is set as XXK and design pressure ($d_p$) is calculated to be YYY bar, using the equation \ref{eqn:designpressure} below:
 \begin{equation}
-    p_d = \frac{P_o}{0.9}
+    p_d = \frac{P_o}{0.9} = X  bar
     \label{eqn:designpressure}
 \end{equation}
 \subsubsection{Shell}
-Similarly, using the equation \ref{eqn:designpressure} above, the design pressure ($d_p$) for the cooling water vessel was calculated to be 1.1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
+Similarly, using the equation \ref{eqn:designpressure} above, the design pressure ($p_d$) for the cooling water vessel was calculated to be 1.1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
 \subsection{Dimensions}
 \label{sec:reactordimensions}
 
-\subsubsection{Reactor dimensions}
+\subsubsection{Reactor tube dimensions}
+Based on the calculation, total flowrate across the entire reactor was calculated to be $9.24 \times 10^{-4} m^3s^{-1}$, thus the flowrate across one individual reactor is calculated to be  $1.32 \times 10^{-4} m^3s^{-1}$. An optimal length of 3.2m was set as mentioned in section (sensitivity analysis). Subsequently, the final diameter of the reactor tubes were set at 23mm.  
+The minimum thickness of the reactor tubes ($e_{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
 \begin{equation}
-    e_{cylinder} = \frac{p_dD_i}{2f-p_d} 
+    e_{reactor} = \frac{p_dD_i}{2f-p_d} = 
     \label{eqn:minthicknessreactor}
 \end{equation}
 where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards (), yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$. 
 
-The minimum calculated thickness of shell plate ($e_{cylinder}$) was calculated to be YY mm. An addition of 1.5mm for corrosion allowance is added to ($e_{cylinder}$), making the final cylindrical thickness XXXmm.
+%The minimum calculated thickness of shell plate ($e_{cylinder}$) was calculated to be YY mm. An addition of 1.5mm for corrosion allowance is added to ($e_{cylinder}$), making the final cylindrical thickness XXXmm. \textcolor{red}{requires final flowrate}
 
-The bundle of 7 tubes was arranged in such a manner with a pitch of X distance between each tubes to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. 
+The bundle of 7 tubes was arranged in such a manner with a pitch of X distance between each tubes to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction (). The clearance of the tube arrangement was set to be 230mm, equivalent to the tube diameter. This exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al. 
+%to write about the arrangement of the pitch in another subsubsection maybe?
 
--refer to excel on tube pitch
+
+
+The arrangement of 7 tubes can be visualised by the tube sheet below. 
 
 -include tube arrangement here (to be done in solidworks)
+\subsubsection{Secondary cooling tube dimensions}
+As mentioned in Section (coolingwater), the secondary cooling water system was implemented in a concentric manner within the reactor tubes to prevent thermal runaway in hotspots. Each secondary cooling water tubes were designed to have a diameter of 20mm to achieve a flowrate $1.5 \cdot 10^{-4} m^3 s^{-1}$. The wall thickness was also set as 5mm for a standardised production. 
+The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section below. 
+- include tube cooling tube here
+
 \subsubsection{Shell dimensions}
+The diameter of the shell was defined as 1.5m with distance of between to fit the flowrate of cooling water flowrate??
+The minimum thickness of the shell ($e_{shell}$) was calculated using the equation \ref{eqn:minthicknessshell},
 \begin{equation}
-    e_{cylinder} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 Nmm^{-2}\times 1500mm}{2 \times 143Nmm^{-2} - 0.11Nmm^{-2}}
-    \label{eqn:minthicknessreactor}
+    e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = 0.577mm
+    \label{eqn:minthicknessshell}
 \end{equation}
 
-Similarly, minimum thickness of the shell ($e_{shell}$) was calculated using equation \ref{eqn:minthicknessreactor}, with $D_i$ set as 1500mm, $p_d$ as 0.11 and $f$ value of 143$Nmm_{-2}$. The minimum thickness of the shell was calculated to be 0.5mm. After taking into account corrosion allowance of 1.5mm and other welding considerations, a final shell thickness of 5mm was chosen. 
+Similarly, minimum thickness of the shell ($e_{shell}$) was calculated using equation \ref{eqn:minthicknessreactor}, with $D_i$ set as 1500mm, $p_d$ as 0.11 and $f$ value of 143$Nmm_{-2}$. The minimum thickness of the shell was calculated to be 0.577mm. After taking into account corrosion allowance of 1.5mm and other welding considerations, a final shell thickness of 5mm was chosen. 
 The calculated shell volume is ...
 - require dimension of 
 \subsubsection{Head dimensions}
@@ -64,14 +76,13 @@ The calculated shell volume is ...
 %\end{equation}
 The minimum thickness ($e_{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
 \begin{equation}
-    e_{head} = \frac{pD_i}{4f-1.2p}
+    e_{head} = \frac{pD_i}{4f-1.2p} = \frac{0.11 \times 1500}{4 \times 143 - 1.2 \times 0.11} = 0.26mm
     \label{eqn:hemisphericalend}
 \end{equation}
 with $p$ set as 1.1bar, $D_i$ set as 1500mm, $f$ value set as 143$Nmm^{-2}$.  The minimum thickness of the hemispherical end was calculated to be 0.26mm, but a final head thickness of 5mm was chosen to complement the thickness of the shell for ease of welding. 
--add another equation with real values
 -refer BS5500 page 78 of the pdf
 
-The minimum distance between ports were calculated using the equation \ref{eqn:mindistance} below:
+The minimum distance ($L_{im}$) between ports were calculated using the equation \ref{eqn:mindistance} below:
 \begin{equation}
     L_m = \sqrt{(2r_{im}+e_{m})e_m} = \sqrt{(2 \times 1500 + 5)5} = 122.6mm
     \label{eqn:mindistance}
@@ -81,7 +92,7 @@ where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickn
 -label and explain this equation
 %rewrite based on hemispherical
 \subsection{Ports and flanges}
-A total of 5 ports were design on the reactor according to BS 5500:1997 and BS 1600:1991 standards. The 5 port were inlet and outlet ports for feed reactants, and one pressure relief valve (PRV). PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event (). Based on BS1600: 1991, schedule 40 pipes were chosen for all pipes. The diameter of the reactant inlet and outlet ports were defined with OD of 560mm (24 NPS) with 9.53mm of wall thickness. The diameter of the secondary cooling tube were defined with OD of 60mm (2 NPS) with 4mm of wall thickness. 
+A total of 7 ports were design on the reactor according to BS 5500:1997 and BS 1600:1991 standards. The 5 port were inlet and outlet ports for feed reactants, and one pressure relief valve (PRV). PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event (). Based on BS1600: 1991, schedule 40 pipes were chosen for all pipes. The diameter of the reactant inlet and outlet ports were defined with OD of 560mm (24" NPS) with 9.53mm of wall thickness. The diameter of the secondary cooling tube were defined with OD of 60mm (2" NPS) with 4mm of wall thickness. 
 \textcolor{red}{-include port sizing here, include feed rate}
 The inlet and outlet reactant ports were calculated to be X () from Section \ref{sec:reactordimensions} and were located on the top and the bottom part of the vertical vessel respectively. 
 The inlet and outlet of the cooling water flow is situated at both sides of the reactor.\textcolor{red}{tbc}
@@ -96,15 +107,16 @@ The inlet and outlet of the cooling water flow is situated at both sides of the 
 
 \subsubsection{Flange types and dimension}
 Class 150 flanges was chosen from Table 16 of BS 1560:1989, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating. Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution ().
-A nominal pipe size of X in was selected based on a schedule of Y. 
+Based on JPI 75-48-73 standard, the nominal pipe size (NPS) for the flange was selected as 54" for class 150 flanges.
 \subsubsection{Gasket type and dimension}
-Gasket is a sealing material placed between flanges to create a leak-proof sealing (hardhat). A narrow-faced, ring joint gasket type was chosen due to the suitability of design. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket. 
+Gasket is a sealing material placed between flanges to create a leak-proof sealing (hardhat). A narrow-faced, ring joint gasket type was chosen due to the suitability of design. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of 124 $Nmm^{-1}$ which fulfils the criteria of 
+
 - Gasket factor (m) and minimum design seating stress, groove number
 
 \subsubsection{Bolt types and dimension}
-The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding 192 $N/mm^2$ design stress for temperature not exceeding 50C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as 1492mm, with 56 bolts of 32mm diameter each for flanges of outer diameter of 1500mm. 
+The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding 192 $N/mm^2$ design stress for temperature not exceeding 50C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as 1492mm, with 56 bolts of 32mm diameter each for 54" NPS flanges. 
 
-- add cross secitonal area of bolts (Ab) and total required cross sectionalal aera of bolts (am)
-\subsection{Structural support}
 \subsection{Overall design}
+The overall cross section design of the reactor can be seen in Figure X below. Additional mechanical design drawings from SolidWorks are included in Appendix .
 
+\textcolor{red}{- include the almighty cross section diagram here}
