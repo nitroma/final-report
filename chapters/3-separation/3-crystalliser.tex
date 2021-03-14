@@ -4,12 +4,10 @@
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
 The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
-
 \begin{equation}\label{eq:amount solid A equilibrium}
     \dot{M}_{solid} = \frac{\dot{M}_{total} (x_1 - x_2)}{1 - x_2}
 \end{equation}
-
-\noindent where $\dot{M}_{solid}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{total}$ is the total mass flow rate of A and B. 
+where $\dot{M}_{solid}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{total}$ is the total mass flow rate of A and B. 
 
 \begin{figure}[h]
     \centering
@@ -19,18 +17,15 @@ The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviou
 \end{figure}
 
 Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram for the (p-NT + m-NT) system, where the component fraction on the horizontal axis has been defined for p-NT. Experimental data were obtained from \cite{detherm} and are marked on this Figure as green circles. For the purpose of design, a model that is able to continuously predict the phase behaviour is needed. Initially, a van't Hoff-type relation from Moyers and Rousseau was used to give continuous predictions of the solid-liquid phase boundary on the right-hand-side of the eutectic point, \cite{Moyers and Rousseau}
-
 \begin{equation}
     ln(x) = \frac{H_{fusion}}{R T}(\frac{T}{T_{melt}} - 1)
 \end{equation}
-
-\noindent where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, $T$ is the equilibrium temperature, and $T_{melt}$ is the melting point of pure p-NT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions of Moyers and Rousseau's van't Hoff relation, shown as the red curve, are quite off from experimental data. In particular, this relation over-predicts the melting temperature at compositions approaching the eutectic point. A better description is thus necessary, and a van't Hoff-type power-law fit has been devised instead in the form of 
-
+where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, $T$ is the equilibrium temperature, and $T_{melt}$ is the melting point of pure p-NT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions of Moyers and Rousseau's van't Hoff relation, shown as the red curve, are quite off from experimental data. In particular, this relation over-predicts the melting temperature at compositions approaching the eutectic point. A better description is thus necessary, and a van't Hoff-type power-law fit has been devised instead in the form of 
 \begin{equation}
      ln(x) = \frac{T - 323.87}{50.259}
 \end{equation}
 
-\noindent It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results， hence it has been applied for the design.
+It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results， hence it has been applied for the design.
 
 In reality, the system needs time to reach thermodynamic equilibrium from where it starts off, which is why a physical crystalliser is needed. Kinetics of crystallisation in a MSMPR crystalliser will be explained in the following sections.
 
@@ -40,53 +35,42 @@ The kinetics of crystallisation is governed by two processes: nucleation and gro
 \subsubsection{Supersaturation}
 
 Before nucleation and crystal growth are further elaborated, the concept of supersaturation must be established. Supersaturation is the driving force for both nucleation and growth, and it is a measure of how much the system is off from equilibrium. Several measures exist that are able to describe the degree of supersaturation. The commonest definition is expressed as a difference in concentration from equilibrium,
-
 \begin{equation}
     \Delta c = c - c_{eq}
 \end{equation}
-
-\noindent where $c$ is the actual concentration of crystallising component in the liquid, and $c^*$ is the equilibrium concentration corresponding to the temperature of the system. Alternatively, it can be defined as a ratio, where
-
+where $c$ is the actual concentration of crystallising component in the liquid, and $c^*$ is the equilibrium concentration corresponding to the temperature of the system. Alternatively, it can be defined as a ratio, where
 \begin{equation} \label{eq: supersaturation ratio}
     S = \frac{c}{c_{eq}}
 \end{equation}
-
-\noindent and $S$ is known as the supersaturation ratio. Finally, a third way of defining supersaturation is on a temperature basis. A quantity known as degree of super-cooling is such that
-
+and $S$ is known as the supersaturation ratio. Finally, a third way of defining supersaturation is on a temperature basis. A quantity known as degree of super-cooling is such that
 \begin{equation}
      \Delta T = T - T_{eq}
 \end{equation}
-
-\noindent where$T$ is the equilibrium temperature corresponding to concentration $c$ in the liquid, and $T_{eq}$ is that which corresponds to the equilibrium concentration. 
+where$T$ is the equilibrium temperature corresponding to concentration $c$ in the liquid, and $T_{eq}$ is that which corresponds to the equilibrium concentration. 
 
 \subsubsection{Primary nucleation}
 
-Primary nucleation involves nucleation occuring in absence of crystals. \cite{seader_separation_2011} It can be further classified into homogeneous nucleation and heterogeneous nucleation. The former is where nuclei are formed from supersaturation only, and the latter results from the presence of insoluble materials. \cite{richardson} The rate at which homogeneous rate of nucleation happens is typically given by an Arrhenius-type expression, \cite{richardson}
-
+Primary nucleation involves nucleation occurring in absence of crystals. \cite{seader_separation_2011} It can be further classified into homogeneous nucleation and heterogeneous nucleation. The former is where nuclei are formed from supersaturation only, and the latter results from the presence of insoluble materials. \cite{richardson} The rate at which homogeneous rate of nucleation happens is typically given by an Arrhenius-type expression, \cite{richardson}
 \begin{equation}
      J = F~exp(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (ln~S)^2})
 \end{equation}
-
-\noindent where $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation, but it is estimated to be in the order of magnitude of 10$^{30}$. Compared to secondary nucleation, primary nucleation is very slow and numerically negligible. 
+where $J$ is the rate of primary nucleation in  $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ as stated by Randolph and Larson. Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence has been omitted from calculation. \cite{randolph larson} 
 
 \subsubsection{Secondary nucleation}
 
-Secondary nucleation takes place when crystals of the species are already present. \cite{Richardson} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. 
+Secondary nucleation takes place when crystals of the species are already present. \cite{richardson} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. 
 
 \subsubsection{Crystal growth}
 
 Alongside the mass balance, the phenomenon of crystal growth is governed by the crystal population balance. The population balance, together with the mass balance, accounts for the crystal size distribution (CSD) where important information about the growth kinetics is contained. It has been a central focus in the works of Randoph and Larson. \cite{randolph larson}
 
 First, for many commercial crystallisation processes, McCabe's $\Delta$ L law is a general constraint,
-
 \begin{equation} \label{eq: McCabe deltaL}
     \Delta L = G \Delta t
 \end{equation}
-
-\noindent where $L$ is the characteristic size of crystal, $t$ is time, and $G$ is the growth rate whose dimensions are length per unit time. The main underlying assumption is that the crystal growth rate is independent of crystal size. 
+where $L$ is the characteristic size of crystal, $t$ is time, and $G$ is the growth rate whose dimensions are length per unit time. The main underlying assumption is that the crystal growth rate is independent of crystal size. 
 
 Then, the crystal population density, $n$, defined as the number of crystals per unit size per unit volume, is expressed as 
-
 \begin{equation} \label{eq:crystal population density definition}
     .
 \end{equation}
@@ -136,43 +120,42 @@ Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
 The following equation were solved simulantaneously in MATLAB 
 
 
-To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
-
+To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. Assuming complete heat transfer to the pipe and coolant, the total heat flow from the process side to the coolant media is calculated from:
 \begin{equation} \label{eq:energy balance}
     Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
 \end{equation}
+where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
 
-\noindent where Q is the total heat flow, $\Dot{m}_f$ is the feed mass flow rate, $C_{pi}$ is the specific heat capacity of the mixture, $\Delta H_{C}$ is the enthalpy of crystallisation, $\Dot{m}_{c}$ is the product crystal flow rate and the $T_{in}$ and $T_{out}$ are the inlet and outlet temperatures of the MSMPR respectively.
 
-
-The overall heat transfer coefficient consist of 4 resistance terms; $R_1$,$R_w$,$R_2$ and $R_f$.
-
+The overall heat transfer coefficient consists of 4 resistance terms; $R_1$, $R_w$, $R_2$ and $R_f$.
 \begin{equation} \label{eq:resistht}
-    R_O = R_1 + R_{fp} + R_w + R_{fs} + R_2
+    R_O = R_1 + R_w + R_2 + R_f
 \end{equation}
+where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer, $R_2$ is the service side convective heat transfer, $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into accountant, but the effects are investigated in depth in later sections. %label section with fouling sensitiivty%.
 
-where $R_1$ is the process side convective heat transfer term,$R_w$ is the conductive heat transfer,$R_2$ is the service side convective heat transfer, $R_{fs}$ AND $R_{fp}$ are the additional resistance due to fouling on the service side and process side respectively. In these calculations, resistance due to fouling on the service side was assumed negligible, whereas the effects of fouling on the process side was investigated further in section %label section with fouling sensitiivty%.
-
-Accounting fr all these resistances n series, the overall heat transfer coefficient is obtained  
-
+Accounting for all these resistances in series, the overall heat transfer coefficient is obtained  
 \begin{equation} \label{eq:energy balance}
     U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
 \end{equation}
+where l is the thickness of the half coil pipe, k is the thermal conductivity of pipe material (steel)
 
-l is the thickness of the half coil pipe, k is the thermal conductivity of pipe material (steel)
+To determine the heat transfer coefficients on both the process side, Equation \ref{eq:processsideht}, and service side, Equation \ref{eq:servicesideht}, Nusselt number for a jacketed vessel with impeller agitator was used.
+\begin{align} 
+    \mathrm{Nu} &= A\mathrm{Re}^{\frac{2}{3}}\mathrm{Pr}^{\frac{1}{3}}\left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:processsideht} \\
+    \mathrm{Nu} &= 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:servicesideht}
+\end{align}
+
+where A is the impeller constant, 0.611 in this case. From these equations, the respective heat transfer coefficients are used in the equation for the overall coefficient, U.
 
 
-To determine the heat transfer coefficients on both the process side,\ref{eq:processsideht},  and service side, \ref{eq:servicesideht} of the heat transfer steps, experimentally obtained Nusselt numbers were obtained. 
 
+The equation for the heat transfer area was formulated using the length of the helix, yielding:
 
-
-\begin{equation} \label{eq:processsideht}
-    Nu = ARe^{\frac{2}{3}}Pr^{\frac{1}{3}}\left( \frac{\eta}{\eta_w} \right)^{0.14}
+\begin{equation} \label{eq:energy balance}
+    L = N \sqrt{C^2 + P^2}
 \end{equation}
 
-\begin{equation} \label{eq:servicesideht}
-    Nu = 0.023Re^{0.8}Pr^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14}
-\end{equation}
+where L is the total length of the half pipe, N is the number of revolutions in the helix, C is the circumference of the coiling and P is the "pitch" or height of a single coil
 
 
 
