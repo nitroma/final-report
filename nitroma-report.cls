@@ -117,7 +117,7 @@
 \AtBeginEnvironment{appendices}{\clearpage}
 \AtEndEnvironment{appendices}{\clearpage}
 %% float numbering: chapters
-\newcommand\counterall[2][within]{
+\long\def\counterall[2][within]{
     \counter#1{figure}{#2}
     \counter#1{table}{#2}
     \counter#1{equation}{#2}
