@@ -128,19 +128,27 @@ The steady state CSD derived from the population balance over volume $V$ of the 
     n = n_0 ~exp(-\frac{L}{G\tau})
 \end{equation}
 
-\noindent where $L$ is the crystal size, $n$ is the population density of crystals defined as the number of crystals per unit size, $n_0$ is the population density of nuclei, $G$ is the growth rate defined as 
+\noindent where $L$ is the crystal size, $n$ is the population density of crystals defined as the number of crystals per unit size, $G$ is the growth rate defined as 
 
 \begin{equation}
     G = \frac{dL}{dt}
 \end{equation}
 
-\noindent and $\tau$ is the residence time of the crystalliser defined as 
+\noindent $n_0$ is the population density of nuclei given by 
+
+\begin{equation}
+    n_0 = \frac{B}{G}
+\end{equation}
+
+\noindent where $B$ is the rate of nucelation defined in and $\tau$ is the residence time of the crystalliser defined as 
 
 \begin{equation}
     \tau = \frac{V}{Q}
 \end{equation}
 
-\noindent The volumetric flow rate, $Q$, has been approximated to be constant into and out from the crystalliser because the process is for condensed phase operations. \cite{levenspiel_chemical_1999} In the end, the mass of crystals per unit volume of the system, also known as magma density, $\rho_m$, is given by
+The volumetric flow rate, $Q$, has been approximated to be constant into and out from the crystalliser because the process is for condensed phase operations. \cite{levenspiel_chemical_1999} 
+
+In the end, the mass of crystals per unit volume of the system, also known as magma density, $\rho_m$, is given by
 
 \begin{equation} \label{eq:magma density}
     \rho_m = 6 \alpha \rho n_0 (G \tau)^4
@@ -152,7 +160,7 @@ The steady state CSD derived from the population balance over volume $V$ of the 
     L_M = 3 G \tau
 \end{equation}
 
-
+The rate of crystal growth, $G$, 
 
 \subsection{Heat transfer}
 
