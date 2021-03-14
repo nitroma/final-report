@@ -66,20 +66,20 @@ Before nucleation and crystal growth are elaborated in further details, the conc
 Primary nucleation involves nucleation occurring in absence of crystals. \cite{seader_separation_2011} It can be further classified into homogeneous nucleation and heterogeneous nucleation. The former is where nuclei are formed from supersaturation only, and the latter results from the presence of insoluble materials. \cite{richardson_chemical_nodate} The rate at which homogeneous rate of nucleation happens is typically given by an Arrhenius-type expression, \cite{richardson_chemical_nodate}
 
 \begin{equation}
-     J_0 = K_0~exp(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (ln~S)^2})
+     J = F~exp(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (ln~S)^2})
 \end{equation}
 
-\noindent where $J_0$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $K_0$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $K^0$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson. \cite{randolph_theory_1971} Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations. 
+\noindent where $J$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $K^0$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson. \cite{randolph_theory_1971} Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations. 
 
 \subsubsection{Secondary nucleation}
 
-Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_nodate} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_nodate} The rate of secondary nucleation is commonly correlated by empirical correlations in the form of,
+Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_nodate} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_nodate} The rate of secondary nucleation is commonly correlated by empirical correlations in the form of, \cite{richardson_chemical_nodate}
 
 \begin{equation} \label{eq:secondary nucleation general}
     B = K_B \rho^j_m N^l (\Delta C)^b 
 \end{equation}
 
-\noindent where $B$ is the secondary nucleation rate, 
+\noindent where $B$ is the secondary nucleation rate or birth rate in m$^{-3}$ s$^{-1}$, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density, and $N$ is the term that gives measure of the intensity of agitation in the system such as the speed of rotation of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
 From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary nucleation can be expressed as 
 
@@ -140,9 +140,6 @@ Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
 \end{tabularx}
 \end{table}
 
-The following equation were solved simulantaneously in MATLAB 
-
-
 To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. Assuming complete heat transfer to the pipe and coolant, the total heat flow from the process side to the coolant media is calculated from:
 \begin{equation} \label{eq:energy balance}
     Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
@@ -187,7 +184,7 @@ where L is the total length of the half pipe, N is the number of revolutions in 
 
 \subsubsection{Crystalliser Results}
 
-
+The system of equations were solved using MATLAB 
 
 
 
