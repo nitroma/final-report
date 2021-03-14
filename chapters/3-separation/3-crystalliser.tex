@@ -79,7 +79,7 @@ Secondary nucleation takes place with the presence of other crystals. \cite{rich
     B = K_B \rho^j_m N^l (\Delta C)^b 
 \end{equation}
 
-\noindent where $B$ is the secondary nucleation rate or birth rate in m$^{-3}$ s$^{-1}$, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density, and $N$ is the term that gives measure of the intensity of agitation in the system such as the speed of rotation of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
+\noindent where $B$ is the secondary nucleation rate or birth rate in m$^{-3}$ s$^{-1}$, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in Equation below, and $N$ is the term that gives measure of the intensity of agitation in the system such as the speed of rotation of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
 From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary nucleation can be expressed in the form of 
 
@@ -121,13 +121,13 @@ To describe the kinetics of crystal growth, a population balance must be perform
     \item Growth rate is independent of crystal size
 \end{itemize}
 
-\noindent These assumptions come from what is commonly referred to as McCabe's $\Delta L$ law. The steady state CSD derived from the population balance over the system is:
+\noindent These assumptions come from what is commonly referred to as McCabe's $\Delta L$ law. The steady state CSD derived from the population balance over volume $V$ of the crystalliser is:
 
 \begin{equation}
-    n = n_0 ~exp(-\frac{-L}{G\tau})
+    n = n_0 ~exp(-\frac{L}{G\tau})
 \end{equation}
 
-\noindent where $L$ is the crystal size, $n$ is the population density of crystals defined as the number of crystals per unit size, and $n_0$ is the population density of nuclei. $G$ is the growth rate defined as 
+\noindent where $L$ is the crystal size, $n$ is the population density of crystals defined as the number of crystals per unit size, $n_0$ is the population density of nuclei, $G$ is the growth rate defined as 
 
 \begin{equation}
     G = \frac{dL}{dt}
@@ -139,7 +139,11 @@ To describe the kinetics of crystal growth, a population balance must be perform
     \tau = \frac{V}{Q}
 \end{equation}
 
-The volumetric flow rate, $Q$, has been approximated to be constant into and out from the crystalliser because the process is for condensed phase operations. \cite{levenspiel_chemical_1999}
+\noindent The volumetric flow rate, $Q$, has been approximated to be constant into and out from the crystalliser because the process is for condensed phase operations. \cite{levenspiel_chemical_1999}
+
+\begin{equation} \label{eq:magma density}
+    
+\end{equation}
 
 \subsection{Heat transfer}
 
