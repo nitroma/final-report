@@ -1,34 +1,40 @@
 \section{Layers of protection analysis (LOPA)}
 
-A LOPA was conducted for one of the major consequences identified from the HAZOP analysis. Focusing on node 1, the chosen consequence was overpressure in R201, resulting to a fire (due to presence of flammable materials and oxidant) and explosion . This consequence was chosen due to the significant affects and losses that are associated with a fire and explosion caused by overpressurization, which includes the loss of production of o-toluidine, the release of harmful substance and subsequent damage to the multiple environments (air, land), equipment and possibly major plant damage and serious injury/fatality for those within the facility. 
+A LOPA was conducted for one of the major consequences identified from the HAZOP analysis. Focusing on Node 1, the chosen consequence was an explosion caused by overpressure of hydrogen gas in R201. The explosion itself has very serious effects, including the release of flammable liquids (including methanol and 2-nitrotoluene). Further consequences include the loss of production of o-toluidine, major plant damage as well as damage to multiple environments (air and land) due to release of harmful substances. The most significant loss however would be the safety of people which would be greatly compromised, with an explosion holding the potential to inflict serious injuries or fatalities of those within the facility. 
 
-There are three main initiating causes (ICs) which can lead to overpressurization of the reaction vessel that have been identified;
+There were four initiating causes (ICs) found in the HAZOP study which could lead to overpressurization of the reaction vessel;
 
 \begin{itemize}
-\item \textbf{IC1} - Bed blockage within in reactor R201, causing build up of pressure (failure independent of control system)
+\item \textbf{IC1} - Failure of PT201 erroneously reads low  (basic process control system failure)
 \item \textbf{IC2} - Failure of pressure controller, PIC201 (basic process control system failure)
 \item \textbf{IC3 }- Blockage in FCV-202, restricting hydrogen recycle stream from reactor R201 (Self acting control valve failure)
-
+\item \textbf{IC4} - Bed blockage within in reactor R201, causing build up of pressure (failure independent of control system)
 \end{itemize}
- For this major consequence, the target mitigated event likelihood (TMEL) taken as 1x10-6yr-1, which corresponds to multiple onsite fatalities as a result of the explosion (this being the likely consequence in the worst case scenario). It was assumed that Nitroma's plant would operate for 24 hours a day for 7 days a week, which is a common industry standard \cite{job_guide_chemical_2021}. In total, the plant will be operating for 6600 hours (or 275 days) a year which results in value of 75.3\% for the time when the risk is present (which is equivalent to a frequency of 7.53E-01).  
+
+The first three ICs can be classified as basic process control system failures, whereas IC4 is a failure that is independent of control system. As an explosion could potentially lead to multiple on-site fatalities, the the target mitigated event likelihood (TMEL) for this consequence was taken as 1x10-6yr-1. 
+
+%fix superscript
+
+Nitroma's plant will operate for 24 hours a day for 7 days a week, which is a common industry standard \cite{job_guide_chemical_2021}. In total, the plant will be operating for 6600 hours (or 275 days) a year, meaning the risk of an explosion in R102 caused by overpressure is present for 75.3\% of the year (equivalent to a frequency of 7.53E-01).  
  
 Whilst there will be flammable material present in R102 which could lead to an explosion in the event of overpressure arising, the presence of hydrogen gas means that an ignition source is not necessary for an explosion to occur. Thus, the probability of ignition was taken to be 100\%, with the probability that ignition would lead to an explosion being taken as 1. As the process is continuous, there will be minimal human involvement in the operation during steady state and thus the the probability of exposure was taken as 0.1. 
- 
- %Alarm and Operator Response Independent of BPCS Shut Down
 
- 
- There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
+There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
  
  \begin{itemize}
-\item  \textbf{IPL1} - pressure controller (PIC201), responding to pressure increase in R201
-\item  \textbf{IPL2} - pressure relief device (PRV-1), with no fouling in the device assumed 
-\item  \textbf{IPL3} - independent high pressure executive (high high) alarm PZAHH204 and its corresponding interlock
+\item \textbf{IPL1} - high pressure alarm (PAH 201), which has a defined operator response
+\item  \textbf{IPL2} - pressure controller (PIC201), responding to pressure increase in R201
+\item  \textbf{IPL3} - pressure relief device (PRV-1), with no fouling in the device assumed
  \end{itemize}
 
-%check is level exec alarm would be IPL
+% insert table 
+
+There was an existing safety instrument function in the original design, which was a high pressure executive alarm system which consists of a sensor, a switch (the logic element) and an interlock which triggers an automatic response. This SIF was applicable to all four of the ICs. Whilst IC3 did not require any further SIFs to meet the TMEL, IC1, IC2 and IC4 all required an additional SIF with a safety integrity level of 1 (SIL-1) to meet their individual risk tolerance. However, overall a SIF of SIL-3 was required to ensure the cumulative frequency of all four ICs would fall below 1.00E-06. 
 
 
-The applicability of each IPL varied with the three ICs. For IC1, all of the IPLs were relevant. For IC2, all IPLs applied except IPL1 as it is a fault in the pressure controller itself that initiates overpressure. 
+
+
+
 
 
 
