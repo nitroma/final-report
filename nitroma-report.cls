@@ -135,7 +135,7 @@
     \counterallwithin{section}
 }
 \AtEndEnvironment{subappendices}{
-\counte
+\counterallwithour{section}
     \counterallwithin{chapter}
 }
 
