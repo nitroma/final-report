@@ -126,7 +126,7 @@
 %% float numbering: appendices
 \RequirePackage[titletoc]{appendix}
 \AtBeginEnvironment{subappendices}{
-    \clearpage
+    \clearpage % flushes waiting floats out
     \counterallwithin{section}
 }
 \AtEndEnvironment{subappendices}{
