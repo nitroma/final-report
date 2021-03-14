@@ -117,20 +117,20 @@
 \AtBeginEnvironment{appendices}{\clearpage}
 \AtEndEnvironment{appendices}{\clearpage}
 %% float numbering: chapters
-\long\def\counterall[2][within]{
-    \counter##1{figure}{#2}
-    \counter##1{table}{#2}
-    \counter##1{equation}{#2}
+\long\def\counterall#1#2{
+    \expandafter\counter#1{figure}{#2}
+    \expandafter\counter#1{table}{#2}
+    \expandafter\counter#1{equation}{#2}
 }
-\AtBeginDocument{\counterall{chapter}}
+\AtBeginDocument{\counterall{within}{chapter}}
 %% float numbering: appendices
 \RequirePackage[titletoc]{appendix}
 \AtBeginEnvironment{subappendices}{
     \clearpage % flushes waiting floats out
-    \counterall{section}
+    \counterall{within}{section}
 }
 \AtEndEnvironment{subappendices}{
-    \counterall{chapter}
+    \counterall{within}{chapter}
 }
 
 %%% REFERENCING
