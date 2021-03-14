@@ -118,9 +118,9 @@
 \AtEndEnvironment{appendices}{\clearpage}
 %% float numbering: chapters
 \long\def\counterall[2][within]{
-    \counter#1{figure}{#2}
-    \counter#1{table}{#2}
-    \counter#1{equation}{#2}
+    \counter##1{figure}{#2}
+    \counter##1{table}{#2}
+    \counter##1{equation}{#2}
 }
 \AtBeginDocument{\counterall{chapter}}
 %% float numbering: appendices
