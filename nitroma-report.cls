@@ -117,15 +117,15 @@
 \AtBeginEnvironment{appendices}{\clearpage}
 \AtEndEnvironment{appendices}{\clearpage}
 %% float numbering: chapters
-\newcommand\counterallwithin{
-    \counterwithin{figure}{#2}
-    \counterwithin{table}{#2}
-    \counterwithin{equation}{#2}
+\newcommand\counterallwithin[1]{
+    \counterwithin{figure}{#1}
+    \counterwithin{table}{#1}
+    \counterwithin{equation}{#1}
 }
-\newcommand\counterallwithout{
-    \counterwithout{figure}{#2}
-    \counterwithout{table}{#2}
-    \counterwithout{equation}{#2}
+\newcommand\counterallwithout[1]{
+    \counterwithout{figure}{#1}
+    \counterwithout{table}{#1}
+    \counterwithout{equation}{#1}
 }
 \AtBeginDocument{\counterallwithin{chapter}}
 %% float numbering: appendices
@@ -135,7 +135,7 @@
     \counterallwithin{section}
 }
 \AtEndEnvironment{subappendices}{
-\counterallwithour{section}
+    \counterallwithout{section} 
     \counterallwithin{chapter}
 }
 
