@@ -121,11 +121,13 @@
     \counterwithin{figure}{#1}
     \counterwithin{table}{#1}
     \counterwithin{equation}{#1}
+    \counterwithin{scheme}{#1}
 }
 \newcommand\counterallwithout[1]{
     \counterwithout{figure}{#1}
     \counterwithout{table}{#1}
     \counterwithout{equation}{#1}
+    \counterwithout{scheme}{#1}
 }
 \AtBeginDocument{\counterallwithin{chapter}}
 %% float numbering: appendices
