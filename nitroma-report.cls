@@ -121,15 +121,23 @@
     \counterwithin{figure}{#1}
     \counterwithin{table}{#1}
     \counterwithin{equation}{#1}
+    \counterwithin{scheme}{#1}
+}
+\newcommand\counterallwithout[1]{
+    \counterwithout{figure}{#1}
+    \counterwithout{table}{#1}
+    \counterwithout{equation}{#1}
+    \counterwithout{scheme}{#1}
 }
 \AtBeginDocument{\counterallwithin{chapter}}
 %% float numbering: appendices
 \RequirePackage[titletoc]{appendix}
 \AtBeginEnvironment{subappendices}{
-    \clearpage
+    \clearpage % flushes waiting floats out
     \counterallwithin{section}
 }
 \AtEndEnvironment{subappendices}{
+    \counterallwithout{section} 
     \counterallwithin{chapter}
 }
 
@@ -168,3 +176,4 @@
 % now apply spacing removal automatically
 \BeforeBeginEnvironment{itemize}{\IfInTableTF{\compress}{}}
 \BeforeBeginEnvironment{enumerate}{\IfInTableTF{\compress}{}}
+\AtBeginEnvironment{table}{\footnotesize}

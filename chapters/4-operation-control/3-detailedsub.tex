@@ -25,7 +25,7 @@ To determine the number of variables that can be simultaneously manipulated to m
 \subsection{Key control loops}
 \Cref{tab:controls} shows a summary of the control loops in the plant sub-section. A total of 14 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
     \caption{Summary of control loops}
     \label{tab:controls}\footnotesize
@@ -61,7 +61,7 @@ Partial Condenser (H203)                    & Condenser duty                    
     \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
 \end{wrapfigure}
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
 
 
 
@@ -223,19 +223,22 @@ The control loops discussed previously aim at maintaining optimum process condit
 
 Firstly regular alarms are triggered when the value from the transmitter for the normal control loop reaches a set high or low level. Those alarms notify the operators that a process variable such as temperature, pressure or flowrate is not correctly managed by the regular control system and that manual actions need to be taken to return the plant to normal operation. The regular alarms are ranked by their priority level which is determined by the severity of the critical event which could occur if the operator fails to take action, and by the urgency to respond which is defined as the time between the operator's acknowledgement of the alarm and the critical event. 
 
+In the event of large shock or disturbances in a short timeframe, manual actions conducted by the operator may fail to return the plant to its normal operating conditions, thus threatening the safety of the process. Hence executive high-high and low-low alarms are installed and linked to safety interlocks which act as emergency trips to bring the plant into a safe state. To avoid common failure with the regular control system, executive alarms are connected to independent process transmitters and thus constitute an additional layer of protection to guarantee the risk is a low as reasonably practicable (ALARP).  
 
-
- However, a large shock or disturbance might occur in a short timeframe and significantly increase the potential for hazardous events, and in this case alarms and manual action by the operators might not be sufficient to ensure the safety of the plant. Hence, emergency trips are designed and implemented to bring the plant into a safe state without any need for manual intervention when extremely hazardous conditions are detected in the plant and the risk of an incident is high.
+Following HAZOP review, many recommendations were implemented to improve the safety of the agreed subsection. The modifications to the initial P\&ID are listed in \Cref{tab:PIDchanges} in the Safety report. The major improvements made include the installation of additional regular and executive alarms to protect the pump P201 and prevent high-temperature in the reactor R201. The updated P\&ID containing all the control loops, alarms and interlocks can be found in \Cref{app:PID}.
  
- Alarms also act as a layer of protection to ensure the risk is as low as reasonably practicable (ALARP) (see LOPA in Safety Section 3.6). 
 
-There are two main types of emergency trips designed for our selected plant: (a) production shutdown by cutting the feed to the reactor but maintaining the salt circulation loop and reducing heat supply to furnace; (b) full plant shutdown by cutting feed, stopping salt circulation by draining all the salts into the shutdown tank, and shutdown of the furnace. The partial shutdown trip is selected for events that can put to a safe state by cutting feed and stopping the reaction, such as high pressure and level in the cyclone. This allows the plant to restart relatively easily, as the salt circulation loop is the most involved part of the plant start-up. However, for the majority of emergency trips a full shutdown was selected, as tripping only the affected piece of equipment might result in sequential trips for the other equipment which must be avoided.
 \subsubsection{Alarms and safety interlocks design}
 
+The full list of regular and executive alarms, including the manual operation to be taken by the operators and the level of priority, can be found in \Cref{tab:alarms}. 
+
+The activation of an executive alarm leads in most cases to an emergency partial or complete plant shutdown. In partial plant shutdown, the production is stopped by operating a series of solenoid valves to cut the feed to the reactor R201 and drain the pressure vessel while the distillation column is continuous to operate and is slowly shutdown following the standard operating procedure. The advantage of partial shutdown is that the production of the distillation column is not lost and that the plant can restart more easily than with a full emergency shutdown. However this option can only be envisioned for events which may only cause product off-specification and slight damage to auxiliary equipment. For events threatening the safety of the plant, a full emergency shutdown of both the reactor and the distillation column and their auxiliary equipment is required. The feeds to both units are stopped and the materials present in the equipment are drained into the shutdown tanks. Cooling of the units is never stopped in either scenario to avoid overheating of the process. In some rare cases which do not represent a direct safety risk, the safety interlocks were not designed to stop the production but rather to automatically act on the specific issue in a more effective manner than the operators. Further details on the safety interlocks can be found in the Cause and Effects diagram \Cref{tab:causeandeffects} in \Cref{app:causeandeffects}. Calculations for the alarm set points are also provided in \Cref{app:samplecal}.
+
+
 \begin{table}[H]
-\label{tab:alarms}
   \caption{Summary of regular and executive alarms}
-\includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
+\includegraphics[clip, trim=1cm 4cm 1cm 1cm,  width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
+\label{tab:alarms}
 \end{table}
 
 \subsubsection{Recommendations from LOPA} %Stephen
