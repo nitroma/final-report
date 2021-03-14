@@ -129,20 +129,16 @@ The catalyst particle size was chosen to be 2 µm. At this particle size, the ef
 
 Typically, catalyst grains, pellets and beads of this diameter would result in a huge pressure drop across the reactor. However, due to the open structure of SiC foam, the pressure drop is significantly reduced [duong viet et al]. In fact, with the same surface area per volume of catalyst bed, catalyst supports have a pressure drop over 10 times smaller than the corresponding packed bed [richardson et al]. The small catalyst size used in the reaction can therefore reap the benefits of negligible diffusional limitations while avoiding any significant pressure drop.
 
-\subsection{Triple concentric tubes}
-Triple concentric tubes heat exchanger (TCTHE) was considered to allow for better temperature control in the reactor. It increases the heat transfer rate through the larger heat exchange area between the fluid and both the inner and outer side of the annulus [ref]. An enhanced heat exchange network within the reactor maintains the temperature in the desirable temperature range of < 90°C for the reaction, which will be detailed in Section [xxx]. Furthermore, a higher heat transfer rate per unit length from the reaction to the cooling fluid in the TCTHE reduces the overall size of the reactor, therefore leading to space and cost savings. The cooling water used in the nitration reactor will be reused from xxx reactor at xxx K to maximise the energy recovery in Nitroma's plant. 
-
 \subsection{Pressure drop}
 %The pressure drop of is a significant consideration in during the selection and modelling of this reactor as the packed-bed reactor shows the 
-
-A significant consideration during the selection and modelling of this packed-bed reactor is the pressure drop, as a huge pressure drop will pose as a safety threat as well as incurring huge amount of CAPEX due to the usage of high performance pumps. An acceptable pressure drop range for this nitration reactor is xxx - yyy bar based on ZZZZ. 
+Even though the pressure drop is expected to be insignificant, efforts were taken to verify the pressure drop of the reactor.
 
 The pressure drop in this was calculated by using the modified Ergun equation from [lacroix et al]: 
 \begin{equation}
     \frac{\Delta p}{L} = \frac{150 \mu (1- \varepsilon)^2 u_0}{\varepsilon^3 d_p^2} + \frac{1.75(1-\varepsilon)\rho u_0^2}{\varepsilon^3 d_p}
     \label{eqn:ergun}
 \end{equation}
-where foam porosity ($\varepsilon$) is 0.30 from , $d_p$ is the particle diameter equivalent to the SiC foam structure based only on its mean windows size ($a$) and the foam porosity ($\varepsilon_f$) using the following formula:
+where foam porosity ($\varepsilon$) is 0.30 from [Byung-KoogJang et al], $d_p$ is the particle diameter equivalent to the SiC foam structure based only on its mean windows size ($a$), using the following formula:
 
 \begin{equation}
 d_{s}=\frac{3a[(4 / 3 \pi)(1-\varepsilon_f)]^{1 / 2}}{2(1-[(4 / 3 \pi)(1-\varepsilon_f)]^{1 / 2})}
@@ -170,6 +166,11 @@ A final number of tubes ($n_t$) of 19 was chosen based on the centered hexagonal
 \end{equation},
 where $n$ represents the sequence of hexagonal number. 
 
-From plot Y, it can be observed that a final number of tubes ($n_t$) of 19 in the multitubular packed-bed reactor will provide a required length ($L$) of \textcolor{red}{4.2m}, and allowing an acceptable pressure drop ($\Delta P$)of \textcolor{red}{0.1bar}.  
+From plot Y, it can be observed that a final number of tubes ($n_t$) of 19 in the multitubular packed-bed reactor will provide a required length ($L$) of \textcolor{red}{4.2m}, and allowing an acceptable pressure drop ($\Delta P$)of \textcolor{red}{0.1bar}.
+
+\subsection{Triple concentric tubes}
+Triple concentric tubes heat exchanger (TCTHE) was considered to allow for better temperature control in the reactor. It increases the heat transfer rate through the larger heat exchange area between the fluid and both the inner and outer side of the annulus [ref]. An enhanced heat exchange network within the reactor maintains the temperature in the desirable temperature range of < 90°C for the reaction, which will be detailed in Section [xxx]. Furthermore, a higher heat transfer rate per unit length from the reaction to the cooling fluid in the TCTHE reduces the overall size of the reactor, therefore leading to space and cost savings. The cooling water used in the nitration reactor will be reused from xxx reactor at xxx K to maximise the energy recovery in Nitroma's plant. 
+
+  
 
 \subsection{Bed voidage}
