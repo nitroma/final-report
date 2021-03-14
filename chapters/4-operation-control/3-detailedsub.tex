@@ -225,13 +225,12 @@ Firstly regular alarms are triggered when the value from the transmitter for the
 
 In the event of large shock or disturbances in a short timeframe, manual actions conducted by the operator may fail to return the plant to its normal operating conditions, thus threatening the safety of the process. Hence executive high-high and low-low alarms are installed and linked to safety interlocks which act as emergency trips to bring the plant into a safe state. To avoid common failure with the regular control system, executive alarms are connected to independent process transmitters and thus constitute an additional layer of protection to guarantee the risk is a low as reasonably practicable (ALARP).  
 
-Following HAZOP review, many recommendations were implemented to improve the safety of the agreed subsection. The modifications to the initial P\&ID are listed in \Cref{tab:PIDchanges} in the Safety report. The major improvements made include the installation of additional regular and executive alarms to protect the pump P201
+Following HAZOP review, many recommendations were implemented to improve the safety of the agreed subsection. The modifications to the initial P\&ID are listed in \Cref{tab:PIDchanges} in the Safety report. The major improvements made include the installation of additional regular and executive alarms to protect the pump P201 and prevent high-temperature in the reactor R201. The updated P\&ID containing all the control loops, alarms and interlocks can be found in \Cref{app:PID}.
  
-
-
 
 \subsubsection{Alarms and safety interlocks design}
 
+The full list of regular and executive alarms, including the manual operations to be taken by the operators and the level of priority, can be found in \Cref{tab:alarms}.
 
 There are two main types of emergency trips designed for our selected plant: (a) production shutdown by cutting the feed to the reactor but maintaining the salt circulation loop and reducing heat supply to furnace; (b) full plant shutdown by cutting feed, stopping salt circulation by draining all the salts into the shutdown tank, and shutdown of the furnace. The partial shutdown trip is selected for events that can put to a safe state by cutting feed and stopping the reaction, such as high pressure and level in the cyclone. This allows the plant to restart relatively easily, as the salt circulation loop is the most involved part of the plant start-up. However, for the majority of emergency trips a full shutdown was selected, as tripping only the affected piece of equipment might result in sequential trips for the other equipment which must be avoided.
 
