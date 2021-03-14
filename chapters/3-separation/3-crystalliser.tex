@@ -120,7 +120,7 @@ Half pipe coil  &  \begin{itemize}[label=+,leftmargin=1em]
 The following equation were solved simulantaneously in MATLAB 
 
 
-To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. The total heat flow from the process side to the coolant media is calculated from:
+To calculate the required length of half coil piping, the total heat transfer needs to be quantified first. Assuming complete heat transfer to the pipe and coolant, the total heat flow from the process side to the coolant media is calculated from:
 \begin{equation} \label{eq:energy balance}
     Q =  \Dot{m}_{f}C_{pi}(T_{in}-T_{out})+ \Delta H_{C}\Dot{m}_{c}
 \end{equation}
@@ -145,5 +145,5 @@ To determine the heat transfer coefficients on both the process side, Equation \
     \mathrm{Nu} &= 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:servicesideht}
 \end{align}
 
-
+where A is the impeller constant, 0.611 in this case. 
 
