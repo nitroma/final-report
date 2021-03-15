@@ -8,4 +8,5 @@ Uses ghostscript to rewrite the file without encryption."
     gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="${in:r}_unencrypted.pdf" -c .setpdfwrite -f "$in"
 }
 
-for f in *.pdf; do pdf-unencrypt $f; done
+# for f in *.pdf; do pdf-unencrypt $f; done
+pdf-unencrypt $1
