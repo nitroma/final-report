@@ -30,16 +30,44 @@ Total                                                                           
 
 \subsubsection{Stopping steam feed to reboiler H204 (Step2)}
     \begin{equation}
-        time\:to\:stop\:flow\:=\frac{x}{10}=y
+        time\:to\:stop\:flow\:=\frac{x}{10}=y\:min
     \end{equation}
-        \begin{itemize}
-            \item The gas flowrate is reduced by 10L/min
-        \end{itemize}
+    
+    \begin{itemize}
+        \item The gas flowrate is reduced by 10L/min
+    \end{itemize}
 
 \subsubsection{Stopping hydrogen and liquid feed to reactor R201 (Step3)}
     \begin{equation}
-        time\:to\:stop\:hydrogen\:flow\:=\frac{x}{10}=y
+        time\:to\:stop\:hydrogen\:flow\:=\frac{x}{10}=y\:min
     \end{equation}
-        \begin{itemize}
-            \item The gas flowrate is reduced by 10L/min
-        \end{itemize}
+    
+    \begin{equation}
+        time\:to\:stop\:liquid\:flow\:=\frac{x}{2}=y\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item The gas flowrate is reduced by 10L/min
+        \item The liquid flowrate is reduced by 2L/min
+    \end{itemize}
+ 
+ \subsubsection{Depressurise reactor R201 to 1 atm by venting gas (Step5)}   
+
+    \begin{equation}
+        time\:to\:depressurise\:=\frac{3.93 * 0.8}{x * 2}=y\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item Assume reactor is 80\% filled with hydrogen, 20\% filled with liquid
+        \item Assume venting flowrate is twice the steady state outlet flowrate
+    \end{itemize}
+    
+ \subsubsection{Drain units (Step6,7)}   
+
+    \begin{equation}
+        time\:to\:drain R201\:=\frac{3.93 * 0.8}{x * 2}=y\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item A one-inch pipe is used (1 inch = 2.54cm)
+    \end{itemize}
