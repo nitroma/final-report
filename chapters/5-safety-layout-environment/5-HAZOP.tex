@@ -67,12 +67,10 @@ Following the review of the HAZOP study, several of the recommendations suggeste
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 % \usepackage{multirow}
-% \usepackage{graphicx}
 \begin{table}[]
 \centering
 \caption{}
 \label{tab:my-table}
-\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}lll@{}}
 2,   Separator                  & Positional change of flow control  valve (FCV-203) and pressure regulating valve (V-201)                                                                 & Change of position will lessen the likelihood of fouling and thus the risk of less flow through FCV-203 into   S203                             \\
 \multirow{4}{*}{3, Reflux drum} & Installation of a pressure  transmitter and control system to regulate pressure in S204, along with   installation of pressure alarms and additional PRV & Acts as a safeguard in the case of no vapour product flow exiting S204, should FVC-205 fail shut                                                \\
@@ -80,6 +78,5 @@ Following the review of the HAZOP study, several of the recommendations suggeste
                                 & Installation  of a flow transmitter and alarm downstream of FCV-206                                                                                      & Should low level in S204 be  caused be more flow through FCV, this addition will allow the operator to   identify the cause and respond quicker \\
                                 & Additional flow transmitter to monitor the flowrate of the cold stream from H204                                                                         & Further surveillance of cold  stream flow can assist in maintaining the temperature of S204                                                     \\
 2, H204                         & Installation of flow indicator and control system on bottoms stream from H204                                                                            & Aids prevention of no flow from the bottoms stream of H204, with a control system responding specifically to   the flow                        
-\end{tabular}%
-}
+\end{tabular}
 \end{table}
