@@ -147,7 +147,7 @@ To further ensure tight control of pressure in the column, a feedback control lo
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
-    \caption{}
+    \caption{Composition control loop for bottoms stream of distillation column S201}
     \label{fig:S201-CC}
 \end{wrapfigure}
 A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
@@ -179,7 +179,7 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
-    \caption{}
+    \caption{Heat duty control loop for condenser H203}
     \label{fig:S203C-TC}
 \end{wrapfigure}
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
