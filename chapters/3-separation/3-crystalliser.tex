@@ -9,7 +9,7 @@ The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviou
     \dot{M}_{\mathrm{solid}} = \frac{\dot{M}_{\mathrm{total}} (x_1 - x_2)}{1 - x_2}
 \end{equation}
 
-\noindent where $\dot{M}_{\mathrm{solid}}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{\mathrm{total}}$ is the total mass flow rate of A and B. This, the thermodynamic equilibrium, gives the theoretical maximum solid recovery that the separation can achieve.
+\noindent where $\dot{M}_{\mathrm{solid}}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{\mathrm{total}}$ is the total mass flow rate of A and B. This, the thermodynamic equilibrium, gives the theoretical maximum recovery of p-NT in the form of solid that the separation can achieve.
 
 \begin{figure}[h]
     \centering
@@ -229,19 +229,23 @@ The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is
     D = \frac{1}{2} H
 \end{equation}
 
-\noindent where $D$ is the diameter of the vessel and $H$ is the height. 
+\noindent where $D$ is the diameter of the vessel and $H$ is the height. The volume of the crystalliser, $V$, is
+
+\begin{equation} \label{eq:crystalliser volume}
+    V = \frac{D^2}{4} H
+\end{equation}
+
+The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall. Details of this will be elaborated in Section \ref{sec:heat transfer}. In the end, Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} can be solved simultaneously for each value of $V$ to compute the mass flow rate of solid p-NT, $\dot{M}_{\mathrm{liquid}}$, that will form. A crystalliser recovery 
 
 
-
-
-\subsection{Heat transfer}
+\subsection{Heat transfer}\label{sec:heat transfer}
 
 The crystallisation cooling can be implemented many different ways and must be chosen based on the conditions of the crystalliser. Table \ref{tab:heatransfermethodstype} outline the properties of each heat transfer method. A half pipe coil jacketed vessel configuration was implemented as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid, and despite usually costing 30-35\% more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect, to have uniform temperature within the crystalliser. 
 
 \begin{table}
 \caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
 \label{tab:heatransfermethodstype}
-\begin{tabularx}{\linewidth}{lXX}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
 \toprule
 Type & Advantages                 & Disadvantages                               \\ \midrule
 Conventional Jacket & \begin{itemize}[label=+,leftmargin=1em]
