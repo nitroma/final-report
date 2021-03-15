@@ -55,13 +55,15 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-\begin{wrapfigure}{r}{0.6\linewidth}
+
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
     \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
-\end{wrapfigure}
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+\end{figure}
 
 
 
@@ -235,7 +237,7 @@ The full list of regular and executive alarms, including the manual operation to
 The activation of an executive alarm leads in most cases to an emergency partial or complete plant shutdown. In partial plant shutdown, the production is stopped by operating a series of solenoid valves to cut the feed to the reactor R201 and drain the pressure vessel while the distillation column is continuous to operate and is slowly shutdown following the standard operating procedure. The advantage of partial shutdown is that the production of the distillation column is not lost and that the plant can restart more easily than with a full emergency shutdown. However this option can only be envisioned for events which may only cause product off-specification and slight damage to auxiliary equipment. For events threatening the safety of the plant, a full emergency shutdown of both the reactor and the distillation column and their auxiliary equipment is required. The feeds to both units are stopped and the materials present in the equipment are drained into the shutdown tanks. Cooling of the units is never stopped in either scenario to avoid overheating of the process. In some rare cases which do not represent a direct safety risk, the safety interlocks were not designed to stop the production but rather to automatically act on the specific issue in a more effective manner than the operators. Further details on the safety interlocks can be found in the Cause and Effects diagram \Cref{tab:causeandeffects} in \Cref{app:causeandeffects}. Calculations for the alarm set points are also provided in \Cref{app:samplecal}.
 
 
-\begin{table}[h]
+\begin{table}[H]
   \caption{Summary of regular and executive alarms}
 \includegraphics[clip, trim=1cm 4cm 1cm 1cm,  width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
 \label{tab:alarms}
