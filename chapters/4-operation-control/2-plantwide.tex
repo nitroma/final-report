@@ -1,17 +1,16 @@
 \section{Plant-wide control}
 
 
-\subsection{Plant-wide control philosophy and survey table}%0.25 page
+\subsection{Plant-wide control philosophy and survey table} %0.25 page %Marie
 
 Nitroma aimed at developing an effective plant-wide control structure for the entire chemical plant following a general heuristic procedure proposed by \textcite{}. A plant-wide control approach offers many advantages over an individual unit based approach. Firstly, disturbance propagation introduced by multiple recycle loops in the process can be efficiently mitigated. Secondly, the likelihood of conflicts between control loops is reduced, so highly oscillatory behaviour of any control parameter becomes very unlikely. 
 
 The control objectives and consequences associated with poor control were identified during a plant-wide control survey conducted on all major process units. For each potential control loop, a controlled variable and a manipulated variable were identified. The type of sensor and actuator was then selected. All possible disturbances affecting the controlled variable were then listed out. Finally the survey addressed major maintenance issues for each of the process units and proposed solutions to mitigate those issues. The plant wide survey can be found in the Supporting Documentation \Cref{sec:PWS}.
-%end subsection
 
 
 \subsection{Key controls}
 
-\subsubsection{Throughput and quality control}%0.75 page
+\subsubsection{Throughput and quality control} %0.75 page %Stephen
 Throughput control is an essential part of Nitroma's control strategy as it ensures that the production capacity of the three products can be consistently met.
 
 A general framework for choosing a suitable throughput manipulator (TPM) has been laid out by \textcite{}. They recommend choosing a valve that directly impacts the reaction rate in the primary reactor of the process while having minimal impact on the separation system. This could be achieved by changing the heat removal duty from the reactor, the flowrate of reactants, catalysts, or reactor effluent. If an explicit TPM  is chosen (i.e. a valve on a process stream), additional consideration has to be given to the TPM being in the direction "of" or "opposite to" flow, as mentioned by \textcite{}. Having a TPM in direction "of" flow such as a valve on the reactor feed provides the most intuitive and traditional form of control, yet having a TPM in direction "opposite of" flow such as a valve on the reactor effluent may offer greater process stability. The stepwise procedure proposed by \textcite{} aided in the selection process of Nitroma's TPM. 
@@ -27,26 +26,24 @@ The feed flow rate to R101 selected as the TPM as it would directly affect the i
 
 To ensure the products from the plant were reliably meeting quality specifications, composition analysers were installed after major reactors and separators in the plant, and inferential sensors such as density or temperature were used to increase reliability of these measurements. Good control of the selectivity in the reactors was achieved by robust control of the pressure and temperature. Ratio controllers maintained correct feed ratios to reactors.
 
-\subsubsection{Inventory and recycle loops control}
-
-\begin{wrapfigure}{r}{0.5\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/TPM-Price-1994.png}
-    \caption{Example of inventory control in direction of flow, taken from \textcite{}}
-    \label{fig:TPM}
-\end{wrapfigure}
+\subsubsection{Inventory and recycle loops control} %0.25page %Stephen
+    \begin{wrapfigure}{r}{0.5\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/TPM-Price-1994.png}
+        \caption{Example of inventory control in direction of flow, taken from \textcite{}}
+        \label{fig:TPM}
+    \end{wrapfigure}
 Inventory control is important to maintain a steady operation of the plant with no accumulation of material in any process unit. Effective inventory controllers are those that are on the primary path, and thus exclude recycle streams. Since the TPM was at the feed to the process, all inventory controls were placed in the direction of flow in order to ensure changes to the production rate from the TPM are propagated throughout the process (see Figure \ref{fig:TPM}). 
 
 Purge streams were added in every recycle loop to prevent the buildup of non-reactive components in process streams.  
 
 
-
 \subsection{Challenges to control}%Marie
 
 \subsubsection{Difficult measurements and dynamics} %0.75 page
-During the plant-wide control survey, difficult measurements were identified and solutions were proposed to overcome the control challenges. Firstly, composition analysis is essential to ensure the final products met their quality specification. However composition analysis is a rather long measurement which means that there can be a long time delay between the apparition of a problem, its identification by the composition transmitter and its resolution via the control loops in place. Where possible inferential control can be implemented to reduce the time delay. For instance, the top and bottom composition of distillation column outlet streams can be controlled with temperature []. However for inferential control to be effective, robust calibration curves between the measured variable and the controlled variable must exist. Moreover the presence of impurities can significantly impact the correlation between the two process variables, ultimately leading to off-specification products. It is recommended to perform thorough experiments to obtain adequate calibration curves to be used in inferential control. In addition to inferential control with temperature, the composition can be inferred from density and viscosity measurements []. Multiplying the number of proxi measured variable should increase the accuracy of the inferential control of composition.
+The plant-wide control survey identified difficult measurements and solutions were proposed to overcome the control challenges. Firstly, composition analysis, though an essential technique to ensure product specifications are met, is rather slow in producing results. This leads to a long time delay between the apparition of a deviation, its identification by the composition transmitter and its resolution via the control loops in place. Where possible inferential control can be implemented to reduce the time delay. For instance, the bottoms composition of the distillation column can be controlled with temperature []. However, for inferential control to be effective, robust calibration curves between the measured variable and the controlled variable must exist. Moreover the presence of impurities can significantly impact the correlation between the two process variables, ultimately leading to off-specification products. It is recommended to perform thorough experiments to obtain adequate calibration curves to be used in inferential control. Composition can also be inferred from density and viscosity measurements in addition to temperature []. Utilising multiple proxy variables should increase the accuracy of the inferential control of composition.
 
-Furthermore, the robust control of temperature in the reactors is one of Nitroma's major concerns since all reactions are highly exothermic and could lead to thermal runaways. More specifically, in the nitration reactor R101, a hot spot can form at the centre of the catalyst bed in the shell-and-tube heat exchanger reactor, which means it can not be directly measured with temperature transmitters placed at the walls. It is suggested to conduct experiments and modelling work to develop correlations between the reactor wall temperature and the inner temperature. Additionally, the monitoring of cooling water outlet temperature can infer of the presence of a significant increase in temperature in the reactor.
+Secondly, the robust control of temperature in the reactors is one of Nitroma's major concerns since all reactions are highly exothermic and could lead to thermal runaways. More specifically, in the nitration reactor R101, a hot spot can form at the centre of the catalyst bed in the shell-and-tube heat exchanger reactor, which means it can not be directly measured with temperature transmitters placed at the walls. It is suggested to conduct experiments and modelling work to develop correlations between the reactor wall temperature and the inner temperature. Additionally, the monitoring of cooling water outlet temperature can infer of the presence of a significant increase in temperature in the reactor.
 
 Difficult dynamics can also be encountered while conducting a plant-wide control structure. Since Nitroma's process is continuous, it is expected that less difficult control dynamics will be found as opposed to a batch process. Nonetheless, it is necessary to have dynamic modelling of plant to be able to design better control loops and transfer functions.
 
