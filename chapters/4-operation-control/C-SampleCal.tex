@@ -24,4 +24,78 @@ Total                                                                           
 
 \subsection{For executive alarms}
 
-\subsection{For start-up and shutdown procedures}
+\subsection{For start-up procedures}
+The total time for each step was rounded up to the nearest 5 or 15min interval where reasonable to give a conservative estimate of the actual time needed.										
+
+\subsection{For shutdown procedures}
+The total time for each step was rounded up to the nearest 5 or 15min interval where reasonable to give a conservative estimate of the actual time needed.
+
+\subsubsection{Stopping flows}
+\paragraph{Steam flow to reboiler H204 (Step2)}   
+    \begin{itemize}
+        \item The gas flowrate is reduced by 10\% its steady state value per minute, so the time to completely stop flow = 10 minutes.
+    \end{itemize}
+
+
+\paragraph{Hydrogen and liquid feed to reactor R201 (Step3)}
+    \begin{equation}
+        time\:to\:stop\:hydrogen\:flow\:=\frac{338.7}{10}=33.9\:min
+    \end{equation}
+    
+    \begin{equation}
+        time\:to\:stop\:liquid\:flow\:=\frac{10.9}{2}=5.5\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item Flowrates are in L/min
+        \item The gas flowrate is reduced by 10L/min
+        \item The liquid flowrate is reduced by 2L/min
+    \end{itemize}
+ 
+\subsubsection{Draining and depressurising}   
+\paragraph{Depressurise reactor R201 to 1 atm by venting gas (Step5)}
+    \begin{equation}
+        time\:to\:depressurise\:=\frac{3.93 * 0.8}{0.100 * 2}=15.6\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item Flowrates are in $m^3$/min
+        \item Assume reactor is 80\% filled with hydrogen, 20\% filled with liquid
+        \item Assume venting flowrate is twice the steady state outlet flowrate
+    \end{itemize}
+    
+ \subsubsection{Drain units (Step6,7)}   
+
+    \begin{equation}
+        time\:to\:drain\:R201\:=\frac{3.93 * 0.07}{\frac{\pi 0.0254^2}{4} * 1} \div 60 =9.0\:min
+    \end{equation}
+    
+    \begin{equation}
+        time\:to\:drain\:S201\:=\frac{0.31 * 0.07}{\frac{\pi 0.0254^2}{4} * 1} \div 60 =0.7\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item Assume 7\% of unit volume is filled with liquid, half the setpoints of the level high-high alarm
+        \item A pipe with a one-inch diameter is used (1 inch = 2.54cm)
+        \item Velocity of fluid through drain valve is controlled at 1m/s
+    \end{itemize}
+    
+\subsubsection{Purge units with nitrogen (Step10)}
+
+    \begin{equation}
+        Quantity\:of\:N2\:needed\:=\frac{V}{K} * \ln \frac{C1}{C2} = \frac{3.93}{0.25} * \ln \frac{0.21}{0.01} = MMM
+    \end{equation}
+    
+    \begin{equation}
+        time\:to\:purge\:R201\:=\frac{MMM}{\frac{\pi 0.0508^2}{4} * 17} * 2 \div 60 = MMM\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item V = volume of unit ($m^3$)
+        \item $V_{N2}$ = volume of nitrogen ($m^3$)
+        \item K = correlation factor
+        \item C1 = initial concentration of oxygen (M)
+        \item C2 = final concentration of oxygen (M)
+        \item two circulations of nitrogen are performed, so total time is multiplied by 2
+        \item N2 will be flowed at a velocity of 17m/s
+    \end{itemize}

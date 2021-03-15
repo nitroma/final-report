@@ -2,7 +2,7 @@
 \label{sec:subsec}
 
 \subsection{Description of sub-section}
-The agreed subsection has a gaseous \ch{H2} feed and liquid feed consisting of methanol and o-nitrotoluene entering the top of a trickle bed reactor (R201). The streams are preheated electric heaters H201 and H202. The reactor has a gaseous effluent which is split into a recycle and purge stream. The liquid effluent enters a packed distillation column (S201), where methanol is separated from the heavier organics. The methanol-rich vapour from the column is partially condensed and split into a gaseous and liquid product in a reflux drum (S204), while the bottoms stream containing valuable o-toluidine product is sent to downstream purification units.
+The agreed sub-section has a trickle bed reactor (R201) that reduces liquid 2-nitrotoluene to o-toluidine using hydrogen gas. Two electric heaters (H201 and H202) preheat the feed streams. The sub-section also has a packed distillation column (S201) that separates the liquid effluent from R201 into methanol-rich vapour and an o-toluidine rich product stream which is sent to downstream purification units to meet purity specifications for the o-toluidine product.
 
 \subsection{Degree of freedom analysis}
 
@@ -20,12 +20,12 @@ Control degrees of freedom          & 16 &  &  &  \\ \bottomrule
 \end{tabular}
 \end{wraptable}
 
-To determine the number of variables that can be simultaneously manipulated to maintain stable operation in our sub-section, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of variables from the total number of equations in a dynamic model of each process unit, however creating such models are often impractical and error-prone for complex plants with specialised units. Instead, the simpler and straightforward method presented by \textcite{} showed that there are a maximum of 14 variables that could be manipulated for control (see Table \ref{tab:dof}).
+To determine the number of variables that can be simultaneously manipulated to maintain stable operation, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of process variables from the total number of equations in a dynamic model of the process, however creating such models are often impractical and error-prone for complex plants with specialised units. Instead, the simpler and straightforward method presented by \textcite{} showed that there are a maximum of 16 variables that could be manipulated for control (see Table \ref{tab:dof}).
 
 \subsection{Key control loops}
 \Cref{tab:controls} shows a summary of the control loops in the plant sub-section. A total of 14 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
 
-\begin{table}[H]
+\begin{table}[h]
 \centering
     \caption{Summary of control loops}
     \label{tab:controls}
@@ -55,13 +55,17 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-\begin{wrapfigure}{r}{0.6\linewidth}
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+    \includegraphics[width=0.8\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
     \caption{Temperature control loop for reactor R201}
     \label{fig:R201-TC}
-\end{wrapfigure}
-Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+\end{figure}
+
+Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate throuch the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the later two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. To smoothen out other potential disturbances coming from flowrate and electric heater duty variations, flow and temperature control loops on the feed streams were added. Those for the gas stream require more robust control because any disturbance could have larger effects on the reactor temperature. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
+
+
 
 
 
@@ -77,12 +81,12 @@ The ONT reduction reactor is operated under pressure at 5 atm. To maintain this 
 
 
 \subsubsection{Ratio control of reactants} %R201-CC
-\begin{wrapfigure}{r}{0.6\linewidth}
+    \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-FC.pdf}
     \caption{Ratio control of reactants to reactor R201}
     \label{fig:R201-FC}
-\end{wrapfigure} 
+    \end{figure} 
 Ratio control is a special type of feedforward control whose objective is to maintain a specified ratio between two process streams. It is used in Nitroma's plant to maintain a stoichiometric ratio of reactants to reactor R201. Two different control schemes are proposed by \textcite{}: for both, one of the stream is treated as a disturbance which is measured by a transmitter. In the most classic scheme, the ratio of signals from the two transmitters are sent to a ratio controller acting on a flow control valve. In the more advance control scheme, the measurement from the disturbance stream is fed into a ratio station which calculates what the set point of the manipulated variable. This set point is sent to a flow controller acting on a valve. The advantage of the first method is that the ratio is actually calculated. However the inclusion of the divider element in the control loop introduces non-linearity in the process gain, thus the second method is preferred. Since the system is required to operate at a 1:4 molar ratio of ONT to hydrogen, the ratio controller must be given molar flowrates for those two species. A flow and composition transmitters are installed on both the gas and liquid stream. The flow and composition signals are multiplied to obtain the molar flowrates of hydrogen and ONT. The hydrogen gas stream is assumed to be the disturbance and its molar flowrate is sent to a ratio station sending the set point to a flow controller acting on the liquid pump speed. One inevitable drawback with ratio control is that the liquid feed flowrate (manipulated variable) will require some time to reach its new set point after a step change in the gas flowrate. However, flow control loops are relatively quick to respond to changes and the time delay is usually acceptable [].
 
 
@@ -100,7 +104,7 @@ The composition of the gas feed to the reactor is controlled via the purge fract
 
 
 \subsubsection{Reactor R201 level control} % R201-LC
-The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce.
+The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce. Level control in the reactor is critical since liquid could reach the gas outlet stream and contaminate the gas recycle, while simultaneously decreasing the productivity of the reactor.
 
 
 \subsubsection{Hydrogen feed flowrate control} %R201-HFC
@@ -143,7 +147,7 @@ To further ensure tight control of pressure in the column, a feedback control lo
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
-    \caption{}
+    \caption{Composition control loop for bottoms stream of distillation column S201}
     \label{fig:S201-CC}
 \end{wrapfigure}
 A composition control loop in the distillation column is also necessary to ensure a high recovery of o-toluidine. Since o-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of o-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
@@ -175,7 +179,7 @@ Similar to the level control in the reboiler, controlling the level of liquid in
 \begin{wrapfigure}{r}{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
-    \caption{}
+    \caption{Heat duty control loop for condenser H203}
     \label{fig:S203C-TC}
 \end{wrapfigure}
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see Figure \ref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
@@ -235,7 +239,7 @@ The full list of regular and executive alarms, including the manual operation to
 The activation of an executive alarm leads in most cases to an emergency partial or complete plant shutdown. In partial plant shutdown, the production is stopped by operating a series of solenoid valves to cut the feed to the reactor R201 and drain the pressure vessel while the distillation column is continuous to operate and is slowly shutdown following the standard operating procedure. The advantage of partial shutdown is that the production of the distillation column is not lost and that the plant can restart more easily than with a full emergency shutdown. However this option can only be envisioned for events which may only cause product off-specification and slight damage to auxiliary equipment. For events threatening the safety of the plant, a full emergency shutdown of both the reactor and the distillation column and their auxiliary equipment is required. The feeds to both units are stopped and the materials present in the equipment are drained into the shutdown tanks. Cooling of the units is never stopped in either scenario to avoid overheating of the process. In some rare cases which do not represent a direct safety risk, the safety interlocks were not designed to stop the production but rather to automatically act on the specific issue in a more effective manner than the operators. Further details on the safety interlocks can be found in the Cause and Effects diagram \Cref{tab:causeandeffects} in \Cref{app:causeandeffects}. Calculations for the alarm set points are also provided in \Cref{app:samplecal}.
 
 
-\begin{table}[h]
+\begin{table}[H]
   \caption{Summary of regular and executive alarms}
 \includegraphics[clip, trim=1cm 4cm 1cm 1cm,  width=\linewidth]{chapters/4-operation-control/4-Figures/Alarms.pdf}
 \label{tab:alarms}
