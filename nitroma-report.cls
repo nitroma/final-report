@@ -135,6 +135,7 @@
 \AtBeginEnvironment{subappendices}{
     \clearpage % flushes waiting floats out
     \counterallwithin{section}
+    \crefalias{section}{appendix}
 }
 \AtEndEnvironment{subappendices}{
     \counterallwithout{section} 
