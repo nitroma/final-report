@@ -63,4 +63,6 @@ End-product purity \textgreater{}95\% &                                         
 \end{table}
 
 \subsection{Further Considerations}
-Some authors have reported that the need to solve the optimisation model during each scan of the process can lead MPCs to have long processing times before a corrective signal is sent from the controller to actuators. However, strategies exist to reduce the computational load on MPCs, such as utilising Newton's Method for finding an optimal solution. Another strategy is having a 'warm start', where solutions from the previous optimisation are used as a starting point for       In conclusion, proper model formulation and implementation of the MPC can serve as a useful technique to effectively manage interactions between control loops in Nitroma's complex plant with a multivariate control problem.
+Some authors have reported that the need to solve the optimisation model during each scan of the process can lead MPCs to have long processing times before a corrective signal is sent from the controller to actuators. However, strategies exist to reduce the computational load on MPCs, such as utilising Newton's Method for finding an optimal solution. Another strategy is having a 'warm start', where solutions from the previous optimisation are used as a starting point for the next optimisation.
+
+In conclusion, proper model formulation and design of the optimisation algorithm can make MPC a useful technique to effectively manage interactions between control loops in Nitroma's complex plant with a multivariate control problem.
