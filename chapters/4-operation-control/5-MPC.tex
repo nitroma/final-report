@@ -45,4 +45,16 @@ Inventory controls (pressure, liquid level) &                                   
 
 Good formulation of the optimisation algorithm for MPC includes the setting of inequality constraints that satisfy quality requirements, operational limits, safety considerations and saturation of actuators. Quality constraints and safety considerations are summarised in Table \ref{}.
 
+\begin{table}[]
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Quality}                      & \textbf{Safety/Environmental}                             \\ \midrule
+Pressure 5 bar in R201                & Temperature not more than 5\% above design specifications \\
+Temperature of 60C in R201            & Pressure not more than 5\% above design specifications    \\
+Temperature of 177C in R201 and R401  & Purge fractions not more than 10\%                        \\
+Feed ratio to reactors                & Temperature and flowrate of cooling utilities             \\
+End-product purity \textgreater{}95\% &                                                           \\ \bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Real-time control}
