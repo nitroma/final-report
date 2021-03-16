@@ -178,5 +178,6 @@
 \BeforeBeginEnvironment{itemize}{\IfInTableTF{\compress}{}}
 \BeforeBeginEnvironment{enumerate}{\IfInTableTF{\compress}{}}
 % make tables small text
-\newcommand\{}
-\AtBeginEnvironment{tabular}{\footnotesize}
+\newcommand\tabletextformat{\footnotesize}
+\AtBeginEnvironment{tabular}{\tabletextformat}
+
