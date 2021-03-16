@@ -18,7 +18,7 @@ The rate equation for this equation can be defined as:
     \label{ONT rate equation}
 \end{equation}
  \begin{equation}
-    k = 211.69 \exp\left(-\frac{45.52 \cdot 10^{3}}{RT} \frac{mol}{kPa^{0.3}g_{cat}s}\right)
+    k = 211.69 \exp \bigg(-\frac{45.52 \cdot 10^{3}}{RT}\bigg) \frac{mol}{kPa^{0.3}g_{cat}s}
  \end{equation}
  
 \subsection{Oxidation of p-nitrotoluene}
@@ -46,8 +46,9 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 
 \begin{scheme}[h]
     \centering
-    \ch{ NBA + Methanoic Acid -> ABA + CO2 + H2O }
-    \ch{ NBAH + Methanoic Acid -> ABAH + CO2 + H2O }
+    \ch{ NBA + HCOOH -> ABA + CO2 + H2O }
+    \\
+    \ch{ NBAH + HCOOH -> ABAH + CO2 + H2O }
     \caption{Hydrogenation of NBA and NBAH to ABA and ABAH}
     \label{eqn: ONT hydrogenation}
 \end{scheme}
