@@ -45,7 +45,7 @@ The enthalpy of reaction was calculated using Hess Law, as shown in the equation
   \Delta H_{r}^{T} = \Delta H_{f,\mathrm{nitrotoluene}}^{T} + \Delta H_{f,\mathrm{water}}^{T} - \Delta H_{f,\mathrm{toluene}}^{T} - \Delta H_{f,\mathrm{nitric acid}}^{T}
 \end{equation}
 
-Since the reaction was carried out at 330K, the enthalpy of reaction was adjusted to the operating temperature by using the heat capacities of the compounds using the equation below. The enthalpy of reaction was not further adjusted to capture the effects of pressure because pressure has a negligible effect on the overall enthalpy. 
+Since the reaction was carried out at 330K, the enthalpy of reaction was adjusted to the operating temperature by using the heat capacities of the compounds using the equation below. The enthalpy of reaction was not further adjusted to capture the effects of pressure because pressure has a negligible effect on the overall enthalpy [liu, 2019]. 
 
 \begin{equation}
   \Delta H_{r}^{330K} = \Delta H_{r}^{\standardstate} + C_p \Delta T
@@ -131,19 +131,6 @@ d_{p}=\frac{3a[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2}}{2(1-[(4 / 3 \pi)(1-\varepsil
 
 The pressure drop was calculated to be 0.33 bar which poses no safety risk to the plant. No high pressure pumps will be required, thus saving both OPEX and CAPEX costs.
 
-\textcolor{red}{[subject to change]}
-In lieu with the pressure drop criteria, an iterative approach was taken to define the optimal length, diameter and number of tubes in the reactor. 
-\begin{equation}
-    L= \frac{V}{\pi d_t^2 / 4 \cdot n_t}
-    \label{eqn:pressuredrop}
-\end{equation}
-\begin{equation}
-    \text{Aspect ratio} = \frac{L}{d_t}
-    \label{eqn:aspectratio}
-\end{equation}
-where the diameter of the tube ($d_t$) was determined to be 0.2m from Section \ref{sec:axialdispersion}, volume of reactor required ($V$) was modelled to be 0.924 $m^3$ based on Aspen. Moreover, 
-
-\textcolor{red}{include Andreas fancy matlab plot here}
 
 A final number of tubes ($n_t$) of 7 was chosen based on the centered hexagonal number rule (Equation \ref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers. 
 \begin{equation}
