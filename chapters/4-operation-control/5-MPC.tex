@@ -1,8 +1,10 @@
-\section{Opportunities for advanced control}
+\section{Opportunities for Model Predictive Control}
 
-\subsection{Model Predictive Control}
-\subsubsection{Introduction}
-Model Predictive control is an advanced control technique that can cope with complex multivariate control problems. A model predictive controller (MPC) functions by taking in current measurements of manipulated variables (MVs) and disturbances (DVs) from the plant and then calculates the future profile for the controlled variables (CVs) and constraint variables in order to predict the optimal values for the manipulated variables. The controller performs two sets of calculations, first to determine the future profile of CVs ('set-point calculations'), and second the optimal values for MVs ('control calculations') to reach the desired set-points. 
+\subsection{Introduction}
+Model Predictive control is an advanced control technique that can cope with complex multivariate control problems. A model predictive controller (MPC) functions by taking in current measurements of manipulated variables (MVs) and disturbances (DVs) from the plant and then calculates the future profile for the controlled variables (CVs) and constraint variables in order to predict the optimal values for the manipulated variables. 
+
+\subsection{Fundamental concepts}
+The controller performs two sets of calculations, first to determine the future profile of CVs ('set-point calculations'), and second the optimal values for MVs ('control calculations') to reach the desired set-points. 
 
 The future profile of CVs are calculated from solving an optimisation problem that determines the set points for the CVs for a period of time in the future ('prediction horizon'). The objective function for this optimisation is usually to maximise profit or minimise cost, and is subject to inequality constraints that can vary with time such as variations in process conditions, functional instrumentation and economic data such as pricing. These set-points are re-calculated each time new data is received. The optimal values for MVs are then calculated. Unlike traditional PID controllers, a sequence of MV steps are calculated by splitting the prediction horizon into a number of sampling intervals, and the effects on CVs are determined in order to move them closer to the desired set-points (see Figure \ref{fig:MPC}). 
 
@@ -17,7 +19,7 @@ The goal of the MPC is to minimise the differences between the set-point and the
 
 The accuracy of MPC algorithms depends heavily on the dynamic model of the process it utilises for calculations. Assuming a good dynamic model exists, Model Predictive Control has serveral advantages over PID controllers, namely that it captures interactions between control loops, handles multiple inputs and predict multiple outputs, and takes into consideration physical constraints on actuators. 
 
-\subsubsection{Application to Nitroma's plant}
+\subsection{Application to Nitroma's plant}
 Nitroma's plant has specialised units such as an intensified shell and tube reactor, melt crystalliser and hydraulic wash column. Although detailed designs of these units have been provided in the relevant report sections, a dynamic model for the entire plant is missing. MPC will only be effective if a good dynamic model can be constructed. 
 
 The most common method for identifying dynamic models is Finite Impulse Reponse (FIR) and Auto Regressive with eXternal inputs (ARX). Step experiments for each MV-CV pair will have to be conducted on Nitroma's plant to measure the dynamic response of each. FIR can then be used to calculate the dead times for each MV-CV pair. This is then used in ARX along with the experimental step data to calculate coefficients relating the mv-cv pairs (see Equation \ref{eq:ARX} for an ARX process model for a single-input, single-output process. $y$ is the CV, $u$ is the MV, $d$ is the dead time, $\nu$, $b$, $a$ are constants). The set of MV-CV equations would constitute a dynamic model for Nitroma's plant. 
@@ -60,6 +62,7 @@ End-product purity \textgreater{}95\% &                                         
 \end{tabular}
 \end{table}
 
-In conclusion, proper model formulation and implementation of the MPC can serve as a useful technique to effectively manage interactions between control loops in Nitroma's complex plant with a multivariate control problem.
+\subsection{Further Considerations}
+Some authors have reported that the need to solve the optimisation model during each scan of the process can lead MPCs to have long processing times before a corrective signal is sent from the controller to actuators. However, strategies exist to reduce the computational load on MPCs, such as utilising Newton's Method for finding an optimal solution. Another strategy is having a 'warm start', where solutions from the previous optimisation are used as a starting point for the next optimisation.
 
-\subsection{Real-time control}
+In conclusion, proper model formulation and design of the optimisation algorithm can make MPC a useful technique to effectively manage interactions between control loops in Nitroma's complex plant with a multivariate control problem.

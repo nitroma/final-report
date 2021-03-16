@@ -39,12 +39,13 @@ The rate equation for this equation can be defined as:
     \label{ONT rate equation}
 \end{equation}
  \begin{equation}
-    k = 211.69 \exp \bigg(-\frac{45.52 \cdot 10^{3}}{RT}\bigg) ~(\si{\mol\per\kPa\tothe{0.3}\per\g\of{cat}\per\s})
+    k = 211.69 \exp \left(-\frac{45.52 \cdot 10^{3}}{RT}\right) ~(\si{\mol\per\kPa\tothe{0.3}\per\g\of{cat}\per\s})
  \end{equation}
  
 \subsection{R301 \& R401: Oxidation of p-nitrotoluene}
 % Andreas
 
+The oxidation of p-nitrotoluene is performed in packed-bed reactors R301 and R401, employing air as the oxidant. The overall reaction network is shown in \cref{sch:R3} and is based on that reported for the oxidation of toluene \cite{hoorn_modelling_2005}. Kinetic information was corrected for the deactivation effect of the \ch{NO2} group, which is reported in the literature to result in rates 5.6 times slower for the nitrotoluene network than for the toluene network. These data are shown in \cref{tab:S3-kinetics}. The rate expression for each step does not depend on the concentration of \ch{O2}
 \begin{scheme}[h]
     \includegraphics[width=\linewidth]{figures/R3.pdf}
     \caption{Oxidation of 4-nitrotoluene to 4-nitrobenzaldehyde, and subsequently to 4-nitrobenzoic acid}
@@ -53,6 +54,8 @@ The rate equation for this equation can be defined as:
 
 \begin{table}[h]
 \centering
+\caption{Corrected kinetic data for the oxidation network \cite{tan_kinetic_2010}}
+\label{tab:S3-kinetics}
 \begin{tabular}{@{}lS[table-format=1.3e1]S[table-format=3.2]@{}}
 \toprule
 Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule

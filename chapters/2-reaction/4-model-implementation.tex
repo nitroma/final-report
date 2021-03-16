@@ -4,9 +4,7 @@
 COMSOL was selected for detailed reactor modelling
 
 \subsection{Model equations}
-
-
-
+COMSOL eqns
 
 \subsection{Final results}
 See \cref{fig:comsol-performance}.
@@ -15,12 +13,12 @@ See \cref{fig:comsol-performance}.
     \centering
 
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/r_TOL.png}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/r_TOL.png}
         \caption{Rate of Toluene reaction}
         \label{fig:comsol-performance:r_TOL}
     \end{subfigure}
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/concentration.eps}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/concentration.eps}
         \caption{Concentration profile within reactor}
         \label{fig:comsol-performance:concentration}
     \end{subfigure}
@@ -28,6 +26,9 @@ See \cref{fig:comsol-performance}.
     \caption{Reactor performance}
     \label{fig:comsol-performance}
 \end{figure}
+
+
+
 
 \subsubsection{Conversion}
 
@@ -37,12 +38,12 @@ See \cref{fig:comsol-conversion}.
     \centering
 
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/conversion-surface.png}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-surface.png}
         \caption{}
         \label{fig:comsol-conversion:surface}
     \end{subfigure}
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/conversion-line.eps}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-line.eps}
         \caption{}
         \label{fig:comsol-conversion:line}
     \end{subfigure}
@@ -50,21 +51,21 @@ See \cref{fig:comsol-conversion}.
     \caption{Conversions}
     \label{fig:comsol-conversion}
 \end{figure}
-
+The reaction achieves 98\% conversion in 3.6m 
 \subsubsection{Temperature}
-
+[include radial temp at max temp location]
 See \cref{fig:comsol-temperature}.
 
 \begin{figure}[h]
     \centering
 
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/temperature-surface.png}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-surface.png}
         \caption{}
         \label{fig:comsol-temperature:surface}
     \end{subfigure}
     \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth]{figures/temperature-lines.eps}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-lines.eps}
         \caption{}
         \label{fig:comsol-temperature:lines}
     \end{subfigure}
@@ -102,7 +103,20 @@ Cocurrent flow: CW warms the downstream end of the reactor, improving rate.
 
 Countercurrent: CW removes heat from downstream section (slowing rate unneccesarily) and is then warm when it reaches the hotspot, limiting its usefulness in minimising the risk of thermal runaway.
 
-\subsubsection{\ch{HNO3}:Toluene ratio}
+\subsubsection{\ch{HNO3}:Toluene inlet ratio}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.49\linewidth]{figures/S3-T-X.eps}
+    \caption{Effect of changing nitric acid molar ratio on temperature and conversion profiles in reactor.}
+    \label{fig:comsol-S3-T-X}
+\end{figure}
+
+\ch{HNO3}:Toluene molar ratio of 2 and 3 were investigated to achieve 98\% conversion in the shortest reactor length possible. Nitric acid is always kept in excess to maximise the formation of nitronium ion on the catalyst surface. Conversely, if the toluene is in excess, it will block the acid sites on the catalyst which obstructs the formation of nitronium ions [vassena et al]. 
+
+The results showed that increasing the \ch{HNO3}:Toluene molar ratio from 2 to 3 had negligible effect on the conversion of toluene. This suggests that the surface of the catalyst had already been fully saturated. Therefore, increasing molar flowrate of nitric acid further would not enhance the conversion of the nitration reaction, but would instead lead to higher OPEX costs of supplying nitric acid to the reactor. It could also complicate the separation process of the 3 nitrotoluene isomers downstream. 
+
+As safety is one of the key priorities of Nitroma in all decision making, the maximum temperature in the reactor were also analysed for both cases before making a final decision. Both cases were found to be below the safe temperature limit of 363K, hence, a molar flowrate ratio of 2 was selected.
 
 \subsubsection{Number of tubes}
 
