@@ -49,7 +49,7 @@
 %     \setmonofont{inconsolata}
 \RequirePackage[default,lining]{FiraSans}
     \renewcommand{\rmdefault}{\firafamily} % force "roman" (serif) text to use Fira Sans too
-\RequirePackage{FiraMono}
+\RequirePackage[lining]{FiraMono}
 \RequirePackage[usefilenames]{firamath-otf}
 \RequirePackage{raleway}
 \newcommand{\headingfont}{\ralewayextra}
@@ -138,6 +138,7 @@
     \crefalias{section}{appendix}
 }
 \AtEndEnvironment{subappendices}{
+    \clearpage
     \counterallwithout{section} 
     \counterallwithin{chapter}
 }
