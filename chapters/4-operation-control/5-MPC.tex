@@ -17,7 +17,11 @@ The goal of the MPC is to minimise the differences between the set-point and the
 
 The accuracy of MPC algorithms depends heavily on the dynamic model of the process it utilises for calculations. Assuming a good dynamic model exists, Model Predictive Control has serveral advantages over PID controllers, namely that it captures interactions between control loops, handles multiple inputs and predict multiple outputs, and takes into consideration physical constraints on actuators. 
 
-Due consideration for constructing a good process model needs to be undertaken in order to improve the performance evaluation of MPC. Various methods for constructing models exist, but the most common method is Finite Impulse Reponse (FIR) and Auto Regressive with eXternal inputs (ARX). These models rely on step experiments to measure the change in a controlled variable on the plant when a manipulated variable is changed. FIR is used t
+Due consideration for constructing a good process model needs to be undertaken in order to improve the performance evaluation of MPC. Various methods for constructing models exist, but the most common method is Finite Impulse Reponse (FIR) and Auto Regressive with eXternal inputs (ARX). These models rely on step experiments to measure the change in a controlled variable on the plant when a manipulated variable is changed. FIR is used to calculate the dead times for each mv-cv pair, and this is used in ARX along with experimental step data to calculate coefficients relating the mv-cv pairs (see Equation \ref{eq:ARX} for an ARX process model for a single-input, single-output process. $y$ is the CV, $u$ is the MV, d is the dead time, $\nu$, $b$, $a$ are constants). 
+
+\begin{equation}
+    y_k = \sum_{i=1}^{\nu}a_{i}y_{k-i} + \sum_{i=1}^{a}b_{i}u_{k-d-i}
+\end{equation}
 
 \subsubsection{Application to Nitroma's plant}
 
