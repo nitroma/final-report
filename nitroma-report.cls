@@ -180,4 +180,4 @@
 % make tables small text
 \newcommand\tabletextformat{\footnotesize}
 \AtBeginEnvironment{tabular}{\tabletextformat}
-
+\AtBeginEnvironment{tabular}{\tabletextformat}
