@@ -182,4 +182,5 @@
 \AtBeginEnvironment{tabular}{\tabletextformat}
 \AtBeginEnvironment{tabularx}{\tabletextformat}
 \AtBeginEnvironment{longtable}{\tabletextformat}
-\RequirePackage{makecell}
+% \RequirePackage{makecell}
+% \renewcommand{\theadfont}{\bfseries}
