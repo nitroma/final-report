@@ -5,14 +5,14 @@ The reactors were chosen on the basis of safety and performance. For the hydroge
 
 Fluidised bed reactors were initially considered for the oxidation and hydrogenation of PNT derivatives, but were ruled out considering the attrition of catalyst particles due to the high flowrates. Packed-bed reactors were chosen and optimised to address its limitation of concentration and temperature gradients by controlling the residence time. Full detailed analysis for each reactor choice can be found in Section \ref{sec:reactorchoices}.
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \caption{Summary of non-detailed reactors}
 \label{tab:nondetailedtable}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llllllll@{}}
 \toprule
-Tag  & Type & Process & Volume (m3) & Temperature (K) & Pressure (atm) & Duties (kW) & Conversion \\ \midrule
+Tag  & Type & Process & Volume (\si{\cubic\m}) & Temperature (K) & Pressure (atm) & Duty (kW) & Conversion \\ \midrule
 R201 & Co-current trickle bed & Hydrogenation & 3.93 & 333 & 5 & -137.78 & 98\% \\
 R301 & Packed-bed & Oxidation & 0.02 & 750 & 1 & -77.20 & 62\% \\
 R401 & Packed-bed & Oxidation & 2.75 & 750 & 1 & -56.25 & 100\% \\
@@ -22,9 +22,7 @@ R601 & Packed-bed & Hydrogenation & 0.60 & 298 & 1 & -73.80 & 86\% \\ \bottomrul
 }
 \end{table}
 
-\subsection{Kinetics of other reactions}
-
-\subsubsection{R201: Hydrogenation of o-nitrotoluene}
+\subsection{R201: Hydrogenation of o-nitrotoluene}
 After the production of the 3 nitrotoluene isomers, (mention separation?) ONT is mixed with propanol and hydrogenated to o-TOL in a co-current trickle bed reactor operating at 333K and 3 atm. 
 
 \begin{scheme}[h]
@@ -44,7 +42,7 @@ The rate equation for this equation can be defined as:
     k = 211.69 \exp \bigg(-\frac{45.52 \cdot 10^{3}}{RT}\bigg) \frac{mol}{kPa^{0.3}g_{cat}s}
  \end{equation}
  
-\subsubsection{R301 \& R401: Oxidation of p-nitrotoluene}
+\subsection{R301 \& R401: Oxidation of p-nitrotoluene}
 % Andreas
 
 \begin{scheme}[h]
@@ -65,7 +63,7 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 \end{tabular}
 \end{table}
 
-\subsubsection{R501 \& R601: Hydrogenation of nitrobenzaldehyde and nitrobenzoic acid}
+\subsection{R501 \& R601: Hydrogenation of nitrobenzaldehyde and nitrobenzoic acid}
 
 \begin{scheme}[h]
     \centering
