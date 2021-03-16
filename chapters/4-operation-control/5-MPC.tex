@@ -27,6 +27,16 @@ The most common method for identifying dynamic models is Finite Impulse Reponse 
 \end{equation}
 
 Once a dynamic model is established, key controlled and manipulated variables will need to be set. While a comprehensive list of CVs and MVs is found in the plant wide survey in \ref{sec:PWS}, a summary table with key information is shown below in Table \ref{}: 
-
+\begin{table}[]
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Key control variables (CVs)}        & \textbf{Key manipulated variables (MVs)} & \textbf{Key disturbances} \\ \midrule
+Temperatures in reactors and crystallisers  & Utility flowrates                        & Utility flowrates         \\
+Feed rate to reactor R101                   & Feed flowrates                           & Utility temperatures      \\
+Feed ratio to reactor R101                  & Outlet flowrates from units              & Feed quality              \\
+Compositions of the 3 product streams       & Electrical input to electrical heaters   & Recycle flowrates         \\
+Inventory controls (pressure, liquid level) &                                          & Ambient temperature       \\ \bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Real-time control}
