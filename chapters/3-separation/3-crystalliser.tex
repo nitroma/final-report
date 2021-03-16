@@ -146,7 +146,7 @@ In the end, the mass of crystals per unit volume of the system, also known as ma
 
 \noindent whence $\alpha$ is the volume shape factor taken to be 0.5236 for spherical crystals, and $\rho$ is the density of the crystal. The dominant crystal size $L_M$, also known as the modal size of the CSD, is given as 
 
-\begin{equation}
+\begin{equation} \label{eq:LM G tau}
     L_M = 3 G \tau
 \end{equation}
 
@@ -161,7 +161,7 @@ The rate of crystal growth, $G$, is commonly expressed as a function of supersat
 
 Figure \ref{fig:o-NT + m-NT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in Figure \ref{fig:o-NT + m-NT kinetics},
 
-\begin{equation} 
+\begin{equation}  \label{eq:KG Ste g}
     G = K_G \cdot {Ste}^{g}
 \end{equation}
 
@@ -348,7 +348,7 @@ The kinetic rate constants employed in Sections \ref{sec:secondary nucleation} a
 
 Figures \ref{fig:sensitivity kinetics}(a) and \ref{fig:sensitivity kinetics}(b) are sensitivity plots for $K_B$ and $K_G$ respectively. Here, the volume has been fixed at the design value of 0.1885 m$^3$, and the kinetic constants $K_B$ and $K_G$ are allowed to change with respect to their design values of 10$^{13}$ and 8.3600 $\cdot$ 10$^{-6}$ m/s. Deviations of the crystalliser recovery, $r_c$, and modal size of crystals, $L_M$, from their design values are plotted against deviations in $K_B$ and $K_G$. For both cases, it can be seen that changes in $r_c$ is negligible. This is because of the large volume designed for the crystalliser, where the crystalliser is operated very close to the thermodynamic equilibrium and the driving force for kinetics is small regardless of the numerical values of the rate constants.
 
-The value of $L_M$, however, does change sizeably with deviations in $K_B$ and $K_G$. This is because $L_M$ has a direct relationship with $G$, the growth rate, which is directly affected by $K_B$ and $K_G$. 
+The value of $L_M$, on the other hand, does change sizeably with deviations in $K_B$ and $K_G$. This is because $L_M$ has a direct relationship with $G$, the growth rate, as described by Equation \ref{eq:LM G tau}. $G$, in turn, is directly affected by $K_B$ and $K_G$ through Equations \ref{eq:magma density} to \ref{eq:KG Ste g}. The value of $L_M$ affects the design of the hydraulic wash column for separating the solid p-NT from the liquid. 
 
 \begin{figure}[h]
     \centering
@@ -356,12 +356,7 @@ The value of $L_M$, however, does change sizeably with deviations in $K_B$ and $
     \caption{Sensitivity plots for (a) the nucleation kinetic rate constant, $K_B$, and(b) the growth rate kinetic constant, $K_G$. Deviations of the crystalliser recovery, $r_c$, and modal size of crystals, $L_M$, from their design values are plotted against deviations in $K_B$ and $K_G$. }
     \label{fig:sensitivity kinetics}
 \end{figure}
-    
-
-
-
-
-
+   
 \subsubsection{Fouling}\label{sec:fouling}
 
 Fouling is a big issue in crystallisation systems as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. No only does this lead to reduced recovery of solid PNT, but also results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coating the pipe. To account for this in the  design, an additional resistance will be added to the aforementioned resistances in series in section %quote section% 
@@ -378,7 +373,7 @@ A suitable value for the service side fouling resistance due to the ethylene gly
 FIGUREEEEE
 
 As can be seen in figure %figureeeee%
-, the fouling decreases the overall heat transfer coefficiently. %using numbers%
+, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a signficant intial drop in the overall heat tranfer coefficient. 
 
 
 
