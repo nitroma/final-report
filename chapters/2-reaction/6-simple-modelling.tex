@@ -56,4 +56,26 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 The hydrogenation of p-nitrobenzaldehyde and p-nitrobenzoic acid were carried out in methanol solvent with formic acid as the reducing agent. The reaction was carried out at room temperature and 1 atm. 5\% w/w Pt/C was chosen as the desired catalyst to speed up the reaction because it can be reused many times while maintaining its catalytic performance \cite{rahman_fast_2020}. The overall yield for 4-ABA and 4-ABH are 86\% and 80\% respectively as reported in [gowda and mahesh].
 
 \subsection{Summary of reactor specification}
-The reactors were chosen on the basis of safety and performance. For the hydrogenation of ONT, a co-current trickle bed reactor was chosen due to the high conversion performance and absence of moving parts that might damage the expensive Pd/C catalyst. Fluidised bed was initially considered for the oxidation and hydrogenation of PNT derivatives, but was ruled out considering the attrition of catalyst particles due to the high flowrates. Packed-bed reactors were chosen for  Full detailed analysis for each reactor choice can be found in \ref{sec:reactorchoices}.
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\caption{Summary of non-detailed reactors}
+\label{tab:nondetailedtable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllllll@{}}
+\toprule
+Reactor & Type of reactor & Process & Reactor Volume (m3) & Temperature (K) & Pressure (atm) & Duties (kW) & Conversion \\ \midrule
+R201 & Co-current trickle bed reactor & Hydrogenation & 3.93 & 333 & 5 & -137.78 & 98\% \\
+R301 & Packed-bed reactors & Oxidation & 0.02 & 750 & 1 & -77.20 & 62\% \\
+R401 & Packed-bed reactors & Oxidation & 2.75 & 750 & 1 & -56.25 & 100\% \\
+R501 & Packed-bed reactors & Hydrogenation & 0.70 & 298 & 1 & -125010 & 80\% \\
+R601 & Packed-bed reactors & Hydrogenation & 0.60 & 298 & 1 & -73.80 & 86\% \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+The reactors were chosen on the basis of safety and performance. For the hydrogenation of ONT, a co-current trickle bed reactor was chosen due to the high conversion performance and absence of moving parts that might damage the expensive Pd/C catalyst. The high pressure required for the reaction can also be well controlled in a trickle bed reactor. 
+
+Fluidised bed reactor was initially considered for the oxidation and hydrogenation of PNT derivatives, but was ruled out considering the attrition of catalyst particles due to the high flowrates. Packed-bed reactors were chosen and optimised to control the residence time to reduce the effect of concentration and temperature gradients. Full detailed analysis for each reactor choice can be found in \ref{sec:reactorchoices}.
