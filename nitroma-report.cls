@@ -177,5 +177,6 @@
 % now apply spacing removal automatically
 \BeforeBeginEnvironment{itemize}{\IfInTableTF{\compress}{}}
 \BeforeBeginEnvironment{enumerate}{\IfInTableTF{\compress}{}}
-% make tables small te
+% make tables small text
+\newco
 \AtBeginEnvironment{tabular}{\footnotesize}
