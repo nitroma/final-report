@@ -16,7 +16,7 @@ The future profile of CVs are calculated from solving an optimisation problem th
 
 The goal of the MPC is to minimise the differences between the set-point and the predicted values of the CV at each sampling instant. Expressing these errors in a vector to the MPC algorithm returns a combination of MV steps that minimises the total error. The MPC then outputs a signal to the actuators to implement the changes to the MVs. However, only the first step is performed. The MPC then receives new measurements from transmitters on the plant, and then re-calculates the trajectory of the CVs with an updated time horizon. In this way the MPC iteratively solves for the optimal MV action to bring the CV closer to its setpoint. 
 
-Model Predictive Control has serveral 
+The accuracy of MPC algorithms depends heavily on the dynamic model of the process it utilises for calculations. Assuming a good dy has serveral 
 
 \subsubsection{Application to Nitroma's plant}
 
