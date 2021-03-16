@@ -51,25 +51,60 @@ Total                                                                           
     
 \paragraph{Tightness testing and bolt tightening (Step7)}
  \begin{itemize}
-        \item There are 15 control loops, 23 executive alarm and 10 interlocks.
-        \item The average time needs to test each control loop and each executive alarm is estimated at 15 seconds and to test each interlock, it is 30 seconds.
-        \item The total time to check would be (15+23) $\times$ 0.25 + 10 $\times$ 0.5 = 14.5 min.
+        \item There are 6 units and 22 pipes with process flow connected to each unit.
+        \item The average time needs to test each unit is estimated at 4 min and to test each pipe, it is 1 min.
+        \item The total time to test would be 6 $\times$ 4 + 22 $\times$ 1 = 46 min.
     \end{itemize}
+    
 \subsubsection{Purging with inert gas}
 
 \paragraph{Purge reactor and column with nitrogen (Step7)}
 
+ \begin{equation}
+        quantity\:of\:N2\:needed\:for\:reactor\:=\frac{V}{K} * \ln \frac{C1}{C2} = \frac{3.93}{0.25} * \ln \frac{0.21}{0.01} = 47.9 m^3
+    \end{equation}
+    
+    \begin{equation}
+        time\:to\:purge\:R201\:=\frac{47.9}{\frac{\pi 0.0254^2}{4} * 55} * 2 \div 60 = 57.2\:min
+    \end{equation}
+    
+    \begin{equation}
+        quantity\:of\:N2\:needed\:for\:column\:=\frac{V}{K} * \ln \frac{C1}{C2} = \frac{0.31}{0.25} * \ln \frac{0.21}{0.01} = 3.77 m^3
+    \end{equation}
+    
+    \begin{equation}
+        time\:to\:purge\:R201\:=\frac{3.77}{\frac{\pi 0.0254^2}{4} * 55} * 2 \div 60 = 4.5\:min
+    \end{equation}
+    
+    \begin{itemize}
+        \item V = volume of unit ($m^3$)
+        \item K = correlation factor = 0.25 according to \textcite{}
+        \item C1 = initial concentration of oxygen (M)
+        \item C2 = final concentration of oxygen (M)
+        \item two circulations of nitrogen are performed, so total time is multiplied by 2
+        \item N2 will be flowed at a velocity of 55m/s
+        \item A pipe with diameter of one-inch is used
+    \end{itemize}
+    
 \subsubsection{Equipment preparation}
 
 \paragraph{Start-up fan F201 and electric heaters H201 and H203 (Step6)}
-
+\begin{itemize}
+        \item The gas flowrate is reduced by 10\% its steady state value per minute, so the time to completely stop flow = 10 minutes.
+    \end{itemize}
+    
 \paragraph{Pressurisation and heating of R201 (Step11)}
 
 \paragraph{Introduce set amount of methanol into column S201 (Step13)}
 
+
 \subsubsection{Start-up of downstream units }
 \paragraph{Start-up of downstream units (Step18)}
-
+    \begin{itemize}
+        \item There are 10 downstream process units with inventory.
+        \item The total time taken for the start-up of 6 units excluding preliminary preparations is 120 minutes.
+        \item This time is scaled for downstream start-up according to the number of units with inventory, i.e. 10/6 * 120 = 200 minutes.
+    \end{itemize}
 
 \subsection{For shutdown procedures}
 
