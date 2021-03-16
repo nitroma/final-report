@@ -58,9 +58,76 @@ MATLAB \texttt{gamultiobj}
 \subsubsection{Coolant temperature}
 Extra length to allow for variations in T
 
+\subsection{Final results}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.49\linewidth]{figures/S4-CW-X-T.eps}
     \caption{Effect of CW temperature on distance required to reach 98\% conversion (blue) and max T (green)}
     \label{fig:comsol-S4-CW-X-T}
+\end{figure}
+
+\subsection{Final results}
+See \cref{fig:comsol-performance}.
+
+\begin{figure}[h]
+    \centering
+
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/r_TOL.png}
+        \caption{Rate of Toluene reaction}
+        \label{fig:comsol-performance:r_TOL}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/concentration.eps}
+        \caption{Concentration profile within reactor}
+        \label{fig:comsol-performance:concentration}
+    \end{subfigure}
+
+    \caption{Reactor performance}
+    \label{fig:comsol-performance}
+\end{figure}
+
+
+\subsubsection{Conversion}
+
+See \cref{fig:comsol-conversion}.
+
+\begin{figure}[h]
+    \centering
+
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-surface.png}
+        \caption{}
+        \label{fig:comsol-conversion:surface}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-line.eps}
+        \caption{}
+        \label{fig:comsol-conversion:line}
+    \end{subfigure}
+
+    \caption{Conversions}
+    \label{fig:comsol-conversion}
+\end{figure}
+The reaction achieves 98\% conversion in 3.6m 
+\subsubsection{Temperature}
+[include radial temp at max temp location]
+See \cref{fig:comsol-temperature}.
+
+\begin{figure}[h]
+    \centering
+
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-surface.png}
+        \caption{}
+        \label{fig:comsol-temperature:surface}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-lines.eps}
+        \caption{}
+        \label{fig:comsol-temperature:lines}
+    \end{subfigure}
+
+    \caption{Temperatures}
+    \label{fig:comsol-temperature}
 \end{figure}
