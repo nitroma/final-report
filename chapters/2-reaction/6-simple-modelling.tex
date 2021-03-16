@@ -1,7 +1,28 @@
 % !TeX root = ../../main.tex
 \section{Non-detailed reactor modelling} \label{Non-detailed}
-\subsection{Kinetics of other reactions}
-\subsubsection{Hydrogenation of o-nitrotoluene}
+
+The reactors were chosen on the basis of safety and performance. For the hydrogenation of ONT, a co-current trickle bed reactor was chosen due to the high conversion performance and absence of moving parts that might damage the expensive Pd/C catalyst. The high pressure required for the reaction can also be well controlled in a trickle bed reactor. 
+
+Fluidised bed reactors were initially considered for the oxidation and hydrogenation of PNT derivatives, but were ruled out considering the attrition of catalyst particles due to the high flowrates. Packed-bed reactors were chosen and optimised to address its limitation of concentration and temperature gradients by controlling the residence time. Full detailed analysis for each reactor choice can be found in Section \ref{sec:reactorchoices}.
+
+\begin{table}[h]
+\centering
+\caption{Summary of non-detailed reactors}
+\label{tab:nondetailedtable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllllll@{}}
+\toprule
+Tag  & Type & Process & \splitcell{Volume\\ (\si{\cubic\m})} & Temperature (K) & Pressure (atm) & Duty (kW) & Conversion \\ \midrule
+R201 & Co-current trickle bed & Hydrogenation & 3.93 & 333 & 5 & -137.78 & 98\% \\
+R301 & Packed-bed & Oxidation & 0.02 & 750 & 1 & -77.20 & 62\% \\
+R401 & Packed-bed & Oxidation & 2.75 & 750 & 1 & -56.25 & 100\% \\
+R501 & Packed-bed & Hydrogenation & 0.70 & 298 & 1 & -125010 & 80\% \\
+R601 & Packed-bed & Hydrogenation & 0.60 & 298 & 1 & -73.80 & 86\% \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection{R201: Hydrogenation of o-nitrotoluene}
 After the production of the 3 nitrotoluene isomers, (mention separation?) ONT is mixed with propanol and hydrogenated to o-TOL in a co-current trickle bed reactor operating at 333K and 3 atm. 
 
 \begin{scheme}[h]
@@ -18,10 +39,10 @@ The rate equation for this equation can be defined as:
     \label{ONT rate equation}
 \end{equation}
  \begin{equation}
-    k = 211.69 \exp \bigg(-\frac{45.52 \cdot 10^{3}}{RT}\bigg) \frac{mol}{kPa^{0.3}g_{cat}s}
+    k = 211.69 \exp \bigg(-\frac{45.52 \cdot 10^{3}}{RT}\bigg) ~(\si{\mol\per\kPa\tothe{0.3}\per\g\of{cat}\per\s})
  \end{equation}
  
-\subsubsection{Oxidation of p-nitrotoluene}
+\subsection{R301 \& R401: Oxidation of p-nitrotoluene}
 % Andreas
 
 \begin{scheme}[h]
@@ -42,7 +63,7 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 \end{tabular}
 \end{table}
 
-\subsubsection{Hydrogenation of nitrobenzaldehyde and nitrobenzoic acid}
+\subsection{R501 \& R601: Hydrogenation of nitrobenzaldehyde and nitrobenzoic acid}
 
 \begin{scheme}[h]
     \centering
@@ -55,4 +76,3 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 
 The hydrogenation of p-nitrobenzaldehyde and p-nitrobenzoic acid were carried out in methanol solvent with formic acid as the reducing agent. The reaction was carried out at room temperature and 1 atm. 5\% w/w Pt/C was chosen as the desired catalyst to speed up the reaction because it can be reused many times while maintaining its catalytic performance \cite{rahman_fast_2020}. The overall yield for 4-ABA and 4-ABH are 86\% and 80\% respectively as reported in [gowda and mahesh].
 
-\subsection{Summary of reactor specification}

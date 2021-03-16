@@ -14,7 +14,7 @@ The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviou
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.45,inkscapelatex=false]{figures/Eutectic_schematic.svg}
-    \caption{(a) Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour. (b) Solid-liquid phase diagram for the (p-NT + m-NT) system.}
+    \caption{(a) Schematic diagram for a typical eutectic-forming solid-liquid phase behaviour. Starting from point 1 on the solid-liquid phase boundary, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid.  (b) Solid-liquid phase diagram for the (p-NT + m-NT) system, where the horizontal axis is the fraction of p-NT. The experimental data marked as green circles were obtained from DETHERM. \cite{noauthor_detherm_2021} The van't Hoff's correlation by Moyers and Rousseau was initially used to give continuous predictions for the solid-liquid phase boundary right of the eutectic point, \cite{moyers_crystallization_1987} marked as the red curve, but since its predictions are quite off from measurements, particularly close to the eutectic, a logarithmic fit marked as the blue curve has been used instead which fits the measurements well.}
     \label{fig:eutectic schematic}
 \end{figure}
 
@@ -32,7 +32,7 @@ where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, 
 In reality, the system needs time to reach thermodynamic equilibrium from where it starts off, which is why a physical crystalliser is needed. Kinetics of crystallisation in a MSMPR crystalliser will be explained in the following sections.
 
 \subsection{Crystallisation kinetics}
-The kinetics of crystallisation is governed by two processes: nucleation and growth. Nucleation is the genesis of embryo-sized crystals known as nuclei due to supersaturation. \cite{richardson_chemical_nodate} It is further classified into primary and secondary nucleation. Growth is the process of existing crystals growing in size, where the material diffuses and deposits on the surface of the crystal and make it grow in volume. During crystallisation, these two processes happen simultaneously, both contributing to the final crystal size distribution (CSD). \cite{richardson_chemical_nodate} They are not, however, independent of each other: nucleation provides nuclei whereon crystal growth can occur. For unseeded crystallisation, nucleation is the first step of crystallisation, and growth happens after nuclei are formed. \cite{Mullin}
+The kinetics of crystallisation is governed by two processes: nucleation and growth. Nucleation is the genesis of embryo-sized crystals known as nuclei due to supersaturation. \cite{richardson_chemical_2006} It is further classified into primary and secondary nucleation. Growth is the process of existing crystals growing in size, where the material diffuses and deposits on the surface of the crystal and make it grow in volume. During crystallisation, these two processes happen simultaneously, both contributing to the final crystal size distribution (CSD). \cite{richardson_chemical_2006} They are not, however, independent of each other: nucleation provides nuclei whereon crystal growth can occur. For unseeded crystallisation, nucleation is the first step of crystallisation, and growth happens after nuclei are formed. \cite{mullin_crystallization_2001}
 
 \subsubsection{Supersaturation}
 
@@ -53,27 +53,27 @@ whence $T$ is the equilibrium temperature corresponding to concentration $C$ in 
 \begin{figure}[h]
 \centering
 \includesvg[scale=0.45,inkscapelatex=false]{chapters/3-separation/figures/Supersaturation.svg}
-\caption{A schematic diagram showing the various definitions of supersaturation. The differences between the actual temperature or concentration of the system to the equilibrium are the measures of supersaturation.}
+\caption{A schematic diagram showing the various definitions of supersaturation. The differences between the actual temperature or concentration of the system to the equilibrium, $\Delta T$ and $\Delta C$, are the measures of supersaturation.}
 \label{fig:supersaturation}
 \end{figure}
 
-\subsubsection{Primary nucleation}
+\subsubsection{Primary nucleation}\label{sec:primary nucleation}
 
-Primary nucleation involves nucleation occurring in absence of crystals. \cite{seader_separation_2011} It can be further classified into homogeneous nucleation and heterogeneous nucleation. The former is where nuclei are formed from supersaturation only, and the latter results from the presence of insoluble materials. \cite{richardson_chemical_nodate} The rate at which homogeneous rate of nucleation happens is typically given by an Arrhenius-type expression, \cite{richardson_chemical_nodate}
+Primary nucleation involves nucleation occurring in absence of crystals. \cite{seader_separation_2011} It can be further classified into homogeneous nucleation and heterogeneous nucleation. The former is where nuclei are formed from supersaturation only, and the latter results from the presence of insoluble materials. \cite{richardson_chemical_2006} The rate at which homogeneous rate of nucleation happens is typically given by an Arrhenius-type expression, \cite{richardson_chemical_2006}
 \begin{equation}
      J = F\exp\left(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (\ln S)^2}\right)
 \end{equation}
 where $J$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $K^0$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson. \cite{randolph_theory_1971} Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations. 
 
-\subsubsection{Secondary nucleation}
+\subsubsection{Secondary nucleation}\label{sec:secondary nucleation}
 
-Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_nodate} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_nodate} The phenomenon of secondary nucleation is complex and lacks a comprehensive theoretical description. It is commonly correlated by empirical relation in the form of, \cite{seader_separation_2011}
+Secondary nucleation takes place with the presence of other crystals. \cite{richardson_chemical_2006} When no seeding is introduced, contact secondary nucleation between the existing crystals themselves or between the crystals and the walls and stirrer are the most significant. \cite{richardson_chemical_2006} The phenomenon of secondary nucleation is complex and lacks a comprehensive theoretical description. It is commonly correlated by empirical relation in the form of, \cite{seader_separation_2011}
 \begin{equation} \label{eq:secondary nucleation general}
     B = K_{\mathrm{B}} \rho^j_{\mathrm{m}} N^l (\Delta C)^b 
 \end{equation}
 where $B$ is the secondary nucleation rate or birth rate in \si{\cubic\m\per\s}, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in Equation \ref{eq:magma density} in Section \ref{sec: crystal growth} later, and $N$ is the term that gives measure of the intensity of agitation in the system such as the speed of rotation of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
-From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary nucleation can be expressed in the form of 
+From the work of Ottens and de Jong, \cite{ottens_model_1974} the kinetic rate of secondary nucleation can be expressed in the form of 
 \begin{equation}
     B = J_{\mathrm{c-c}} + J_{\mathrm{c-s}}
 \end{equation}
@@ -98,11 +98,11 @@ From the work of Ottens and de Jong, \cite{Ottens} the kinetic rate of secondary
     B = K_B \varepsilon (\Delta C)^b \rho_m^2
 \end{equation}
 
-\noindent where the first order term $\rho_m$ has disappeared because its size would be too small compared to the second order term $\rho_m^2$. The value of $K_B$ has been estimated to be in the order of 10$^{13}$, \cite{Bauer} provided that all the quantities in Equation \ref{eq:secondary nucleation final expression} are in SI units. The exponent, $b$, has been taken as 1. 
+\noindent where the first order term $\rho_m$ has disappeared because its size would be too small compared to the second order term $\rho_m^2$. The value of $K_B$ has been estimated to be in the order of 10$^{13}$, \cite{bauer_contact_1974} provided that all the quantities in Equation \ref{eq:secondary nucleation final expression} are in SI units. The exponent, $b$, has been taken as 1. 
 
 \subsubsection{Crystal growth} \label{sec: crystal growth}
 
-To describe the kinetics of crystal growth, a population balance must be performed. The importance of the population balance is widely acknowledged and has been the central focus of the works of Randolph and Larson. \cite{richardson_chemical_nodate} \cite{randolph_theory_1971} For a continuous MSMPR crystalliser operated under steady state with no crystals present in the feed, the following underlying assumptions are made,
+To describe the kinetics of crystal growth, a population balance must be performed. The importance of the population balance is widely acknowledged and has been the central focus of the works of Randolph and Larson. \cite{richardson_chemical_2006} \cite{randolph_theory_1971} For a continuous MSMPR crystalliser operated under steady state with no crystals present in the feed, the following underlying assumptions are made,
 
 \begin{itemize}
     \item All crystals are of the same shape
@@ -150,18 +150,18 @@ In the end, the mass of crystals per unit volume of the system, also known as ma
     L_M = 3 G \tau
 \end{equation}
 
-The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Data of the rate of crystal growth for the (p-NT + m-NT) system cannot, however, be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (m-NT + o-NT) system at 292.15 K, which is the most similar and closest to the (p-NT + m-NT) system. \cite{Radhakrishnan} Here, m-NT is the species that crystallises from the liquid.
+The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Data of the rate of crystal growth for the (p-NT + m-NT) system cannot, however, be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (m-NT + o-NT) system at 292.15 K, which is the most similar and closest to the (p-NT + m-NT) system. \cite{radhakrishnan_kinetics_1999} Here, m-NT is the species that crystallises from the liquid.
 
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.75,inkscapelatex=false]{figures/Kinetics.svg}
-    \caption{Crystal growth rate of the (o-NT + m-NT) system against the Stephen number. The experimental data shown as the grey squares were obtained from Radhakrishnan and Balakrishnan. \cite{Radhakrishnan} A power-law correlation has been used to fit these data and plotted as the red curve.}
+    \caption{Crystal growth rate of the (o-NT + m-NT) system against the Stephen number. The experimental data shown as the grey squares were obtained from Radhakrishnan and Balakrishnan. \cite{radhakrishnan_kinetics_1999} A power-law correlation has been used to fit these data and plotted as the red curve.}
     \label{fig:o-NT + m-NT kinetics}
 \end{figure}
 
 Figure \ref{fig:o-NT + m-NT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in Figure \ref{fig:o-NT + m-NT kinetics},
 
-\begin{equation}
+\begin{equation} 
     G = K_G \cdot {Ste}^{g}
 \end{equation}
 
@@ -173,7 +173,7 @@ Figure \ref{fig:o-NT + m-NT kinetics} is a plot of the experimentally obtained g
 
 \noindent whence $C_{P,S}$ is the heat capacity of the solid crystal, $\Delta T$ is the degree of super-cooling as defined in Equation \ref{eq:deltaT}, and $H_{f}$ is the heat of fusion as in Equation \ref{eq:vantHoff}. The correlation directly relates $G$ to $\Delta T$ and has an $R^2$ of 0.9833.
 
-The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of the system. The growth rate of the (p-NT + m-NT) system can thus be estimated from Wilke-Chang's correlation, \cite{Miyabe}
+The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of the system. The growth rate of the (p-NT + m-NT) system can thus be estimated from Wilke-Chang's correlation, \cite{miyabe_estimation_2011}
 
 \begin{equation}
     D_m = \frac{7.4 \cdot 10^{-8} T_{\mathrm{eq}} \sqrt{\alpha M_A}}{\mu_A V_{m,B}^0.6}
@@ -181,7 +181,7 @@ The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of
 
 \noindent whence $T_{eq}$ is the temperature whereat the system has been operated as defined in \ref{eq:deltaT}, $alpha$ is taken as 0.7 for mixtures of aromatics, $M_A$ is the molecular weight of the solute, $\mu_A$ is the viscosity of the solute, and $V_{m,B}$ is the molar volume of the solvent at normal boiling point. The subscripts, $A$ and $B$, correspond to the solute and solvent respectively. Therefore, $K_G$ for the (p-NT + m-NT) system can be obtained as 
 
-\begin{equation}
+\begin{equation} \label{eq:ratio of growth kinetics}
     \frac{K_{G(p-NT + m-NT)}}{K_{G(o-NT + m-NT)}} = \frac{D_{m(p-NT + m-NT)}}{D_{m(o-NT + m-NT)}}
 \end{equation}
 
@@ -226,13 +226,13 @@ The fraction of p-NT in the liquid, $x$, has a one-to-one correspondence to $C$,
 The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be 280 K. As can be seen in Figure \ref{fig:eutectic schematic}, the eutectic point is rounghly around 270 K. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid m-NT forms when there is fluctuation in temperature upstream or with the heat transfer fluid. The composition of liquid at the inlet is such that the fraction of p-NT, $x_{\mathrm{in}}$, is 0.8839. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
 
 \begin{equation}
-    D = \frac{1}{2} H
+    H = 2D
 \end{equation}
 
-\noindent where $D$ is the diameter of the vessel and $H$ is the height. The volume of the crystalliser, $V$, is
+\noindent where $D$ is the diameter of the vessel and $H$ is the height. Using the above ratio, the volume of the crystalliser, $V$, is
 
 \begin{equation} \label{eq:crystalliser volume}
-    V = \frac{D^2}{4} \pi H
+    V = \frac{\pi D^3}{2} 
 \end{equation}
 
 \noindent The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall. Details of this will be elaborated in Section \ref{sec:heat transfer crystalliser}.
@@ -329,8 +329,6 @@ where L is the total length of the half pipe, N is the number of revolutions in 
 
 \subsection{Modelling results}\label{sec:modelling results crystalliser}
 
-The crystalliser recovery, $r_c$, has been calculated using Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curve in Figure \ref{fig:recovery vs volume crystalliser}. As can be seen on the diagram, the larger the vessel is, the more p-NT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of p-NT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at 90.5724\%, which is about the same as the theoretical maximum. 
-
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.75,inkscapelatex=false]{chapters/3-separation/figures/Recovery_vs_volume_crystalliser.svg}
@@ -338,18 +336,29 @@ The crystalliser recovery, $r_c$, has been calculated using Equations \ref{eq:am
     \label{fig:recovery vs volume crystalliser}
 \end{figure}
 
+\noindent The crystalliser recovery, $r_c$, has been calculated using Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curve in Figure \ref{fig:recovery vs volume crystalliser}. As can be seen on the diagram, the larger the vessel is, the more p-NT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of p-NT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at 90.5724\%, which is about the same as the theoretical maximum. 
+
 However, to achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as red point in Figure \ref{fig:recovery vs volume crystalliser}. 
 
 \subsection{Sensitivity analyses}
 
+\subsubsection{Kinetic rate constants}\label{sec:kinetics sensitivity}
+
+The kinetic rate constants employed in Sections \ref{sec:secondary nucleation} and \ref{sec: crystal growth} were estimates and should have been scrutinised in greater details; specifically, sensitivity analyses have been performed for $K_B$ and $K_G$ in Equations \ref{eq:secondary nucleation final expression} and \ref{eq:ratio of growth kinetics}. 
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Caption}
+    \label{fig:sensitivity kinetics}
+\end{figure}
+    
 
 
 
 
 
-
-
-\subsubsection{Fouling}
+\subsubsection{Fouling}\label{sec:fouling}
 
 Fouling is a big issue in crystallisation tanks as nucleation can form on the wall of the crystalliser, leading to a layer of crystallised solid product encrusted on the inner wall of the vessel. No only does this lead to reduced recovery of solid PNT, but also results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coating the pipe. To account for this in the  design, an additional resistance will be added to the aforementioned resistances in series in section %quote section% 
 

@@ -21,3 +21,18 @@ To select the suitable catalyst size, the Weisz-Prater criterion is used. This c
 \begin{equation}
     \Phi = \eta \phi^2
 \end{equation}
+
+
+
+\subsection{Pressure Relief Valve (PRV) detailed calculation}
+The sizing of the PRV port is as below,
+\begin{equation}
+    A_r = \frac{11.78 \times Q}{K_d K_w K_c} \cdot \sqrt{\frac{G}{p_1-p_2}}
+\end{equation}
+\begin{equation}
+    K_v = (0.9935 + \frac{2.878}{Re^{0.5}} + \frac{342.75}{Re^{1.5}})^{-1}
+\end{equation}
+\begin{equation}
+    Re = \frac{Q(18800 \times G}{\mu \sqrt{A_R}}
+\end{equation}
+where the $A_r$ is the required effective discharge area assuming no viscosity correction, Q is the required volumetric flowrate, $K_d$ is the discharge coefficient, $K_w$ is the backpressure correction factor, $K_c$ is the bursting disc factor, $G$ is the specific gravity of fluid at flowing conditions relative to water at STP, $p_1$ is the relieving pressure and $p_2$ is the backpressure. 

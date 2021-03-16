@@ -4,11 +4,11 @@
 \subsection{Model equations}
 \subsubsection{1-D model}
 \subsubsection{2-D model}
-\subsection{Model results}
 
-\subsubsection{Performance}
-Compare with batch reactor
 
+
+
+\subsection{Final results}
 See \cref{fig:comsol-performance}.
 
 \begin{figure}[h]
@@ -73,7 +73,7 @@ See \cref{fig:comsol-temperature}.
     \label{fig:comsol-temperature}
 \end{figure}
 
-\subsection{Sensitivity analysis}
+\subsection{Optimisation and sensitivity analysis}
 
 \subsubsection{Secondary cooling system sizing}
 
@@ -82,20 +82,36 @@ See \cref{fig:comsol-temperature}.
 
     \begin{subfigure}{0.49\linewidth}
         \includegraphics[width=\linewidth]{figures/S2-maxT.png}
-        \caption{}
+        \caption{Maximum temperature reached in the reactor}
         \label{fig:comsol-S2:maxT}
     \end{subfigure}
     \begin{subfigure}{0.49\linewidth}
         \includegraphics[width=\linewidth]{figures/S2-CW-Pdrop.eps}
-        \caption{}
+        \caption{CW side pressure drop}
         \label{fig:comsol-S2:CW-Pdrop}
     \end{subfigure}
 
-    \caption{Sensitivity to secondary CW}
+    \caption{Sensitivity to secondary CW parameters}
     \label{fig:comsol-S2}
 \end{figure}
+Inner coolant flowrate and diameter of inner cooling tube were optimised to keep temperature below the safe limit of 363K while maintaining a low pressure drop. As seen in Figure \ref{fig:comsol-S2:maxT}, it is desirable to have a small inner cooling tube diameter and a high coolant flowrate to keep the reactor temperature low. Conversion is not an issue here as the analysis was done for the 2 parameters that gave a conversion above 98 \%.
+
+Moreover, having a larger inner diameter gives the flexibility of increasing inner coolant flowrate in the future when the reactant flowrate increases as a result of expected higher throughput demand. 
+
+- in case need more
+
+
+\subsubsection{Cocurrent vs counter-current cooling water flow}
+
+\subsubsection{Toluene: \ch{HNO3} ratio}
+
+\subsubsection{Number of tubes}
+
+\subsubsection{Pareto frontier}
+MATLAB \texttt{gamultiobj}
 
 \subsubsection{Coolant temperature}
+Extra length to allow for variations in T
 
 \begin{figure}[h]
     \centering
