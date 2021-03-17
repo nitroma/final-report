@@ -1,17 +1,15 @@
 \section*{Reactor design}
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=0.49\linewidth]{}
-    \caption{Mechanical design of nitration reactor}
-    \label{fig:comsol-S4-CW-X-T}
-\end{figure}
+
 
 Transitioning from batch to continuous process requires a complete redesign of the reactors that are commonly used in the industry today. Nitroma developed a novel approach of using a Heat Exchanger Reactor (HEX Reactor) for the nitration of toluene.
 
 -steps taken to model (kinetics, Brinkman) 
 - SiC immobilise
+%modelling approach [andreas]
+The model was implemented and optimised on COMSOL 5.6. 
 
-The model was implemented and optimised on COMSOL 5.6. To ensure the reactor operates in optimal conditions, the following parameters were optimised: Concentric inner cooling pipe diameter and flowrate, direction of cooling water flow, \ch{HNO3} : Toluene inlet ratio and the total number of tubes.
+%optimisation
+To ensure the reactor operates in optimal conditions, the following parameters were optimised: Concentric inner cooling pipe diameter and flowrate, direction of cooling water flow, \ch{HNO3} : Toluene inlet ratio and the total number of tubes.
 
 A further sensitivity analysis was performed on the cooling water inlet temperature because the temperature inside the reactor needs to be well-controlled at all times. Cooling water temperature was simulated to vary by \mypm $\Delta$ 5 K.
 
@@ -22,3 +20,10 @@ The cooling water was sourced from to enhance energy recovery in the plant while
 Traditional methods of using 
 rigorous modelling
 
+%mech design [loon]
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=0.49\linewidth]{}
+    \caption{Mechanical design of nitration reactor}
+    \label{fig:comsol-S4-CW-X-T}
+\end{figure}
