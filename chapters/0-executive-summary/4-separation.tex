@@ -3,12 +3,11 @@
 The separation of p-nitrotoluene from a liquid mixture of predominantly p-nitrotoluene and m-nitrotoluene with trace amounts of o-nitrotoluene has been selected for detailed design. The choice has been because p-nitrotoluene is an essential precursor for production of both aminobenzaldehyde and aminobenzoic acid and needs to be at least 90\% purity. Due to the negligible difference in boiling points yet sizeable difference in melting points of p-nitrotoluene and m-nitrotoluene, crystallisation has been chosen as the separation methodology. A cooling melt crystalliser has been designed to be implemented downstream of distillation column S103, where solid p-nitrotoluene would crystallise out from the liquid mixture. A subsequent hydraulic wash column has been designed immediately downstream of the crystalliser to recover pure solid p-nitrotoluene from the slurry. 
 
 
-The liquid mixture to be separated has been modelled as a binary mixture of (p-nitrotoluene + m-nitrotoluene) because the presence of o-nitrotoluene is negligible. This mixThe crystalliser has been model as operating under mixed suspension mixed product removal (MSMPR) mode. The MSMPR operation is similar to CSTR operation for reactor, in that perfect mixing is assumed and the crystalliser operates at outlet conditions. An agitator has been implemented to achieve MSMPR operation, and to provide the cooling for the crystalliser, a half pipe cooling coil has been implemented around the crystalliser vessel, through which cooling medium of 10\% ethylene glycol aqueous solution flows at \SI{7}{L/s}. 
-%results achieved 
+The liquid mixture to be separated has been modelled as a binary mixture of p-nitrotoluene and m-nitrotoluene because the presence of o-nitrotoluene is negligible. This mixture exhibits a eutectic-forming solid-liquid phase behaviour, where p-nitrotoluene is able to crystallise from the mixture liquid as pure solid. The crystalliser has been model as operating under mixed suspension mixed product removal (MSMPR) mode, where perfect mixing is assumed and the crystalliser operates at outlet conditions. An agitator has been implemented to achieve MSMPR operation , and its geometry aims at minimising fouling in the vessel. To provide cooling for the crystalliser, a half pipe cooling coil surrounds the crystalliser vessel through which cooling medium of 10\% ethylene glycol aqueous solution flows at \SI{7}{L/s} with temperature of SI{274}{K}. Figure \ref{fig:crystalliser schematic executive} provides a 3D overview of the crystalliser design.
 
 
-Hydraulic wash columns used in ultrapurification have proven to achieve 99.9 \% purity. A hydraulic wash column was modelled based on a volume and force balance, assuming 99.9 \% p-NT recovery. The pressure drop at various locations of the column were observed the effect of the diameter and steer flow rate. Finally, a sensitivity analysis was conducted on the Kozeny constant used for determining the permeability constant. 
-
+Hydraulic wash columns used in ultrapurification have proven to achieve 99.9 \% separation. A hydraulic wash column was modelled based on a volume and force balance, assuming 99.9 \% p-NT recovery. The pressure drop at various locations of the column were observed as key variables (the diameter and steer flow rate) were varied. From this a suitable diameter of 0.17 m and steer flow rate  of $2.65 \times 10^{-5} m^{3}/s$ was chosen for. Finally, a sensitivity analysis was conducted on the Kozeny constant used for determining the permeability constant. 
+ a
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.3,inkscapelatex=false]{chapters/3-separation/figures/Crystalliser_schematic.svg}
@@ -19,6 +18,6 @@ Hydraulic wash columns used in ultrapurification have proven to achieve 99.9 \% 
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.3,inkscapelatex=false]{chapters/3-separation/figures/Wash_column_schematic_executive.svg}
-    \caption{Schematics for the hydraulic wash column: (a) perspective (b) right-side section (c) front section (d) section for detailed view of knives (e) section for detailed view of filter tubes crossing.}
+    \caption{Schematics for the hydraulic wash column: (a) perspective (b) right-side section (c) front section.}
     \label{fig:wash column schematic executive}
 \end{figure}
