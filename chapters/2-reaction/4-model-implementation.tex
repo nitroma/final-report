@@ -119,17 +119,15 @@ As safety is one of the key priorities of Nitroma in all decision making, the ma
 A Pareto frontier illustrating the tradeoff between reactor performance (namely minimising the length required to reach the target \SI{98}{\percent} conversion) and safety (maximum temperature reached within the reactor, related to the risk of thermal runaway) was derived using the MATLAB genetic algorithm function \texttt{gamultiobj} and is shown in \cref{fig:comsol-pareto}.
 
 \subsubsection{Coolant temperature}
-A sensitivity analysis was performed on the cooling water inlet temperature as temperature control was deemed the most important parameter for safety and performance evaluation. The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature. Any changes in temperature would have a knock-on effect on the rate of reaction since the nitration process is sensitive to temperature [chen]. 
-The region of interest in Figure \ref{fig:comsol-S4-CW-X-T} is \SI{325}{\K} \pm \SI{5}{\K}. Such a large fluctuation in temperature is unlikely to happen as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. For each cooling stream to have a significant effect on the overall mixed cooling water stream temperature, there needs to be a significant deviation in the unit operations. The safety alarm systems in Nitroma's plant would alert the operators if that happens, therefore there is a low risk for the cooling water temperature to fluctuate by \pm \SI{5}{\K}. The summary of cooling water stream used in the HEX reactor can be found in Appendix \ref{tab:cwtable}.
-
-In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in Figure \ref{fig:comsol-conversion}. However, as discussed, a conservative approach is taken when designing the HEX reactor. Therefore, an extra length is added to allow a maximum deviation of \pm \SI{5}{\K}, and the final reactor length was determined to be \SI{4.2}{\metre}. 
-
 \begin{wrapfigure}{r}{0pt}
     \vspace{-\intextsep}
     \includegraphics[width=0.5\textwidth]{figures/S4-CW-X-T.eps}
     \caption{Effect of CW temperature on distance required to reach 98\% conversion (blue) and max T (green). Maximum reactor length is capped at 5m to prevent an excessively long reactor.}
     \label{fig:comsol-S4-CW-X-T}
 \end{wrapfigure}
+A sensitivity analysis was performed on the cooling water inlet temperature as temperature control was deemed the most important parameter for safety and performance evaluation. The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature. Any changes in temperature would have a noticeable knock-on effect on the rate of reaction since the nitration process is sensitive to temperature [chen]. The region of interest in Figure \ref{fig:comsol-S4-CW-X-T} is between \SI{325}{\K} \pm \SI{5}{\K}. Such a large fluctuation in temperature is unlikely to happen as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. For each cooling stream to have a significant effect on the overall mixed cooling water stream temperature, there needs to be a significant deviation in the unit operations. The safety alarm systems in Nitroma's plant would alert the operators if that happens, therefore there is a low risk for the cooling water temperature to fluctuate by \pm \SI{5}{\K}. However, a conservative approach is taken when designing the HEX reactor. In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in Figure \ref{fig:comsol-conversion}.  Therefore, an extra length is added to allow a maximum deviation of \pm \SI{5}{\K}, and the final reactor length was determined to be \SI{4.2}{\metre}.The summary of cooling water stream used in the HEX reactor can be found in Appendix \ref{tab:cwtable}.
+
+
 
 \subsection{Final results}
 Using the optimised parameter values above, the reaction was simulated in the nitration reactor. It showed robust performance by meeting the desired safety and reaction performance benchmark.
@@ -177,30 +175,27 @@ See \cref{fig:comsol-conversion}.
 The reaction achieves 98\% conversion in 3.6m 
 
 \subsubsection{Temperature}
-[include radial temp at max temp location]
 See \cref{fig:comsol-temperature}.
 
 \begin{figure}[h]
     \centering
 
-    \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-surface.png}
-        \caption{}
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{figures/temperature-surface.png}
+        \caption{Overall profile}
         \label{fig:comsol-temperature:surface}
     \end{subfigure}
-    \begin{subfigure}{0.49\linewidth}
-        \includegraphics[width=\linewidth, scale=0.5]{figures/temperature-lines.eps}
-        \caption{}
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{figures/temperature-lines.eps}
+        \caption{$T(z)$ within each section}
         \label{fig:comsol-temperature:lines}
     \end{subfigure}
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{figures/Tr-maxT.eps}
+        \caption{$T(r)$ at $T = \max(T)$}
+        \label{fig:comsol-temperature:radial}
+    \end{subfigure}
 
-    \caption{Temperatures}
+    \caption{Temperatures in reactor}
     \label{fig:comsol-temperature}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.49\linewidth]{figures/Tr-maxT.eps}
-    \caption{Caption}
-    \label{fig:my_label}
 \end{figure}
