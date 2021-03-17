@@ -1,7 +1,7 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 
-COMSOL was selected for detailed reactor modelling
+COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comso}
 
 \subsection{Model equations}
 COMSOL eqns
@@ -31,12 +31,10 @@ Transport due to thermal diffusion is neglected.
 \paragraph{Heat transfer: Porous media}
 
 In the porous medium, heat transfer is described by a volume-averaged combination of the solid and fluid equations, respectively \cite{comsol_heat_2020}
-\begin{equation}
-    \rho_{\mathrm{s}} C_{p, \mathrm{~s}} \frac{\partial T_{\mathrm{s}}}{\partial t}+\nabla \cdot \mathbf{q}_{\mathrm{s}}=Q_{\mathrm{s}}
-\end{equation}
-\begin{equation}
-    \rho_{\mathrm{f}} C_{p, \mathrm{f}} \frac{\partial T_{\mathrm{f}}}{\partial t}+\rho_{\mathrm{f}} C_{p, \mathrm{f}} \mathbf{u}_{\mathrm{f}} \cdot \nabla T_{\mathrm{f}}+\nabla \cdot \mathbf{q}_{\mathrm{f}}=Q_{\mathrm{f}}
-\end{equation}
+\begin{align}
+    \rho_{\mathrm{s}} C_{p, \mathrm{~s}} \frac{\partial T_{\mathrm{s}}}{\partial t}+\nabla \cdot \mathbf{q}_{\mathrm{s}} &= \mathbf{Q}_{\mathrm{s}} \\
+    \rho_{\mathrm{f}} C_{p, \mathrm{f}} \frac{\partial T_{\mathrm{f}}}{\partial t}+\rho_{\mathrm{f}} C_{p, \mathrm{f}} \mathbf{u}_{\mathrm{f}} \cdot \nabla T_{\mathrm{f}}+\nabla \cdot \mathbf{q}_{\mathrm{f}} &= \mathbf{Q}_{\mathrm{f}}
+\end{align}
 
 \subsubsection{Wall}
 
