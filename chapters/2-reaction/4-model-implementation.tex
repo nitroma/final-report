@@ -14,9 +14,15 @@ COMSOL eqns
     \frac{\partial}{\partial t}\left(\varepsilon_{\mathrm{p}} \rho\right)+\nabla \cdot(\rho \mathbf{u})=Q_{\mathrm{m}}
 \end{equation}
 
+\begin{equation}
+\frac{\rho}{\varepsilon_{\mathrm{p}}}\left(\frac{\partial \mathbf{u}}{\partial t}+(\mathbf{u} \cdot \nabla) \frac{\mathbf{u}}{\varepsilon_{\mathrm{p}}}\right)=
+-\nabla p+\nabla \cdot\left[\frac{1}{\varepsilon_{\mathrm{p}}}\left\{\mu\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3} \mu(\nabla \cdot \mathbf{u}) \mathbf{I}\right\}\right]-\left(\kappa^{-1} \mu+\frac{Q_{\mathrm{m}}}{\varepsilon_{\mathrm{p}}^{2}}\right) \mathbf{u}+\mathbf{F}
+\end{equation}
+
 \paragraph{Chemical reaction}
 
-\paragraph{}
+\paragraph{Heat transfer in porous media}
+
 \subsubsection{Wall}
 
 \subsubsection{Coolant zone}
