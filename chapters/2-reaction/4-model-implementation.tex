@@ -10,15 +10,16 @@ COMSOL eqns
 
 \paragraph{Mass transfer: Brinkman equations}
 
+Under the assumption of Stokes and incompressible flow, the continuity and momentum equations reduce to the following \cite{comsol_cfd_2020}
 \begin{equation}
-    \frac{\partial}{\partial t}\left(\varepsilon_{\mathrm{p}} \rho\right)+\nabla \cdot(\rho \mathbf{u})=Q_{\mathrm{m}}
+    \rho\nabla \cdot \mathbf{u}=Q_{\mathrm{m}}
 \end{equation}
 \begin{equation}
-\frac{\rho}{\varepsilon_{\mathrm{p}}}\left(\frac{\partial \mathbf{u}}{\partial t}+(\mathbf{u} \cdot \nabla) \frac{\mathbf{u}}{\varepsilon_{\mathrm{p}}}\right)=
--\nabla p+\nabla \cdot\left[\frac{1}{\varepsilon_{\mathrm{p}}}\left\{\mu\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3} \mu(\nabla \cdot \mathbf{u}) \mathbf{I}\right\}\right]-\left(\kappa^{-1} \mu+\frac{Q_{\mathrm{m}}}{\varepsilon_{\mathrm{p}}^{2}}\right) \mathbf{u}+\mathbf{F}
+    \frac{\rho}{\varepsilon_{\mathrm{p}}} \frac{\partial \mathbf{u}}{\partial t} =
+    -\nabla p+\nabla \cdot\left[\frac{1}{\varepsilon_{\mathrm{p}}}\left\{\mu\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3} \mu(\nabla \cdot \mathbf{u}) \mathbf{I}\right\}\right]-\left(\kappa^{-1} \mu+\frac{Q_{\mathrm{m}}}{\varepsilon_{\mathrm{p}}^{2}}\right) \mathbf{u}+\mathbf{F}
 \end{equation}
 
-\paragraph{Chemical reaction}
+\paragraph{Chemical reaction: Transport of concentrated species}
 
 \paragraph{Heat transfer in porous media}
 
