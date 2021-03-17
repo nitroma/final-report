@@ -3,14 +3,16 @@
 \label{app:reaction}
 \subsection{Kinetics data}
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 \begin{table}[]
 \centering
-\caption{Kinetic data for nitration reactions at 330K and 30\% catalyst loading}
-\label{tab:kineticsdata}
+\caption{Cooling water sources for R101}
+\label{tab:cwtable}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lll}
 \hline
- & Pre-exponential factor (s \textsuperscript{-1}) & Activation Energy (J/mol) \\ \hline
+ & Pre-exponential factor (s\textsuperscript{-1}) & Activation Energy (J/mol) \\ \hline
 ONT & 1.739 & 24215 \\
 MNT & 7.024 & 32370 \\
 PNT & 4.968 & 27962
@@ -64,13 +66,14 @@ Water                     & -285.8              & 75.3              & -283.4    
 \label{tab:cwtable}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{cccccc}
+\hline
 Stream & Source & T (K) & Mass flow available (kg/hr) & Flow used (kg/hr) & Fraction of total flow used \\ \hline
 1 & River & 289 & 1000 & 530 & 3\% \\
 2 & R201 & 323 & 3529 & 3529 & 22\% \\
 3 & S301 & 323 & 2953 & 2953 & 19\% \\
 4 & S203 Condenser & 328 & 6051 & 6051 & 38\% \\
 5 & S201 Condenser & 330 & 7020 & 2777 & 18\% \\ \hline
-Mixed &  & 325 &  & 15840 & 
+Mixed &  & 325 &  & 15840 &  \\ \hline
 \end{tabular}%
 }
 \end{table}
