@@ -156,7 +156,9 @@
     }
 
 %%% FLOATS
+\RequirePackage{graphicx}
 \RequirePackage[font={footnotesize,singlespacing},labelfont={bf},skip=2pt]{caption}
+\RequirePackage{subcaption}
 % command to remove erroneous extra vertical spacing before lists inside tabular environments - https://tex.stackexchange.com/a/6454/135479
 \newcommand*{\compress}{\@minipagetrue}
 % set up method to detect tabular environments automatically - https://tex.stackexchange.com/a/557166/135479
