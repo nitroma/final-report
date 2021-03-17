@@ -4,18 +4,18 @@ Transitioning from batch to continuous processing requires a complete redesign o
 %Transitioning from batch to continuous process requires a complete redesign of the reactors that are commonly used in the industry today. Nitration of toluene produces 3 isomers of nitrotoluene, but only ONT and PNT are of commercial interest. The reactor must be capable of handling 816 tonnes of ONT and 841 tonnes of PNT throughput per annum. To meet this annual demand while minimising safety risk and maximising performance of the reactor, Nitroma developed a novel approach of using a Heat Exchanger Reactor (HEX Reactor) for the nitration of toluene.
 
 %general overview
-\begin{wrapfigure}{r}{0.5\linewidth}
+\begin{figure}{r}{0.5\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{chapters/0-executive-summary/figures/FYD executive sum.PNG}
-    \caption{Mechanical design of Nitroma's nitration reactor}
+    \includegraphics[width=\linewidth]{figures/FYD executive sum.PNG}
+    \caption{Mechanical design of nitration reactor}
     \label{fig:executivesummaryreactor}
-\end{wrapfigure}
-A key aspect of innovation is the robust temperature control within the nitration reactor's compact design, achieved using a state-of-the-art triple concentric tube arrangement. Each of the 7 reaction tubes are surrounded by an outer primary cooling water jacket, with an additional secondary concentric cooling tube running through the centre. The reaction zone is packed with a highly thermally conductive Silicon Carbide foam, immobilising the H-mordenite catalyst and enhancing heat removal to the cooling zones. By combining these features, the HEX reactor keeps the temperature of the exothermic reaction below the safe limit of \SI{363}{\K}, while ensuring that \SI{> 98}{\percent} conversion is achieved within the reactor length. The reactor design was validated through multiphysics simulation in COMSOL, coupling heat and mass transfer with chemical reaction in the porous catalyst medium, solid reactor wall, and fluid zones. This enabled the appropriate sizing of the cooling system and reactor to balance competing safety and performance objectives.
+\end{figure}
+A key aspect of innovation is the robust temperature control within the nitration reactor's compact design, achieved using a state-of-the-art triple concentric tube arrangement. Each of the 7 reaction tubes are surrounded by an outer primary cooling water jacket, with an additional secondary concentric cooling tube running through the centre. The reaction zone is packed with a highly thermally conductive Silicon Carbide foam, immobilising the H-mordenite catalyst and enhancing heat removal to the cooling zones. By combining these features, the HEX reactor keeps the temperature of the exothermic reaction below the safe limit of \SI{363}{\K}, while ensuring that \SI{> 98}{\percent} conversion is achieved within the reactor length. The reactor design was validated through multiphysics simulation in COMSOL 5.6, coupling heat and mass transfer with chemical reaction in the porous catalyst medium, solid reactor wall, and fluid zones. This enabled the appropriate sizing of the cooling system and reactor to balance competing safety and performance objectives.
 
 The reactor material chosen is stainless steel 304L, which is suitable for corrosive nitric acid processing (). The wall thickness of the shell and ends were calculated to be 5mm after taking into consideration of corrosion and other welding factors. The final reactor design can be seen in Figure \ref{fig:executivesummaryreactor}
 
 %kinetics and modelling approach [andreas]
-The kinetics of the zeolite-catalysed nitration reaction were determined using literature data and the Arrhenius equation. To allow for more accurate modelling, the rate equation for the production of each nitrotoluene isomer were determined. 
+% The kinetics of the zeolite-catalysed nitration reaction were determined using literature data and the Arrhenius equation. To allow for more accurate modelling, the rate equation for the production of each nitrotoluene isomer were determined. 
 
 The model was implemented and optimised on COMSOL 5.6. 
 - general model used (porous media) and show 1 comsol plot to get Ali excited

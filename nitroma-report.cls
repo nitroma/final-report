@@ -103,6 +103,7 @@
 }
 \newcommand\mainmatter{
     \clearpage
+    \counterallwithin{chapter}
     % option 1: go back to simple single-digit page numbers
     % \setcounter{page}{1}
     % \renewcommand\thepage{\arabic{page}}
@@ -129,7 +130,7 @@
     \counterwithout{equation}{#1}
     \counterwithout{scheme}{#1}
 }
-\AtBeginDocument{\counterallwithin{chapter}}
+% \AtBeginDocument{\counterallwithin{chapter}}
 %% float numbering: appendices
 \RequirePackage[titletoc]{appendix}
 \AtBeginEnvironment{subappendices}{
