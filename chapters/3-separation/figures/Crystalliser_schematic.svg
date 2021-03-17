@@ -9,8 +9,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="207mm"
-   height="250mm"
-   viewBox="0 0 207 250"
+   height="239mm"
+   viewBox="0 0 207 239"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
@@ -25,17 +25,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="562.77581"
-     inkscape:cy="516.98496"
+     inkscape:cx="222.57494"
+     inkscape:cy="455.5424"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
-     inkscape:window-width="1267"
-     inkscape:window-height="1040"
-     inkscape:window-x="2024"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0">
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid10" />
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,7 +96,7 @@
          style="stroke-width:0.264583">(b)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 74.083333,52.916667 100.54167,15.875"
+       d="M 74.083333,52.916667 95.25,21.166667"
        id="path64"
        sodipodi:nodetypes="cc" />
     <path
@@ -105,7 +105,7 @@
        id="path66" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 63.5,201.08333 26.458332,26.45833"
+       d="m 63.5,201.08333 15.875,10.58334"
        id="path68"
        sodipodi:nodetypes="cc" />
     <path
@@ -124,84 +124,113 @@
        id="path74" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 174.625,153.45833 5.29166,74.08333"
+       d="m 174.625,153.45833 10.58333,55.5625"
        id="path76"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="19.276777"
-       y="17.764879"
+       y="15.874998"
        id="text42-1"><tspan
          sodipodi:role="line"
          id="tspan40-2"
          x="19.276777"
-         y="17.764879"
+         y="15.874998"
          style="font-size:7.05556px;stroke-width:0.264583">Sightholes</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="94.494041"
-       y="13.607141"
+       x="92.604164"
+       y="16.252975"
        id="text42-1-2"><tspan
          sodipodi:role="line"
          id="tspan40-2-8"
-         x="94.494041"
-         y="13.607141"
+         x="92.604164"
+         y="16.252975"
          style="font-size:7.05556px;stroke-width:0.264583">Inlet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="98.273804"
-       y="120.19643"
+       x="97.987541"
+       y="119.44048"
        id="text42-1-22"><tspan
          sodipodi:role="line"
-         x="98.273804"
-         y="120.19643"
+         x="97.987541"
+         y="119.44048"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan148">Cooling</tspan><tspan
          sodipodi:role="line"
-         x="98.273804"
-         y="129.01587"
+         x="97.987541"
+         y="128.25993"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan152">coil inlet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="82.020821"
-       y="235.85715"
+       x="79.374992"
+       y="219.98215"
        id="text42-1-8"><tspan
          sodipodi:role="line"
          id="tspan40-2-4"
-         x="82.020821"
-         y="235.85715"
+         x="79.374992"
+         y="219.98215"
          style="font-size:7.05556px;stroke-width:0.264583">Outlet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="163.66368"
-       y="21.922619"
+       x="169.33331"
+       y="20.788691"
        id="text42-1-3"><tspan
          sodipodi:role="line"
          id="tspan40-2-2"
-         x="163.66368"
-         y="21.922619"
+         x="169.33331"
+         y="20.788691"
          style="font-size:7.05556px;stroke-width:0.264583">Stirrer</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="157.23808"
-       y="235.47917"
+       x="154.97021"
+       y="217.71428"
        id="text42-1-0"><tspan
          sodipodi:role="line"
          id="tspan40-2-9"
-         x="157.23808"
-         y="235.47917"
+         x="154.97021"
+         y="217.71428"
          style="font-size:7.05556px;stroke-width:0.264583">Cooling</tspan><tspan
          sodipodi:role="line"
-         x="157.23808"
-         y="244.29861"
+         x="154.97021"
+         y="226.53372"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan146">coil outlet</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 15.875,5.2916667 H 58.208333 V 21.166666 H 15.875 Z"
+       id="path37" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 89.958333,5.2916667 H 111.125 V 21.166667 H 89.958333 Z"
+       id="path37-4"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 96.572917,111.125 h 31.750003 v 21.16667 H 96.572917 Z"
+       id="path37-7"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 76.72917,211.66667 H 103.1875 V 222.25 H 76.72917 Z"
+       id="path37-8"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 150.81249,209.02083 h 42.33334 v 21.16666 H 150.8125 Z"
+       id="path37-80"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 164.04167,10.583333 h 31.75 v 15.875 h -31.75 z"
+       id="path37-42"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
