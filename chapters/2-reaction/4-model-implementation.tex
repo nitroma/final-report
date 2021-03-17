@@ -112,7 +112,9 @@ As safety is one of the key priorities of Nitroma in all decision making, the ma
 A Pareto frontier illustrating the tradeoff between reactor performance (namely minimising the length required to reach the target \SI{98}{\percent} conversion) and safety (maximum temperature reached within the reactor, related to the risk of thermal runaway) was derived using the MATLAB genetic algorithm function \texttt{gamultiobj} and is shown in \cref{fig:comsol-pareto}.
 
 \subsubsection{Coolant temperature}
-A sensitivity analysis was performed on the cooling water inlet temperature. \pm 5K 
+A sensitivity analysis was performed on the cooling water inlet temperature. \pm 5 \si{K} 
+The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature
+
 Such a large fluctuation in temperature is unlikely to happen as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. The summary of cooling water stream used in the HEX reactor is found in Appendix \ref{tab:cwtable}.
 
 In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in Figure \ref{fig:comsol-conversion}. However, as discussed, an extra length is added to allow variations in temperature. 
@@ -121,7 +123,7 @@ In the ideal scenario where the cooling water temperature does not fluctuate, a 
 \begin{wrapfigure}{r}{0pt}
     \vspace{-\intextsep}
     \includegraphics[width=0.5\textwidth]{figures/S4-CW-X-T.eps}
-    \caption{Effect of CW temperature on distance required to reach 98\% conversion (blue) and max T (green)}
+    \caption{Effect of CW temperature on distance required to reach 98\% conversion (blue) and max T (green). Maximum reactor length is capped at 5m to prevent an excessively long reactor.}
     \label{fig:comsol-S4-CW-X-T}
 \end{wrapfigure}
 
