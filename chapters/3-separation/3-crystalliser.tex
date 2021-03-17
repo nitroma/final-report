@@ -4,12 +4,10 @@
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
 The (p-NT + m-NT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium. \cite{seader_separation_2011} Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
-
 \begin{equation}\label{eq:amount solid A equilibrium}
     \dot{M}_{\mathrm{solid}} = \frac{\dot{M}_{\mathrm{total}} (x_1 - x_2)}{1 - x_2}
 \end{equation}
-
-\noindent where $\dot{M}_{\mathrm{solid}}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{\mathrm{total}}$ is the total mass flow rate of A and B. This, the thermodynamic equilibrium, gives the theoretical maximum recovery of p-NT in the form of solid that the separation can achieve.
+where $\dot{M}_{\mathrm{solid}}$ is the equilibrium mass flow rate of crystallised solid A and $\dot{M}_{\mathrm{total}}$ is the total mass flow rate of A and B. This, the thermodynamic equilibrium, gives the theoretical maximum recovery of p-NT in the form of solid that the separation can achieve.
 
 \begin{figure}[h]
     \centering
@@ -26,8 +24,7 @@ where $x$ is the fraction of p-NT, $H_f$ is the heat of fusion when p-NT melts, 
 \begin{equation} \label{eq:fittedvantHoffcorrelation}
     \ln(x) = \frac{T - 323.87}{50.259}
 \end{equation}
-
-\noindent It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results, hence it has been applied for the design.
+It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results, hence it has been applied for the design.
 
 In reality, the system needs time to reach thermodynamic equilibrium from where it starts off, which is why a physical crystalliser is needed. Kinetics of crystallisation in a MSMPR crystalliser will be explained in the following sections.
 
@@ -77,16 +74,12 @@ From the work of Ottens and de Jong, \cite{ottens_model_1974} the kinetic rate o
 \begin{equation}
     B = J_{\mathrm{c-c}} + J_{\mathrm{c-s}}
 \end{equation}
- where $J_{\mathrm{c-c}}$ is the contribution from crystal-crystal collisions, and $J_{\mathrm{c-s}}$ is that from collisions of crystal with solid objects, such as crystal-wall and crystal-stirrer collisions. The forms of $J_{\mathrm{c-c}}$ and $J_{\mathrm{c-s}}$ are as following,
-\begin{equation}
-    J_{\mathrm{c-c}} = k_{\mathrm{c-c}} \varepsilon \rho_m^2 (\Delta C)^b
-\end{equation}
-
-\begin{equation}
-    J_{\mathrm{c-s}} = k_{\mathrm{c-s}} \varepsilon \rho_m (\Delta C)^b
-\end{equation}
-
-\noindent where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for the individual contributions, and $\varepsilon$ is the quantity corresponding to the $N$ in Equation \ref{eq:secondary nucleation general} such that 
+ where $J_{\mathrm{c-c}}$ is the contribution from crystal-crystal collisions, and $J_{\mathrm{c-s}}$ is that from collisions of crystal with solid objects, such as crystal-wall and crystal-stirrer collisions. The forms of $J_{\mathrm{c-c}}$ and $J_{\mathrm{c-s}}$ are as follows,
+\begin{align}
+    J_{\mathrm{c-c}} &= k_{\mathrm{c-c}} \varepsilon \rho_m^2 (\Delta C)^b \\
+    J_{\mathrm{c-s}} &= k_{\mathrm{c-s}} \varepsilon \rho_m (\Delta C)^b
+\end{align}
+where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for the individual contributions, and $\varepsilon$ is the quantity corresponding to the $N$ in Equation \ref{eq:secondary nucleation general} such that 
 
 \begin{equation}
     \varepsilon = P_0 \frac{\omega_r^3 D_r^5}{V} 
@@ -360,13 +353,10 @@ The value of $L_M$, on the other hand, does change sizeably with deviations in $
 \subsubsection{Fouling}\label{sec:fouling}
 
 Fouling is a big issue in crystallisation systems as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. No only does this lead to reduced recovery of solid PNT, but also results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coating the pipe. To account for this in the  design, an additional resistance will be added to the aforementioned resistances in series in section %quote section% 
-
-
 \begin{equation} \label{eq:fouling}
     R_f = R_{fs} + R_{fp}
-    \end{equation}
-    
-\noindnet where $R_{fs}$ is the service side fouling and $R_{fp}$ is the process side fouling 
+\end{equation}
+where $R_{fs}$ is the service side fouling and $R_{fp}$ is the process side fouling 
 
 A suitable value for the service side fouling resistance due to the ethylene glycol solution was found. To look at the process side fouling, the thickness of fouling was varied to analyse its effect on the heat transfer area and the overall heat transfer coefficient and whether the effect needed to be addressed with any further considerations.:
 
@@ -374,8 +364,6 @@ FIGUREEEEE
 
 As can be seen in figure 
 , as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with a small encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1mm layer of PNT solid. This is mainly due to solid PNT's low conductivity, so higher $R_{fp}$. Therefore, it is imperative to deal with this issue to ensure the heat transfer efficiency is maintained in the crystalliser, otherwise there may not be sufficient recovery of solids for downstream processing. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal. 
-
-
 
 \subsection{Physical design} \label{sec:physical design crystalliser}
 
@@ -400,8 +388,6 @@ A general schematic for the crystalliser vessel is available in Figure \ref{fig:
     \caption{Schematics for the designed crystalliser vessel: (a) perspective view; (b) section view.}
     \label{fig:crystalliser schematic}
 \end{figure}
-
-
 
 \newpage
 \begin{figure}[h!]
