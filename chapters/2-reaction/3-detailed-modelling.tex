@@ -50,26 +50,7 @@ Since the reaction was carried out at 330K, the enthalpy of reaction was adjuste
   \Delta H_{r}^{330K} = \Delta H_{r}^{\standardstate} + C_p \Delta T
 \end{equation}
 
-P-nitrotoluene is an exception, because it is a solid at standard state. Therefore, the latent heat of fusion needs to be included when adjusting the enthalpy of reaction to the operating temperature. 
-
-The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactants, the heat duty of the reactor is -63.4 kW.
-
-\begin{table}[H]
-\centering
-\caption{Enthalpy of formation for reactants and products}
-\label{tab:Heat enthalpy table}
-\begin{tabularx}{\linewidth}{l|XXX}
-\toprule
-                                                                & Standard enthalpy of formation (298K, 1 atm) [kJ/mol] & Heat Capacity [J/mol K] & Enthalpy of formation (330K, 1 atm) [kJ/mol] \\ \midrule
-Toluene                        & 12.0              & 157.1              & 17.0                     \\
-Nitric acid                      & -207.4              & 109.9              & -203.9                       \\
-O-nitrotoluene & -21.7             & 202.5              & -15.3              \\ 
-M-Nitrotoluene                      & -30.4              & 202.1             & -24.0                       \\
-P-Nitrotoluene                      & -46.3              & 172.3 (solid), 214.0 (liquid)             & -23.9                        \\
-Water                     & -285.8              & 75.3              & -283.4                        \\
-\bottomrule
-\end{tabularx}
-\end{table}
+P-nitrotoluene is an exception since it is a solid at standard state. Therefore, the latent heat of fusion needs to be included when adjusting the enthalpy of reaction to the operating temperature. The summary of the enthalpy of formation for all reactants and products can be found in Appendix \ref{tab:Heat enthalpy table}. The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactants, the heat duty of the reactor is -63.4 kW.
 
 \subsection{Axial dispersion}
 \label{sec:axialdispersion}
@@ -107,7 +88,7 @@ The nitration reactor cannot be assumed to be isothermal because nitration is a 
 \subsubsection{Catalyst support}
 Silicon Carbide (SiC) was chosen as the catalyst support owing to its high thermal conductivity (83 W m \textsuperscript{-1} K \textsuperscript{-1} as compared to 3 W m \textsuperscript{-1} K \textsuperscript{-1} for H-mordenite [ref]). This helps to lower the overall temperature in the reactor by reducing the catalyst surface temperature [ref]. Although as a result, the rate of reaction and conversion are relatively lower, using SiC keeps the temperature below the critical temperature before thermal runaway happens. 
 
-Besides, an important feature of the SiC catalyst support is that the tortuosity of the structure promotes homogeneous mixing of the reactants, much like a static mixer [ref]. As the nitration of toluene is a two-phase reaction, the well-mixed flow increases the interphase contact area, and subsequently increases the rate of reaction. Thus, the reaction can be modelled as a single phase reaction on COMSOL. [can be moved to other sections] 
+Besides, an important feature of the SiC catalyst support is that the tortuosity of the structure promotes homogeneous mixing of the reactants, much like a static mixer [ref]. As the nitration of toluene is a two-phase reaction, the well-mixed flow increases the interphase contact area, and subsequently increases the rate of reaction. Thus, the reaction can be modelled as a single phase reaction. [can be moved to other sections] 
 
 Additionally, the nitration reactor would require 270 kg of H-mordenite catalyst to achieve the desired rate and conversion. However, this could lead to collapse of the catalyst bed due to its weight, which could lead to significant attrition of catalyst and severe pressure drop [ref]. The mechanical strength of the SiC support will ensure the catalyst is strongly kept in place when fluid flows through it. The strength of the SiC catalyst support does not decrease over time because SiC forms a silica film when in contact with HNO3 solution, therefore rendering it passive against corrosion [ref]. The strength and durability of SiC makes it an ideal material as a catalyst support. The SiC catalyst support used will be fabricated using the partial sintering process with 30 \% porosity before coating it with H-mordenite catalyst.
 
