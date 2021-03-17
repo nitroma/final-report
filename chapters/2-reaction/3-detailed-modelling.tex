@@ -99,6 +99,21 @@ where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient
 The axial dispersion coefficient ($D_z$) was calculated to for various diameters and plotted based on \cref{axial dispersion coefficient,wilkechang}.
 
 From \cref{fig:dispersion}, it can be observed that the dispersion coefficient decreases sharply after after ~10cm. Thus, a diameter of 23cm has been selected as any further increase in the diameter does not warrant the drawback of the increasing pressure drop ($\Delta P$), as the $d_p$ is inversely proportional to $\Delta P$ based on \cref{eqn:ergun}.
+\subsection{Pressure drop}
+%The pressure drop of is a significant consideration in during the selection and modelling of this reactor as the packed-bed reactor shows the 
+Even though the pressure drop is expected to be insignificant, efforts were taken to verify the pressure drop of the reactor.
+
+The pressure drop in this was calculated by using the modified Ergun equation from [lacroix et al]: 
+\begin{equation}
+    \frac{\Delta p}{L} = \frac{150 \mu (1- \varepsilon)^2 u_0}{\varepsilon^3 d_p^2} + \frac{1.75(1-\varepsilon)\rho u_0^2}{\varepsilon^3 d_p}
+    \label{eqn:ergun}
+\end{equation}
+where foam porosity ($\varepsilon$) is 0.30 from [Byung-KoogJang et al], $d_p$ is the particle diameter equivalent to the SiC foam structure based only on its mean window size ($a$), using the following formula:
+\begin{equation}
+d_{p}=\frac{3a[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2}}{2(1-[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2})}
+\end{equation}
+
+The pressure drop was calculated to be 0.33 bar which poses no safety risk to the plant. No high pressure pumps will be required, thus saving both OPEX and CAPEX costs.
 
 
 \subsection{Adiabatic temperature}
@@ -125,12 +140,13 @@ Even with an external cooling jacket to cool down the reactor, it is not enough 
         \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
         \caption{Temperature with external cooling}
     \end{subfigure}
-    \begin{comment} %the other 2 plots should suffi
-    \begin{subfigure}{0.32\linewidth}
-        \includegraphics[width=\linewidth]{figures/simple-tube-T-X.eps}
-        \caption{Temperature and conversion profiles}
-    \end{subfigure}
-    \end{comment}
+
+%the other 2 plots should suffice
+    %\begin{subfigure}{0.32\linewidth}
+        %\includegraphics[width=\linewidth]{figures/simple-tube-T-X.eps}
+        %\caption{Temperature and conversion profiles}
+    %\end{subfigure}
+
     \caption{Temperature profiles for adiabatic reactor, and with external cooling}
     \label{fig:simple-tube}
 \end{figure}
@@ -150,21 +166,6 @@ The catalyst particle size was chosen to be 2 µm. At this particle size, the ef
 
 Typically, catalyst grains, pellets and beads of this diameter would result in a huge pressure drop across the reactor. However, due to the open structure of SiC foam, the pressure drop is significantly reduced [duong viet et al]. In fact, with the same surface area per volume of catalyst bed, catalyst supports have a pressure drop over 10 times smaller than the corresponding packed bed [richardson et al]. The small catalyst size used in the reaction can therefore reap the benefits of negligible diffusional limitations while avoiding any significant pressure drop.
 
-\subsection{Pressure drop}
-%The pressure drop of is a significant consideration in during the selection and modelling of this reactor as the packed-bed reactor shows the 
-Even though the pressure drop is expected to be insignificant, efforts were taken to verify the pressure drop of the reactor.
-
-The pressure drop in this was calculated by using the modified Ergun equation from [lacroix et al]: 
-\begin{equation}
-    \frac{\Delta p}{L} = \frac{150 \mu (1- \varepsilon)^2 u_0}{\varepsilon^3 d_p^2} + \frac{1.75(1-\varepsilon)\rho u_0^2}{\varepsilon^3 d_p}
-    \label{eqn:ergun}
-\end{equation}
-where foam porosity ($\varepsilon$) is 0.30 from [Byung-KoogJang et al], $d_p$ is the particle diameter equivalent to the SiC foam structure based only on its mean window size ($a$), using the following formula:
-\begin{equation}
-d_{p}=\frac{3a[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2}}{2(1-[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2})}
-\end{equation}
-
-The pressure drop was calculated to be 0.33 bar which poses no safety risk to the plant. No high pressure pumps will be required, thus saving both OPEX and CAPEX costs.
 
 
 \subsection{Novel triple concentric tubes}

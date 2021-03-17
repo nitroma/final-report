@@ -228,7 +228,7 @@ The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is
     V = \frac{\pi D^3}{2} 
 \end{equation}
 
-\noindent The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall to minimise fouling. Details of this will be elaborated in Section \ref{sec:heat transfer crystalliser}.
+\noindent The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall to minimise fouling. Details of this will be elaborated in Section \ref{sec:fouling}.
 
 In the end, Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} form a system of algebraic equations and can be solved simultaneously. For each value of $V$, the mass flow rate of solid PNT that will form $\dot{M}_{\mathrm{liquid}}$, can be computed. A crystalliser recovery, $r_c$, can be defined where
 
@@ -290,13 +290,13 @@ The overall heat transfer coefficient consists of 4 resistance terms; $R_1$, $R_
     R_O = R_1 + R_w + R_2 + R_f
 \end{equation}
 
-\noindent where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer of the crustalliser wall, $R_2$ is the service side convective heat transfer, and $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into account, but the effects are investigated in depth in Sections. %label section with fouling sensitiivty%.
+\noindent where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer of the pipe material, $R_2$ is the service side convective heat transfer, and $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into account, but the effects are investigated in depth in Section \ref{sec:fouling}. 
 
-Accounting for all these resistances in series, the overall heat transfer coefficient is obtained  
+Accounting for all these resistances in series, the overall heat transfer coefficient is obtained as 
 \begin{equation} \label{eq:energy balance}
     U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
 \end{equation}
-where l is the thickness of the half coil pipe and k is the thermal conductivity of pipe material (steel)
+where $l$ is the thickness of the half coil pipe and $k$ is the thermal conductivity of pipe material (steel).
 
 To determine the heat transfer coefficients on both the process side, Equation \ref{eq:processsideht}, and service side, Equation \ref{eq:servicesideht}, the Nusselt number for a jacketed vessel with impeller agitator %reference
 has been used. 
