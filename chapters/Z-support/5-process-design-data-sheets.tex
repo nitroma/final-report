@@ -25,18 +25,18 @@
 \begin{tabular}{@{}l|l|l@{}}
 \toprule
 \textbf{Specification}                    & \textbf{Value} & \textbf{Units} \\ \midrule
-Max Temperature                           & 60             & °C             \\ \midrule
-Max discharge   flowrate                  & 11.779         & kg/hr          \\ \midrule
-Cooling duty                              & 1.41           &                \\ \midrule
+Max Temperature                           & 90             & °C             \\ \midrule
+Cooling duty                              & 63.4         & kW                \\ \midrule
 Inlet   pressure, P1                      & 130        & kPa            \\ \midrule
 Outlet   pressure, P2                     & 100            & kPa            \\ \midrule
-Critical   pressure                       & 144        & kPa            \\ \midrule
+Design   pressure                       & 144        & kPa            \\ \midrule
 Maximum   allowable accumulated  pressure & 174        & kPa            \\ \midrule
 Reactor length                            & 4.3          & m               \\ \midrule
 Reactor tube diameter                            & 0.23          & m               \\ \midrule
 Reactant flowrate                         & 11.354         & mm$^2$            \\ \midrule
 Primary cooling water flowrate            & 2.3           & kg/s             \\ \midrule
-Secondary cooling water flowrate          & 2.1         & kg/s            \\ \bottomrule
+Secondary cooling water flowrate          & 2.1         & kg/s            \\ \midrule
+Shell and end thickness                   & 5         & mm            \\ \bottomrule
 \end{tabular}
 \end{table}
 \newpage
@@ -82,6 +82,18 @@ Nominal nozzle   size                     & 3.80           & mm             \\ \
 
 \newpage
 \subsection{Heat exchanger}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}l|l@{}}
+    \toprule
+    \textbf{Pocess Equipment}      & Heat Exchanger      \\
+    \textbf{Equipment Label}       & S201 condenser      \\
+    \textbf{Equipment Model}       & Plate   \& Frame    \\
+    \textbf{Construction Material} & 316 Stainless Steel \\ \bottomrule
+    \end{tabular}
+\end{table}
+
 
 \newpage
 \subsection{Safety relief valve}
@@ -213,7 +225,30 @@ Maximum pumping power                     & 0.55     & kW           \\ \bottomru
 
 \newpage
 \subsection{Storage vessel}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{@{}l|l@{}}
+    \toprule
+      \textbf{Equipment label}  & SV101\\
+       \textbf{Equipment type}  & Storage Vessel \\
+       \textbf{Material of construction} & Stainless steel 316 \\
+       \bottomrule
+    \end{tabular}
+\end{table}
 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}l|l|l@{}}
+\toprule
+\textbf{Specification}                    & \textbf{Value} & \textbf{Units} \\ \midrule
+Discharge volume                              & 0.65            & m$^3$/h            \\ \midrule
+Maximum capacity                  & 12       &  m$^3$/h       \\ \midrule
+Maximum discharge pressure       & 10         &     bar           \\ \midrule
+Maximum temperature                  & 90     & °C         \\ \midrule
+Pump efficiency []               & 65\%         &            \\ \midrule
+Maximum pumping power                     & 0.55     & kW           \\ \bottomrule
+\end{tabular}
+\end{table}
 \newpage
 \subsection{Flare stack}
 

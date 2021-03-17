@@ -14,7 +14,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="Wash_column_schematic.svg">
+   sodipodi:docname="Wash_column_schematic_executive.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -33,7 +33,7 @@
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,7 +66,7 @@
          id="tspan40"
          x="4.7624898"
          y="189.59285"
-         style="stroke-width:0.264583">(a)</tspan></text>
+         style="stroke-width:0.264583">(i)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -77,7 +77,7 @@
          id="tspan40-7"
          x="103.03632"
          y="188.91251"
-         style="stroke-width:0.264583">(b)</tspan></text>
+         style="stroke-width:0.264583">(ii)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -211,7 +211,7 @@
          id="tspan40-7-2"
          x="195.11133"
          y="189.97084"
-         style="stroke-width:0.264583">(c)</tspan></text>
+         style="stroke-width:0.264583">(iii)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
