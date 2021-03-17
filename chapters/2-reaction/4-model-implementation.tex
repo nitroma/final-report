@@ -1,10 +1,10 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 
-COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}.
+COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry with cylindrical coordinates.
 
 \subsection{Model equations}
-The physics interfaces selected in COMSOL for each domain of the re
+The physics interfaces selected in COMSOL for each domain of the reactor and their associated governing equations are described in this section.
 
 \subsubsection{Reaction zone}
 
@@ -35,6 +35,7 @@ In the porous medium, heat transfer is described by a volume-averaged combinatio
     \rho_{\mathrm{s}} C_{p, \mathrm{~s}} \frac{\partial T_{\mathrm{s}}}{\partial t}+\nabla \cdot \mathbf{q}_{\mathrm{s}} &= \mathbf{Q}_{\mathrm{s}} \\
     \rho_{\mathrm{f}} C_{p, \mathrm{f}} \frac{\partial T_{\mathrm{f}}}{\partial t}+\rho_{\mathrm{f}} C_{p, \mathrm{f}} \mathbf{u}_{\mathrm{f}} \cdot \nabla T_{\mathrm{f}}+\nabla \cdot \mathbf{q}_{\mathrm{f}} &= \mathbf{Q}_{\mathrm{f}}
 \end{align}
+where local thermal equilibrium is assumed such that $T_{\mathrm{s}} = T_{\mathrm{f}} = T$.
 
 \subsubsection{Wall}
 
