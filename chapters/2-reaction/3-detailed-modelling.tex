@@ -84,13 +84,19 @@ From \cref{fig:dispersion}, it can be observed that the dispersion coefficient d
 \textcolor{red}{Include adiabatic temp rise with and without cooling water}
 
 The nitration reactor cannot be assumed to be isothermal because nitration is a highly exothermic process. As seen in Fig. [adibatic], the temperature rises sharply in the first xxx meters before plateauing at xxx K for an adiabatic reactor. Even by cooling the reactor with a cooling jacket, the exit temperature remains at xxx. The temperature of the reaction needs to kept below 140 °C. At temperatures higher than that, thermal decomposition of nitric acid occurs, which releases nitrogen dioxide and produces even more heat, leading to thermal runaway. Other $NOx$ emission safety risks have been covered in section \ref{sec:NOx}. Additionally, the possibility of hotspot as shown in Fig [hotspot] will speed up the deactivation of catalyst, but more importantly, it poses safety concerns through the risk of thermal runaway [ref]. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled.
-\textcolor{red}{Include temp hotspot}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
+    
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
+    \end{subfigure}
+    \begin{subfigure}{0.49\linewidth}
+        \includegraphics[width=\linewidth]{figures/simple-tube-T-X.eps}
+    \end{subfigure}
 
-    \caption{Temperature profile wit}
-    \label{fig:my_label}
+    \caption{Temperature profiles with external cooling}
+    \label{fig:simple-tube}
 \end{figure}
 
 \subsection{Catalyst specification}
