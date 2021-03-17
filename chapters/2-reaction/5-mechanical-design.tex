@@ -10,7 +10,7 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon, which are not stabilised with titanium or niobium, thus are susceptible to intergranular attack in nitric acid at heat affected zone of the welds due to precipitation of chromium carbides at the grain boundaries (). Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell.
+Stainless steel type 304 have higher levels of carbon, which are not stabilised with titanium or niobium, thus are susceptible to intergranular attack in nitric acid at heat affected zone of the welds due to precipitation of chromium carbides at the grain boundaries  (). Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell.
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
@@ -27,13 +27,14 @@ Similarly, using the equation \ref{eqn:designpressure} above, the design pressur
 \label{sec:reactordimensions}
 
 \subsubsection{Reactor tube dimensions}
+\label{sec:reactortube}
 Based on section X, the total flowrate across the entire reactor was calculated to be $9.24 \times 10^{-4} m^3s^{-1}$, thus the flowrate across one individual reactor is calculated to be  $1.32 \times 10^{-4} m^3s^{-1}$. An optimal length of 4.3m was set as mentioned in section (sensitivity analysis). Subsequently, the final diameter of the reactor tubes were set at 230mm.  
 The minimum thickness of the reactor tubes ($e_{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
 \begin{equation}
     e_{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = 0.145mm
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards (), yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$. 
+where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards (), yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$ \cite{noauthor_unfired_nodate}
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -42,7 +43,7 @@ where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter s
     \caption{3D cross section of reactor tube arrangement}
     \label{fig:reactortubearrangement}
 \end{wrapfigure}
-The bundle of 7 tubes was arranged in such a manner with a clearance of 230mm, which exceeds t between each tubes to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction (). The clearance of the tube arrangement was set to be 230mm, equivalent to the tube diameter. This exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
+The bundle of 7 tubes was arranged in such a manner with a clearance of 230mm, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 
 \subsubsection{Secondary cooling tube dimensions}
@@ -119,7 +120,7 @@ The diameter of the primary cooling water port was defined to have an OD of 219.
 
 
 \subsubsection{Pressure relief valve design}
-PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event ().An overpressure event will occur when the pressure is beyond the design pressure (also known as maximum allowable working pressure, MAWP) (). Detailed calculation of the sizing of safety relief valves for liquid can be viewed in Appendix section \ref{app:PRV}.
+PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event ().An overpressure event will occur when the pressure is beyond the design pressure (also known as maximum allowable working pressure, MAWP) \cite{marsha_lecture_nodate}. Detailed calculation based on API 250 standard \cite{api_standard_520_sizing_2013} of the sizing of safety relief valves for liquid can be viewed in Appendix section \ref{app:PRV}.
 
 The PRV was designed to relief 20\% of the reactant flow within one minute. Due to highly flammable nature of nitration reaction, the maximum allowable accumulated pressure was designed for fire exposure at 1.21 ratio increase to the maximum allowable working pressure (MAWP), which is then calculated to be 1.74 bar. 
 
@@ -130,10 +131,10 @@ The final PRV size for schedule 40 steel was calculated to have an OD of 101.6mm
 
 
 \subsubsection{Flange types and dimension}
-Class 150 flanges was chosen from Table 16 of BS 1560:1989, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating for the stainless steel type 304L (material group 2.3). Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution ().
+Class 150 flanges was chosen from Table 16 of BS 1560:1989, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating for the stainless steel type 304L (material group 2.3). Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution \cite{ulma_forge_welding_2020}.
 Based on JPI 75-48-73 standard, the nominal pipe size (NPS) for the flange was selected as 54" for class 150 flanges.
 \subsubsection{Gasket type and dimension}
-Gasket is a sealing material placed between flanges to create a leak-proof sealing (hardhat). A narrow-faced, ring joint gasket type was chosen due to the suitability of design. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of 124 $Nmm^{-1}$. (BS5500)
+Gasket is a sealing material placed between flanges to create a leak-proof sealing \cite{varun_piping_nodate}. A narrow-faced, ring joint gasket type was chosen due to the suitability of design. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of 124 $Nmm^{-1}$. (BS5500)
 
 \subsubsection{Bolt types and dimension}
 The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding 192 $N/mm^2$ design stress for temperature not exceeding 50C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as 1492mm, with 56 bolts of 32mm diameter each for 54" NPS flanges. 
