@@ -184,13 +184,16 @@ The \ch{CO2} and \ch{NO2} emissions (in both the BA and the BH scenario), fall b
         \centering
         \includegraphics[width=\linewidth]{figures/CO2plumeBH.jpg}
         \caption{$CO_2$ plume model from BH scenario}
+        \label{fig:CO2plumeBH}
     \end{subfigure}%
     ~ 
     \begin{subfigure}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/NO2plumeBH.jpg}
         \caption{$NO_2$ plume model from BH scenario}
+         \label{fig:NO2plumeBH}
     \end{subfigure}
+    
 \end{figure*}
 
 
@@ -223,14 +226,14 @@ The greenhouse gas emissions from Nitroma's plant are summarised in \cref{tab:GH
 \begin{tabular}{@{}lllll@{}}
 \toprule
  & Embodied energy (MJ/kg)  \\ \midrule
-Raw materials    & 6.643   \\
+Raw materials    & 152.76   \\
 Transportation     &  0.012  \\
 Production                  & 0.024   \\
-Total                  & 6.679   \\\bottomrule
+Total                  & 152.79   \\\bottomrule
 \end{tabular}
-\end{wraptable}
+\end{wraptable} 
 
-Embodied energy in Nitroma's plant was estimated per kilogram of product manufactured. The energy involved in the extraction of raw material, transportation of the raw material to Nitroma's plant and finally manufacturing the final products are summarised in \cref{tab:embodied}. The embodied energy in the raw materials were estimated using heat of reaction and heat of formation for each species. The embodied energy in transportation was determined based on the distance travelled by heavy duty vehicles from the supplier to the plant. Embodied energy in production is the electricity consumed throughout the plant to process the final products. 
+Embodied energy in Nitroma's plant was estimated per kilogram of product manufactured. The energy involved in the extraction of raw material, transportation of the raw material to Nitroma's plant and finally manufacturing the final products are summarised in \cref{tab:embodied}. The embodied energy in the raw materials were approximated from OpenLCA, using Cumulative Energy Demand (CED) metric. The embodied energy in transportation was determined based on the distance travelled by heavy duty vehicles from the supplier to the plant. The embodied energy from production is the electricity consumed throughout the plant to process the final products. 
 
 
 
