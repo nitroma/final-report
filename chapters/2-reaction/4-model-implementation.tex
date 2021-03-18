@@ -1,12 +1,12 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 
-COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry (i.e. in cylindrical coordinates). The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below.
+COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry (i.e. in cylindrical coordinates). The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Further details of the equations implemented are available in \cref{app:comsol}.
 
 \subsubsection{Reaction zone}
 
 \paragraph{Mass transfer: Brinkman equations}
-The Brinkman equations describe flow through porous media
+The Brinkman equations describe laminar flow through porous media, and are an extension of Darcy's law \cite{comsol_cfd_2020}. A key parameter is the bed porosity; this was found to be \num{0.277} from the porosity of the sintered SiC support (0.30) and the required catalyst loading of \SI{300}{\kg\per\cubic\m}. Fluid properties (density, viscosity) were taken from Aspen PRoperte
 
 \paragraph{Chemical reaction: Transport of concentrated species}
 
@@ -76,7 +76,10 @@ As safety is one of the key priorities of Nitroma in all decision making, the ma
 \subsubsection{Number of tubes}
 A sensitivity analysis was performed on the number of reactor tubes required in Figure \ref{fig:S5-T-X}. An optimal number of 7 was chosen as it provides the lowest maximum temperature at 360K and spends a comparatively short length at a maximum temperature, which will reduce the occurrence of a thermal runaway.
 
-According to the modified Ergun equation, shown in equation \ref{eqn:ergun} the pressure drop ($\Delta p$) is inversely proportional to the length of the reactor, a shorter reactor is more favourable.  This is also evident in Figure \ref{fig:S5-T-X}, where the targeted conversion of 98\% can be achieved well within 4m of reactor length. As the number of tubes increases, the flowrate per tube decreases thus providing a higher residence time, leading to an overall increase in conversion. As the number of reactor tubes increases, the velocity flow across all reactors decreases thus
+According to the modified Ergun equation, shown in equation \ref{eqn:ergun} the pressure drop ($\Delta p$) is inversely proportional to the length of the reactor, a shorter reactor is more favourable.  This is also evident in Figure \ref{fig:S5-T-X}, where the targeted conversion of 98\% can be achieved well within 4m of reactor length. As the number of tubes increases, the flowrate per tube decreases thus providing a higher residence time, leading to an overall increase in conversion. 
+
+Conversely, 
+
 
 The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
 \begin{equation}
