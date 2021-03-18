@@ -3,7 +3,7 @@
 
 \subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
 
-The (PNT + MNT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium \cite{seader_separation_2011}. Figure \ref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
+The (PNT + MNT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, depending on the composition, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium \cite{seader_separation_2011}. \Cref{fig:eutectic schematic}a is a schematic of this process. Here, starting from point 1 on the solid-liquid phase boundary, which is on the right-hand-side of the eutectic point, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
 \begin{equation}\label{eq:amount solid A equilibrium}
     \dot{M}_{\mathrm{solid}} = \frac{\dot{M}_{\mathrm{total}} (x_1 - x_2)}{1 - x_2}
 \end{equation}
@@ -16,15 +16,15 @@ where $\dot{M}_{\mathrm{solid}}$ is the equilibrium mass flow rate of crystallis
     \label{fig:eutectic schematic}
 \end{figure}
 
-Figure \ref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram for the (PNT + MNT) system, where the component fraction on the horizontal axis has been defined for PNT. Experimental data were obtained from DETHERM \cite{noauthor_detherm_2021} and are marked on this Figure as green circles. For the purpose of design, a model that is able to continuously predict the phase behaviour is needed. Initially, a van't Hoff-type relation from Moyers and Rousseau was used to give continuous predictions of the solid-liquid phase boundary on the right-hand-side of the eutectic point, \cite{moyers_crystallization_1987}
+\Cref{fig:eutectic schematic}b is a plot of the solid-liquid phase diagram for the (PNT + MNT) system, where the component fraction on the horizontal axis has been defined for PNT. Experimental data were obtained from DETHERM \cite{noauthor_detherm_2021} and are marked on this Figure as green circles. For the purpose of design, a model that is able to continuously predict the phase behaviour is needed. Initially, a van't Hoff-type relation from Moyers and Rousseau was used to give continuous predictions of the solid-liquid phase boundary on the right-hand-side of the eutectic point, \cite{moyers_crystallization_1987}
 \begin{equation}\label{eq:vantHoff}
     \ln(x) = \frac{H_{\mathrm{f}}}{R T}\left(\frac{T}{T_{\mathrm{m}}} - 1\right)
 \end{equation}
-where $x$ is the fraction of PNT, $H_f$ is the heat of fusion when PNT melts, $T$ is the equilibrium temperature, and $T_{m}$ is the melting point of pure PNT. However, as can be seen on Figure \ref{fig:eutectic schematic}b, van't Hoff's relation over-predicts the melting temperature at compositions approaching the eutectic point. A better description is thus necessary, and a van't Hoff-type logarithmic fit has been devised instead in the form of 
+where $x$ is the fraction of PNT, $H_f$ is the heat of fusion when PNT melts, $T$ is the equilibrium temperature, and $T_{m}$ is the melting point of pure PNT. However, as can be seen on \cref{fig:eutectic schematic}b, van't Hoff's relation over-predicts the melting temperature at compositions approaching the eutectic point. A better description is thus necessary, and a van't Hoff-type logarithmic fit has been devised instead in the form of 
 \begin{equation} \label{eq:fittedvantHoffcorrelation}
     \ln(x) = \frac{T - 323.87}{50.259}
 \end{equation}
-It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on Figure \ref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results, hence it has been applied for the design.
+It has been found that this fitted correlation would give an $R^2$ of 0.9901 against experimental data; indeed, as can be seen on \cref{fig:eutectic schematic}b, predictions from this correlation, shown as the blue curve, do fit well with the experimental results, hence it has been applied for the design.
 
 In reality, the system needs time to reach thermodynamic equilibrium from where it starts off, which is why a physical crystalliser is needed. Kinetics of crystallisation in a MSMPR crystalliser will be explained in the following sections.
 
@@ -45,7 +45,7 @@ and $S$ is known as the supersaturation ratio. A third way of defining supersatu
 \begin{equation} \label{eq:deltaT}
      \Delta T = T - T_{\mathrm{eq}}
 \end{equation}
-whence $T$ is the equilibrium temperature corresponding to concentration $C$ in the liquid, and $T_{\mathrm{eq}}$ is the operated temperature to which the system has been super-cooled, i.e. in this design, $T_{\mathrm{eq}}$ is the operating temperature of the crystalliser and the specified design input. Figure \ref{fig:supersaturation} is a schematic which explains these definitions.
+whence $T$ is the equilibrium temperature corresponding to concentration $C$ in the liquid, and $T_{\mathrm{eq}}$ is the operated temperature to which the system has been super-cooled, i.e. in this design, $T_{\mathrm{eq}}$ is the operating temperature of the crystalliser and the specified design input. \Cref{fig:supersaturation} is a schematic which explains these definitions.
 
 \begin{figure}[h]
 \centering
@@ -152,7 +152,7 @@ The rate of crystal growth, $G$, is commonly expressed as a function of supersat
     \label{fig:ONT + MNT kinetics}
 \end{figure}
 
-Figure \ref{fig:ONT + MNT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in Figure \ref{fig:ONT + MNT kinetics},
+\Cref{fig:ONT + MNT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in \cref{fig:ONT + MNT kinetics},
 
 \begin{equation}  \label{eq:KG Ste g}
     G = K_G \cdot {Ste}^{g}
@@ -216,7 +216,7 @@ The fraction of PNT in the liquid, $x$, has a one-to-one correspondence to $C$, 
 
 \noindent Values of $T_{\mathrm{eq}}$, $T$, and $\Delta T$ in Equation \ref{eq:deltaT} can be computed by invoking the fitted van't Hoff-type correlation in Equation \ref{eq:fittedvantHoffcorrelation}. 
 
-The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be 280 K. As can be seen in Figure \ref{fig:eutectic schematic}, the eutectic point is roughly around 270 K. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid MNT forms when there is fluctuation in temperature upstream or with the heat transfer fluid. The composition of liquid at the inlet is such that the fraction of PNT, $x_{\mathrm{in}}$, is 0.8839, as given in Table \ref{tab:inlet crystalliser}. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
+The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be 280 K. As can be seen in \cref{fig:eutectic schematic}, the eutectic point is roughly around 270 K. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid MNT forms when there is fluctuation in temperature upstream or with the heat transfer fluid. The composition of liquid at the inlet is such that the fraction of PNT, $x_{\mathrm{in}}$, is 0.8839, as given in Table \ref{tab:inlet crystalliser}. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
 
 \begin{equation}
     H = 2D
@@ -327,11 +327,11 @@ The equation for the heat transfer area has been formulated using the length of 
     \label{fig:recovery vs volume crystalliser}
 \end{figure}
 
-\noindent The crystalliser recovery, $r_c$, and the modal size of crystal, $L_M$, have been calculated using Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curves in Figure \ref{fig:recovery vs volume crystalliser}a and Figure \ref{fig:recovery vs volume crystalliser}b. As can be seen on Figure \ref{fig:recovery vs volume crystalliser}a, the larger the vessel is, the more PNT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of PNT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at 90.5724\%, which is about the same as the theoretical maximum.
+\noindent The crystalliser recovery, $r_c$, and the modal size of crystal, $L_M$, have been calculated using Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curves in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. As can be seen on \cref{fig:recovery vs volume crystalliser}a, the larger the vessel is, the more PNT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of PNT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at 90.5724\%, which is about the same as the theoretical maximum.
 
-As can be seen on Figure \ref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. As explained earlier, the larger the volume is, the closer the system is operated near equilibrium with a lower $G$, whereas $\tau$ increases with greater volume by definition. This explains the existence of the turning point. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in Section \ref{section: hydraulic wash column}. However, at volumes larger than the turning point at around 0.025 m$^3$, the change of $L_M$ does not go beyond one order of magnitude, so it will not make a significant impact on the hydraulic wash column design. 
+As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. As explained earlier, the larger the volume is, the closer the system is operated near equilibrium with a lower $G$, whereas $\tau$ increases with greater volume by definition. This explains the existence of the turning point. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in Section \ref{section: hydraulic wash column}. However, at volumes larger than the turning point at around 0.025 m$^3$, the change of $L_M$ does not go beyond one order of magnitude, so it will not make a significant impact on the hydraulic wash column design. 
 
-To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. This sets the operating point for the crystalliser. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in Figure \ref{fig:recovery vs volume crystalliser}a and Figure \ref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient,$U$, has been calculated as 1452.64 W m$^{-2}$ K$^{-1}$, and total heat exchange area, $A_s$, is 2.070 m$^2$. A stream table for the crystalliser is available in Table \ref{tab:crystalliser stream table}.
+To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. This sets the operating point for the crystalliser. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient,$U$, has been calculated as 1452.64 W m$^{-2}$ K$^{-1}$, and total heat exchange area, $A_s$, is 2.070 m$^2$. A stream table for the crystalliser is available in Table \ref{tab:crystalliser stream table}.
 
 \begin{table}[h]
 \centering
@@ -345,7 +345,7 @@ Pressure (atm)   &      1    &  1 \\ \midrule
 Phase               &   Liquid    & Solid + liquid \\ \midrule
 Liquid fraction       &   1       & 0.1995 \\ \midrule
 Solid fraction         &  0        & 0.8005 \\ \midrule
-MNT (kmol/day)          &  2.27        & 2.27 \\ \midrule
+MNT (kmol/day)          &  2.72        & 2.72 \\ \midrule
 ONT (kmol/day)        &    0.17      & 0.17 \\ \midrule
 PNT (kmol/day)          &    21.99      & 21.99 \\ \bottomrule
 \end{tabular}
@@ -383,7 +383,7 @@ whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivi
 
 A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{fouling}. This resistance is too small to make an impact on the vessel design. 
 
-To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. Figure \ref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in Figure \ref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermoal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in Section \ref{crystalliser conclusions}.
+To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. \Cref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in \cref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermoal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in \cref{separation conclusions}.
 
 \begin{figure}[h]
     \centering
@@ -396,7 +396,7 @@ To analyse the effect of the process side fouling, the thickness of fouling, $l_
 
 \subsection{Physical design} \label{sec:physical design crystalliser}
 
-The crystalliser has been designed in accordance with the British Standards. A general schematic for the crystalliser vessel is available in Figure \ref{fig:crystalliser schematic}.  SolidWorks\textsuperscript{\textregistered} has been employed for the mechanical design. The crystalliser has been designed to consist of a cylindrical shell and two ellipsoidal domed ends. The internal diameter of the cylindrical shell, $D_i$, is taken to be the same as $D$ defined in Section \ref{sec: crystalliser mass balance}. For the domed ends, the inside crown radius, $R$, and the inside knuckle radius, $r$, are given as 
+The crystalliser has been designed in accordance with the British Standards. A general schematic for the crystalliser vessel is available in \cref{fig:crystalliser schematic}.  SolidWorks\textsuperscript{\textregistered} has been employed for the mechanical design. The crystalliser has been designed to consist of a cylindrical shell and two ellipsoidal domed ends. The internal diameter of the cylindrical shell, $D_i$, is taken to be the same as $D$ defined in Section \ref{sec: crystalliser mass balance}. For the domed ends, the inside crown radius, $R$, and the inside knuckle radius, $r$, are given as 
 \begin{align}
     R &= 0.8 D_i &
     r &= 0.146 D_i
@@ -422,9 +422,11 @@ Helical heating coils with internal dimensions specified in Section \ref{sec:hea
 \textbf{Knuckle radius (mm)}                & 78.01 \\ \midrule
 \textbf{NPS of ports (inch)}                & 2 \\ \midrule
 \textbf{Flange class}                       & 300 \\ \midrule
+\textbf{Coil outer diameter (mm)}           & 62.00 \\ \midrule
+\textbf{Coil pitch (mm)}                    & 72.00 \\ \midrule
 \textbf{Stirrer diameter (mm)}              & 431.10 \\ \midrule
 \textbf{Number of stirrer blade}            & 3 \\ \midrule
-\textbf{Stirrer blade length (mm)}          & 328.8 \\ \bottomrule
+\textbf{Stirrer blade length (mm)}          & 328.80 \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -444,4 +446,3 @@ Helical heating coils with internal dimensions specified in Section \ref{sec:hea
 \end{figure} 
 
 \newpage
-\subsection{Conclusions and recommendations} \label{crystalliser conclusions}
