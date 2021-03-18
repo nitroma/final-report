@@ -31,10 +31,10 @@ The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materia
 A co-current coolant flow within the secondary cooling tube serves to remove excess heat from the reaction. A nonisothermal flow coupling links heat and mass transfer.
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
-
-Due to the high flow rate through the tube and its small diameter, the flow regime is turbulent. Temperature-dependent fluid density and viscosity are determined from the COMSOL material library. The inlet boundary condition is set to a mass flow of \SI{0.3}{\kg\per\s}
+Due to the high flow rate through the tube and its small diameter, the flow regime is turbulent. Temperature-dependent fluid density and viscosity are determined from the COMSOL material library. The inlet boundary condition is set to a mass flow of \SI{0.3}{\kg\per\s} and the outlet to a pressure of \SI{1}{\atm}.
 
 \paragraph{Heat transfer: fluid}
+Temperature-dependent thermal conductivity of the fluid is found from the COMSOL material library. 
 
 \subsection{Optimisation and sensitivity analysis}
 
