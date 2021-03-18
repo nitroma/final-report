@@ -11,7 +11,7 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate} . Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as .
+Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate}. This causes the oxidation of the protective chromium passive film and producing chromium ions $Cr^{6+}$ and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
@@ -21,6 +21,7 @@ According to section X, the reactor must operate within the temperature range of
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
 \end{equation}
+
 \subsubsection{Shell}
 Similarly, using the \citeref{eqn:designpressure}, ($p_d$) for the cooling water vessel was calculated to be 1.1 bar from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
@@ -30,6 +31,7 @@ Similarly, using the \citeref{eqn:designpressure}, ($p_d$) for the cooling water
 \subsubsection{Reactor tube dimensions}
 \label{sec:reactortube}
 Based on section \ref{sec:detailedreactor}, the total flowrate across the entire reactor was calculated to be $1.32 \times 10^{-4} m^3s^{-1}$, thus the flowrate across one individual reactor is calculated to be  $1.88 \times 10^{-5} m^3s^{-1}$. An optimal length of \SI{4.2}{\metre} and a final diameter of the reactor tubes of \SI{230}{\milli \metre} were set as previously mentioned in \citeref{sec:coolanttemp} and \citeref{sec:axialdispersion}. 
+
 The minimum thickness of the reactor tubes ($e_{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
 \begin{equation}
     e_{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = 0.145mm
@@ -44,7 +46,7 @@ where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section
     \caption{3D cross section of reactor tube arrangement}
     \label{fig:reactortubearrangement}
 \end{wrapfigure}
-The bundle of 7 tubes was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
+The bundle of 7 tubes was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 
 \subsubsection{Secondary cooling tube dimensions}
@@ -59,12 +61,12 @@ The arrangement of the secondary cooling tube within the reactor tubes can be vi
 
 \subsubsection{Shell dimensions}
 The diameter of the shell was 1.5m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
-The minimum thickness of the shell ($e_{shell}$) was calculated using the equation \ref{eqn:minthicknessshell},
+The minimum thickness of the shell ($e_{shell}$) was calculated using equation \citeref{eqn:minthicknessshell},
 \begin{equation}
     e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = 0.577mm
     \label{eqn:minthicknessshell}
 \end{equation}
-where $D_i$ set as 1500mm, $p_d$ as 0.11 and $f$ value of 143$Nmm_{-2}$. The minimum thickness of the shell was calculated to be 0.577mm. After taking into account corrosion allowance of 1.5mm and other welding considerations, a final shell thickness of 5mm was chosen. 
+where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of 143$Nmm^{-2}$. The minimum thickness of the shell was calculated to be \SI{0.577}{\milli \metre}. After taking into account corrosion allowance of \SI{1.5}{\milli \metre} and other welding considerations, a final shell thickness of \SI{5}{\milli \metre} was chosen. 
 
 \subsubsection{Head dimensions}
 %A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
@@ -82,7 +84,7 @@ The minimum thickness ($e_{head}$)of the hemispherical head was calculated using
     e_{head} = \frac{pD_i}{4f-1.2p} = \frac{0.14 \times 1500}{4 \times 143 - 1.2 \times 0.14} = 0.26mm
     \label{eqn:hemisphericalend}
 \end{equation}
-with $p$ set as 1.4bar, $D_i$ set as 1500mm, $f$ value set as 143$Nmm^{-2}$.  The minimum thickness of the hemispherical end was calculated to be 0.26mm, but a final head thickness of 5mm was chosen to complement the thickness of the shell for ease of welding. 
+with $p$ set as 1.4bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as 143$Nmm^{-2}$.  The minimum thickness of the hemispherical end was calculated to be \SI{0.26}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
 %-refer BS5500 page 78 of the pdf
 
 The minimum distance ($L_{im}$) between ports were calculated using the equation \ref{eqn:mindistance} below,
@@ -90,7 +92,7 @@ The minimum distance ($L_{im}$) between ports were calculated using the equation
     L_m = \sqrt{(2r_{im}+e_{m})e_m} = \sqrt{(2 \times 1500 + 5)5} = 122.6mm
     \label{eqn:mindistance}
 \end{equation}
-where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the shell. The minimum distance between ports on the dome was calculated to be 122.6mm apart. 
+where $r_{im}$ denotes the radius of inner diameter and $e_m$ denotes the thickness of the shell. The minimum distance between ports on the dome was calculated to be \SI{122.6}{\milli \metre} apart. 
 
 %-label and explain this equation
 %rewrite based on hemispherical
@@ -113,19 +115,18 @@ The inlet and outlet of the reactant flow were placed at the top right and top l
     A &= \frac{Q_v}{U} &
     \mathrm{D} &= \sqrt{\frac{4A}{\pi}}
 \end{align}
-where $Q_v$ is defined as $9.24 \times 10^{-4} m^3s^{-1}$ and a first approximation of $0.1 ms^{-1}$ liquid velocity was assumed to achieve a initial port diameter of 108.5mm. Based on BS 1600:1991, the diameter of the reactant inlet and outlet ports were chosen to have an OD of 114.3mm (4" NPS) with 6mm of wall thickness. 
+where $Q_v$ is defined as $9.24 \times 10^{-4} m^3s^{-1}$ and a first approximation of $0.1 ms^{-1}$ liquid velocity was assumed to achieve a initial port diameter of \SI{108.5}{\milli \metre}. Based on BS 1600:1991, the diameter of the reactant inlet and outlet ports were chosen to have an outer diameter (OD) of \SI{114.3}{\milli \metre} (4" NPS) with \SI{6}{\milli \metre} of wall thickness. 
 
 \subsubsection{Cooling water flow port design}
-Similarly, the outer diameter pipe diameter of both primary and secondary cooling water flow was calculated as previously described. The 
-The diameter of the primary cooling water port was defined to have an OD of 219.1mm (8" NPS) with 6.55mm of wall thickness. The diameter of the secondary cooling tube were defined as OD of 60mm (2" NPS) with 4mm of wall thickness. All port dimensions were calculated based on information from BS 1600:1991. 
+Similarly, the outer diameter pipe diameter of both primary and secondary cooling water flow was calculated as previously described. The diameter of the primary cooling water port was defined to have an OD of \SI{219.1}{\milli \metre} (8" NPS) with \SI{6.55}{\milli \metre} of wall thickness. The diameter of the secondary cooling tube were defined as OD of \SI{60}{\milli \metre} (2" NPS) with \SI{4}{\milli \metre} of wall thickness. All port dimensions were calculated based on information from BS 1600:1991. 
 
 
 \subsubsection{Pressure relief valve design}
-PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event ().An overpressure event will occur when the pressure is beyond the design pressure (also known as maximum allowable working pressure, MAWP) \cite{marsha_lecture_nodate}. Detailed calculation based on API 250 standard \cite{api_standard_520_sizing_2013} of the sizing of safety relief valves for liquid can be viewed in Appendix section \ref{app:PRV}.
+PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event. An overpressure event will occur when the pressure is beyond the design pressure (also known as maximum allowable working pressure, MAWP) \cite{marsha_lecture_nodate}. Detailed calculation based on API 250 standard \cite{api_standard_520_sizing_2013} of the sizing of safety relief valves for liquid can be viewed in \citeref{app:PRV}.
 
-The PRV was designed to relief 20\% of the reactant flow within one minute. Due to highly flammable nature of nitration reaction, the maximum allowable accumulated pressure was designed for fire exposure at 1.21 ratio increase to the maximum allowable working pressure (MAWP), which is then calculated to be 1.74 bar. 
+The PRV was designed to relief 20\% of the reactant flow within one minute. Due to highly flammable nature of nitration reaction, the maximum allowable accumulated pressure was designed for fire exposure at 1.21 times the maximum allowable working pressure (MAWP), which is then calculated to be 1.74 bar. 
 
-The final PRV size for schedule 40 steel was calculated to have an OD of 101.6mm (3 $\frac{1}{2}$" NPS) and a wall thickness of 5.74mm.
+The final PRV size for schedule 40 steel was calculated to have an OD of \SI{101.6}{\milli \metre} (3 $\frac{1}{2}$" NPS) and a wall thickness of \SI{5.74}{\milli \metre}.
 %- Inlet of water on top, outlet of water at the bottom. Size the water
 
 %what is the arramgement of the piping? are we looking at all 19 stacked into one huge tube of diameter 100+cm? 
@@ -138,7 +139,7 @@ Based on JPI 75-48-73 standard, the nominal pipe size (NPS) for the flange was s
 Gasket is a sealing material placed between flanges to create a leak-proof sealing \cite{varun_piping_nodate}. A narrow-faced, ring joint gasket type was chosen due to the suitability of design. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of 124 $Nmm^{-1}$. (BS5500)
 
 \subsubsection{Bolt types and dimension}
-The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding 192 $N/mm^2$ design stress for temperature not exceeding 50C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as 1492mm, with 56 bolts of 32mm diameter each for 54" NPS flanges. 
+The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding 192 $N/mm^2$ design stress for temperature not exceeding 50°C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as \SI{1492}{\milli \metre}, with 56 bolts of \SI{32}{\milli \metre} diameter each for 54" NPS flanges. 
 
 \subsection{Overall design}
 The overall cross section design of the reactor can be seen in \cref{fig:mainreactor} below. Additional mechanical design drawings from SolidWorks are included in \cref{app:engineeringdesign} .
