@@ -1,13 +1,35 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 \label{sec: modelimplementation}
+
+\begin{wraptable}{r}{0.6\linewidth}
+\vspace{-\intextsep}
+\caption{Reactor overview}
+\label{tab:reactoroverview}
+\begin{tabular}{@{}lS[table-format=4.2e1]s@{}}
+\toprule
+Parameter                            & {Value} & {Unit}         \\ \midrule
+Overall volumetric flowrate          & 1.32e-4 & \cubic\m\per\s \\
+Number of tubes                      & 7       &                \\
+Diameter of each channel             & 0.23    & \m             \\
+Diameter of inner cooling tube       & 0.02    & \m             \\
+Wall thickness of inner cooling tube & 5       & \mm            \\
+Area of each channel                 & 3.14e-2 & \square\m      \\
+Length of reactor                    & 4.3     & \m             \\
+Bed voidage                          & 0.277   &                \\
+Mass of H-mordenite required         & 59      & \kg            \\
+Mass of inert SiC                    & 2090    & \kg            \\
+Volume of reactor tubes              & 9.45e-1 & \cubic\m       \\ 
+Total shell volume                   & 9.2     & \cubic\m       \\ \bottomrule
+\end{tabular}
+\end{wraptable}
+
 COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry.
 
 \subsection{Physics setup}
-The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Further details of the equations implemented are available in \cref{app:comsol}.
+The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Key parameters of the reactor design are presented in \cref{tab:reactoroverview}, and further details of the equations implemented are available in \cref{app:comsol}.
 
 \subsubsection{Reaction zone}
-
 Within this zone, nonisothermal flow and reacting flow couplings are used to link heat and mass transfer, and chemical reaction with mass transfer, respectively.
 
 \paragraph{Mass transfer: Brinkman equations}
@@ -20,14 +42,12 @@ Reaction rate laws outlined in \cref{sec:R1-kinetics} were implemented to define
 A critical parameter for heat transfer in the bed is the overall thermal conductivity. This was found through a volume-average model considering the conductivities of the fluid (\SI{0.187}{\W\per\m\per\K}), catalyst (\SI{3}{\W\per\m\per\K}) and sintered SiC support (\SI{40}{\W\per\m\per\K} at \SI{30}{\percent} porosity \cite{jang_thermophysical_2007}, as opposed to \SI{120}{\W\per\m\per\K} for bulk SiC \cite{accuratus_silicon_2013}) phases within the bed. Upstream reactant temperature was set to \SI{330}{\K}, following Aspen. A convective heat transfer coefficient of \SI{500}{\W\per\square\m\per\K} was defined for the outer boundary of the reaction zone, to model heat removal by the shell-side cooling fluid. Additionally, conduction into the wall of the inner cooling tube was modelled.
 
 \subsubsection{Wall}
-
 The secondary cooling tube runs axially along the centre of the tubular reactor.
 
 \paragraph{Heat transfer: Solid}
 The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materials library, with a thermal conductivity of \SI{44.5}{\W\per\m\per\K}. No conduction from the tube wall into the tube sheets at the ends of the reaction was modelled.
 
 \subsubsection{Coolant zone}
-
 A co-current cooling water flow within the secondary cooling tube serves to remove excess heat from the reaction. A nonisothermal flow coupling links heat and mass transfer.
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
@@ -85,18 +105,16 @@ The results in \cref{fig:comsol-S3-T-X} showed that increasing the \ch{HNO3} : T
 As safety is one of the key priorities of Nitroma in all decision making, the maximum temperature in the reactor were also analysed for both cases before making a final decision. Both cases were found to be below the safe temperature limit of \SI{363}{\K}, hence, a molar flowrate ratio of 2 was selected.
 
 \subsubsection{Number of tubes}
-A sensitivity analysis was performed on the number of reactor channels, shown in \cref{fig:S5-T-X}. An interesting point to note is that increasing number of tubes raises the average temperature as the peak temperature is more broad and spread out across the reactor channel. Although this would suggest that the rate of reaction and conversion would be higher, the opposite was observed. This can be explained by the decrease in volumetric flowrate per tube as the number of tubes increases. The effect of longer residence time in each channel outweighs the effect of higher average temperature in each channel.
+A sensitivity analysis was performed on the number of reactor channels, shown in \cref{fig:S5-T-X}. An interesting point to note is that increasing number of tubes raises the average temperature as the peak temperature is more broad and spread out across the reactor channel. Although this would suggest that the rate of reaction and conversion would be higher, the opposite was observed. This can be explained by the decrease in volumetric flowrate per tube as the number of tubes increases. The effect of longer residence time in each channel outweighs the effect of higher average temperature in each channel. As a result, having more channels increases the overall conversion while reducing the peak temperature.
 
-From \cref{fig:S5-T-X}, it can also be seen that the higher average temperature does not lead to an expected higher conversion, proving that the higher residence time and reduced velocity effects have offset the contrasting temperature effects.   
-
-An optimal number of 7 was chosen as it provides the lowest maximum temperature at 360K and spends a comparatively short length at a maximum temperature, which will reduce the occurrence of a thermal runaway.where the targeted conversion of 98\% can be achieved well within 4m of reactor length. 
+An optimal number of 7 tubes was chosen as it provides the lowest maximum temperature at 360K and spends a comparatively short length at a maximum temperature, which will reduce the occurrence of a thermal runaway. The targeted conversion of \SI{98}{\percent} can be achieved within \SI{4}{\metre} of reactor length. 
 
 The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
 \begin{equation}
     n^3 - (n-1)^3 = 3n(n-1)+1
     \label{eqn: hexagon}
 \end{equation}
-where $n$ represents the sequence of hexagonal number. The further explanation on the heat transfer benefits will be discussed in Section \ref{sec:reactortube}.
+where $n$ represents the sequence of hexagonal number. Further explanation on the heat transfer benefits will be discussed in Section \ref{sec:reactortube}.
 
 \begin{figure}[h]
     \begin{minipage}[t]{0.45\linewidth}
@@ -116,7 +134,7 @@ A Pareto frontier illustrating the tradeoff between reactor performance (i.e. mi
 
 \subsubsection{Coolant temperature}
 \label{sec:coolanttemp}
-A sensitivity analysis was performed on the cooling water inlet temperature as temperature control was deemed the most important parameter for safety and performance evaluation. The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature. Any changes in temperature would have a noticeable knock-on effect on the rate of reaction since the nitration process is sensitive to temperature \cite{chen_experimental_1998}. The region of interest in \cref{fig:comsol-S4-CW-X-T} is between \SI{325}{\K} \pm \SI{5}{\K}. Such a large fluctuation in temperature is unlikely to happen as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. For each cooling stream to have a significant effect on the overall mixed cooling water stream temperature, there needs to be a significant deviation in the unit operations. The safety alarm systems in Nitroma's plant would alert the operators if that happens, therefore there is a low risk for the cooling water temperature to fluctuate by \pm \SI{5}{\K}. However, a conservative approach is taken when designing the HEX reactor. In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in \cref{fig:comsol-conversion}. When taking into account the maximum deviation of \pm \SI{5}{\K}, the reactor length is extended and the final reactor length is determined to be \SI{4.2}{\metre}. The summary of cooling water stream used in the HEX reactor can be found in \cref{tab:cwtable}.
+A sensitivity analysis was performed on the cooling water inlet temperature as temperature control was deemed the most important parameter for safety and performance evaluation. The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature. Any changes in temperature would have a noticeable knock-on effect on the rate of reaction since the nitration process is sensitive to temperature \cite{chen_experimental_1998}. The region of interest in \cref{fig:comsol-S4-CW-X-T} is between \SI{325}{\K} \pm \SI{5}{\K}. Such a large fluctuation in temperature is unlikely to happen in reality as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. For each cooling stream to have a significant effect on the overall mixed cooling water stream temperature, there needs to be a significant deviation in the unit operations. The safety alarm systems in Nitroma's plant would alert the operators if that happens, therefore there is a low risk for the cooling water temperature to fluctuate by \pm \SI{5}{\K}. However, a conservative approach is taken when designing the HEX reactor. In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in \cref{fig:comsol-conversion}. When taking into account the maximum deviation of \pm \SI{5}{\K}, the reactor length is extended and the final reactor length is determined to be \SI{4.2}{\metre}. The summary of cooling water stream used in the HEX reactor can be found in \cref{tab:cwtable}.
 
 \begin{figure}[h]
     \begin{minipage}[t]{0.45\linewidth}
@@ -135,9 +153,9 @@ A sensitivity analysis was performed on the cooling water inlet temperature as t
 \label{finalresults}
 Using the optimised parameter values above, the reaction was simulated in the HEX nitration reactor. It showed robust performance by meeting the desired safety and reaction performance benchmark.
 
-As illustrated in \cref{fig:comsol-conversion}, the reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in \cref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds at the highest rate in the first \SI{0.5}{\metre} before gradually decreasing after that. This results in a spike in temperature (\cref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which help keep the temperature below the safe temperature limit of \SI{363}{\K}. 
+As illustrated in \cref{fig:comsol-conversion}, the reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in \cref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds the fastest in the first \SI{0.5}{\metre} before gradually decreasing after that. This results in a spike in temperature (\cref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which helped keep the temperature below the safe temperature limit of \SI{363}{\K}. 
 
-An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature. The temperature of the reaction fluid followed an asymmetrical parabola course due to the different heat flux across the inner and outer sides of the reaction annulus. A maximum temperature of \approx \SI{360.5}{\K} was located somewhere in the middle of the reaction annulus. Without either of the external or internal cooling water, the maximum temperature within the reactor would have increased well above \SI{363}{\K}, and hotspot would be found in the radial centre or the channel walls respectively . This emphasises the importance of Nitroma's novel triple concentric tube arrangement to achieving a safe and efficient reaction.
+An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature. The temperature of the reaction fluid followed an asymmetrical parabola course due to the different heat flux across the inner and outer sides of the reaction annulus. A maximum temperature of \approx \SI{360.5}{\K} was located somewhere in the middle of the reaction annulus. Without either of the external or internal cooling water, the maximum temperature within the reactor would have increased well above \SI{363}{\K}, and hotspot would be found in the radial centre or the channel walls respectively. This emphasises the importance of Nitroma's novel triple concentric tube arrangement to achieving a safe and efficient reaction.
 
 Overall, a \SI{98}{\%}conversion that is desired for the nitration reaction was achieved within the reactor. As expected, the more valuable ONT and PNT were produced in much greater amounts as compared to MNT. These products are later fed to other parts of Nitroma's plants to be converted to final products to be sold.
 

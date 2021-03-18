@@ -1,28 +1,6 @@
 % !TeX root = ../../main.tex
 \section{Detailed reactor modelling: Toluene nitration (R101)} \label{sec:detailedreactor}
 
-\begin{wraptable}{r}{0.5\linewidth}
-\centering
-\caption{Reactor overview}
-\label{tab:reactoroverview}
-\begin{tabular}{@{}lS[table-format=4.2e1]s@{}}
-    \toprule
-    Parameter                    & {Value} & {Unit}         \\ \midrule
-    Overall volumetric flowrate  & 1.32e-4 & \cubic\m\per\s \\
-    Number of tubes              & 7       &                \\
-    Diameter of each channel     & 0.23    & \m             \\
-    Diameter of inner cooling tube & 0.02 & \m \\
-    Area of each channel         & 3.14e-2 & \square\m      \\
-    Length of reactor            & 4.3     & \m             \\
-    Bed voidage                  & 0.277   &                \\
-    Mass of H-mordenite required & 59      & \kg            \\
-    Mass of inert SiC            & 2092    & \kg            \\
-    Volume of liquid in reactor  & 9.24e-1 & \cubic\m       \\
-    Total reactor volume         & 2.37    & \cubic\m       \\
-    Total pressure drop          & 1.41e-1 & \bar           \\ \bottomrule
-\end{tabular}
-\end{wraptable}
-
 The nitration of toluene in the heat exchanger reactor (R101) was chosen to be designed in detail for a few reasons. Firstly, the nitration process is most commonly carried out in batch or semi-batch reactors in industry \cite{dugal_nitrobenzene_2005}. Even though there have been incidents of nitration plant explosions such as the Xiangshui plant explosion, the industry has been slow in addressing these safety issues. As part of Nitroma's efforts to enhance the safety of the nitration process by transitioning from batch to continuous process, designing the nitration reactor in detail will allow Nitroma to develop a novel continuous reactor that is inherently safer. Moreover, the nitration reaction is a highly exothermic reaction, so the reactor needs to be robust in controlling the temperature to prevent thermal runaway. The reactor will be optimised to balance safety needs as well as efficient reaction performance. 
 
 Additionally, the industrial nitration reaction typically uses sulfuric acid to protonate the nitric acid to form nitronium ions that are the main nitrating species \cite{sreedhar_scientific_2013}. However, the use of sulfuric acid is not environmentally-friendly as energy is needed to separate the products from the acid and further treatment needs to be done before discharging the sulfuric acid as a wastestream. Therefore, a detailed design of the nitration reactor will allow Nitroma to explore solid catalysts as a substitute, which will be key to Nitroma's goal of being a green company.  
@@ -117,8 +95,7 @@ Nitration is a dangerous process due to its highly exothermic nature. \textcite{
 Therefore, to prevent thermal runaway, nitration reactors in industry are typically operated between \si{10} – \SI{50}{°C} below the temperature of runaway reaction \cite{noauthor_lees_2012}. Taking an average temperature between those numbers gives a maximum operating temperature of \SI{30}{\K} below the thermal decomposition of nitric acid of \SI{393}{\K}. Subsequent modelling and safety considerations will aim to keep operating temperature of the nitration process below the safe limit of \SI{363}{\K}. This assumption is in agreement with literature, where most nitration reactions are operated below \SI{373}{\K} as reported by \textcite{chen_experimental_1998}.
 
 As seen in \cref{fig:Adiabatic-without-cooling}, it is infeasible to operate the reactor without controlling its temperature. \textcolor{red}{[insert analysis after the plot is added]}
-
-Even with an external cooling jacket, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and a hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns through the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
+Even with an external cooling jacket, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and a hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns due to the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
 
 \begin{figure}[h]
     \centering
@@ -148,7 +125,7 @@ Even with an external cooling jacket, the cooling system is insufficient to keep
 \subsubsection{Catalyst support}
 Silicon Carbide (SiC) was chosen as the catalyst support owing to its high thermal conductivity (\SI{120}{\W\per\m\per\K} in the bulk, as compared to \SI{3}{\W\per\m\per\K} for H-Mordenite). To immobilise the catalyst, a porous sintered SiC support was selected, with a porosity of 0.30 and thermal conductivity of \SI{40}{\W\per\m\per\K} \cite{jang_thermophysical_2007}. This helps to lower the overall temperature in the reactor by enhancing heat removal from the catalyst surface to the cooling zones \cite{ledoux_silicon_2001}. Although as a result, the rate of reaction and conversion are relatively lower, using SiC keeps the temperature below the critical temperature at which thermal runaway initiates.
 
-Besides, an important feature of the sintered SiC catalyst support is that the tortuosity of the structure promotes homogeneous mixing of the reactants, much like a static mixer \cite{duong-vi_silicon_2016}. As the nitration of toluene is a multiphase reaction, the SiC catalyst ensures well-mixed flow, which increases the interphase contact area between the aqueous and organic phase, and subsequently increases the rate of reaction. Having the SiC catalyst support allows the reaction to be modelled as a single phase reaction in \cref{sec: modelimplementation}.
+Besides, an important feature of the sintered SiC catalyst support is that the tortuosity of the structure promotes homogeneous mixing of the reactants, much like a static mixer \cite{duong-viet_silicon_2016}. As the nitration of toluene is a multiphase reaction, the SiC catalyst ensures well-mixed flow, which increases the interphase contact area between the aqueous and organic phase, and subsequently increases the rate of reaction. Having the SiC catalyst support allows the reaction to be modelled as a single phase reaction in \cref{sec: modelimplementation}.
 
 Additionally, the nitration reactor would require 59 kg of H-Mordenite catalyst to achieve the desired rate and conversion. However, this could lead to collapse of the catalyst bed due to its weight, which could lead to significant attrition of catalyst and severe pressure drop. The mechanical strength of the SiC support will ensure the catalyst is strongly held in place when fluid flows through it. The strength of the SiC catalyst support is not expected to decrease over time because SiC forms a silica film when in contact with HNO3 solution, therefore rendering it passive against corrosion \cite{cook_corrosion_2013}. The strength and durability of SiC makes it an ideal material as a catalyst support. The SiC catalyst support used will be fabricated using the partial sintering process with \SI{30}{\%} porosity before coating it with H-Mordenite catalyst.
 
