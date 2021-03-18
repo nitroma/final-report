@@ -1,7 +1,10 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 
-COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry (i.e. in cylindrical coordinates). The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Further details of the equations implemented are available in \cref{app:comsol}.
+COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry (i.e. in cylindrical coordinates).
+
+\subsection{Physics setup}
+The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Further details of the equations implemented are available in \cref{app:comsol}.
 
 \subsubsection{Reaction zone}
 
@@ -27,7 +30,7 @@ A co-current coolant flow within the secondary cooling tube serves to remove exc
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
 
-Due to the high flow rate through the tube and its small diameter, the flow regime is turbulent. 
+Due to the high flow rate through the tube (\SI{0.3}{\kg\per\s}) and its small diameter, the flow regime is turbulent. 
 
 \paragraph{Heat transfer: fluid}
 
