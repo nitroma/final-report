@@ -10,33 +10,33 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds. Chromium carbides precipitate at the grain boundaries \cite{cm_selection_nodate}, which causes the oxidation of the protective chromium passive film and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which causes extreme reduction in corrosion resistance. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
+Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds. Chromium carbides precipitate at the grain boundaries \cite{cm_selection_nodate}, which causes the oxidation of the protective chromium passive film and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is known to cause extreme reduction in corrosion resistance. Thus, stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film \cite{ningshen_corrosion_2011}.
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
 \subsubsection{Reactor tube}
-According to section X, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
+According to Section \ref{sec:adiabatic}, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
 \end{equation}
 
 \subsubsection{Shell}
-Similarly, using the \cref{eqn:designpressure}, ($p_d$) for the cooling water vessel was calculated to be \SI{1.1}{\bar} from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 328K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
+Similarly, using the \cref{eqn:designpressure}, $p_d$ for the cooling water vessel was calculated to be \SI{1.1}{\bar} from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 328K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
 \subsection{Reactor dimension design}
 \label{sec:reactordimensions}
 
 \subsubsection{Reactor tube dimensions}
 \label{sec:reactortube}
-Based on section \ref{sec:detailedreactor}, the total flowrate across the entire reactor was calculated to be \SI{1.32e-4}{\cubic\m\per\s}, thus the flowrate across one individual reactor is calculated to be  \SI{1.88e-5}{\cubic\m\per\s}. An optimal length of \SI{4.2}{\metre} and a final diameter of the reactor tubes of \SI{230}{\milli \metre} were set as previously mentioned in \cref{sec:coolanttemp,sec:axialdispersion}. 
+The total flowrate across the entire reactor was calculated to be \SI{1.32e-4}{\cubic\m\per\s} (\cref{sec:detailedreactor}), thus the flowrate across one individual reactor is calculated to be  \SI{1.88e-5}{\cubic\m\per\s}. An optimal length of \SI{4.2}{\metre} and a final diameter of the reactor tubes of \SI{230}{\milli \metre} were set as previously mentioned in \cref{sec:coolanttemp,sec:axialdispersion}. 
 
-The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
+The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated using \cref{}{eqn:minthicknessreactor},
 \begin{equation}
     e_\mathrm{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = \SI{0.145}{\mm}
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards , yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$ \cite{noauthor_unfired_nodate}.
+where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from Section \ref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -45,7 +45,7 @@ where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section
     \caption{3D cross section of reactor tube arrangement}
     \label{fig:reactortubearrangement}
 \end{wrapfigure}
-The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
+7 tubes were selected as the optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
 \begin{equation}
     n^3 - (n-1)^3 = 3n(n-1)+1
     \label{eqn: hexagon}
@@ -54,11 +54,9 @@ where $n$ represents the sequence of hexagonal number.
 
 The tube bundle was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
-
-
 \subsubsection{Secondary cooling tube dimensions}
-As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes were designed to have a diameter of \SI{20}{\milli \metre} with a flowrate \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
-The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section figure \ref{fig:concentriccoolingwater}. 
+As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
+The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section \cref{fig:concentriccoolingwater}. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\linewidth]{chapters/2-reaction/figures/FYD conc tube with calc bw.png} 
@@ -67,7 +65,7 @@ The arrangement of the secondary cooling tube within the reactor tubes can be vi
 \end{figure}
 
 \subsubsection{Shell dimensions}
-The diameter of the shell was 1.5m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
+The diameter of the shell was 1.5 m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
 The minimum thickness of the shell ($e_\mathrm{shell}$) was calculated using equation \cref{eqn:minthicknessshell},
 \begin{equation}
     e_\mathrm{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = \SI{0.577}{\mm}
@@ -77,8 +75,7 @@ where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{
 
 \subsubsection{Head dimensions}
 %A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
-A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. 
-The minimum thickness ($e_\mathrm{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
+A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. The minimum thickness ($e_\mathrm{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
 \begin{equation}
     e_\mathrm{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
     \label{eqn:hemisphericalend}
@@ -132,10 +129,10 @@ The final PRV size for schedule 40 steel was calculated to have an OD of \SI{101
 
 
 \subsubsection{Flange types and dimension}
-Class 150 flanges was chosen from Table 16 of BS 1560:1989, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating for the stainless steel type 304L (material group 2.3). Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution \cite{ulma_forge_welding_2020}.
+Class 150 flanges was chosen from Table 16 of BS 1560:1989 \cite{noauthor_circular_nodate}, based on the maximum permissible working pressure and temperature, which provides a suitable pressure-temperature rating for the stainless steel type 304L (material group 2.3). Weld-neck flanges was selected for all ports due to the high structural strength along with stress distribution \cite{ulma_forge_welding_2020}.
 Based on JPI 75-48-73 standard, the nominal pipe size (NPS) for the flange was selected as 54" for class 150 flanges.
 \subsubsection{Gasket type and dimension}
-Gasket is a sealing material placed between flanges to create a leak-proof sealing \cite{varun_piping_nodate}. A narrow-faced, ring joint gasket type was chosen due to the suitability of design and excellent sealability in small sealing area (). The octagonal soft steel gasket was chosen to complement choice of ring joint gasket as it is softer than the flange material. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of \SI{124}{\N\per\mm}. (BS5500)
+Gasket is a sealing material placed between flanges to create a leak-proof sealing \cite{varun_piping_nodate}. A narrow-faced, ring joint gasket type was chosen due to the suitability of design and excellent sealability in small sealing area \cite{noauthor_ring_nodate}. The octagonal soft steel gasket was chosen to complement choice of ring joint gasket as it is softer than the flange material. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of \SI{124}{\N\per\mm}. (BS5500)
 
 \subsubsection{Bolt types and dimension}
 The bolting material was selected was mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding \SI{192}{\N\per\square\mm} design stress for temperature not exceeding 50°C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as \SI{1492}{\milli \metre}, with 56 bolts of \SI{32}{\milli \metre} diameter each for 54" NPS flanges. 

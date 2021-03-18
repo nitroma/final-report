@@ -5,7 +5,7 @@ This section details the design of the hydraulic wash column, S106.
 
 \subsection{Choice of wash column}   
 
- Initially, three types of wash column had been considered: gravity, hydraulic, and mechanical. The main disadvantage with using gravity wash column is the long residence time, which can last as long as several hours, while hydraulic and mechanical wash columns have residence time of 10 to 15 minutes. Both hydraulic and mechanical wash columns are subject to compressive force and pressure drop. Due to the use of moving mechanical parts in the mechanical wash column, it was considered a less desirable choice for this process. Hydraulic wash column has been deemed the most suitable. This is a technique that combines continuous solid-liquid separation with counter-current washing. 
+ Initially, three types of wash column were considered: gravity, hydraulic, and mechanical. The main disadvantage with gravity wash columns is the long residence time, which can last as long as several hours, while hydraulic and mechanical wash columns have residence times of 10 to 15 minutes. Both hydraulic and mechanical wash columns are subject to compressive forces and pressure drops. Due to the use of moving mechanical parts in the mechanical wash column, it was considered a less desirable choice for this process. The hydraulic wash column was thus deemed the most suitable. This is a technique that combines continuous solid-liquid separation with counter-current washing. 
 
 \subsection{Steady state model}   
 
@@ -14,9 +14,9 @@ Typically, the design of a hydraulic wash column should be based on pilot-scale 
 % Typically, the design of a hydraulic wash column should be based on pilot-scale experiments to determine appropriate dimensions at varying operating conditions. In this design, a model from van Oord-Knol \cite{van_oord-knol_hydraulic_2000} has been used for modelling the steady-state performance of the column. The hydraulic wash column has been modelled based on volume and force balances using initial dimensions provided by van Oord-Knol \cite{oordknol_dynamic_2002}. Some variables were used to observe the performance of the column. The aim of this model was to determine an appropriate steer flow rate, feasible column diameter and determine the pressure at different sections of the wash column in  order to attain a 99.9 \% pure PNT product flow.  
 
 
-\begin{wrapfigure}{r}{0.5\linewidth}
+\begin{wrapfigure}{r}{0.4\linewidth}
 \centering
-\includegraphics[width=0.4\textwidth]{chapters/3-separation/figures/hydraulic.jpg}
+\includegraphics[width=0.35\textwidth]{chapters/3-separation/figures/hydraulic.jpg}
 \caption{A schematic diagram of the hydraulic wash column: 1) steer flow pump 2) column wall 3) bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) rotating knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant section D) wash front section \cite{van_oord-knol_hydraulic_2000}}
 \label{fig:hydraulic}
 \end{wrapfigure}
@@ -60,7 +60,7 @@ The length of the wash section is related to the wash-liquid flow entering the k
 \end{equation}
 
 \noindent where $\epsilon_w$ is the porosity in the wash section, $L_{\mathrm{wash}}$ (m) is the length of the wash section and $\phi_{wl,\mathrm{knife}} $(\si{\cubic\m\per\s}) is wash liquid flow at the knife. 
-The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was approximated at 0.45 \cite{jansens_furification_1995}. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be explored further through experiments. The porosity in the wash zone was calculated from the equation below. 
+The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant sections, it is assumed that the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was approximated at 0.45 \cite{jansens_furification_1995}. Due to the wash-liquid crystallisation at the wash zone, an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be explored further through experiments. The porosity in the wash zone was calculated from the equation below. 
 
 \begin{equation}
 \epsilon_{w}= \epsilon-(1-\epsilon)\left(\frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}\right)
@@ -106,22 +106,16 @@ The equation above is based on the assumption that the crystal particles are sph
 \begin{equation}
 S = \frac{6}{d}
 \end{equation}
-\noindent where d is the particle diameter. 
-
-The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
+\noindent where $d$ is the particle diameter. The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 \begin{equation}
 P_{\mathrm{top}} = P_{\mathrm{filters}} + \Delta P_{l,\mathrm{filtration}}
 \end{equation}
 
-\noindent whence $P_{\mathrm{top}}$ (Pa) is the liquid pressure above crystal bed and $P_{\mathrm{filters}} $(Pa) is the pressure at the filter.
-
-The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit, $\Delta P_{\mathrm{valve}} $(Pa). The pressure drop across the valve is determined through a linear relation with the product flow rate.
+\noindent whence $P_{\mathrm{top}}$ (Pa) is the liquid pressure above crystal bed and $P_{\mathrm{filters}} $(Pa) is the pressure at the filter. The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit, $\Delta P_{\mathrm{valve}} $(Pa). The pressure drop across the valve is determined through a linear relation with the product flow rate.
 \begin{equation}
 P_{\mathrm{bottom}}=\Delta P_{\mathrm{valve}} = K_w\phi_{\mathrm{product}}
 \end{equation}
-\noindent where $K_w$ (Pas/m$^3$) is the modified flow resistance factor.  
-
-The pressure in the melting circuit was calculated using the equation below. 
+\noindent where $K_w$ (Pa~s/m$^3$) is the modified flow resistance factor. The pressure in the melting circuit was calculated using the equation below. 
 \begin{equation}
 \Delta P_{\mathrm{valve}} = \Delta P_{l,\mathrm{stagnant}} + \Delta P_{l,\mathrm{wash}} + P_{\mathrm{filters}}
 \end{equation}
@@ -129,7 +123,7 @@ The pressure in the melting circuit was calculated using the equation below.
 \subsection{Modelling results}
 The linear system of algebraic equations from the steady state model were solved using input variables and parameters shown in \cref{tab:inputsparameters}. 
 
-\begin{wraptable}{R}{0.54\linewidth}
+\begin{wraptable}{R}{0.53\linewidth}
 \centering
 \caption{Input variables and parameters}
 \label{tab:inputsparameters}
@@ -176,7 +170,7 @@ Steer flow is the flow rate of the mother liquor being recycled back into the co
 
 The permeability constant, $B$, was determined using Kozeny constant, $K"$.  In this process, $K"$ was considered to be 5, assuming the crystal is spherical. A sensitivity analysis on the permeability constant was conducted by varying K". \Cref{fig:koz_col} shows when $K"$ > 6.5, the design becomes infeasible reaching negative filter pressures.The sensitivity analysis was conducted with the filtration and wash section varying between 0.27 and 0.3 m to observe the range of pressure in the column. It is evident, the hydraulic column is sensitive to the Kozenzy constant and the permeability of the packed bed. This was expected due to the inverse relationship between the permeability constant and pressure drop in the modified Darcy's law equation. It is essential to conduct pilot-scale experiments to obtain more accurate value for K" and the permeability constant to get a reliable observation of the column's performance. 
 
-Based on literature \cite{jansens_furification_1995} the temperature profile at the wash front was found to be independent of the axial and radial position in the column if the distance of the wash front from the filter is greater than 0.1 m. The temperature profile was also found to be independent of the product throughput. Additionally, compressive stress impacts the permeability of the bed and causes deformation of the crystal particles. In this process the crystals are melted; the crystal particle size or shape were not of concern so compressive stress was not considered further. 
+The pressure of top, bottom, and filter sections are 4.02 bar, 2.79 bar, 7.36 bar respectively. Based on literature \cite{jansens_furification_1995} the temperature profile at the wash front was found to be independent of the axial and radial position in the column if the distance of the wash front from the filter is greater than 0.1 m. The temperature profile was also found to be independent of the product throughput. Additionally, compressive stress impacts the permeability of the bed and causes deformation of the crystal particles. In this process the crystals are melted; the crystal particle size or shape were not of concern so compressive stress was not considered further. 
 
 %In this design the filter tube was positioned 0.1 m above the wash front. 
 
@@ -190,7 +184,7 @@ Table \ref{tab:wash column stream table} is a stream table for the hydraulic was
 \toprule
 Stream            & 3-01 & 3-02 & 3-03 & 3-04 & 3-05 & 3-06 & 3-07 & 3-08 & 3-09 \\ \midrule
 Temperature (K)   & 280 & 324 & 324 & 324 & 324 & 280 & 280 & 280 & 324 \\ \midrule
-Pressure (atm)    & 1   & 1   & 1   & 1   & 1   & 1   & 1   & 1   & 1 \\ \midrule
+Pressure (bar)    &  4.02  & 7.36   & 7.36   & 7.36   & 7.36   & 2.79   & 4.02   & 2.79   & 1.01 \\ \midrule
 Phase & \begin{tabular}[c]{@{}l@{}}Solid \\ + liquid \end{tabular}  & \begin{tabular}[c]{@{}l@{}}Solid \\ + liquid \end{tabular} & Liquid & Liquid & Liquid & Liquid & Liquid & Liquid & Liquid \\ \midrule
 Liquid fraction &  0.1995 &  0.1995 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\ \midrule
 Solid fraction  &  0.8005  &  0.8005 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \midrule
@@ -223,12 +217,12 @@ PNT (kmol/day)  &  21.99 & 22.48 & 22.48 & 2.58 & 19.90 & 8.12 & 8.12 & 2.09 & 1
 The hydraulic wash column vessel has also been designed in accordance with British Standards and to consist of a cylindrical shell and two ellipsoidal domed ends. From \textbf{BS5500: 1997}, the minimum thickness for a cylindrical shell, $e_{\mathrm{cyl}}$, can be computed as 
 
 \begin{equation}
-    e_{\mathrm{cyl}} = \frac{p D_i}{2f - p}
+    e_{\mathrm{cyl}} = \frac{P D_i}{2f - P}
 \end{equation}
 
-\noindent where $p$ is the design pressure of the vessel, and $D_i$ is the internal diameter of the vessel taken to be the same as $D$ as defined in \cref{sec: crystalliser mass balance}. For a vessel with ellipsoidal ends, the minimum thickness, $e_{\mathrm{end}}$, can be calculated using the methodology outlined in Section 3.5.2 of \textbf{BS5500: 1997}. The values of $e_{\mathrm{cyl}}$ and $e_{\mathrm{end}}$ have been obtained as 0.36 mm and 0.918 mm. After a corrosion factor of 1.5 mm has been taken into account, a uniform wall thickness of 3 mm has been chosen for both the shell and the dome ends. 
+\noindent where $P$ is the highest design pressure in the vessel which is 7.36 bar and $D_i$ is the internal diameter of the vessel taken to be the same as $D$ as defined in \cref{sec: crystalliser mass balance}. For a vessel with ellipsoidal ends, the minimum thickness, $e_{\mathrm{end}}$, can be calculated using the methodology outlined in Section 3.5.2 of \textbf{BS5500: 1997}. The values of $e_{\mathrm{cyl}}$ and $e_{\mathrm{end}}$ have been obtained as 0.36 mm and 0.918 mm. After a corrosion factor of 1.5 mm has been taken into account, a uniform wall thickness of 3 mm has been chosen for both the shell and the dome ends. 
 
-Eight ports are required in total: the vessel inlet at the top, the top recycle, the filter tube outlet, the vessel outlet at the bottom, the bottom recycle, a safety relief valve, and two sightholes. The safety relief valve is able to release the liquid level in the vessel to 80\% from full in less than 1 min. Pipes with nominal pipe size (NPS) of 1/2 inch have been selected for all ports except the two sightholes on the wash column. For the two sightholes, 2 inch pipes have been used instead. 
+Eight ports are required in total: the vessel inlet at the top, the top recycle, the filter tube outlet, the vessel outlet at the bottom, the bottom recycle, a safety relief valve, and two sightholes. The safety relief valve is able to release the liquid level in the vessel to 80\% from maximum-allowable working pressure (MAWP) designed to be 1.21 times $P$ in less than 1 min. Schedule 80 pipes with nominal pipe size (NPS) of 1/2 inch have been selected for all ports except the two sightholes on the wash column. For the two sightholes, 2 inch pipes have been used instead. 
 
 Four filter tubes 680 mm in length, 20 mm in diameter, and 3 mm in wall thickness have been implemented in the design. A set of four knives have been implemented at the bottom of the vessel. Support structures are not included in the design but are nonetheless recommended for implementation to secure the position of the vessel due to the inherent imbalance of weights. The operators are recommended to select support structures appropriate to their circumstances. 
 
