@@ -13,7 +13,18 @@ A crystallisation system consisting of a melt crystalliser (S104) and a subseque
 
 Due to the small difference in boiling points between nitrotoluene isomers, distillation is infeasible and energy intensive. Similar solubility in both aqueous and organic solvents between the isomers made the use of absorption or adsorption processes infeasible as well. However, crystallisation has been deemed feasible due to the sizeable gaps in melting points between the isomers.
 
-*Table of boiling points, melting points and solubility in water or two organics
+\begin{table}[h]
+\centering
+\caption{Thermophysical properties of ONT, MNT, and PNT.}
+\begin{tabular}{llllllll}
+\toprule
+Technique  & Distillation & Distillation & Flash & Flash   & Crystallisation (melt) & Microfiltration & Microfiltration \\ \midrule
+Pair Ratio & \texttt{r\_bp}        & \texttt{r\_vapP}      & \texttt{r\_bp} & \texttt{r\_vapP} & \texttt{r\_mp}                  & \texttt{r\_kd}           & \texttt{r\_mr}           \\
+Feasible   & 1.01         & 1.05         & 1.23  & 10      & 1.2                    & 2               & 1.9             \\
+Good       & 1.02         & 1.5          & 1.4   & 15      & 1.27                   & 3               & 2.4             \\ \bottomrule
+\end{tabular}
+\label{tab:propoerties of P,M,O NTs}
+\end{table}
 
 
 Crystallisation can produce high purity products with very low energy input compared to processes like distillation. The heat of transition in crystallisation is typically two to five times lower than in distillation \cite{noauthor_melt_nodate}, which is ideal. In the industry, there are two main processes: solution crystallisation and melt crystallisation. For organics like the nitrotoluene isomers considered in this design, this could mean dissolving the isomers in a solvent. When the resultant solution is cooled down, the isomers crystallise out from the solution at different temperatures. The main drawback, however, for such process is that the solvent required could be environmentally-unfriendly; recovering the solvent or disposing of it is potentially costly. Melt crystallisation, on the other hand, directly utilises the difference in melting points of the components. No additional substance needs to be added for this operation. When the liquid mixture of the components is cooled down, for a eutectic-forming system, one of the components will crystallise as pure solid from the liquid mixture. In general, compared to solution crystallisation, crystal growth rates in melt crystallisers are faster \cite{myerson_handbook_2019}. These advantages make melt crystallisation attractive; hence it has been chosen as the separation technique. 
