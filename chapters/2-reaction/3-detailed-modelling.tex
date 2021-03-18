@@ -108,11 +108,9 @@ where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient
 
 The relationship between axial dispersion coefficient ($D_z$) and diameter was investigated in \cref{fig:dispersion}. Dispersion coefficient decreases exponentially, with \SI{75}{\%} decrease from \SI{1e-1}{\m} to \SI{2e-1}{\m} diameter. Beyond that, the decrease in axial dispersion per unit diameter length plateaus. Although having a larger diameter would decrease axial dispersion further, the drawback of higher CAPEX and larger floor space required does not warrant any further significant increase in channel diameter. A final diameter of \SI{23}{\cm} was selected for each channel, giving an axial dispersion of \SI{1.78}{\metre \squared \per \second}. 
 
-
-\subsection{Adiabatic temperature}
+\subsection{Adiabatic temperature profile}
 
 \label{sec:adiabatic}
-\textcolor{red}{Include adiabatic temp rise with and without cooling water}
 
 Nitration is a dangerous process due to its highly exothermic nature. \textcite{di_miceli_raimondi_safety_2015} reported that decomposition of nitric acid begins at \SI{393}{\K}. At temperatures higher than that, thermal decomposition of nitric acid accelerates, which produces even more heat. The build-up of heat increases the rate of reaction, leading to thermal runaway. The reaction also releases poisonous nitrogen oxides as well as other safety risks, which are covered in \cref{sec:NOx}. 
 
@@ -161,6 +159,21 @@ The catalyst particle size was chosen to be 2 µm. At this particle size, the ef
 
 Typically, catalyst grains, pellets and beads of this diameter would result in a huge pressure drop across the reactor. However, due to the open structure of SiC foam, the pressure drop is significantly reduced \cite{duong-viet_silicon_2016}. In fact, with the same surface area per volume of catalyst bed, catalyst supports have a pressure drop over 10 times smaller than the corresponding packed bed \cite{richardson_properties_2000}. The small catalyst size used in the reaction can therefore reap the benefits of negligible diffusional limitations while avoiding any significant pressure drop.
 
+\subsection{Pressure drop}
+%The pressure drop of is a significant consideration in during the selection and modelling of this reactor as the packed-bed reactor shows the 
+Even though the pressure drop is expected to be insignificant, efforts were taken to verify the pressure drop of the reactor.
+
+The pressure drop was calculated by using the modified Ergun equation as reported by \textcite{lacroix_pressure_2007}: 
+\begin{equation}
+    \frac{\Delta p}{L} = \frac{150 \mu (1- \varepsilon)^2 u_0}{\varepsilon^3 d_p^2} + \frac{1.75(1-\varepsilon)\rho u_0^2}{\varepsilon^3 d_p}
+    \label{eqn:ergun}
+\end{equation}
+where foam porosity ($\varepsilon$) is 0.30 from \cite{jang_thermophysical_2007}, $d_p$ is the particle diameter equivalent to the SiC foam structure based only on its mean window size ($a$), using the following formula:
+\begin{equation}
+d_{p}=\frac{3a[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2}}{2(1-[(4 / 3 \pi)(1-\varepsilon)]^{1 / 2})}
+\end{equation}
+
+The pressure drop was calculated to be \SI{0.33}{\bar} which poses no safety risk to the plant. No high pressure pumps will be required, thus saving both OPEX and CAPEX costs.
 
 \subsection{Novel triple concentric tubes}
 \label{sec:tripleconctube}
