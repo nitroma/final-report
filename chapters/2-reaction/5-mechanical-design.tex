@@ -52,10 +52,10 @@ where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from Sectio
 \end{equation}
 where $n$ represents the sequence of hexagonal number. 
 
-The tube bundle was arranged such that a clearance of \SI{230}{\milli \metre}, which satisfies the minimum clearance of 0.25 times tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
+The tube bundle was arranged such that a clearance of \SI{230}{\milli \metre}, which satisfies the minimum clearance of 0.25 times tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}. The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 \subsubsection{Secondary cooling tube dimensions}
-As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
+As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tube was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production with the shell and head vessel. 
 The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section \cref{fig:concentriccoolingwater}. 
 \begin{figure}[H]
     \centering
@@ -65,8 +65,8 @@ The arrangement of the secondary cooling tube within the reactor tubes can be vi
 \end{figure}
 
 \subsubsection{Shell dimensions}
-The diameter of the shell was 1.5 m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
-The minimum thickness of the shell ($e_\mathrm{shell}$) was calculated using equation \cref{eqn:minthicknessshell},
+The diameter of the shell was \SI{1.5}{\metre} to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
+The minimum thickness of the shell ($e_\mathrm{shell}$) was calculated using \cref{eqn:minthicknessshell},
 \begin{equation}
     e_\mathrm{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = \SI{0.577}{\mm}
     \label{eqn:minthicknessshell}
@@ -75,15 +75,15 @@ where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{
 
 \subsubsection{Head dimensions}
 %A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
-A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. The minimum thickness ($e_\mathrm{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
+A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. The minimum thickness ($e_\mathrm{head}$) of the hemispherical head was calculated using \cref{eqn:hemisphericalend},
 \begin{equation}
     e_\mathrm{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
     \label{eqn:hemisphericalend}
 \end{equation}
-with $p$ set as 1.4bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as \SI{143}{\N\per\square\mm}.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
+with $p$ set as 1.4 bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as \SI{143}{\N\per\square\mm}.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
 %-refer BS5500 page 78 of the pdf
 
-The minimum distance ($L_{im}$) between ports were calculated using the equation \ref{eqn:mindistance} below,
+The minimum distance ($L_{im}$) between ports were calculated using \cref{eqn:mindistance} below,
 \begin{equation}
     L_m = \sqrt{(2r_{im}+e_{m})e_m} = \sqrt{(2 \times 1500 + 5)5} = \SI{122.6}{\mm}
     \label{eqn:mindistance}
@@ -106,15 +106,10 @@ A total of 7 ports were designed according to BS 5500:1997 and BS 1600:1991 stan
 \end{enumerate}
 Based on BS1600: 1991, schedule 40 pipes were chosen for all pipes \cite{noauthor_dimensions_nodate}. 
 \subsubsection{Reactant flow port design}
-The inlet and outlet of the reactant flow were placed at the top right and top left of the hemispherical shell domes respectively. Both ports were estimated to have an acceptable feed liquid velocity range (U) of \SIrange{0.1}{1}{\m\per\s}. The cross sectional area (A) and pipe diameter (D) are then calculated using the volumetric flowrate ($Q_v$) as follows
-\begin{align}
-    A &= \frac{Q_v}{U} &
-    \mathrm{D} &= \sqrt{\frac{4A}{\pi}}
-\end{align}
-where $Q_v$ is defined as \SI{9.24e-4}{\cubic\m\per\s} and a first approximation of \SI{0.1}{\m\per\s} liquid velocity was assumed to achieve a initial port diameter of \SI{108.5}{\milli \metre}. Based on BS 1600:1991, the diameter of the reactant inlet and outlet ports were chosen to have an outer diameter (OD) of \SI{114.3}{\milli \metre} (4" NPS) with \SI{6}{\milli \metre} of wall thickness. 
+The inlet and outlet of the reactant flow were placed at the top right and top left of the hemispherical shell domes respectively. Both ports were estimated to have an acceptable feed liquid velocity range (U) of \SIrange{0.1}{1}{\m\per\s}. The cross sectional area (A) is then calculated by dividing the volumetric flowrate ($Q_v$) by the liquid velocity. $Q_v$ is determined as \SI{9.24e-4}{\cubic\m\per\s} and a first approximation of \SI{0.1}{\m\per\s} liquid velocity was assumed to achieve a initial port diameter of \SI{108.5}{\milli \metre}. Based on BS 1600:1991, the diameter of the reactant inlet and outlet ports were chosen to have an outer diameter (OD) of \SI{114.3}{\milli \metre} (4" NPS) with \SI{6}{\milli \metre} of wall thickness. 
 
 \subsubsection{Cooling water flow port design}
-Similarly, the outer diameter pipe diameter of both primary and secondary cooling water flow was calculated as previously described. The diameter of the primary cooling water port was defined to have an OD of \SI{219.1}{\milli \metre} (8" NPS) with \SI{6.55}{\milli \metre} of wall thickness. The diameter of the secondary cooling tube were defined as OD of \SI{60}{\milli \metre} (2" NPS) with \SI{4}{\milli \metre} of wall thickness. All port dimensions were calculated based on information from BS 1600:1991. 
+Similarly, the outer diameter pipe diameter of both primary and secondary cooling water flow were calculated as previously described. The primary cooling water port was defined to have an OD of \SI{219.1}{\milli \metre} (8" NPS) with \SI{6.55}{\milli \metre} of wall thickness, whereas the secondary cooling tube h as OD of \SI{60}{\milli \metre} (2" NPS) with \SI{4}{\milli \metre} of wall thickness. All port dimensions were calculated based on information from BS 1600:1991. 
 
 
 \subsubsection{Pressure relief valve design}
