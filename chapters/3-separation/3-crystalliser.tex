@@ -47,14 +47,13 @@ and $S$ is known as the supersaturation ratio. A third way of defining supersatu
 \begin{equation} \label{eq:deltaT}
      \Delta T = T - T_{\mathrm{eq}}
 \end{equation}
-whence $T$ is the equilibrium temperature corresponding to concentration $C$ in the liquid, and $T_{\mathrm{eq}}$ is the operated temperature to which the system has been super-cooled, i.e. in this design, $T_{\mathrm{eq}}$ is the operating temperature of the crystalliser and the specified design input. \Cref{fig:supersaturation} is a schematic which explains these definitions.
-
-\begin{figure}[h]
-\centering
-\includesvg[scale=0.45,inkscapelatex=false]{chapters/3-separation/figures/Supersaturation.svg}
-\caption{A schematic diagram showing the various definitions of supersaturation. The differences between the actual temperature or concentration of the system to the equilibrium, $\Delta T$ and $\Delta C$, are the measures of supersaturation.}
-\label{fig:supersaturation}
-\end{figure}
+whence $T$ is the equilibrium temperature corresponding to concentration $C$ in the liquid, and $T_{\mathrm{eq}}$ is the operated temperature to which the system has been super-cooled, i.e. in this design, $T_{\mathrm{eq}}$ is the operating temperature of the crystalliser and the specified design input.
+\begin{wrapfigure}{r}{0pt}
+    \includesvg[scale=0.45,inkscapelatex=false]{chapters/3-separation/figures/Supersaturation.svg}
+    \caption{A schematic diagram showing the various definitions of supersaturation. The differences between the actual temperature or concentration of the system to the equilibrium, $\Delta T$ and $\Delta C$, are the measures of supersaturation.}
+    \label{fig:supersaturation}
+\end{wrapfigure}
+\Cref{fig:supersaturation} is a schematic which explains these definitions.
 
 \subsubsection{Primary nucleation}\label{sec:primary nucleation}
 
@@ -145,14 +144,13 @@ In the end, the mass of crystals per unit volume of the system, also known as ma
     L_M = 3 G \tau
 \end{equation}
 
-The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Data of the rate of crystal growth for the (PNT + MNT) system cannot, however, be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (MNT + ONT) system at 292.15 K, which is the most similar and closest to the (PNT + MNT) system. \cite{radhakrishnan_kinetics_1999} Here, MNT is the species that crystallises from the liquid.
-
-\begin{figure}[h]
-    \centering
+\begin{wrapfigure}{r}{0pt}
     \includesvg[scale=0.75,inkscapelatex=false]{figures/Kinetics.svg}
     \caption{Crystal growth rate of the (ONT + MNT) system against the Stephen number. The experimental data shown as the grey squares were obtained from Radhakrishnan and Balakrishnan. \cite{radhakrishnan_kinetics_1999} A power-law correlation has been used to fit these data and plotted as the red curve.}
     \label{fig:ONT + MNT kinetics}
-\end{figure}
+\end{wrapfigure}
+
+The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Data of the rate of crystal growth for the (PNT + MNT) system cannot, however, be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (MNT + ONT) system at 292.15 K, which is the most similar and closest to the (PNT + MNT) system. \cite{radhakrishnan_kinetics_1999} Here, MNT is the species that crystallises from the liquid.
 
 \Cref{fig:ONT + MNT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in \cref{fig:ONT + MNT kinetics},
 
@@ -331,13 +329,7 @@ The equation for the heat transfer area has been formulated using the length of 
 
 \noindent The crystalliser recovery, $r_c$, and the modal size of crystal, $L_M$, have been calculated using Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystalliser volume} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curves in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. As can be seen on \cref{fig:recovery vs volume crystalliser}a, the larger the vessel is, the more PNT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of PNT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at 90.5724\%, which is about the same as the theoretical maximum.
 
-As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. As explained earlier, the larger the volume is, the closer the system is operated near equilibrium with a lower $G$, whereas $\tau$ increases with greater volume by definition. This explains the existence of the turning point. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in Section \ref{section: hydraulic wash column}. However, at volumes larger than the turning point at around 0.025 m$^3$, the change of $L_M$ does not go beyond one order of magnitude, so it will not make a significant impact on the hydraulic wash column design. 
-
-To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. This sets the operating point for the crystalliser. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient,$U$, has been calculated as 1452.64 W m$^{-2}$ K$^{-1}$, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
-
-A stream table for the crystalliser is available in Table \ref{tab:crystalliser stream table}. 5.2 kW of power is required for the compresser P102 in the refrigerator to remove 18 kW of heat from the crystalliser. 
-
-\begin{table}[h]
+\begin{wraptable}{r}{0.4\linewidth}
 \centering
 \caption{Stream table for the crystalliser.}
 \label{tab:crystalliser stream table}
@@ -353,7 +345,13 @@ MNT (kmol/day)          &  2.72        & 2.72 \\ \midrule
 ONT (kmol/day)        &    0.17      & 0.17 \\ \midrule
 PNT (kmol/day)          &    21.99      & 21.99 \\ \bottomrule
 \end{tabular}
-\end{table}
+\end{wraptable}
+
+As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. As explained earlier, the larger the volume is, the closer the system is operated near equilibrium with a lower $G$, whereas $\tau$ increases with greater volume by definition. This explains the existence of the turning point. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in Section \ref{section: hydraulic wash column}. However, at volumes larger than the turning point at around 0.025 m$^3$, the change of $L_M$ does not go beyond one order of magnitude, so it will not make a significant impact on the hydraulic wash column design. 
+
+To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. This sets the operating point for the crystalliser. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient,$U$, has been calculated as 1452.64 W m$^{-2}$ K$^{-1}$, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
+
+A stream table for the crystalliser is available in Table \ref{tab:crystalliser stream table}. 5.2 kW of power is required for the compresser P102 in the refrigerator to remove 18 kW of heat from the crystalliser. 
 
 \subsection{Sensitivity analyses}
 
@@ -387,16 +385,14 @@ whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivi
 
 A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{noauthor_fouling_2021}. This resistance is too small to make an impact on the vessel design. 
 
-To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. \Cref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in \cref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermoal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in \cref{separation conclusions}.
-
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0pt}
     \centering
     \includesvg[scale=0.75,inkscapelatex=false]{chapters/3-separation/figures/Fouling_sensitivity.svg}
     \caption{The overall heat transfer coefficient, $U$, plotted against the thickness of fouling, $l_f$.}
     \label{fig:fouling sensitivity}
-\end{figure}
+\end{wrapfigure}
 
-
+To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. \Cref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in \cref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in \cref{separation conclusions}.
 
 \subsection{Physical design} \label{sec:physical design crystalliser}
 
@@ -409,11 +405,7 @@ respectively for ellipsoidal ends. The total length, $L_t$, of the cylindrical s
 
 Austenitic stainless steel 304L-S71 has been chosen from Table 2.3-5 of \textbf{BS5500: 1997} for constructing the crystalliser vessel. It is a strong material with a nominal design stress of 174 MPa. The corrosion resistance of stainless steel means it is also ideal for long-term operation. Because the crystalliser is operated at atmospheric pressure, it is not considered a pressure vessel according to \textbf{BS5500: 1997}. A thickness of 6 mm has thus been taken for the shell of the vessel.
 
-Four ports are needed on the crystalliser vessel, namely the inlet, the outlet, and two sightholes. Per requirement of \textbf{BS470: 1984}, a minimum of two sightholes with diameter no smaller than 30 mm are needed. For liquid phase operations, the desirable operating velocity for the inlet and outlet ports should be between 0.1-1 m/s, which sets limits on the area the ports openings have to satisfy. In the end, schedule 80 pipes with nominal pipe size (NPS) of 2 inch as given in Table 1 of \textbf{BS1600: 1991} have been found to fit the requirements of all ports and hence have been chosen. Class 300 weld-neck ring-type joint flanges from \textbf{BS1560-3.1: 1989} have been chosen for these ports, and class 300 blind flanges have been chosen for covering the sightholes. 
-
-Helical heating coils with internal dimensions specified in Section \ref{sec:heat transfer crystalliser} are to be implemented around the vessel. Wall thickness of the coils are designed to be 6 mm just like for the shells and ends. Stirrers are designed such that they are about-to-touch the coils to minimise fouling on the walls. Schematic and general arrangement (GA) drawings are available in Figures \ref{fig:crystalliser schematic} and \ref{fig:crystalliser GA}. A physical design summary is available in Table \ref{tab:crystalliser mech design summary}. 
-
-\begin{table}[h]
+\begin{wraptable}{R}{0.4\linewidth}
 \centering
 \caption{Summary of key physical design parameters for the crystalliser.}
  \label{tab:crystalliser mech design summary}
@@ -429,22 +421,27 @@ Helical heating coils with internal dimensions specified in Section \ref{sec:hea
 \textbf{Coil pitch (mm)}                    & 72.00 \\ \midrule
 \textbf{Stirrer diameter (mm)}              & 431.10 \\ \midrule
 \textbf{Number of stirrer blade}            & 3 \\ \midrule
+\textbf{Stirring speed (rpm)}               & 300 \\ \midrule
 \textbf{Stirrer blade length (mm)}          & 328.80 \\ \bottomrule
 \end{tabular}
-\end{table}
+\end{wraptable}
+
+Four ports are needed on the crystalliser vessel, namely the inlet, the outlet, and two sightholes. Per requirement of \textbf{BS470: 1984}, a minimum of two sightholes with diameter no smaller than 30 mm are needed. For liquid phase operations, the desirable operating velocity for the inlet and outlet ports should be between 0.1-1 m/s, which sets limits on the area the ports openings have to satisfy. In the end, schedule 80 pipes with nominal pipe size (NPS) of 2 inch as given in Table 1 of \textbf{BS1600: 1991} have been found to fit the requirements of all ports and hence have been chosen. Class 300 weld-neck ring-type joint flanges from \textbf{BS1560-3.1: 1989} have been chosen for these ports, and class 300 blind flanges have been chosen for covering the sightholes. 
+
+Helical heating coils with internal dimensions specified in Section \ref{sec:heat transfer crystalliser} are to be implemented around the vessel. Wall thickness of the coils are designed to be 6 mm just like for the shells and ends. Stirrers are designed such that they are about-to-touch the coils to minimise fouling on the walls. Schematic and general arrangement (GA) drawings are available in Figures \ref{fig:crystalliser schematic} and \ref{fig:crystalliser GA}. A physical design summary is available in Table \ref{tab:crystalliser mech design summary}. 
 
 \begin{figure}[h]
+\begin{minipage}[t]{0.5\linewidth}
     \centering
-    \includesvg[scale=0.3,inkscapelatex=false]{figures/Crystalliser_schematic.svg}
+    \includesvg[scale=0.4,inkscapelatex=false]{figures/Crystalliser_schematic.svg}
     \caption{Schematics for the designed crystalliser vessel: (a) perspective view; (b) section view.}
     \label{fig:crystalliser schematic}
-\end{figure}
-
-
-\begin{figure}[h]
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
     \centering
-    \includegraphics[scale=0.4]{chapters/3-separation/figures/Crystalliser_GA.PDF}
+    \includegraphics[scale=0.3]{chapters/3-separation/figures/Crystalliser_GA.PDF}
     \caption{GA drawing for the crystalliser vessel}
     \label{fig:crystalliser GA}
+\end{minipage}
 \end{figure} 
 

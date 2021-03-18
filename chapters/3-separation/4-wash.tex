@@ -14,7 +14,7 @@ Typically, the design of a hydraulic wash column should be based on pilot-scale 
 % Typically, the design of a hydraulic wash column should be based on pilot-scale experiments to determine appropriate dimensions at varying operating conditions. In this design, a model from van Oord-Knol \cite{van_oord-knol_hydraulic_2000} has been used for modelling the steady-state performance of the column. The hydraulic wash column has been modelled based on volume and force balances using initial dimensions provided by van Oord-Knol \cite{oordknol_dynamic_2002}. Some variables were used to observe the performance of the column. The aim of this model was to determine an appropriate steer flow rate, feasible column diameter and determine the pressure at different sections of the wash column in  order to attain a 99.9 \% pure PNT product flow.  
 
 
-\begin{wrapfigure}{R}{0.5\linewidth}
+\begin{wrapfigure}{r}{0.5\linewidth}
 \centering
 \includegraphics[width=0.4\textwidth]{chapters/3-separation/figures/hydraulic.jpg}
 \caption{A schematic diagram of the hydraulic wash column: 1) steer flow pump 2) column wall 3) bed level 4) packed bed 5) filter tube 6) filter 7) wash front level 8) reslurry section 9) rotating knife 10) melter 11) product flow valve; A) slurry section B) filtration section C) stagnant section D) wash front section \cite{van_oord-knol_hydraulic_2000}}
@@ -96,8 +96,21 @@ The liquid pressure drop across each section were calculated with the following 
     \frac{\Delta P_{l,\mathrm{wash}}}{L_{\mathrm{wash}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{wash}}}\left(-\frac{\phi_{wl,\mathrm{knife}}}{\epsilon_w A_c} - \frac{\phi_{s,\mathrm{knife}}}{1-\epsilon_w A_c}\right)
 \end{align}
 
-\noindent where $\Delta P_{l,\mathrm{filtration}}$, $\Delta P_{l,\mathrm{wash}}$, and $\Delta P_{l,\mathrm{stagnant}}$ (Pa) are the liquid pressure drops across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) are the permeability constants for filtration, wash and stagnant sections. 
+\noindent where $\Delta P_{l,\mathrm{filtration}}$, $\Delta P_{l,\mathrm{wash}}$, and $\Delta P_{l,\mathrm{stagnant}}$ (Pa) are the liquid pressure drops across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) are the permeability constants for filtration, wash and stagnant sections. The permeability constant at the filtration and stagnant section are equal. 
 
+The permeability constants were determined  from Carman-Kozeny equation shown below. A commonly accepted value for Kozenzy constant, $K"$, is 5.
+
+\begin{align}
+   B_{\mathrm{filtration}} &= \frac{1}{K"}\frac{\epsilon^3}{S^2(1-\epsilon)^3} &
+   B_{\mathrm{wash}} &= \frac{1}{K"}\frac{\epsilon_w^3}{S^2(1-\epsilon_w)^3}
+\end{align}
+
+The equation above is based on the assumption that the crystal particles are spherical so the specific surface area, $S$ (m$^2$), of particles is 
+
+\begin{equation}
+S = \frac{6}{d}
+\end{equation}
+\noindent where d is the particle diameter. 
 
 The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 \begin{equation}
@@ -134,30 +147,29 @@ $\mathrm{K_{w}}$        & 1.9e10 & \pascal\s\per\cubic\m &                      
 \end{tabular}
 \end{table}
 
-During the operation of the hydraulic column, it is possible for the lengths of the filtration, stagnant, and wash sections to vary. With proper controls in place, the sections should not vary significantly to a normal mode operation. Modelling with varying filtration and wash section lengths were implemented to observe their effect on pressures at different sections of the column. In the end, variation in filtration and wash section would be designed to be between 0.27 to 0.30 m.  
+During the operation of the hydraulic column, it is possible for the lengths of the filtration, stagnant, and wash sections to vary. With proper controls in place, the sections should not vary significantly to a normal mode operation. Modelling with varying filtration and wash section lengths were implemented to observe their effect on pressures at different sections of the column. In the end, lengths of the filtration and wash sections have been designed to be between 0.27 to 0.30 m. 
 
-\begin{figure*}[t!]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=\linewidth]{chapters/3-separation/figures/diameter.jpg}
-        \caption{Effect of varying diameter on the pressure at top, bottom and filter section of the hydraulic wash column.}
-    \end{subfigure}%
-    \label{fig:dia_col}
+        \caption{Effect of varying diameter on the pressure at top, bottom and filter section of the hydraulic wash column.} 
+        \label{fig:dia_col}
+        \end{subfigure}%
     ~ 
     \begin{subfigure}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=\linewidth]{chapters/3-separation/figures/steerflow.jpg}
-        \caption{Effect of varying steer flow rate on the pressure at top, bottom and filter section of the hydraulic wash column.}
+        \caption{Effect of varying steer flowrate on the pressure at top, bottom and filter section of the hydraulic wash column.}
+    \label{fig:steer}   
     \end{subfigure}
-    \label{fig:steer}
-\end{figure*}
 
+\end{figure}
 
-The length of the column was fixed at 0.8 m. The diameter of the column was varied from 0.1 m to 0.3 m to observe the impact it has on the pressure across the column. \Cref{fig:dia_col} indicates when the diameter is less than 0.165 m the model suggests negative pressure at the filter which could imply instead of mother liquor flowing upwards through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation.
+Figures \ref{fig:dia_col} and \ref{fig:steer} show the effects of diameter and steer flowrate on the pressures in different sections of the column. The length of the column was designed to be 0.8 m. The diameter of the column was varied from 0.1 m to 0.3 m to observe the impact it has on the pressure across the column. Figure \ref{fig:dia_col} indicates when the diameter is less than 0.165 m, the model suggests negative pressure at the filter. This implies that instead of the mother liquor flowing upwards through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative, which indicates that at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation.
 
-
-Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. The filtrate being recycled back into the column increases the transport force. Steer flowrate was varied from $1.5 \times 1o^{-5}$ to $3.5 \times 1o^{-5}$ $m^{3}/s$. \Cref{fig:steer_col} shows the unfeasible and feasible region of operation. Above a steer flow rate of $2.7 \times 1o^{-5}$ $m^{3}/s$, the model shows negative liquid pressure drop at the filter. However, at lower steer flow such as $1.5 \times 1o^{-5}$ $m^{3}/s$ the filter pressure increases significantly to more than 10 bar. In order to attain a lower pressure but also ensure the column is operating in a feasible region, the steer flow rate at $2.65 \times 1o^{-5}$ $m^{3}/s$ was chosen. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. The steer flow appears to have no impact on the bottom pressure. This is because the bottom pressure mainly relies on the valve resistance coefficient. 
+Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes while some mother liquor is removed as residual flow. The filtrate being recycled back into the column increases the transport force. Steer flowrate was varied from $1.5 \times 1o^{-5}$ to $3.5 \times 1o^{-5}$ $m^{3}/s$. Figure \ref{fig:steer} shows the unfeasible and feasible region of operation. Above a steer flow rate of $2.7 \times 1o^{-5}$ $m^{3}/s$, the model indicates negative liquid pressure drop at the filter. However, at lower steer flow such as $1.5 \times 1o^{-5}$ $m^{3}/s$, the filter pressure increases significantly to more than 10 bar. In order to attain a lower pressure but also to ensure that the column is operating in a feasible region, the steer flow rate at $2.65 \times 1o^{-5}$ $m^{3}/s$ was chosen. At this flow rate, there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. The steer flow appears to have no impact on the bottom pressure. This is because the bottom pressure mainly relies on the valve resistance coefficient. 
 
 \begin{wrapfigure}{R}{0.5\linewidth}
 \centering
@@ -166,7 +178,7 @@ Steer flow is the flow rate of the mother liquor being recycled back into the co
 \label{fig:koz_col}
 \end{wrapfigure}
 
-The permeability constant, B, was determined using Kozeny constant, K".  In this process, K" was considered to be 5, assuming the crystal is spherical. A sensitivity analysis on the permeability constant was conducted by varying K". \Cref{fig:koz_col} shows when K">6.5, the design becomes infeasible reaching negative filter pressures.The sensitivity analysis was conducted with the filtration and wash section varying between 0.27 and 0.3 m to observe the range of pressure in the column. It is evident, the hydraulic column is sensitive to the Kozenzy constant and the permeability of the packed bed. This was expected due to the inverse relationship between the permeability constant and pressure drop in the modified Darcy's law equation. It is essential to conduct pilot-scale experiments to obtain more accurate value for K" and the permeability constant to get a reliable observation of the column's performance. 
+The permeability constant, $B$, was determined using Kozeny constant, $K"$.  In this process, $K"$ was considered to be 5, assuming the crystal is spherical. A sensitivity analysis on the permeability constant was conducted by varying K". \Cref{fig:koz_col} shows when $K"$ > 6.5, the design becomes infeasible reaching negative filter pressures.The sensitivity analysis was conducted with the filtration and wash section varying between 0.27 and 0.3 m to observe the range of pressure in the column. It is evident, the hydraulic column is sensitive to the Kozenzy constant and the permeability of the packed bed. This was expected due to the inverse relationship between the permeability constant and pressure drop in the modified Darcy's law equation. It is essential to conduct pilot-scale experiments to obtain more accurate value for K" and the permeability constant to get a reliable observation of the column's performance. 
 
 Based on literature \cite{jansens_furification_1995} the temperature profile at the wash front was found to be independent of the axial and radial position in the column if the distance of the wash front from the filter is greater than 0.1 m. In this design the filter tube was positioned 0.1 m above the wash front. The temperature profile was also found to be independent of the product throughput. Additionally, compressive stress impacts the permeability of the bed and causes deformation of the crystal particles. In this process the crystals are melted; the crystal particle size or shape were not of concern so compressive stress was not considered further. 
 
@@ -227,7 +239,7 @@ Schematics and GA drawing for the design is available in Figures \ref{fig:wash c
 \begin{figure}[h]
     \centering
     \includesvg[scale=0.3,inkscapelatex=false]{figures/Wash_column_schematic.svg}
-    \caption{Schematics for the hydraulic wash column: (a) perspective (b) right-side section (c) front section (d) section for detailed view of knives (e) section for detailed view of filter tubes crossing.}
+    \caption{Schematics for the hydraulic wash column: (a) perspective (b) left-side section (c) front section (d) section for detailed view of knives (e) section for detailed view of filter tubes crossing.}
     \label{fig:wash column schematic}
 \end{figure}
 
