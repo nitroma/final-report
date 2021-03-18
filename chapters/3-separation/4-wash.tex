@@ -66,7 +66,7 @@ At steady state, the wash section is constant with no flow of mother liquor into
 \phi_{\mathrm{residue}}= \phi_{ml,\mathrm{filters}} - \phi_{\mathrm{steer}}
 \end{equation}
 
-The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at the melting temperature.$\phi_{\mathrm{product}} (m^3/s)$ is the product flow.
+The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at the melting temperature.$\phi_{\mathrm{product}}$ (m$^3$/s) is the product flow.
 
 \begin{equation}
 \frac{\rho_s}{\rho_l}\phi_{s,\mathrm{knife}}= \phi_{wl,\mathrm{knife}} - \phi_{\mathrm{product}}
@@ -74,7 +74,7 @@ The volume balance at the melting circuit is based on the assumption that crysta
 
 
 \subsubsection{Force balance}
-The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. $\Delta P_{l,\mathrm{filtration}}, \Delta P_{l,\mathrm{wash}}, \Delta P_{l,\mathrm{stagnant}} (Pa)$ is the liquid pressure drop across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}} (m^2)$ is the permeability constant for filtration, wash and stagnant sections. 
+The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. $\Delta P_{l,\mathrm{filtration}}, \Delta P_{l,\mathrm{wash}}, \Delta P_{l,\mathrm{stagnant}}$ (Pa) is the liquid pressure drop across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) is the permeability constant for filtration, wash and stagnant sections. 
 
 \begin{align}
     \frac{\Delta P_{l,\mathrm{filtration}}}{L_{\mathrm{filtration}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{filtration}}}\left(\frac{\phi_{ml,\mathrm{filters}}}{\epsilon A_c} - \frac{\phi_{s,\mathrm{filters}}}{1-\epsilon A_c}\right) \\
@@ -82,12 +82,12 @@ The liquid pressure drop across each section were calculated with the following 
     \frac{\Delta P_{l,\mathrm{wash}}}{L_{\mathrm{wash}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{wash}}}\left(-\frac{\phi_{wl,\mathrm{knife}}}{\epsilon_w A_c} - \frac{\phi_{s,\mathrm{knife}}}{1-\epsilon_w A_c}\right)
 \end{align}
 
-The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. $P_{\mathrm{top}} (Pa)$ is the liquid pressure above crystal bed and  $P_{\mathrm{filters}} (Pa)$ is the pressure at the filter.
+The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. $P_{\mathrm{top}}$ (Pa) is the liquid pressure above crystal bed and  $P_{\mathrm{filters}} $(Pa) is the pressure at the filter.
 \begin{equation}
 P_{\mathrm{top}} = P_{\mathrm{filters}} + \Delta P_{l,\mathrm{filtration}}
 \end{equation}
 
-The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit,$\Delta P_{\mathrm{valve}} (Pa)$ . The pressure drop across the valve is determined through a linear relation with the product flow rate.$K_w (Pas/m^3)$ is the modified flow resistance factor.  
+The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit,$\Delta P_{\mathrm{valve}} $(Pa) . The pressure drop across the valve is determined through a linear relation with the product flow rate.$K_w$ (Pas/m$^3$) is the modified flow resistance factor.  
 \begin{equation}
 P_{\mathrm{bottom}}=\Delta P_{\mathrm{valve}} = K_w\phi_{\mathrm{product}}
 \end{equation}
