@@ -1,7 +1,7 @@
 % !TeX root = ../../main.tex
 \section{Mechanical design}
 \subsection{Material selection}
-The strong oxidising property of nitric acid as a result of autocatalytic reduction \cite{suresh_corrosion_nodate} gives nitric acid very corrosive property at \SI{70}{\%_{m/v}}. The reactor material needs to be carefully selected to ensure the reactants do not corrode the walls, which gives rise to more possible location for hotspot.
+The strong oxidising property of nitric acid as a result of autocatalytic reduction \cite{suresh_corrosion_nodate} gives nitric acid very corrosive property at \SI{70}{\percent\wv}. The reactor material needs to be carefully selected to ensure the reactants do not corrode the walls, which gives rise to more possible location for hotspot.
 
 Several stainless steel have been shortlisted for selection: 
 \begin{enumerate}
@@ -10,19 +10,19 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate}. This causes the oxidation of the protective chromium passive film and producing chromium ions \ch{Cr^6+} and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
+Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds. Chromium carbides precipitate at the grain boundaries \cite{cm_selection_nodate}, which causes the oxidation of the protective chromium passive film and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which causes extreme reduction in corrosion resistance. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
 \subsubsection{Reactor tube}
-According to section X, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{400}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
+According to section X, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
 \end{equation}
 
 \subsubsection{Shell}
-Similarly, using the \citeref{eqn:designpressure}, ($p_d$) for the cooling water vessel was calculated to be 1.1 bar from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
+Similarly, using the \cref{eqn:designpressure}, ($p_d$) for the cooling water vessel was calculated to be \SI{1.1}{\bar} from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 328K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
 \subsection{Reactor dimension design}
 \label{sec:reactordimensions}
@@ -31,9 +31,9 @@ Similarly, using the \citeref{eqn:designpressure}, ($p_d$) for the cooling water
 \label{sec:reactortube}
 Based on section \ref{sec:detailedreactor}, the total flowrate across the entire reactor was calculated to be \SI{1.32e-4}{\cubic\m\per\s}, thus the flowrate across one individual reactor is calculated to be  \SI{1.88e-5}{\cubic\m\per\s}. An optimal length of \SI{4.2}{\metre} and a final diameter of the reactor tubes of \SI{230}{\milli \metre} were set as previously mentioned in \cref{sec:coolanttemp,sec:axialdispersion}. 
 
-The minimum thickness of the reactor tubes ($e_{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
+The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
 \begin{equation}
-    e_{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = 0.145mm
+    e_\mathrm{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = 0.145mm
     \label{eqn:minthicknessreactor}
 \end{equation}
 where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards , yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$ \cite{noauthor_unfired_nodate}.
@@ -68,9 +68,9 @@ The arrangement of the secondary cooling tube within the reactor tubes can be vi
 
 \subsubsection{Shell dimensions}
 The diameter of the shell was 1.5m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
-The minimum thickness of the shell ($e_{shell}$) was calculated using equation \cref{eqn:minthicknessshell},
+The minimum thickness of the shell ($e_\mathrm{shell}$) was calculated using equation \cref{eqn:minthicknessshell},
 \begin{equation}
-    e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = \SI{0.577}{\mm}
+    e_\mathrm{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = \SI{0.577}{\mm}
     \label{eqn:minthicknessshell}
 \end{equation}
 where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{143}{\N\per\square\mm}. The minimum thickness of the shell was calculated to be \SI{0.577}{\milli \metre}. After taking into account corrosion allowance of \SI{1.5}{\milli \metre} and other welding considerations, a final shell thickness of \SI{5}{\milli \metre} was chosen. 
@@ -78,9 +78,9 @@ where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{
 \subsubsection{Head dimensions}
 %A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
 A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. 
-The minimum thickness ($e_{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
+The minimum thickness ($e_\mathrm{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
 \begin{equation}
-    e_{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
+    e_\mathrm{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
     \label{eqn:hemisphericalend}
 \end{equation}
 with $p$ set as 1.4bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as \SI{143}{\N\per\square\mm}.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
