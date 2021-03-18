@@ -74,7 +74,7 @@ The volume balance at the melting circuit is based on the assumption that crysta
 
 
 \subsubsection{Force balance}
-The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. $\Delta P_{l,\mathrm{filtration}}, \Delta P_{l,\mathrm{wash}}, \Delta P_{l,\mathrm{stagnant}} (bar)$ is the liquid pressure drop across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}} and B_{\mathrm{stagnant}}$
+The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. $\Delta P_{l,\mathrm{filtration}}, \Delta P_{l,\mathrm{wash}}, \Delta P_{l,\mathrm{stagnant}} (bar)$ is the liquid pressure drop across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}} and B_{\mathrm{stagnant}} (m^2)$ is the permeability constant for filtration, wash and stagnant sections. 
 
 \begin{align}
     \frac{\Delta P_{l,\mathrm{filtration}}}{L_{\mathrm{filtration}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{filtration}}}\left(\frac{\phi_{ml,\mathrm{filters}}}{\epsilon A_c} - \frac{\phi_{s,\mathrm{filters}}}{1-\epsilon A_c}\right) \\
@@ -82,7 +82,7 @@ The liquid pressure drop across each section were calculated with the following 
     \frac{\Delta P_{l,\mathrm{wash}}}{L_{\mathrm{wash}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{wash}}}\left(-\frac{\phi_{wl,\mathrm{knife}}}{\epsilon_w A_c} - \frac{\phi_{s,\mathrm{knife}}}{1-\epsilon_w A_c}\right)
 \end{align}
 
-The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
+The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. $P_{\mathrm{top}}$
 \begin{equation}
 P_{\mathrm{top}} = P_{\mathrm{filters}} + \Delta P_{l,\mathrm{filtration}}
 \end{equation}
