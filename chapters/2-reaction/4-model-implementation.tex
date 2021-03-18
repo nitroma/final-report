@@ -3,6 +3,28 @@
 \label{sec: modelimplementation}
 COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry.
 
+\begin{wraptable}{R}{0.5\linewidth}
+\centering
+\caption{Reactor overview}
+\label{tab:reactoroverview}
+\begin{tabular}{@{}lS[table-format=4.2e1]s@{}}
+\toprule
+Parameter                            & {Value} & {Unit}         \\ \midrule
+Overall volumetric flowrate          & 1.32e-4 & \cubic\m\per\s \\
+Number of tubes                      & 7       &                \\
+Diameter of each channel             & 0.23    & \m             \\
+Diameter of inner cooling tube       & 0.02    & \m             \\
+Wall thickness of inner cooling tube & 5       & \mm            \\
+Area of each channel                 & 3.14e-2 & \square\m      \\
+Length of reactor                    & 4.3     & \m             \\
+Bed voidage                          & 0.277   &                \\
+Mass of H-mordenite required         & 59      & \kg            \\
+Mass of inert SiC                    & 2090    & \kg            \\
+Volume of reactor tubes              & 9.45e-1 & \cubic\m       \\ 
+\bottomrule
+\end{tabular}
+\end{wraptable}
+
 \subsection{Physics setup}
 The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Further details of the equations implemented are available in \cref{app:comsol}.
 
