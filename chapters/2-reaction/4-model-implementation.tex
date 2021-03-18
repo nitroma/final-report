@@ -3,70 +3,15 @@
 
 COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry (i.e. in cylindrical coordinates). 
 
-\subsection{Model equations}
-The physics interfaces selected in COMSOL for each domain of the reactor and their associated governing equations are described in this section.
-
 \subsubsection{Reaction zone}
-
-In the reaction zone of the tubular reactor, mass and heat transfer are coupled with reaction through the following equations.
 
 \paragraph{Mass transfer: Brinkman equations}
 
-Under the assumption of Stokes and incompressible flow, the continuity and momentum equations reduce to the following \cite{comsol_cfd_2020}
-\begin{equation}
-    \rho\nabla \cdot \mathbf{u}=Q_{\mathrm{m}}
-\end{equation}
-\begin{equation}
-    \frac{\rho}{\varepsilon_{\mathrm{p}}} \frac{\partial \mathbf{u}}{\partial t} =
-    -\nabla p+\nabla \cdot\left[\frac{1}{\varepsilon_{\mathrm{p}}}\left\{\mu\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3} \mu(\nabla \cdot \mathbf{u}) \mathbf{I}\right\}\right]-\left(\kappa^{-1} \mu+\frac{Q_{\mathrm{m}}}{\varepsilon_{\mathrm{p}}^{2}}\right) \mathbf{u}+\mathbf{F}
-\end{equation}
-
 \paragraph{Chemical reaction: Transport of concentrated species}
-The transport of species $i$ is given as follows \cite{comsol_cfd_2020}
-\begin{equation}
-    \rho \frac{\partial}{\partial t}\left(\omega_{i}\right)+\rho(\mathbf{u} \cdot \nabla) \omega_{i}=-\nabla \cdot \mathbf{j}_{i}+R_{i}
-\end{equation}
-Transport due to thermal diffusion is neglected.
 
 \paragraph{Heat transfer: Porous media}
 
-In the porous medium, heat transfer is described by a volume-averaged combination of the solid and fluid equations, respectively \cite{comsol_heat_2020}
-\begin{align}
-    \rho_{\mathrm{s}} C_{p, \mathrm{~s}} \frac{\partial T_{\mathrm{s}}}{\partial t}+\nabla \cdot \mathbf{q}_{\mathrm{s}} &= \mathbf{Q}_{\mathrm{s}} \\
-    \rho_{\mathrm{f}} C_{p, \mathrm{f}} \frac{\partial T_{\mathrm{f}}}{\partial t}+\rho_{\mathrm{f}} C_{p, \mathrm{f}} \mathbf{u}_{\mathrm{f}} \cdot \nabla T_{\mathrm{f}}+\nabla \cdot \mathbf{q}_{\mathrm{f}} &= \mathbf{Q}_{\mathrm{f}}
-\end{align}
-where local thermal equilibrium is assumed such that $T_{\mathrm{s}} = T_{\mathrm{f}} = T$.
-
-\subsubsection{Wall}
-
-\paragraph{Heat transfer: Solid}
-\cite{comsol_heat_2020}
-\begin{equation}
-    \rho C_{p}\left(\frac{\partial T}{\partial t}+\mathbf{u}_{\text {trans }} \cdot \nabla T\right)+\nabla \cdot\left(\mathbf{q}+\mathbf{q}_{\mathrm{r}}\right)= \mathbf{Q}_{\mathrm{ted}}+ \mathbf{Q}
-\end{equation}
-
-\subsubsection{Coolant zone}
-
-\paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
-This model incorporates the turbulent kinetic energy $k$ and dissipation rate $\varepsilon$ \cite{comsol_cfd_2020}. A turbulent form of the viscosity is defined as
-\begin{equation}
-    \mu_{T}=\rho C_{\mu} \frac{k^{2}}{\varepsilon}
-\end{equation}
-whilst transport equations for $k$ and $\varepsilon$ are given by
-\begin{align}
-    \rho \frac{\partial k}{\partial t}+\rho \mathbf{u} \cdot \nabla k &= \nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{k}}\right) \nabla k\right)+P_{k}-\rho \varepsilon \\
-    \rho \frac{\partial \varepsilon}{\partial t}+\rho \mathbf{u} \cdot \nabla \varepsilon &= \nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{\varepsilon}}\right) \nabla \varepsilon\right)+C_{\varepsilon 1} \frac{\varepsilon}{k} P_{k}-C_{\varepsilon 2} \rho \frac{\varepsilon^{2}}{k}
-\end{align}
-with a production term in $k$ given by
-\begin{equation}
-    P_{k}=\mu_{\mathrm{T}}\left(\nabla \mathbf{u}:\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3}(\nabla \cdot \mathbf{u})^{2}\right)-\frac{2}{3} \rho k \nabla \cdot \mathbf{u}
-\end{equation}
-
-\paragraph{Heat transfer: Fluid}
-\cite{comsol_heat_2020}
-\begin{equation}
-    \rho C_{p}\left(\frac{\partial T}{\partial t}+\mathbf{u} \cdot \nabla T\right)+\nabla \cdot\left(\mathbf{q}+\mathbf{q}_{\mathrm{r}}\right)=\alpha_{p} T\left(\frac{\partial p}{\partial t}+\mathbf{u} \cdot \nabla p\right)+\tau: \nabla \mathbf{u}+\mathbf{Q}
-\end{equation}
+\subsubsection{}
 
 \subsection{Optimisation and sensitivity analysis}
 
@@ -122,7 +67,7 @@ As safety is one of the key priorities of Nitroma in all decision making, the ma
 \subsubsection{Number of tubes}
 A sensitivity analysis was performed on the number of reactor tubes required in Figure \ref{fig:S5-T-X}. An optimal number of 7 was chosen as it provides the lowest maximum temperature at 360K and spends a comparatively short length at a maximum temperature, which will reduce the occurrence of a thermal runaway.
 
-According to the modified Ergun equation, shown in equation \ref{eqn:ergun} the pressure drop ($\Delta p$) is inversely proportional to the length of the reactor, a shorter reactor is more favourable.  This is also evident in Figure \ref{fig:S5-T-X}, where the targeted conversion of 98\% can be achieved well within 4m of reactor length. 
+According to the modified Ergun equation, shown in equation \ref{eqn:ergun} the pressure drop ($\Delta p$) is inversely proportional to the length of the reactor, a shorter reactor is more favourable.  This is also evident in Figure \ref{fig:S5-T-X}, where the targeted conversion of 98\% can be achieved well within 4m of reactor length. As the number of tubes increases, the flowrate per tube decreases thus a higher residence time, leading to an overall increase in conversion. The temperature increase in the 
 
 The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
 \begin{equation}

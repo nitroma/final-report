@@ -188,5 +188,3 @@
 \AtBeginEnvironment{longtable}{\tabletextformat}
 % \RequirePackage{makecell}
 % \renewcommand{\theadfont}{\bfseries}
-\def\halffloat\dimexpr 0.5\linewidth-0.5\floatsep \relax
-\def\thirdfloat\dimexpr 0.333\linewidth-0.666\floatsep \relax
