@@ -1,7 +1,8 @@
 % !TeX root = ../../main.tex
 \section{Mechanical design}
 \subsection{Material selection}
-Due to the strong oxidising property, nitric acid is very corrosive at 70 mass\% and has poses a significant safety threat to the plant. According to ref, an increase in corrosion potential with increase in acid concentration can be attributed to the autocatalytic reduction of nitric acid. 
+Due to the strong oxidising property, nitric acid is very corrosive at \SI{70}{\%_{m/v}} and poses a significant safety risk to the plant. An increase in corrosion potential with increase in acid concentration can be attributed to the autocatalytic reduction of nitric acid
+\cite{suresh_corrosion_nodate}. 
 
 Several stainless steel have been shortlisted for selection: 
 \begin{enumerate}
@@ -10,31 +11,31 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon, which are not stabilised with titanium or niobium, thus are susceptible to intergranular attack in nitric acid at heat affected zone of the welds due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate} . Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell.
+Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate} . Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as .
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
 \subsubsection{Reactor tube}
-According to section X, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{400}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using the equation \ref{eqn:designpressure} below:
+According to section X, the reactor must operate within the temperature range of \SIrange{330}{378}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{400}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \citeref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
 \end{equation}
 \subsubsection{Shell}
-Similarly, using the equation \ref{eqn:designpressure} above, the design pressure ($p_d$) for the cooling water vessel was calculated to be 1.1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
+Similarly, using the \citeref{eqn:designpressure}, ($p_d$) for the cooling water vessel was calculated to be 1.1 bar from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 313K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
 \subsection{Reactor dimension design}
 \label{sec:reactordimensions}
 
 \subsubsection{Reactor tube dimensions}
 \label{sec:reactortube}
-Based on section \ref{sec:detailedreactor}, the total flowrate across the entire reactor was calculated to be $9.24 \times 10^{-4} m^3s^{-1}$, thus the flowrate across one individual reactor is calculated to be  $1.32 \times 10^{-4} m^3s^{-1}$. An optimal length of 4.2m was set as mentioned in Section \ref{sec:coolanttemp}. Subsequently, the final diameter of the reactor tubes were set at 230mm.  
+Based on section \ref{sec:detailedreactor}, the total flowrate across the entire reactor was calculated to be $1.32 \times 10^{-4} m^3s^{-1}$, thus the flowrate across one individual reactor is calculated to be  $1.88 \times 10^{-5} m^3s^{-1}$. An optimal length of \SI{4.2}{\metre} and a final diameter of the reactor tubes of \SI{230}{\milli \metre} were set as previously mentioned in \citeref{sec:coolanttemp} and \citeref{sec:axialdispersion}. 
 The minimum thickness of the reactor tubes ($e_{reactor}$) was calculated using the equation \ref{eqn:minthicknessreactor},
 \begin{equation}
     e_{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = 0.145mm
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards , yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$ \cite{noauthor_unfired_nodate}
+where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section (diameter section), design pressure ($p_d$) is calculated to be X bar, nominal design stress ($f$) is defined 111$Nmm^{-2}$ for design temperature not exceeding 423K based on BS5500 standards , yield stress ($\delta_y$) is defined as 215$Nmm^{-2}$ \cite{noauthor_unfired_nodate}.
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -43,11 +44,11 @@ where inner reactor diameter ($D_i$) is defined as 0.2m from Section (diameter s
     \caption{3D cross section of reactor tube arrangement}
     \label{fig:reactortubearrangement}
 \end{wrapfigure}
-The bundle of 7 tubes was arranged in such a manner with a clearance of 230mm, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
+The bundle of 7 tubes was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular tube arrangement was selected due to the more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 
 \subsubsection{Secondary cooling tube dimensions}
-As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway in hotspots. Each secondary cooling water tubes were designed to have a diameter of 20mm to achieve a flowrate $2.1 \times 10^{-4} m^3 s^{-1}$. The wall thickness was also set as 5mm for a standardised production. 
+As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes were designed to have a diameter of \SI{20}{\milli \metre} to achieve a flowrate $2.1 \times 10^{-4} m^3 s^{-1}$. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
 The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section figure \ref{fig:concentriccoolingwater}. 
 \begin{figure}[H]
     \centering
@@ -57,7 +58,7 @@ The arrangement of the secondary cooling tube within the reactor tubes can be vi
 \end{figure}
 
 \subsubsection{Shell dimensions}
-The diameter of the shell was defined as 1.5m for withstand a total cooling water mass flowrate of 2.3kg/s.
+The diameter of the shell was 1.5m to withstand a total cooling water mass flowrate of \SI{2.3}{\kilogram \per \second}.
 The minimum thickness of the shell ($e_{shell}$) was calculated using the equation \ref{eqn:minthicknessshell},
 \begin{equation}
     e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = 0.577mm
