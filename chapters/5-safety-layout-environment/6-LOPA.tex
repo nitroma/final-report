@@ -3,20 +3,20 @@
 
 A LOPA was conducted for one of the major consequences identified from the HAZOP analysis. Focusing on Node 1, the chosen consequence was an explosion caused by overpressure of hydrogen gas in R201. The explosion itself has serious repercussions, including the release of flammable liquids (including methanol and 2-nitrotoluene) which may result in a fire. Further consequences include the loss of production of o-toluidine, major plant damage as well as damage to multiple environments due to release of harmful substances. Most significantly, the explosion holds the potential to cause serious injuries or even fatalities to those within the facility. 
 
-There were four initiating causes (ICs) found in the HAZOP study which could lead to overpressurization of the reaction vessel;
+There were four initiating causes (ICs) found in the HAZOP study which could lead to overpressurization of the reaction vessel:
 
 \begin{itemize}
-\item \textbf{IC1} - pressure transmitter, PT201, erroneously reads low 
-\item \textbf{IC2} -  pressure controller, PIC201, set point high in error
+\item \textbf{IC1} - Pressure transmitter, PT201, erroneously reads low 
+\item \textbf{IC2} -  Pressure controller, PIC201, set point high in error
 \item \textbf{IC3 }- Blockage in FCV-202, restricting hydrogen recycle stream from reactor R201 
 \item \textbf{IC4} - Bed blockage within reactor R201, causing build up of pressure 
 \end{itemize}
 
-The first three ICs can be classified as basic process control system failures and as such, were each given a failure frequency of 1.00E-01/yr, which is the typical value for failure of control instrumentation. IC4 is classed as a failure that is independent of control system. It was estimated that a bed blockage would occur once in ten years (a failure frequency of 1.00E-01/yr), as whilst the liquid within R102 should in theory be clear, there may be solid deposits from impurities from the previous stage. Solid deposits may also arise from a possible reaction between methanol and the palladium-on-carbon catalyst, which may block the reactor bed. 
+The first three ICs can be classified as basic process control system failures and as such, were each given a failure frequency of \num{1.00e-1}/yr, which is the typical value for failure of control instrumentation. IC4 is classed as a failure that is independent of control system. It was estimated that a bed blockage would occur once in ten years (a failure frequency of \num{1.00e-1}/yr), as whilst the liquid within R102 should in theory be clear, there may be solid deposits from impurities from the previous stage. Solid deposits may also arise from a possible reaction between methanol and the palladium-on-carbon catalyst, which may block the reactor bed. 
 
-As mentioned previously, the explosion could potentially lead to multiple on-site fatalities, the the target mitigated event likelihood (TMEL) for this consequence was taken as 1.00E-06/yr. Nitroma's plant will operate for 24 hours a day for 7 days a week, which is a common industry standard \cite{job_guide_chemical_2021}. In total, the plant will be operating for 6600 hours (or 275 days) a year, meaning the risk of an explosion in R102 caused by overpressure is present for 75.3\% of the year.  
+As mentioned previously, the explosion could potentially lead to multiple on-site fatalities, the target mitigated event likelihood (TMEL) for this consequence was taken as \num{1.00e-6}/yr. Nitroma's plant will operate for 24 hours a day for 7 days a week, which is a common industry standard \cite{job_guide_chemical_2021}. In total, the plant will be operating for 6600 hours (or 275 days) a year, meaning the risk of an explosion in R102 caused by overpressure is present for 75.3\% of the year.  
  
-Whilst there will be flammable material present in R102 (including methanol and o-nitrotoluene), which could lead to an explosion in the event of overpressure, the presence of hydrogen gas means that an ignition source is not necessary for an explosion to occur. Thus, as there is no ignition required for the explosion, the frequency was taken to be 1.00E+00/yr. Due to the continuous nature of the plant, the reactor is essentially fully automated. This in turn means that there will be minimal human involvement in the operation during steady state and thus the the probability of exposure was taken as 0.1. 
+Whilst there will be flammable material present in R102 (including methanol and o-nitrotoluene), which could lead to an explosion in the event of overpressure, the presence of hydrogen gas means that an ignition source is not necessary for an explosion to occur. Thus, as there is no ignition required for the explosion, the frequency was taken to be \num{1.00e0}/yr. Due to the continuous nature of the plant, the reactor is essentially fully automated. This in turn means that there will be minimal human involvement in the operation during steady state and thus the probability of exposure was taken as 0.1. 
 
 There are numerous  independent protection layers (IPLs) linked to R201 in relation to overpressure. These are as follows;
  
@@ -26,19 +26,19 @@ There are numerous  independent protection layers (IPLs) linked to R201 in relat
 \item  \textbf{IPL3} - pressure relief device (PRV-1), with no fouling in the device assumed
  \end{itemize}
 
-All IPLs were applicable to IC3 and IC4. For IC1 and IC2, only the pressure relief valve (IPL3) was relevant, since in these two cases the control system cannot act  as a layer of protection since it has been compromised (and is thus the initiating cause). There was an existing safety instrument function in the original design, a high pressure executive alarm system which consists of a sensor, a switch (the logic element) and an interlock that triggers an automatic response. This SIF was applicable to all four of the ICs. Whilst IC3 and IC4 did not require any further SIFs to meet the TMEL. IC1 and IC2 both required an additional SIF with a safety integrity level of 1 (SIL-1) to individually meet designated risk tolerance . However, overall a SIF of SIL-3 was required to ensure the cumulative frequency of all four ICs would fall below 1.00E-06. The SIF chosen was a system of three pressure transmitters read by a pressure controller, which is connected to two flow control valves. 
+All IPLs were applicable to IC3 and IC4. For IC1 and IC2, only the pressure relief valve (IPL3) was relevant, since in these two cases the control system cannot act as a layer of protection since it has been compromised (and is thus the initiating cause). There was an existing safety instrument function in the original design, a high pressure executive alarm system which consists of a sensor, a switch (the logic element) and an interlock that triggers an automatic response. This SIF was applicable to all four of the ICs. Whilst IC3 and IC4 did not require any further SIFs to meet the TMEL. IC1 and IC2 both required an additional SIF with a safety integrity level of 1 (SIL-1) to individually meet designated risk tolerance. However, overall a SIF of SIL-3 was required to ensure the cumulative frequency of all four ICs would fall below \num{1.00e-6}. The SIF chosen was a system of three pressure transmitters read by a pressure controller, which is connected to two flow control valves. 
 
 
 \subsection{Emergency measures }
 
-Whilst Nitroma has identified potential hazards which may compromise the health and safety of the workforce and taken appropriate measures to control these effectively, we recognise that accidents may still occur and have thus put a number of emergency measures in place. 
+Whilst Nitroma has identified potential hazards which may compromise the health and safety of the workforce and taken appropriate measures to control these effectively, we recognise that accidents may still occur and have thus put a number of emergency measures in place:
  
 \begin{itemize}
-    \item placement of emergency showers, eye-wash unit and respirators
-\item Interlock systems to automatically shut down plant (or a specific section of the plant) in case of critical condition 
-\item Fire detectors, alarms and extinguishers will be on site, with an on-site fire-station at hand
-    \item Emergency exits in each section of the plant (see plant layout) for efficient evacuation 
-\item  A medical centre within the administration building for immediate health concerns
+    \item Placement of emergency showers, eye-wash unit and respirators.
+\item Interlock systems to automatically shut down plant (or a specific section of the plant) in case of critical condition. 
+\item Fire detectors, alarms and extinguishers will be on site, with an on-site fire-station at hand.
+    \item Emergency exits in each section of the plant for efficient evacuation. 
+\item  A medical centre within the administration building for immediate health concerns.
 \end{itemize}
 
 In addition to these measures, Nitroma will ensure that all workers within the facility (both within production and administration) are trained for emergency and evacuation procedures which will be regularly revised. 
