@@ -43,7 +43,7 @@ The Brinkman equations describe laminar flow through porous media, and are an ex
     \caption{Sensitivity to secondary CW parameters}
     \label{fig:comsol-S2}
 \end{figure}
-Inner coolant flowrate and diameter of inner cooling tube were optimised to keep temperature below the safe limit of 363K while maintaining a low pressure drop. As seen in Figure \ref{fig:comsol-S2:maxT}, it is desirable to have a small inner cooling tube diameter and a high coolant flowrate to keep the reactor temperature low. However, the smaller the diameter, the greater the increase in pressure drop per unit length as the coolant flowrate increases. This could be a problem in the future when the throughput is expected to increase when Nitroma's production grows. Thus, it is important to have a larger inner diameter that gives the flexibility of increasing inner coolant flowrate to remove heat from the reaction. Moreover, having a lower pressure drop means no high pressure pump is required to feed the cooling water into the reactor. The final determined values were inner diameter of 0.02m and inner coolant flowrate of 0.3 kg/s. At these specifications, the temperature of reactor can still be kept below 363K while keeping pressure drop to a minimum.
+Inner coolant flowrate and diameter of inner cooling tube were optimised to keep temperature below the safe limit of 363K while maintaining a low pressure drop. As seen in Figure \ref{fig:comsol-S2:maxT}, it is desirable to have a small inner cooling tube diameter and a high coolant flowrate to keep the reactor temperature low. However, the smaller the diameter, the greater the increase in pressure drop per unit length as the coolant flowrate increases. This could be a problem in the future when the throughput is expected to increase when Nitroma's production grows. Thus, it is important to have a larger inner diameter that gives the flexibility of increasing inner coolant flowrate to remove heat from the reaction when needed. Moreover, having a lower pressure drop means CAPEX savings from not h high pressure pump is required to feed the cooling water into the reactor. The final determined values were inner diameter of 0.02m and inner coolant flowrate of 0.3 kg/s. At these specifications, the temperature of reactor can still be kept below 363K while keeping pressure drop to a minimum.
 
 \subsubsection{Cocurrent vs counter-current cooling water flow}
 [insert cocurrent vs countercurrent]
@@ -78,8 +78,7 @@ A sensitivity analysis was performed on the number of reactor tubes required in 
 
 According to the modified Ergun equation, shown in equation \ref{eqn:ergun} the pressure drop ($\Delta p$) is inversely proportional to the length of the reactor, a shorter reactor is more favourable.  This is also evident in Figure \ref{fig:S5-T-X}, where the targeted conversion of 98\% can be achieved well within 4m of reactor length. As the number of tubes increases, the flowrate per tube decreases thus providing a higher residence time, leading to an overall increase in conversion. 
 
-Conversely, 
-
+From figure \ref{fig:S5-T-X}, it can also be seen that the higher the number of 
 
 The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
 \begin{equation}
