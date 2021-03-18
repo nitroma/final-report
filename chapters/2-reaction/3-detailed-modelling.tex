@@ -94,20 +94,14 @@ Nitration is a dangerous process due to its highly exothermic nature. \textcite{
 
 Therefore, to prevent thermal runaway, nitration reactors in industry are typically operated between \si{10} – \SI{50}{°C} below the temperature of runaway reaction \cite{noauthor_lees_2012}. Taking an average temperature between those numbers gives a maximum operating temperature of \SI{30}{\K} below the thermal decomposition of nitric acid of \SI{393}{\K}. Subsequent modelling and safety considerations will aim to keep operating temperature of the nitration process below the safe limit of \SI{363}{\K}. This assumption is in agreement with literature, where most nitration reactions are operated below \SI{373}{\K} as reported by \textcite{chen_experimental_1998}.
 
-As seen in \cref{fig:Adiabatic-with-cooling}, it is infeasible to operate the reactor without controlling its temperature. Even with an external cooling jacket, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and a hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns due to the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
+As seen in \cref{fig:Adiabatic-with-cooling}, it is infeasible to operate the reactor without controlling its temperature. Even with an external cooling jacket, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns due to the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
 
 \begin{figure}[h]
     \centering
-    
-    \begin{subfigure}{0.32\linewidth}
-        % \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
-        \label{fig:Adiabatic-without-cooling}
-        \caption{Adiabatic reactor temperature}
-    \end{subfigure}
     \begin{subfigure}{0.32\linewidth}
         \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
         \label{fig:Adiabatic-with-cooling}
-        \caption{Temperature with external cooling}
+        \caption{Temperature profile with external cooling}
     \end{subfigure}
     
 
@@ -117,8 +111,6 @@ As seen in \cref{fig:Adiabatic-with-cooling}, it is infeasible to operate the re
         %\caption{Temperature and conversion profiles}
     %\end{subfigure}
 
-    \caption{Temperature profiles for adiabatic reactor, and with external cooling}
-    \label{fig:simple-tube}
 \end{figure}
 
 \subsection{Catalyst specification}
