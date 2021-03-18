@@ -19,8 +19,11 @@ A critical parameter for heat transfer in the bed is the overall thermal conduct
 The secondary cooling tube runs axially along the centre of the tubular reactor.
 
 \paragraph{Heat transfer: Solid}
+The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materials library, with a thermal conductivity of \SI{44.5}{\W\per\m\per\K}. No conduction from the tube wall into the tube sheets at the ends of the reaction was modelled.
 
 \subsubsection{Coolant zone}
+
+A co-current coolant flow within the secondary cooling tube removes heat from the reaction and serves to 
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
 
@@ -125,11 +128,11 @@ Using the optimised parameter values above, the reaction was simulated in the HE
 
 The reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in Figure \ref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds at the highest rate in the first 0.5m before gradually decreasing after that. This results in a spike in temperature (Figure \ref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which help keep the temperature below the safe temperature limit of \SI{363}{\K}. 
 
-An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature.
+An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature. The temperature of the reaction fluid followed an asymmetrical parabola course due the different heat flux across the inner and outer sides of the reaction annulus. A maximum temperature of \approx \SI{360.5}{\K}
 
-Without eicooling water on
+The absence of either external or internal cooling water on
 
-The asymmetrical parabola is due the different heat flux across the inner and outer sides of the reaction annulus.
+
 
 Overall, a \SI{98}{\%}conversion that is desired for the nitration reaction was achieved within the reactor. As expected, the more valuable ONT and PNT were produced in much greater amounts as compared to MNT. These products are later fed to other parts of Nitroma's plants to be converted to final products to be sold.
 
