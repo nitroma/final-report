@@ -6,12 +6,13 @@ COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat T
 \subsubsection{Reaction zone}
 
 \paragraph{Mass transfer: Brinkman equations}
-The Brinkman equations describe laminar flow through porous media, and are an extension of Darcy's law \cite{comsol_cfd_2020}. A key parameter is the bed porosity; this was found to be \num{0.277} from the porosity of the sintered SiC support (0.30) and the required catalyst loading of \SI{300}{\kg\per\cubic\m}. Fluid properties (density, viscosity) were taken from Aspen Properties (see \cref{sec:flowsheeting}) and assumed invariant with temperature. The thermal conductivity of the sintered SiC support---lower than that of bulk SiC---was found in the literature [Jang/Sakka]. Solid permeability was assumed constant at \SI{1e-12}{\square\m}. The inlet boundary condition was set to a uniform velocity profile dividing the required throughput across the 7 reactor tubes. The outlet boundary condition was set to a pressure of \SI{1}{\atm}, as required for donwstream processing.
+The Brinkman equations describe laminar flow through porous media, and are an extension of Darcy's law \cite{comsol_cfd_2020}. A key parameter is the bed porosity; this was found to be \num{0.277} from the porosity of the sintered SiC support (0.30) and the required catalyst loading of \SI{300}{\kg\per\cubic\m}. Fluid properties (density, viscosity) were taken from Aspen Properties (see \cref{sec:flowsheeting}) and assumed invariant with temperature. Solid permeability was assumed constant at \SI{1e-12}{\square\m}. The inlet boundary condition was set to a uniform velocity profile dividing the required throughput across the 7 reactor tubes. The outlet boundary condition was set to a pressure of \SI{1}{\atm}, as required for donwstream processing.
 
 \paragraph{Chemical reaction: Transport of concentrated species}
-Reaction rate laws outlined in \cref{sec:R1-kinetics} were implemented to define the species-wise material balances. Molar concentrations in the inflow stream were defined as determined in Aspen Plus, excluding species of very small concentration. Only the 3 reaction
+Reaction rate laws outlined in \cref{sec:R1-kinetics} were implemented to define the species-wise material balances. Molar concentrations in the inflow stream were defined as determined in Aspen Plus, excluding species of very small concentration.
 
 \paragraph{Heat transfer: Porous media}
+A critical parameter for heat transfer in the bed is the overall thermal conductivity. This was found through a volume-average model considering the conductivities of the fluid (\SI{0.187}{\W\per\m\per\K}), catalyst (\SI{3}{\W\per\m\per\K}) and sintered SiC support (\SI{40}{\W\per\m\per\K} at \SI{30}{\percent} porosity [Jang/Sakka], as opposed to \SI{120}{\W\per\m\per\K} for bulk SiC [accuratus]) phases within the bed.
 
 \subsubsection{Wall}
 
@@ -120,7 +121,11 @@ A sensitivity analysis was performed on the cooling water inlet temperature as t
 \label{finalresults}
 Using the optimised parameter values above, the reaction was simulated in the HEX nitration reactor. It showed robust performance by meeting the desired safety and reaction performance benchmark.
 
-The reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in Figure \ref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds at the highest rate in the first 0.5m before gradually decreasing after that. This results in a spike in temperature (Figure \ref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which helps keep the temperature below the safe temperature limit of \SI{363}{\K}. A \SI{98}{\%}conversion that is desired for the nitration reaction was achieved within the reactor. As expected, the more valuable ONT and PNT were produced in much greater amounts as compared to MNT. These products are later fed to other parts of Nitroma's plants to be converted to final products to be sold.
+The reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in Figure \ref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds at the highest rate in the first 0.5m before gradually decreasing after that. This results in a spike in temperature (Figure \ref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which help keep the temperature below the safe temperature limit of \SI{363}{\K}. 
+
+An interesting occurence can be pointed out in \cref{fig:comsol-temperature:radial}. At the 
+
+A \SI{98}{\%}conversion that is desired for the nitration reaction was achieved within the reactor. As expected, the more valuable ONT and PNT were produced in much greater amounts as compared to MNT. These products are later fed to other parts of Nitroma's plants to be converted to final products to be sold.
 
 \begin{figure}[h]
     \centering
@@ -140,27 +145,21 @@ The reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the 
     \label{fig:comsol-performance}
 \end{figure}
 
-
-See \cref{fig:comsol-conversion}.
-
 \begin{figure}[h]
     \centering
 
     \begin{subfigure}{0.45\linewidth}
-        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-surface.png}
+        \includegraphics[width=\linewidth, scale=0.3]{figures/conversion-surface.png}
         \label{fig:comsol-conversion:surface}
     \end{subfigure}
     \begin{subfigure}{0.45\linewidth}
-        \includegraphics[width=\linewidth, scale=0.5]{figures/conversion-line.eps}
+        \includegraphics[width=\linewidth, scale=0.3]{figures/conversion-line.eps}
         \label{fig:comsol-conversion:line}
     \end{subfigure}
 
     \caption{Conversion of toluene across reactor length}
     \label{fig:comsol-conversion}
 \end{figure}
-
-\subsubsection{Temperature}
-See \cref{fig:comsol-temperature}.
 
 \begin{figure}[h]
     \centering
