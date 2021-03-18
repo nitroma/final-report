@@ -30,7 +30,6 @@ COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat T
 The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Key parameters of the reactor design are presented in \cref{tab:reactoroverview}, and further details of the equations implemented are available in \cref{app:comsol}.
 
 \subsubsection{Reaction zone}
-
 Within this zone, nonisothermal flow and reacting flow couplings are used to link heat and mass transfer, and chemical reaction with mass transfer, respectively.
 
 \paragraph{Mass transfer: Brinkman equations}
@@ -43,14 +42,12 @@ Reaction rate laws outlined in \cref{sec:R1-kinetics} were implemented to define
 A critical parameter for heat transfer in the bed is the overall thermal conductivity. This was found through a volume-average model considering the conductivities of the fluid (\SI{0.187}{\W\per\m\per\K}), catalyst (\SI{3}{\W\per\m\per\K}) and sintered SiC support (\SI{40}{\W\per\m\per\K} at \SI{30}{\percent} porosity \cite{jang_thermophysical_2007}, as opposed to \SI{120}{\W\per\m\per\K} for bulk SiC \cite{accuratus_silicon_2013}) phases within the bed. Upstream reactant temperature was set to \SI{330}{\K}, following Aspen. A convective heat transfer coefficient of \SI{500}{\W\per\square\m\per\K} was defined for the outer boundary of the reaction zone, to model heat removal by the shell-side cooling fluid. Additionally, conduction into the wall of the inner cooling tube was modelled.
 
 \subsubsection{Wall}
-
 The secondary cooling tube runs axially along the centre of the tubular reactor.
 
 \paragraph{Heat transfer: Solid}
 The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materials library, with a thermal conductivity of \SI{44.5}{\W\per\m\per\K}. No conduction from the tube wall into the tube sheets at the ends of the reaction was modelled.
 
 \subsubsection{Coolant zone}
-
 A co-current cooling water flow within the secondary cooling tube serves to remove excess heat from the reaction. A nonisothermal flow coupling links heat and mass transfer.
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
