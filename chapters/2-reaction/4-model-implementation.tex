@@ -8,6 +8,8 @@ The physics interfaces used to model each zone of the reactor, as well as assump
 
 \subsubsection{Reaction zone}
 
+Within this zone, nonisothermal flow and reacting flow couplings are used to link heat and mass transfer, and chemical reaction with mass transfer, respectively.
+
 \paragraph{Mass transfer: Brinkman equations}
 The Brinkman equations describe laminar flow through porous media, and are an extension of Darcy's law \cite{comsol_cfd_2020}. A key parameter is the bed porosity; this was found to be \num{0.277} from the porosity of the sintered SiC support (0.30) and the required catalyst loading of \SI{300}{\kg\per\cubic\m}. Fluid properties (density, viscosity) were taken from Aspen Properties (see \cref{sec:flowsheeting}) and assumed invariant with temperature. Solid permeability was assumed constant at \SI{1e-12}{\square\m}. The inlet boundary condition was set to a uniform velocity profile dividing the required throughput across the 7 reactor tubes. The outlet boundary condition was set to a pressure of \SI{1}{\atm}, as required for donwstream processing.
 
@@ -26,11 +28,11 @@ The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materia
 
 \subsubsection{Coolant zone}
 
-A co-current coolant flow within the secondary cooling tube serves to remove excess heat from the reaction.
+A co-current coolant flow within the secondary cooling tube serves to remove excess heat from the reaction. A nonisothermal flow coupling links heat and mass transfer.
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
 
-Due to the high flow rate through the tube (\SI{0.3}{\kg\per\s}) and its small diameter, the flow regime is turbulent. 
+Due to the high flow rate through the tube (\SI{0.3}{\kg\per\s}) and its small diameter, the flow regime is turbulent. Temperature-dependent fluid density and viscosity are determined from the COMSOL material library.
 
 \paragraph{Heat transfer: fluid}
 
