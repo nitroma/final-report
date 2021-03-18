@@ -59,20 +59,17 @@ Temperature-dependent thermal conductivity of the fluid is found from the COMSOL
 \end{figure}
 Inner coolant flowrate and diameter of inner cooling tube were optimised to keep temperature below the safe limit of \SI{363}{\K} while maintaining a low pressure drop. As seen in \cref{fig:comsol-S2:maxT}, it is desirable to have a small inner cooling tube diameter and a high coolant flowrate to keep the reactor temperature low. However, the smaller the diameter, the greater the increase in pressure drop per unit length as the coolant flowrate increases. This could be a problem in the future when the throughput is expected to increase when Nitroma's production grows. Thus, it is important to have a larger inner diameter that gives the flexibility of increasing inner coolant flowrate to remove heat from the reaction when needed. Moreover, having a lower pressure drop means CAPEX savings from not requiring high pressure pumps to feed the cooling water into the reactor. The final determined values were inner diameter of \SI{0.02}{\m} and inner coolant flowrate of \SI{0.3}{\kg\per\s}. At these specifications, the temperature of reactor can still be kept below \SI{363}{\K} while keeping pressure drop to a minimum.
 
-\subsubsection{Cocurrent vs counter-current cooling water flow}
-[insert cocurrent vs countercurrent]
-Cocurrent flow: CW warms the downstream end of the reactor, improving rate.
-
-Countercurrent: CW removes heat from downstream section (slowing rate unnecessarily) and is then warm when it reaches the hotspot, limiting its usefulness in minimising the risk of thermal runaway.
+\subsubsection{Co-current vs counter-current cooling water flow}
+The secondary cooling tube was simulated in both co-current and counter-current flow modes relative to the reaction zone (\cref{fig:comsol-temperature:lines,fig:comsol-temperature:lines:countercurrent}, respectively). Counter-current flow provides enhanced heat removal which, though typically advantageous, is in fact a limitation in the context of the present reactor. Counter-current flow has the effect of unnecessarily cooling the downstream portion of the reactor, further reducing the rate of reaction and increasing the length required to reach \SI{98}{\percent} conversion. Further, the cooling fluid is warmer when it reaches the reactor hotspot and thus the rate of heat removal in this section---critical to avoid thermal runaway---is reduced. In the co-current flow configuration, the secondary cooling water is immediately utilised to remove heat from the hotspot, and in fact serves to warm the downstream portion of the reactor, enhancing the rate of reaction in this section.
 
 \begin{figure}[h]
     \centering
-    \begin{minipage}[t]{0.47\linewidth}
+    \begin{minipage}[t]{0.45\linewidth}
         \includegraphics[width=\linewidth]{figures/temperature-lines-countercurrent.eps}
         \caption{Temperature profiles for counter-current secondary cooling water flow. Compare to \cref{fig:comsol-temperature:lines} (co-current flow).}
         \label{fig:comsol-temperature:lines:countercurrent}
     \end{minipage}\hfill
-    \begin{minipage}[t]{0.47\linewidth}
+    \begin{minipage}[t]{0.45\linewidth}
         \includegraphics[width=\linewidth]{figures/S3-T-X.eps}
         \caption{Effect of changing nitric acid molar ratio on temperature and conversion profiles in reactor.}
         \label{fig:comsol-S3-T-X}
@@ -113,7 +110,7 @@ where $n$ represents the sequence of hexagonal number. The further explanation o
         \includegraphics[width=\linewidth]{figures/comsol-pareto.pdf}
         \caption{Pareto frontier for reactor performance-safety tradeoff}
         \label{fig:comsol-pareto}
-    \end{minipage}
+    \end{minipage}\hfill
     \begin{minipage}[t]{0.32\linewidth}
         \includegraphics[width=\linewidth]{figures/S4-CW-X-T.eps}
         \caption{Effect of CW temperature on distance required to reach 98\% conversion (blue) and max T (green). Maximum reactor length is capped at 5m to prevent an excessively long reactor.}
@@ -122,7 +119,7 @@ where $n$ represents the sequence of hexagonal number. The further explanation o
 \end{figure}
 
 \subsubsection{Pareto frontier}
-A Pareto frontier illustrating the tradeoff between reactor performance (namely minimising the length required to reach the target \SI{98}{\percent} conversion) and safety (maximum temperature reached within the reactor, related to the risk of thermal runaway) was derived using the MATLAB genetic algorithm function \texttt{gamultiobj} and is shown in \cref{fig:comsol-pareto}.
+A Pareto frontier illustrating the tradeoff between reactor performance (i.e. minimising the length required to reach the target \SI{98}{\percent} conversion) and safety (i.e. minimising the maximum temperature reached within the reactor, related to the risk of thermal runaway) was derived using the MATLAB genetic algorithm function \texttt{gamultiobj} and is shown in \cref{fig:comsol-pareto}. The genetic algorithm varied the specification of the cooling system, namely the diameter and mass flow through the secondary cooling tube, and inlet temperature for both primary and secondary cooling. The operating point was selected to maximise reactor performance whilst still respecting the conservative \SI{90}{\celsius} thermal limit.
 
 \subsubsection{Coolant temperature}
 A sensitivity analysis was performed on the cooling water inlet temperature as temperature control was deemed the most important parameter for safety and performance evaluation. The length of reactor required was found to be quite sensitive to changes in inlet cooling temperature. Any changes in temperature would have a noticeable knock-on effect on the rate of reaction since the nitration process is sensitive to temperature \cite{chen_experimental_1998}. The region of interest in \cref{fig:comsol-S4-CW-X-T} is between \SI{325}{\K} \pm \SI{5}{\K}. Such a large fluctuation in temperature is unlikely to happen as the cooling water is sourced from a mixture of used cooling water streams across the plant and fresh cooling water. For each cooling stream to have a significant effect on the overall mixed cooling water stream temperature, there needs to be a significant deviation in the unit operations. The safety alarm systems in Nitroma's plant would alert the operators if that happens, therefore there is a low risk for the cooling water temperature to fluctuate by \pm \SI{5}{\K}. However, a conservative approach is taken when designing the HEX reactor. In the ideal scenario where the cooling water temperature does not fluctuate, a conversion of 98\% can be achieved in 3.6m as shown in \cref{fig:comsol-conversion}. When taking into account the maximum deviation of \pm \SI{5}{\K}, the reactor length is extended and the final reactor length is determined to be \SI{4.2}{\metre}. The summary of cooling water stream used in the HEX reactor can be found in \cref{tab:cwtable}.
@@ -154,6 +151,7 @@ Overall, a \SI{98}{\%}conversion that is desired for the nitration reaction was 
         \caption{Reactor performance}
         \label{fig:comsol-performance}
     \end{minipage}
+    \vspace{\floatsep}
     
     \begin{minipage}{\linewidth}
         \centering
@@ -168,7 +166,8 @@ Overall, a \SI{98}{\%}conversion that is desired for the nitration reaction was 
         \caption{Conversion of toluene across reactor length}
         \label{fig:comsol-conversion}
     \end{minipage}
-
+    \vspace{\floatsep}
+    
     \begin{minipage}{\linewidth}
         \centering
         \begin{subfigure}{0.45\linewidth}

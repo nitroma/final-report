@@ -36,50 +36,59 @@ The overall volume balance at the top section is
 
 \noindent where $\phi_{\mathrm{feed}}$ (m$^{3}$/s) is the feed flow, $\phi_{\mathrm{steer}}$ (m$^{3}$/s) is the steering flow, $\phi_{\mathrm{s,filters}} $(m$^{3}$/s) is the crystal flow at the filters and $\phi_{\mathrm{ml,filters}} $(m$^{3}$/s) is the mother liquor flow at the top section.
 
-The total length of the top section remains constant. The length of the filtration section $ L_{\mathrm{filtration}}$ (m),  was derived from the solid balance in the top section where $\alpha_1$ (m$^3$/m$^3$) is the crystal fraction in the feed slurry, $\alpha_2$ (m$^3$/m$^3$) is the crystal fraction in the slurry section, $\epsilon$ is the porosity in the filtration and stagnant section and $A_c $(m$^2$) is the cross sectional area of the wash column. 
+The total length of the top section remains constant. The length of the filtration section $ L_{\mathrm{filtration}}$ (m), was derived from the solid balance in the top section: 
 
 \begin{equation}
 \frac{\dd L_{\mathrm{filtration}}}{\dd t} = \frac{1}{A_c(1-\alpha_2-\epsilon)}(\alpha_1\phi_{\mathrm{feed}}-\phi_{s,\mathrm{filters}})
 \end{equation}
+
+\noindent where $\alpha_1$ (m$^3$/m$^3$) is the crystal fraction in the feed slurry, $\alpha_2$ (m$^3$/m$^3$) is the crystal fraction in the slurry section, $\epsilon$ is the porosity in the filtration and stagnant section and $A_c $(m$^2$) is the cross sectional area of the wash column.
 
 In the bottom section, there is the stagnant zone with the crystals. Then there is the wash zone with only the crystal and the wash liquid at steady state. The wash liquid crystallises due to low temperature at the wash front. The crystallisation of the wash liquid can be related to the disappearance of the wash liquid by difference in density of the solid and liquid.$C_s$ (m$^3$/s) is the solidification rate of wash liquid at the wash front, $C_l$ (m$^3$/s) is the washing liquid melted at the wash front. 
 \begin{equation}
 C_l= \frac{\rho_s}{\rho_l}C_s
 \end{equation}
 
-The amount of crystallised material was calculated based on a heat balance and temperature difference between the feed and the melt. This assumes the total cooling capacity of the crystals is used to crystallise the wash liquid.$c_p$ (kJ/kgK) is the specific heat capacity, $T_{\mathrm{melt}} $(K) is the melting temperature, $T_{\mathrm{feed}}$ (K) is the feed temperature and $\Delta H_m$ (kJ/kg) is the heat of fusion. 
+The amount of crystallised material was calculated based on a heat balance and temperature difference between the feed and the melt. This assumes the total cooling capacity of the crystals is used to crystallise the wash liquid:
+
 \begin{equation}
 C_s= \frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}Q_{s,\mathrm{filters}}
 \end{equation}
 
-The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes wash liquid is not lost through the filters which is ensured by positioning the filters above the wash section.$\epsilon_w$ is the porosity in the wash section, $L_{\mathrm{wash}}$ (m) is the length of the wash section and $\phi_{wl,\mathrm{knife}} $(\si{\cubic\m\per\s}) is wash liquid flow at the knife. 
+\noindent where $c_p$ (kJ kg$^{-1}$ K$^{-1}$) is the specific heat capacity, $T_{\mathrm{melt}} $(K) is the melting temperature, $T_{\mathrm{feed}}$ (K) is the feed temperature, and $\Delta H_m$ (kJ kg$^{-1}$) is the heat of fusion. 
 
+The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes wash liquid is not lost through the filters which is ensured by positioning the filters above the wash section:
 
 \begin{equation}
 \epsilon_w A_c \frac{\dd L_{\mathrm{wash}}}{\dd t}= \phi_{wl,\mathrm{knife}}-C_l
 \end{equation}
 
+\noindent where $\epsilon_w$ is the porosity in the wash section, $L_{\mathrm{wash}}$ (m) is the length of the wash section and $\phi_{wl,\mathrm{knife}} $(\si{\cubic\m\per\s}) is wash liquid flow at the knife. 
 The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was approximated at 0.45 \cite{jansens_furification_1995}. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be explored further through experiments. The porosity in the wash zone was calculated from the equation below. 
 
 \begin{equation}
 \epsilon_{w}= \epsilon-(1-\epsilon)\left(\frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}\right)
 \end{equation}
 
-At steady state, the wash section is constant with no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and splits into residual and steer flow. $\phi_{\mathrm{residue}}$ (m$^3$/s) is the residue flow. 
+At steady state, the wash section is constant with no flow of mother liquor into or out of the bottom section. The mother liquor at the top section leaves the column through the filter and splits into residual and steer flow. 
 
 \begin{equation}
 \phi_{\mathrm{residue}}= \phi_{ml,\mathrm{filters}} - \phi_{\mathrm{steer}}
 \end{equation}
 
-The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at the melting temperature.$\phi_{\mathrm{product}}$ (m$^3$/s) is the product flow.
+\noindent where $\phi_{\mathrm{residue}}$ (m$^3$/s) is the residue flow. 
+
+The volume balance at the melting circuit is based on the assumption that crystals are molten the moment they enter the melting circuit. The wash liquid enters the column at the melting temperature.
 
 \begin{equation}
 \frac{\rho_s}{\rho_l}\phi_{s,\mathrm{knife}}= \phi_{wl,\mathrm{knife}} - \phi_{\mathrm{product}}
 \end{equation}
 
+\noindent where $\phi_{\mathrm{product}}$ (m$^3$/s) is the product flow.
+
 
 \subsubsection{Force balance}
-The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. $\Delta P_{l,\mathrm{filtration}}, \Delta P_{l,\mathrm{wash}}, \Delta P_{l,\mathrm{stagnant}}$ (Pa) is the liquid pressure drop across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) is the permeability constant for filtration, wash and stagnant sections. 
+The liquid pressure drop across each section were calculated with the following modified Darcy's law equation. 
 
 \begin{align}
     \frac{\Delta P_{l,\mathrm{filtration}}}{L_{\mathrm{filtration}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{filtration}}}\left(\frac{\phi_{ml,\mathrm{filters}}}{\epsilon A_c} - \frac{\phi_{s,\mathrm{filters}}}{1-\epsilon A_c}\right) \\
@@ -87,15 +96,21 @@ The liquid pressure drop across each section were calculated with the following 
     \frac{\Delta P_{l,\mathrm{wash}}}{L_{\mathrm{wash}}} &= \frac{\epsilon \eta_{l}}{B_{\mathrm{wash}}}\left(-\frac{\phi_{wl,\mathrm{knife}}}{\epsilon_w A_c} - \frac{\phi_{s,\mathrm{knife}}}{1-\epsilon_w A_c}\right)
 \end{align}
 
-The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. $P_{\mathrm{top}}$ (Pa) is the liquid pressure above crystal bed and  $P_{\mathrm{filters}} $(Pa) is the pressure at the filter.
+\noindent where $\Delta P_{l,\mathrm{filtration}}$, $\Delta P_{l,\mathrm{wash}}$, and $\Delta P_{l,\mathrm{stagnant}}$ (Pa) are the liquid pressure drops across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) are the permeability constants for filtration, wash and stagnant sections. 
+
+
+The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 \begin{equation}
 P_{\mathrm{top}} = P_{\mathrm{filters}} + \Delta P_{l,\mathrm{filtration}}
 \end{equation}
 
-The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit,$\Delta P_{\mathrm{valve}} $(Pa) . The pressure drop across the valve is determined through a linear relation with the product flow rate.$K_w$ (Pas/m$^3$) is the modified flow resistance factor.  
+\noindent whence $P_{\mathrm{top}}$ (Pa) is the liquid pressure above crystal bed and $P_{\mathrm{filters}} $(Pa) is the pressure at the filter.
+
+The pressure at the bottom is equal to the liquid pressure drop in the valve of the melting circuit, $\Delta P_{\mathrm{valve}} $(Pa). The pressure drop across the valve is determined through a linear relation with the product flow rate.
 \begin{equation}
 P_{\mathrm{bottom}}=\Delta P_{\mathrm{valve}} = K_w\phi_{\mathrm{product}}
 \end{equation}
+\noindent where $K_w$ (Pas/m$^3$) is the modified flow resistance factor.  
 
 The pressure in the melting circuit was calculated using the equation below. 
 \begin{equation}
@@ -119,22 +134,28 @@ $\mathrm{K_{w}}$        & 1.9e10 & \pascal\s\per\cubic\m &                      
 \end{tabular}
 \end{table}
 
-During operation of the hydraulic column  variations in the length of the filtration, stagnant and wash section is possible. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different sections of the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore variation in filtration and wash section would be designed to be between 0.27 to 0.30 m.  
-\begin{wrapfigure}{R}{0.5\linewidth}
-\centering
-\includegraphics[width=\linewidth]{chapters/3-separation/figures/diameter.jpg}
-\caption{Effect of varying diameter on the pressure at top, bottom and filter section of the hydraulic wash column.}
-\label{fig:dia_col}
-\end{wrapfigure}
+During the operation of the hydraulic column, variations in the length of the filtration stagnant and wash section is possible. Therefore, simulations of variable filtration and wash section lengths were implemented on Excel to determine the effect on pressures at different sections of the column. With proper controls in place, the sections should not vary significantly during normal operation, therefore variation in filtration and wash section would be designed to be between 0.27 to 0.30 m.  
+
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/3-separation/figures/diameter.jpg}
+        \caption{Effect of varying diameter on the pressure at top, bottom and filter section of the hydraulic wash column.}
+    \end{subfigure}%
+    \label{fig:dia_col}
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/3-separation/figures/steerflow.jpg}
+        \caption{Effect of varying steer flow rate on the pressure at top, bottom and filter section of the hydraulic wash column.}
+    \end{subfigure}
+    \label{fig:steer}
+\end{figure*}
+
 
 The length of the column was fixed at 0.8 m. The diameter of the column was varied from 0.1 m to 0.3 m to observe the impact it has on the pressure across the column. \Cref{fig:dia_col} indicates when the diameter is less than 0.165 m the model suggests negative pressure at the filter which could imply instead of mother liquor flowing upwards through the filter tube, it could be flowing in the reverse direction. The pressure at the top is also negative indicating at these conditions the fluid flow in the column may not be in the desirable downward direction. A suitable diameter was chosen at 0.17 m allowing for slight variations in the section lengths over time under normal operation.
 
-\begin{wrapfigure}{R}{0.5\linewidth}
-\centering
-\includegraphics[width=\linewidth]{chapters/3-separation/figures/steerflow.jpg}
-\caption{Effect of varying steer flow rate on the pressure at top, bottom and filter section of the hydraulic wash column.}
-\label{fig:steer_col}
-\end{wrapfigure}
 
 Steer flow is the flow rate of the mother liquor being recycled back into the column from the filter tubes whilst some mother liquor are removed as residual flow. The filtrate being recycled back into the column increases the transport force. Steer flowrate was varied from $1.5 \times 1o^{-5}$ to $3.5 \times 1o^{-5}$ $m^{3}/s$. \Cref{fig:steer_col} shows the unfeasible and feasible region of operation. Above a steer flow rate of $2.7 \times 1o^{-5}$ $m^{3}/s$, the model shows negative liquid pressure drop at the filter. However, at lower steer flow such as $1.5 \times 1o^{-5}$ $m^{3}/s$ the filter pressure increases significantly to more than 10 bar. In order to attain a lower pressure but also ensure the column is operating in a feasible region, the steer flow rate at $2.65 \times 1o^{-5}$ $m^{3}/s$ was chosen. At this flow rate there is an allowance for variation in the flowrate whilst the column is still operating in the feasible region. The steer flow appears to have no impact on the bottom pressure. This is because the bottom pressure mainly relies on the valve resistance coefficient. 
 

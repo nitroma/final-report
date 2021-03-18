@@ -23,11 +23,11 @@ R601 & Packed-bed & Hydrogenation & 0.60 & 298 & 1 & -73.80 & 86\% \\ \bottomrul
 \end{table}
 
 \subsection{R201: Hydrogenation of o-nitrotoluene}
-After the production of the 3 nitrotoluene isomers, ONT is mixed with methanol and hydrogenated to o-TOL in a co-current trickle bed reactor operating at 333K. Methanol was chosen as a solvent due to its ability to be easily separated from the product water, making it a suitable choice for solvent for this reaction. According to Rajadhyaksha et al, the hydrogen pressure was defined as 1380 kPa, but this pressure was lowered to 5 atm for safety reasons \cite{rajadhyaksha_solvent_1986}. The overall conversion for this equation was 98\%.
+After the production of the 3 nitrotoluene isomers, ONT is mixed with methanol and hydrogenated to o-toluidine in a co-current trickle bed reactor operating at 333K. Methanol was chosen as a solvent due to its ability to be easily separated from the product water, which can then be recycled into the reactor. Kinetic data was sourced from literature papers \cite{rajadhyaksha_solvent_1986} and operating pressure was lowered to 5 atm for safety reasons. The overall conversion for this reaction was \SI{98}{\%}.
 
 \begin{scheme}[h]
     \centering
-    \ch{ ONT + 3 H2 -> O{-}TOL + 2 H2O }
+    \ch{ ONT + 3 H2 -> O{-}Toluidine + 2 H2O }
     \caption{ONT hydrogenation to O-TOL}
     \label{eqn: ONT hydrogenation}
 \end{scheme}
@@ -61,28 +61,28 @@ Reaction & {$A$ (\si{\per\s})} & {$E_a$ (\si{\kJ\per\mol})} \\ \midrule
 \end{wraptable}
 The oxidation of p-nitrotoluene is performed in packed-bed reactors R301 and R401, employing air as the oxidant \cite{chandalia_kinetics_1999}. The overall reaction network is shown in \cref{sch:R3} and is based on that reported for the oxidation of toluene \cite{hoorn_modelling_2005}. Kinetic information was sourced for the toluene oxidation network and corrected for the deactivation effect of the nitro- substituent using Hammett constants, resulting in rates 5.6 times slower for the nitrotoluene network \cite{partenheimer_methodology_1995}. The rate constants are shown in \cref{tab:S3-kinetics}; the corresponding rate expression for each step is first-order in the aromatic \cite{tan_kinetic_2010}, as follows:
 \begin{align*}
-    r_1 &= k_1 C_\text{4-nitrotoluene} & r_2 &= k_2 C_\text{4-nitrotoluene} \\
-    r_3 &= k_3 C_\text{4-nitrobenzaldehyde} & r_4 &= k_4 C_\text{4-nitrobenzyl alcohol}
+    r_1 &= k_1 C_\text{p-nitrotoluene} & r_2 &= k_2 C_\text{p-nitrotoluene} \\
+    r_3 &= k_3 C_\text{p-nitrobenzaldehyde} & r_4 &= k_4 C_\text{p-nitrobenzyl alcohol}
 \end{align*}
 
 The catalyst employed in the packed bed is cobalt phthalocyanine, with an overall loading of \SI{5}{\g\per\L} \cite{chandalia_kinetics_1999}. The feeds to the reactor are a \SI{70}{\percent\of{w/v}} 4-nitrotoluene stream, alongside air at room temperature, and it is operated at \SI{750}{\K} and \SI{1}{\atm} \cite{chandalia_kinetics_1999}. Commercial processes for the production of 4-NBA are reported with yields of \SI{88.5}{\percent} \cite{maki_benzoic_2000}; the model implemented in Aspen for the 2 oxidation reactors gave yields of \SIlist{0;0}{\percent} respectively.
 
 \begin{scheme}[h]
     \includegraphics[width=\linewidth]{figures/R3.pdf}
-    \caption{Oxidation of 4-nitrotoluene to 4-nitrobenzaldehyde, and subsequently to 4-nitrobenzoic acid}
+    \caption{Oxidation of p-nitrotoluene to p-nitrobenzaldehyde, and subsequently to p-nitrobenzoic acid}
     \label{sch:R3}
 \end{scheme}
 
-\subsection{R501 \& R601: Hydrogenation of nitrobenzaldehyde and nitrobenzoic acid}
+\subsection{R501 \& R601: Hydrogenation of p-nitrobenzaldehyde and p-nitrobenzoic acid}
 
 \begin{scheme}[h]
     \centering
-    \ch{ NBA + HCOOH -> ABA + CO2 + H2O }
+    \ch{ pNBH + HCOOH -> pABH + CO2 + H2O }
     \\
-    \ch{ NBAH + HCOOH -> ABAH + CO2 + H2O }
-    \caption{Hydrogenation of NBA and NBAH to ABA and ABAH}
+    \ch{ pNBA + HCOOH -> pABA + CO2 + H2O }
+    \caption{Hydrogenation of pNBH and pNBA to pABH and pABA}
     \label{eqn: ONT hydrogenation}
 \end{scheme}
 
-The hydrogenation of p-nitrobenzaldehyde and p-nitrobenzoic acid were carried out in methanol solvent with formic acid as the reducing agent. The reaction was carried out at room temperature and 1 atm. 5\% w/w Pt/C was chosen as the desired catalyst to speed up the reaction because it can be reused many times while maintaining its catalytic performance \cite{rahman_fast_2020}. The overall yield for 4-ABA and 4-ABH are 86\% and 80\% respectively as reported by \textcite{gowda_catalytic_2000}.
+The hydrogenation of p-nitrobenzaldehyde and p-nitrobenzoic acid were carried out in methanol solvent with formic acid as the reducing agent. The reaction was carried out at room temperature and 1 atm. \SI{5}{\%} w/w Pt/C was chosen as the desired catalyst to speed up the reaction due to its reusability benefits while maintaining its catalytic performance \cite{rahman_fast_2020}. The overall yield for p-ABH and p-ABA were \SI{86}{\%} and \SI{80}{\%} respectively as reported by \textcite{gowda_catalytic_2000}.
 
