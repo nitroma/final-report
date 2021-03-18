@@ -66,13 +66,13 @@ To understand the thermal effects of the reaction, the enthalpy of reaction was 
 
 The enthalpy of reaction was calculated using Hess Law, as shown in the equation below:
 \begin{equation}
-  \Delta H_{r}^{T} = \Delta H_{f,\mathrm{nitrotoluene}}^{T} + \Delta H_{f,\mathrm{water}}^{T} - \Delta H_{f,\mathrm{toluene}}^{T} - \Delta H_{f,\mathrm{nitric acid}}^{T}
+    \Delta H_{r}^{T} = \Delta H_{f,\mathrm{nitrotoluene}}^{T} + \Delta H_{f,\mathrm{water}}^{T} - \Delta H_{f,\mathrm{toluene}}^{T} - \Delta H_{f,\text{nitric acid}}^{T}
 \end{equation}
 
 Since the reaction was carried out at 330K, the enthalpy of reaction was adjusted to the operating temperature by using the heat capacities of the compounds using the equation below. The enthalpy of reaction was not further adjusted to capture the effects of pressure because pressure has a negligible effect on the overall enthalpy [liu, 2019]. 
 
 \begin{equation}
-  \Delta H_{r}^{330K} = \Delta H_{r}^{\standardstate} + C_p \Delta T
+    \Delta H_{r}^{330K} = \Delta H_{r}^{\standardstate} + C_p \Delta T
 \end{equation}
 
 P-nitrotoluene is an exception since it is a solid at standard state. Therefore, the latent heat of fusion needs to be included when adjusting the enthalpy of reaction to the operating temperature. The summary of the enthalpy of formation for all reactants and products can be found in Appendix \ref{tab:Heat enthalpy table}. The final enthalpy of reaction at 330K is calculated to be -116 kJ/mol. At the specified flowrates of the reactants, the heat duty of the reactor is -63.4 kW.
@@ -88,7 +88,7 @@ P-nitrotoluene is an exception since it is a solid at standard state. Therefore,
 \end{wrapfigure}
 \textcite{young_axial_1973} showed that if temperature and concentration distribution (i.e conversion) are important, then axial dispersion must be taken into account to ensure accurate modelling of flow. A large degree of axial dispersion increases back-mixing in the reactor, which increases the residence time in the reactor and promote undesirable side reactions such as dinitrotoluene or trinitrotoluene. Axial dispersion is a function of the diameter of reacting channels and is independent of the total length. Thus, to minimise the degree of axial dispersion, an optimal diameter needs to be selected. 
 
-The axial dispersion coefficient ($D_z$) can be calculated using the Taylor expression: 
+The axial dispersion coefficient ($D_z$) can be calculated using the Taylor expression \cite{froment_chemical_2011}: 
 \begin{equation}
     D_z=D_{ab}+\frac{(uD)^2}{192D_{ab}}
     \label{eq: axial dispersion coefficient}
