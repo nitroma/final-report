@@ -23,9 +23,11 @@ The wall medium was modelled as AISI 4340 Steel from the built-in COMSOL materia
 
 \subsubsection{Coolant zone}
 
-A co-current coolant flow within the secondary cooling tube serves both to remove heat from the reaction and serves to 
+A co-current coolant flow within the secondary cooling tube serves to remove excess heat from the reaction.
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
+
+Due to the high flow rate through the tube and its small diameter, the flow regime is turbulent. 
 
 \paragraph{Heat transfer: fluid}
 
@@ -128,9 +130,7 @@ Using the optimised parameter values above, the reaction was simulated in the HE
 
 The reactor sees a sharp rise in conversion of \approx \SI{80}{\percent} in the first \SI{1}{\metre} of reactor before achieving the remaining \SI{20}{\percent} in the next \approx 3m. This can be explained by the rate of reaction as shown in Figure \ref{fig:comsol-performance:r_TOL}. As high concentrations of reactants are first mixed together at the inlet of the reactor, the reaction proceeds at the highest rate in the first 0.5m before gradually decreasing after that. This results in a spike in temperature (Figure \ref{fig:comsol-temperature}) since the reaction is an exothermic process, but the temperature does not continue on an upwards trajectory. This is due to the combined effect of having lower remaining concentration of reactants and efficient heat removal from cooling water which help keep the temperature below the safe temperature limit of \SI{363}{\K}. 
 
-An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature. The temperature of the reaction fluid followed an asymmetrical parabola course due the different heat flux across the inner and outer sides of the reaction annulus. A maximum temperature of \approx \SI{360.5}{\K}
-
-The absence of either external or internal cooling water on
+An interesting occurrence can be pointed out in \cref{fig:comsol-temperature:radial}. The figure shows the radial temperature profile at the slice of the reactor with the highest temperature. The temperature of the reaction fluid followed an asymmetrical parabola course due to the different heat flux across the inner and outer sides of the reaction annulus. A maximum temperature of \approx \SI{360.5}{\K} was located somewhere in the middle of the reaction annulus. Without either of the external or internal cooling water. This highlights the importance of Nitroma's novel triple concentric tube arrangement
 
 
 
