@@ -51,9 +51,11 @@ The optimal number of tubes of 7 was also chosen based on the centered hexagonal
     n^3 - (n-1)^3 = 3n(n-1)+1
     \label{eqn: hexagon}
 \end{equation}
+where $n$ represents the sequence of hexagonal number. 
+
 The bundle of 7 tubes was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
-where $n$ represents the sequence of hexagonal number. Further explanation on the heat transfer benefits will be discussed in Section \ref{sec:reactortube}.
+
 
 \subsubsection{Secondary cooling tube dimensions}
 As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes were designed to have a diameter of \SI{20}{\milli \metre} with a flowrate \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
@@ -72,14 +74,14 @@ The minimum thickness of the shell ($e_{shell}$) was calculated using equation \
     e_{shell} = \frac{p_dD_i}{2f-p_d} = \frac{0.11 \times 1500}{2 \times 143 - 0.11} = 0.577mm
     \label{eqn:minthicknessshell}
 \end{equation}
-where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{143}$Nmm^{-2}$. The minimum thickness of the shell was calculated to be \SI{0.577}{\milli \metre}. After taking into account corrosion allowance of \SI{1.5}{\milli \metre} and other welding considerations, a final shell thickness of \SI{5}{\milli \metre} was chosen. 
+where $D_i$ set as \SI{1500}{\milli \metre}, $p_d$ as 0.11 and $f$ value of \SI{143}{\N\per\square\mm}. The minimum thickness of the shell was calculated to be \SI{0.577}{\milli \metre}. After taking into account corrosion allowance of \SI{1.5}{\milli \metre} and other welding considerations, a final shell thickness of \SI{5}{\milli \metre} was chosen. 
 
 \subsubsection{Head dimensions}
 %A torispherical head was chosen as the preferred over ellipsoidal and hemispherical heads due to higher maximum stress and deformation threshold (). 
 A hemispherical head was chosen as the preferred head as the pressure in the vessel is divided equally across the surface of the head, making it suitable for large sized pressure vessels. 
 The minimum thickness ($e_{head}$)of the hemispherical head was calculated using the equation \ref{eqn:hemisphericalend},
 \begin{equation}
-    e_{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = 0.73mm
+    e_{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
     \label{eqn:hemisphericalend}
 \end{equation}
 with $p$ set as 1.4bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as 143$Nmm^{-2}$.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
@@ -108,7 +110,7 @@ A total of 7 ports were designed according to BS 5500:1997 and BS 1600:1991 stan
 \end{enumerate}
 Based on BS1600: 1991, schedule 40 pipes were chosen for all pipes \cite{noauthor_dimensions_nodate}. 
 \subsubsection{Reactant flow port design}
-The inlet and outlet of the reactant flow were placed at the top right and top left of the hemispherical shell domes respectively. Both ports were estimated to have an acceptable feed liquid velocity range (U) of 0.1 - 1 $ms^{-1}$. The cross sectional area (A) and pipe diameter (D) are then calculated using the volumetric flowrate ($Q_v$) as follows
+The inlet and outlet of the reactant flow were placed at the top right and top left of the hemispherical shell domes respectively. Both ports were estimated to have an acceptable feed liquid velocity range (U) of \SIrange{0.1}{1}{\m\per\s}. The cross sectional area (A) and pipe diameter (D) are then calculated using the volumetric flowrate ($Q_v$) as follows
 \begin{align}
     A &= \frac{Q_v}{U} &
     \mathrm{D} &= \sqrt{\frac{4A}{\pi}}
