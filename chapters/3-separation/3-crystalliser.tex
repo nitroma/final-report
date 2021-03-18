@@ -339,7 +339,7 @@ The kinetic rate constants employed in Sections \ref{sec:secondary nucleation} a
 
 Figures \ref{fig:sensitivity kinetics}(a) and \ref{fig:sensitivity kinetics}(b) are sensitivity plots for $K_B$ and $K_G$ respectively. Here, the volume has been fixed at the design value of 0.1885 m$^3$, and the kinetic constants $K_B$ and $K_G$ are allowed to change with respect to their design values of 10$^{13}$ and 8.3600 $\cdot$ 10$^{-6}$ m/s. Deviations of the crystalliser recovery, $r_c$, and modal size of crystals, $L_M$, from their design values are plotted against deviations in $K_B$ and $K_G$. For both cases, it can be seen that changes in $r_c$ is negligible. This is because of the large volume designed for the crystalliser, where the crystalliser is operated very close to the thermodynamic equilibrium and the driving force for kinetics is small regardless of the numerical values of the rate constants.
 
-The value of $L_M$, on the other hand, does change sizeably with deviations in $K_B$ and $K_G$. This is because $L_M$ has a direct relationship with $G$, the growth rate, as described by Equation \ref{eq:LM G tau}. $G$, in turn, is directly affected by $K_B$ and $K_G$ through Equations \ref{eq:magma density} to \ref{eq:KG Ste g}. The value of $L_M$ affects the design of the hydraulic wash column for separating the solid PNT from the liquid. 
+The value of $L_M$, on the other hand, does change sizeably with deviations in $K_B$ and $K_G$. This is because $L_M$ has a direct relationship with $G$, the growth rate, as described by Equation \ref{eq:LM G tau}. $G$, in turn, is directly affected by $K_B$ and $K_G$ through Equations \ref{eq:magma density} to \ref{eq:KG Ste g}. The value of $L_M$ in principle affects some parameters in the design of the hydraulic wash column as would be explained in Section \ref{section: hydraulic wash column}; however, the deviation in $L_M$ is not significant enough to cause a meaningful change in the overall design. 
 
 \begin{figure}[h]
     \centering
@@ -350,7 +350,7 @@ The value of $L_M$, on the other hand, does change sizeably with deviations in $
    
 \subsubsection{Fouling}\label{sec:fouling}
 
-Fouling is a big issue for continuous melt crystallisation, as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coated on the cooling pipe surface. The cooling fluid side can also exhibit fouling. To account for this in the design, an additional resistance, $R_f$, will be added to the aforementioned resistances in series relation of Equation \ref{eq:resistht},
+Fouling can pose a big challenge for continuous melt crystallisation, as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coated on the cooling pipe surface. The cooling fluid side can also exhibit fouling. To account for this in the design, an additional resistance, $R_f$, will be added to the aforementioned resistances in series relation of Equation \ref{eq:resistht},
 \begin{equation} \label{eq:fouling}
     R_f = R_{fs} + R_{fp}
 \end{equation}
@@ -363,7 +363,7 @@ whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivi
 
 A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{fouling}. This resistance is too small to make an impact on the vessel design. 
 
-To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. Figure \ref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in Figure \ref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermoal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in Section.
+To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to observe its effect on the overall heat transfer coefficient. Figure \ref{fig:fouling sensitivity} is a plot of the overall heat transfer coefficient against the thickness of fouling. As can be seen in Figure \ref{fig:fouling sensitivity}, as the thickness of the fouled layer on the outer side of the half pipe coil increases, there is a decrease in the overall heat transfer coefficient. Even with slight encrustation, there is a significant initial drop in the coefficient. For example, there is a 90.7\% drop in the heat transfer coefficient with a 1 mm layer of PNT solid fouling. This is mainly due to PNT's low thermoal conductivity as a solid, which results in a high value of $R_{fp}$. Therefore, it is imperative to resolve this to ensure that the heat transfer efficiency is maintained in the crystalliser; otherwise, there might not be sufficient recovery of solids for downstream processing into the final products due to the crystalliser unable to reach the desired operating temperature. Both on line and off line methods can be used to use remove the fouling such as chemical treatment or mechanical removal, and these will be included in the recommendations in Section \ref{crystalliser conclusions}.
 
 \begin{figure}[h]
     \centering
@@ -376,20 +376,20 @@ To analyse the effect of the process side fouling, the thickness of fouling, $l_
 
 \subsection{Physical design} \label{sec:physical design crystalliser}
 
-The crystalliser has been designed in accordance with the British Standards.  SolidWorks\textsuperscript{\textregistered} has been employed for the mechanical design. The crystalliser has been designed to consist of a cylindrical shell and two ellipsoidal domed ends. The internal diameter of the cylindrical shell, $D_i$, is taken to be the same as $D$ defined in Section \ref{sec: crystalliser mass balance}. For the domed ends, the inside crown radius, $R$, and the inside knuckle radius, $r$, are given as 
+The crystalliser has been designed in accordance with the British Standards. A general schematic for the crystalliser vessel is available in Figure \ref{fig:crystalliser schematic}.  SolidWorks\textsuperscript{\textregistered} has been employed for the mechanical design. The crystalliser has been designed to consist of a cylindrical shell and two ellipsoidal domed ends. The internal diameter of the cylindrical shell, $D_i$, is taken to be the same as $D$ defined in Section \ref{sec: crystalliser mass balance}. For the domed ends, the inside crown radius, $R$, and the inside knuckle radius, $r$, are given as 
 \begin{align}
     R &= 0.8 D_i &
     r &= 0.146 D_i
 \end{align}
 respectively for ellipsoidal ends. The total length, $L_t$, of the cylindrical shell has been taken to be the same as $H$ defined in Section \ref{sec: crystalliser mass balance}. 
 
-Austenitic stainless steel 304-S71 has been chosen from Table 2.3-5 of \textbf{BS5500: 1997} for constructing the crystalliser vessel. It is a strong material with a nominal design stress of 174 MPa. The corrosion resistance of stainless steel means it is also ideal for long-term operation. Because the crystalliser is operated at atmospheric pressure, it is not considered a pressure vessel according to \textbf{BS5500: 1997}. A thickness of 6 mm has thus been taken for the shell of the vessel.
+Austenitic stainless steel 304L-S71 has been chosen from Table 2.3-5 of \textbf{BS5500: 1997} for constructing the crystalliser vessel. It is a strong material with a nominal design stress of 174 MPa. The corrosion resistance of stainless steel means it is also ideal for long-term operation. Because the crystalliser is operated at atmospheric pressure, it is not considered a pressure vessel according to \textbf{BS5500: 1997}. A thickness of 6 mm has thus been taken for the shell of the vessel.
 
 Four ports are needed on the crystalliser vessel, namely the inlet, the outlet, and two sightholes. Per requirement of \textbf{BS470: 1984}, a minimum of two sightholes with diameter no smaller than 30 mm are needed. For liquid phase operations, the desirable operating velocity for the inlet and outlet ports should be between 0.1-1 m/s, which sets limits on the area the ports openings have to satisfy. In the end, schedule 80 pipes with nominal pipe size (NPS) of 2 inch as given in Table 1 of \textbf{BS1600: 1991} have been found to fit the requirements of all ports and hence have been chosen. Class 300 weld-neck ring-type joint flanges from \textbf{BS1560-3.1: 1989} have been chosen for these ports, and class 300 blind flanges have been chosen for covering the sightholes. 
 
 Helical heating coils with internal dimensions specified in Section \ref{sec:heat transfer crystalliser} are to be implemented around the vessel. Wall thickness of the coils are designed to be 6 mm just like for the shells and ends. Stirrers are designed such that they are about-to-touch the coils to minimise fouling on the walls. 
 
-A general schematic for the crystalliser vessel is available in Figure \ref{fig:crystalliser schematic}. 
+
 
 \begin{table}[h] \label{tab:crystalliser mech design summary}
 \centering
@@ -424,3 +424,4 @@ A general schematic for the crystalliser vessel is available in Figure \ref{fig:
 \end{figure} 
 
 \newpage
+\subsection{Conclusions and recommendations} \label{crystalliser conclusions}
