@@ -49,17 +49,21 @@ In the bottom section, there is the stagnant zone with the crystals. Then there 
 C_l= \frac{\rho_s}{\rho_l}C_s
 \end{equation}
 
-The amount of crystallised material was calculated based on a heat balance and temperature difference between the feed and the melt. This assumes the total cooling capacity of the crystals is used to crystallise the wash liquid
+The amount of crystallised material was calculated based on a heat balance and temperature difference between the feed and the melt. This assumes the total cooling capacity of the crystals is used to crystallise the wash liquid:
+
 \begin{equation}
 C_s= \frac{c_p(T_{\mathrm{melt}}-T_{\mathrm{feed}})}{\Delta H_m}Q_{s,\mathrm{filters}}
 \end{equation}
 
-The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes wash liquid is not lost through the filters which is ensured by positioning the filters above the wash section.$\epsilon_w$ is the porosity in the wash section, $L_{\mathrm{wash}}$ (m) is the length of the wash section and $\phi_{wl,\mathrm{knife}} $(\si{\cubic\m\per\s}) is wash liquid flow at the knife. 
+\noindent where $c_p$ (kJ kg$^{-1}$ K$^{-1}$) is the specific heat capacity, $T_{\mathrm{melt}} $(K) is the melting temperature, $T_{\mathrm{feed}}$ (K) is the feed temperature, and $\Delta H_m$ (kJ kg$^{-1}$) is the heat of fusion. 
 
+The length of the wash section is related to the wash-liquid flow entering the knife and the wash liquid that crystallises. This assumes wash liquid is not lost through the filters which is ensured by positioning the filters above the wash section:
 
 \begin{equation}
 \epsilon_w A_c \frac{\dd L_{\mathrm{wash}}}{\dd t}= \phi_{wl,\mathrm{knife}}-C_l
 \end{equation}
+
+$\epsilon_w$ is the porosity in the wash section, $L_{\mathrm{wash}}$ (m) is the length of the wash section and $\phi_{wl,\mathrm{knife}} $(\si{\cubic\m\per\s}) is wash liquid flow at the knife. 
 
 The wash column during operation forms 3 layers of filtration, stagnant and wash sections. Within the filtration and stagnant section it is assumed the porosity and permeability remain constant. Since the crystals form a densely packed column $\epsilon$ was approximated at 0.45 \cite{jansens_furification_1995}. Due to the wash-liquid crystallisation at the wash zone an abrupt change in porosity and permeability was considered. The consolidation of the crystal bed were neglected in this model, however under compressive force from the pressure at the top section this may not be a valid assumption and will have to be explored further through experiments. The porosity in the wash zone was calculated from the equation below. 
 
