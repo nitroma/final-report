@@ -53,11 +53,13 @@ This model incorporates the turbulent kinetic energy $k$ and dissipation rate $\
     \mu_{T}=\rho C_{\mu} \frac{k^{2}}{\varepsilon}
 \end{equation}
 whilst transport equations for $k$ and $\varepsilon$ are given by
+\begin{align}
+    \rho \frac{\partial k}{\partial t}+\rho \mathbf{u} \cdot \nabla k &= \nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{k}}\right) \nabla k\right)+P_{k}-\rho \varepsilon \\
+    \rho \frac{\partial \varepsilon}{\partial t}+\rho \mathbf{u} \cdot \nabla \varepsilon &= \nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{\varepsilon}}\right) \nabla \varepsilon\right)+C_{\varepsilon 1} \frac{\varepsilon}{k} P_{k}-C_{\varepsilon 2} \rho \frac{\varepsilon^{2}}{k}
+\end{align}
+with a production term in $k$ given by
 \begin{equation}
-\rho \frac{\partial k}{\partial t}+\rho \mathbf{u} \cdot \nabla k=\nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{k}}\right) \nabla k\right)+P_{k}-\rho \varepsilon
-\end{equation}
-\begin{equation}
-\rho \frac{\partial \varepsilon}{\partial t}+\rho \mathbf{u} \cdot \nabla \varepsilon=\nabla \cdot\left(\left(\mu+\frac{\mu_{\mathrm{T}}}{\sigma_{\varepsilon}}\right) \nabla \varepsilon\right)+C_{\varepsilon 1} \frac{\varepsilon}{k} P_{k}-C_{\varepsilon 2} \rho \frac{\varepsilon^{2}}{k}
+    P_{k}=\mu_{\mathrm{T}}\left(\nabla \mathbf{u}:\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^{T}\right)-\frac{2}{3}(\nabla \cdot \mathbf{u})^{2}\right)-\frac{2}{3} \rho k \nabla \cdot \mathbf{u}
 \end{equation}
 
 \paragraph{Heat transfer: Fluid}
