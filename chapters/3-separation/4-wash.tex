@@ -98,15 +98,18 @@ The liquid pressure drop across each section were calculated with the following 
 
 \noindent where $\Delta P_{l,\mathrm{filtration}}$, $\Delta P_{l,\mathrm{wash}}$, and $\Delta P_{l,\mathrm{stagnant}}$ (Pa) are the liquid pressure drops across the filtration, wash and stagnant section. $B_{\mathrm{filtration}},B_{\mathrm{wash}}$ and $B_{\mathrm{stagnant}}$ (m$^2$) are the permeability constants for filtration, wash and stagnant sections. 
 
-The permeability constants were determined  from Carman-Kozeny equation shown below. the commonly accepted value for Kozenzy constant is 5.
+The permeability constants were determined  from Carman-Kozeny equation shown below. the commonly accepted value for Kozenzy constant, $K"$, is 5.
 
 
 \begin{equation}
 B = \frac{1}{K"}\frac{\epsilon^3}{S^2(1-\epsilon)^3}
 \end{equation}
 
- based on the assumption that the crystal particles are spherical, therefore, the specific surface area, 
+The equation above is based on the assumption that the crystal particles are spherical, therefore, the specific surface area, $S$, of particles is 
 
+\begin{equation}
+S = \frac{6}{K"}\frac{d}
+\end{equation}
 
 The liquid pressure gradient at each section were assumed to be constant since the packed bed is considered incompressible. The liquid pressure at the top in the slurry section was based on the pressure at the filter and the pressure drop over the filtration section. 
 \begin{equation}
