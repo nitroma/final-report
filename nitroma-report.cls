@@ -85,7 +85,8 @@
 \titleformat{\subsection}{\color{color1}\large\bfseries\headingfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\color{color1}\bfseries\headingfont}{\thesubsubsection}{1em}{}
 % original spacing values can be found here https://tex.stackexchange.com/a/48754/135479
-\newcommand{}{\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\newcommand\normalchapterspacing{\titlespacing*{\chapter}{0pt}{50pt}{40pt}}
+\newcommand\compactchapterspacing{\titlespacing*{\chapter}{0pt}{50pt}{40pt}}
 \titlespacing*{\section}{0pt}{*1}{*1}
 \titlespacing*{\subsection}{0pt}{2pt plus 4pt}{*0}
 \titlespacing*{\subsubsection}{0pt}{2pt plus 2pt}{*0}
