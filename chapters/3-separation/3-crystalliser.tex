@@ -240,7 +240,7 @@ In the end, Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystallise
 
 \subsection{Heat transfer}\label{sec:heat transfer crystalliser}
 
-Cooling for the crystallisation can be implemented in many different ways and must be chosen based on the conditions of the crystalliser. Table \ref{tab:heatransfermethodstype} outlines the advantages and disadvantages of each heat transfer method. A half pipe coil jacketed vessel configuration has been chosen to be implemented, as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid. Despite usually costing 30-35\% more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect for MSMPR operations, to have uniform temperature distribution within the crystalliser. 
+Cooling for the crystallisation can be implemented in many different ways and must be chosen based on the conditions of the crystalliser. Table \ref{tab:heatransfermethodstype} outlines the advantages and disadvantages of each heat transfer method. A half pipe coil jacketed vessel with 10% ethylene glycol  has been chosen to be implemented, as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid. Despite usually costing 30-35\% more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect for MSMPR operations, to have uniform temperature distribution within the crystalliser. 
 
 \begin{table}
 \caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
@@ -350,13 +350,18 @@ The value of $L_M$, on the other hand, does change sizeably with deviations in $
    
 \subsubsection{Fouling}\label{sec:fouling}
 
-Fouling is a big issue in crystallisation systems as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coated on the cooling pipe surface. To account for this in the design, an additional resistance will be added to the aforementioned resistances in series relation of Equation \ref{eq:resistht},
+Fouling is a big issue for continuous melt crystallisation, as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency due to the higher heat transfer resistance caused by the layer of fouling coated on the cooling pipe surface. The cooling fluid side can also exhibit fouling. To account for this in the design, an additional resistance, $R_f$, will be added to the aforementioned resistances in series relation of Equation \ref{eq:resistht},
 \begin{equation} \label{eq:fouling}
     R_f = R_{fs} + R_{fp}
 \end{equation}
-where $R_{fs}$ is the service side fouling and $R_{fp}$ is the process side fouling 
+where $R_{fp}$ is the process side fouling and $R_{fs}$ is the service side fouling computed as 
 
-A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has found to be 0.000352 W$^{-1}$ m$^2$ K. To look at the process side fouling, the thickness of fouling, $l_f$, has been varied to analyse its effect on the overall heat transfer coefficient and whether the effect needed to be addressed with any further considerations.:
+\begin{equation} \label{eq:fouling}
+    R_{fp} = \frac{l_f}{k_{PNT}}
+\end{equation}
+whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivity of solid PNT. 
+
+A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has found to be 0.000352 W$^{-1}$ m$^2$ K \cite{fouling}. To analyse the effect of the process side fouling, the thickness of fouling, $l_f$, has been varied to analyse its effect on the overall heat transfer coefficient and whether the effect needed to be addressed with any further considerations.:
 
 \begin{figure}[h]
     \centering
