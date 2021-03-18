@@ -11,7 +11,7 @@ Several stainless steel have been shortlisted for selection:
     \item Stainless steel Type 304L
 \end{enumerate}
 
-Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate}. This causes the oxidation of the protective chromium passive film and producing chromium ions $Cr^{6+}$ and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
+Stainless steel type 304 have higher levels of carbon that are not stabilised with titanium or niobium. This makes it susceptible to intergranular attack in nitric acid at heat affected zone of the welds, due to precipitation of chromium carbides at the grain boundaries \cite{cm_selection_nodate}. This causes the oxidation of the protective chromium passive film and producing chromium ions \ch{Cr^6+} and reducing the corrosion resistant property. Next, stainless steel type 316 includes molybdenum additions which are generally known to improve resistance to acid corrosion, but for the case of nitric acid, molybdenum tends to promote the formation of sigma phase, which is less resistant to nitric acid attack. Thus, a final material of stainless steel type 304L (also identified as BS EN 10088-1.4307) was selected for both tube and shell as it is a low-carbon and stabilised stainless steel which has excellent corrosion resistance with the formation of chromium passive film ().
 
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
@@ -46,8 +46,14 @@ where inner reactor diameter ($D_i$) is defined as \SI{0.2}{\metre} from Section
     \caption{3D cross section of reactor tube arrangement}
     \label{fig:reactortubearrangement}
 \end{wrapfigure}
+The optimal number of tubes of 7 was also chosen based on the centered hexagonal number rule \cref{eqn: hexagon} which has practical usage in industry for maximising tube bundles into large cylindrical containers \cite{noauthor_realiable_2018}. 
+\begin{equation}
+    n^3 - (n-1)^3 = 3n(n-1)+1
+    \label{eqn: hexagon}
+\end{equation}
 The bundle of 7 tubes was arranged such that a clearance of \SI{230}{\milli \metre}, which exceeds the rule of thumb for minimum clearance of 0.25 times of tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}.  The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
+where $n$ represents the sequence of hexagonal number. Further explanation on the heat transfer benefits will be discussed in Section \ref{sec:reactortube}.
 
 \subsubsection{Secondary cooling tube dimensions}
 As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tubes were designed to have a diameter of \SI{20}{\milli \metre} to achieve a flowrate $2.1 \times 10^{-4} m^3 s^{-1}$. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production. 
