@@ -48,7 +48,12 @@ where local thermal equilibrium is assumed such that $T_{\mathrm{s}} = T_{\mathr
 \subsubsection{Coolant zone}
 
 \paragraph{Mass transfer: $k$-$\varepsilon$ Turbulence model}
-\cite{comsol_cfd_2020}
+This model incorporates the turbulent kinetic energy $k$ and dissipation rate $\varepsilon$ \cite{comsol_cfd_2020}. A turbulent form of the viscosity is defined as
+\begin{equation}
+    \mu_{T}=\rho C_{\mu} \frac{k^{2}}{\varepsilon}
+\end{equation}
+whilst transport equations for $k$ and $\varepsilon$ are given by
+
 
 \paragraph{Heat transfer: Fluid}
 \cite{comsol_heat_2020}
