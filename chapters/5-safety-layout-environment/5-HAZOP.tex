@@ -27,13 +27,13 @@ Following the review of the HAZOP study, several of the recommendations suggeste
 % \usepackage{graphicx}
 
 
-\begin{longtable}
+\begin{longtable}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
 \centering
 \caption{Changes to P\&ID}
 \label{tab:PIDchanges}
 
 % \resizebox{\textwidth}{!}{%
-\begin{tabularx}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
+%\begin{tabularx}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
 \toprule
 \multicolumn{2}{@{}l}{Node / Region} & Recommendation implemented                                                                                                                               & Reasoning for design change                                                                                                                                                                                  \\ \midrule
 1   & Methanol / ONT feed       & Installation of an additional pressure sensor associated with regular and executive alarms                                                                    & Prevention of overpressure in the pump (P2101a/b) and piping rupture and the subsequent risk of overheating and a fire                                                                                       \\ \cmidrule(l){3-4} 
