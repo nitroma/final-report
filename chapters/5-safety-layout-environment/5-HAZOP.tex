@@ -27,13 +27,13 @@ Following the review of the HAZOP study, several of the recommendations suggeste
 % \usepackage{graphicx}
 
 
-\begin{longtable}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
+\begin{table}
 \centering
 \caption{Changes to P\&ID}
 \label{tab:PIDchanges}
 
 % \resizebox{\textwidth}{!}{%
-%\begin{tabularx}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright}p{2cm}XX@{}}
 \toprule
 \multicolumn{2}{@{}l}{Node / Region} & Recommendation implemented                                                                                                                               & Reasoning for design change                                                                                                                                                                                  \\ \midrule
 1   & Methanol / ONT feed       & Installation of an additional pressure sensor associated with regular and executive alarms                                                                    & Prevention of overpressure in the pump (P2101a/b) and piping rupture and the subsequent risk of overheating and a fire                                                                                       \\ \cmidrule(l){3-4} 
@@ -61,6 +61,6 @@ Following the review of the HAZOP study, several of the recommendations suggeste
     \\ \cmidrule(l){2-4} 
     & Kettle Reboiler (H204)           &          Installation of flow indicator and control system on bottoms stream from H204                                                                                                                                                     &               Aids prevention of no flow from the bottoms stream of H204, with a control system responding specifically to the flow                                                                                                                                                                                               \\ \cmidrule(l){3-4} 
     &                           &      Switched level controller from maintaining level in column to maintaining level in H204                                                                                                                                                          &            Prevents H204 from drying up and overpressurising due to excess heat duty. Low level in S201 does not pose more significant operational or safety risks.                                                                                                                                                                                                                                  \\ \bottomrule
-%\end{tabularx}%
+\end{tabularx}%
 % }
-\end{longtable}
+\end{table}
