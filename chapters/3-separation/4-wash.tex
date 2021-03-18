@@ -26,17 +26,13 @@ Typically, the design of a hydraulic wash column should be based on pilot-scale 
 %A disadvantage of hydraulic wash column compared to gravity wash column  is that in gravity wash column some impurities are removed from the crystals via recrystallisation and sweating due to the long residence time in the column. Whereas, hydraulic wash columns have short residence time so the removal of the impurities trapped in crystal lattice is less likely to occur.   \cite{van_oord-knol_hydraulic_2000}.
 
 \subsubsection{Volume balance} 
-The model has been based on the assumption that the liquid and solid in the system were incompressible. For simplicity, density and viscosity have been assumed to be independent of temperature. Thus, volume balance can be performed and will function like the mass balance. 
-
-The overall volume balance at the top section is
+The model has been based on the assumption that the liquid and solid in the system are incompressible. Density and viscosity have been assumed to be independent of temperature. The overall volume balance at the top section is
 
 \begin{equation}
 \phi_{\mathrm{feed}}+\phi_{\mathrm{steer}}=\phi_{s,\mathrm{filters}}+\phi_{ml.\mathrm{filters}}
 \end{equation}
 
-\noindent where $\phi_{\mathrm{feed}}$ (m$^{3}$/s) is the feed flow, $\phi_{\mathrm{steer}}$ (m$^{3}$/s) is the steering flow, $\phi_{\mathrm{s,filters}} $(m$^{3}$/s) is the crystal flow at the filters and $\phi_{\mathrm{ml,filters}} $(m$^{3}$/s) is the mother liquor flow at the top section.
-
-The total length of the top section remains constant. The length of the filtration section $ L_{\mathrm{filtration}}$ (m), was derived from the solid balance in the top section: 
+\noindent where $\phi_{\mathrm{feed}}$ (m$^{3}$/s) is the feed flow, $\phi_{\mathrm{steer}}$ (m$^{3}$/s) is the steering flow, $\phi_{\mathrm{s,filters}} $(m$^{3}$/s) is the crystal flow at the filters and $\phi_{\mathrm{ml,filters}} $(m$^{3}$/s) is the mother liquor flow at the top section. The total length of the top section remains constant. The length of the filtration section $ L_{\mathrm{filtration}}$ (m), was derived from the solid balance in the top section: 
 
 \begin{equation}
 \frac{\dd L_{\mathrm{filtration}}}{\dd t} = \frac{1}{A_c(1-\alpha_2-\epsilon)}(\alpha_1\phi_{\mathrm{feed}}-\phi_{s,\mathrm{filters}})
