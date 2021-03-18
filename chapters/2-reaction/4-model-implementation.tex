@@ -1,9 +1,8 @@
 % !TeX root = ../../main.tex
 \section{Model implementation}
 \label{sec: modelimplementation}
-COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry.
 
-\begin{wraptable}{R}{0.5\linewidth}
+\begin{wraptable}{r}{0.5\linewidth}
 \centering
 \caption{Reactor overview}
 \label{tab:reactoroverview}
@@ -24,6 +23,8 @@ Volume of reactor tubes              & 9.45e-1 & \cubic\m       \\
 Total shell volume                   & 9.2     & \cubic\m       \\ \bottomrule
 \end{tabular}
 \end{wraptable}
+
+COMSOL was selected for detailed reactor modelling, utilising the CFD and Heat Transfer modules \cite{comsol_comsol_2020,comsol_cfd_2020,comsol_heat_2020}. A single tube of the reactor was modelled in 2D axisymmetric geometry.
 
 \subsection{Physics setup}
 The physics interfaces used to model each zone of the reactor, as well as assumptions made in modelling, are outlined below. Key parameters of the reactor design are presented in \cref{tab:reactoroverview}, and further details of the equations implemented are available in \cref{app:comsol}.
