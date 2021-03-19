@@ -1,6 +1,9 @@
 % !TeX root = ../../main.tex
 \section{Detailed calculations}
 \label{app:reaction}
+
+The calculations used in reactor modelling are detailed in this section, along with numerical values used and the appropriate assumptions taken.
+
 \subsection{Kinetics data}
 
 % Please add the following required packages to your document preamble:
@@ -26,7 +29,7 @@ The effective diffusional coefficient $D_e$ is first calculated to be \num{4.42e
 \end{equation}
 where the intraparticle void fraction for H-mordenite is 0.463 from \cite{saleman_capacity_2013}, the pore diffusion coefficient is \num{1.56e-9} and the tortuosity of the pellet was found to be 1.63 using the equation given in \textcite{lanfrey_tortuosity_2010}.
 
-The effective diffusional coefficient is used to calculate Thiele modulus $\phi$ through the equation:
+The effective diffusional coefficient is used to calculate the Thiele modulus $\phi$ through the equation:
 \begin{equation}
     \phi = r_p \sqrt{\frac{k_v}{D_e}}
 \end{equation}
@@ -80,7 +83,7 @@ Mixed &  & 325 &  & 15840 &  \\ \bottomrule
 
 \subsection{Pressure Relief Valve (PRV)}
 \label{app:PRV}
-The equations for the sizing of the PRV port is as below,
+The equations for the sizing of the PRV port are as below,
 \begin{align}
     A_r &= \frac{11.78 \times Q}{K_d K_w K_c} \cdot \sqrt{\frac{G}{p_1-p_2}} \\
     K_v &= (0.9935 + \frac{2.878}{Re^{0.5}} + \frac{342.75}{Re^{1.5}})^{-1} \\

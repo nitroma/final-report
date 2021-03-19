@@ -22,18 +22,18 @@ Flash Vessels              & 3                             & 2305.55            
 Gravitational Decanters    & 1                             & 4493.06                    \\
 Crystallizer               & 2                             & 42503.76                   \\
 Wash column                & 1                             & 16668.24                   \\
-Refregiration system       & 1                             & 37935.77                   \\
+Refregiration system       & 2                             & 37935.77                   \\
 Storage (Buffer) Tanks     & 12                            & 879434.57                  \\
 Mixers                     & 5                             & 82320.88                   \\
 Pumps                      & 10                            & 47430.51                   \\
 Fan                        & 4                             & 33157.33                   \\
 Granualtor                 & 2                             & 49241.20                   \\
 Waste Treatment Equipments & 3                             & 50978.91                   \\ \midrule
-\textbf{Total}             & 93                            & 2402306.05                 \\ \bottomrule
+\textbf{Total}             & 94                            & 2402306.05                 \\ \bottomrule
 \end{tabular}
 \end{table}
 
-\Cref{tab:equipment purchase} summarized all major units purchased by Nitroma. Due to the variety of equipment types, detail breakdown of individual equipment cost is not discussed here but can be found in XX.
+\Cref{tab:equipment purchase} summarized all major units purchased by Nitroma. Due to the variety of equipment types, detail breakdown of individual equipment cost is not discussed here but can be found in \cref{app:capexbreakdown}.
 
 The inside battery limits (ISBL) investment is the cost of purchasing and installing all equipment. Lang has proposed ISBL is a function of the installation factor and the purchase cost calculated above.
 \begin{equation}
@@ -41,11 +41,11 @@ The inside battery limits (ISBL) investment is the cost of purchasing and instal
 \end{equation}
 As both solids and fluids are processed in Nitroma's plant, the installation factor is 3.63, leading to an ISBL value of \$8.72 million. However, Towler \cite{sinnott_chemical_2020} has introduced a factorial method with individual installation factors:
 \begin{equation}
-    ISBL=\sum C_{e}*\left(\left(1+f_{p}\right)\frac{f_{er}++f_{el}+f_{i}+f_{c}+f_{s}+f_{l}}{f_{m}}\right)
+    ISBL=\sum C_{e}\left(1+f_{p}+\frac{f_{er}+f_{el}+f_{i}+f_{c}+f_{s}+f_{l}}{f_{m}}\right)
 \end{equation}
 Values of each installation factor can be found in \textbf{Appendix}. Using this method, the overall installation factor is calculated to be 3.68 and ISBL is \$8.84 million.
 
-\subsection{Additional costs}
+\subsection{Additional capital costs}
 
 \begin{table}[H]
 \centering
@@ -61,9 +61,9 @@ Land        & Industial land price is \$24.33/m\textsuperscript{2} in Nanjing. &
             & Plant size is 0.12km\textsuperscript{2}.                         &           \\\midrule
 Design \&   & Cost spent designing and constructing the plant, typically paid to                & 3094170 \\
 Engineering & contractor. This is approximately \SI{25}{\percent} of the sum of ISBL and OSBL.               &           \\\midrule
-Contingency & Extra costs added into the project to allow flucation of the                      & 1237668 \\
+Contingency & Extra costs added to the project to allow fluctuation of the                      & 1237668 \\
             & cost estimate since the number of equipments is uncertain                         &           \\
-            & until the of construction phase. Approximated to \SI{10}{\percent}                             &           \\
+            & until the construction phase. Approximated to \SI{10}{\percent}                             &           \\
             & of the sum of ISBL and OSBL                                                       &           \\\midrule
 One-off     & The plant has installed a refrigeration cycle to lower the                        & 9315     \\
 chemicals   & operating temperature of one of the crystallizers. Given                          &           \\
@@ -77,8 +77,9 @@ Captial     & prior to earning profit.                                          
 \subsection{CAPEX summary}
 \begin{wrapfigure}{r}{8cm}
     \vspace{-1.1cm}
+    \label{fig:CAPEXSummary}
+    \includegraphics[width=0.42\textwidth]{chapters/6-economics/figures/CAPEX_summary.jpg}
     \caption{CAPEX Summary}
-    \label{fig:OPEXSummary}
-    \includegraphics[width=0.47\textwidth]{chapters/6-economics/figures/CAPEX_summary.jpg}
 \end{wrapfigure}
-Total investment of Nitroma was calculated to be \$22.6 million, by adding ISBL and additional costs listed in Table \ref{tab:CAPEXadditional}. It should be noted that due Nitroma is operating a small-scale plant, separation units, particularly packed columns, are smaller to common industrial-installed units. This contributed to the low investment figure.
+Total investment of Nitroma was calculated to be \$22.6 million, by adding ISBL and additional costs listed in Table \ref{tab:CAPEXadditional}. It should be noted that since Nitroma is operating as a small-scale plant, separation units, particularly packed columns, are smaller than common industrial-installed units. This contributed to the low investment figure.
+\vspace{5cm}

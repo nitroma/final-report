@@ -3,7 +3,7 @@
 
 \subsection{Nitration of toluene}
 \label{sec:R1-kinetics}
-The nitrotoluene production was achieved by  reacting \SI{95}{\%_{w/v}} toluene and \SI{70}{\%_{w/v}} nitric acid to produce 3 different nitrotoluene isomers of ONT, MNT and PNT in a heat-exchanger tubular reactor operating at \SI{330}{\K} and \SI{1}{\atm}. This reaction is catalysed by solid H-Mordenite.
+The nitrotoluene production was achieved by reacting \SI{95}{\%_{w/v}} toluene and \SI{70}{\%_{w/v}} nitric acid to produce 3 different nitrotoluene isomers of ONT, MNT and PNT in a heat-exchanger tubular reactor operating at \SI{330}{\K} and \SI{1}{\atm}. This reaction is catalysed by solid H-Mordenite.
 \begin{scheme}[h]
     \centering
     \ch{ Toluene + HNO3 -> ONT + MNT + PNT + H2O}
@@ -14,7 +14,7 @@ The nitrotoluene production was achieved by  reacting \SI{95}{\%_{w/v}} toluene 
 \begin{figure}[h]
     \centering
     \includegraphics[width= 0.8\linewidth, scale = 0.4]{chapters/2-reaction/figures/Nitration.png}
-    \caption{Mechanism for nitration of toluene to \ortho-nitrotoluene. Mechanism for meta and para nitrotoluene are similar, except that the nitronium ion favors the meta and para position of the toluene respectively.}
+    \caption{Mechanism for nitration of toluene to \ortho-nitrotoluene. Mechanism for meta and para nitrotoluene are similar, except that the nitronium ion favours the meta and para position of the toluene respectively.}
     \label{fig:firststep}
 \end{figure}
 
@@ -26,6 +26,6 @@ The nitration of toluene is governed by intrinsic kinetics under the experimenta
 \begin{equation}
 -\frac{\dd C_\mathrm{Toluene}}{\dd t} = k_{2} \cdot [C_\mathrm{Toluene}] \cdot [C_\text{Nitric Acid}] \approx k_{1} \cdot [C_\mathrm{Toluene}]
 \end{equation}
-where $k_2$, $k_1$ are the second-order and pseudo-first order rate constant respectively. A pseudo-first order rate constant can be assumed since nitric acid is in excess. The rate constant varies with temperature according to the Arrhenius equation and this information was extracted from the Arrhenius plot in \textcite{jeeru_kinetics_2018}. Instead of having a single aggregated rate equation for the reaction of toluene to all 3 nitrotoluene isomers, individual rate equations for each isomer is calculated. Dinitrotoluene and trinitrotoluene can be assumed to be negligible as the yield was only at \SI{0.55}{\percent}. This assumption is justified since toluene is 8 orders of magnitude more reactive than mononitrotoluene \cite{barden_study_2003} due to the presence of additional electron-withdrawing nitro groups that reduces its reactivity. \textcite{vassena_highly_2000} also showed that the yield of dinitrotoluene is negligible for H-Mordenite catalysed reaction. Therefore, only the nitration of toluene to mononitrotoluene will be modelled in the reactor.
+where $k_2$, $k_1$ are the second-order and pseudo-first order rate constant respectively. A pseudo-first order rate constant can be assumed since nitric acid is in excess. The rate constant varies with temperature according to the Arrhenius equation and this information was extracted from the Arrhenius plot in \textcite{jeeru_kinetics_2018}. Instead of having a single aggregated rate equation for the reaction of toluene to all 3 nitrotoluene isomers, individual rate equations for each isomer are calculated. Dinitrotoluene and trinitrotoluene can be assumed to be negligible as the yield was only at \SI{0.55}{\percent}. This assumption is justified since toluene is 8 orders of magnitude more reactive than mononitrotoluene \cite{barden_study_2003} due to the presence of additional electron-withdrawing nitro groups that reduces its reactivity. \textcite{vassena_highly_2000} also showed that the yield of dinitrotoluene is negligible for H-Mordenite catalysed reaction. Therefore, only the nitration of toluene to mononitrotoluene will be modelled in the reactor.
 
 A summary of the activation energies and pre-exponential factors for the formation of all 3 isomers of nitrotoluene can be found in \cref{tab:R1-kinetic-params}. The catalyst loading of \SI{30}{\percent\wv} of H-Mordenite that gave the highest rate of reaction was selected from \textcite{jeeru_kinetics_2018}.

@@ -1,6 +1,7 @@
 % !TeX root = ../../main.tex
 \section{Detailed operating cost breakdown}
-The following sections detail the annual operating expenditure (OPEX) incurred by Nitroma. The unit prices of all items were obtained from the negotiated price agreement with DEdwards Corp plc found in Section \ref{sec:price-agreement}. For all future OPEX projections, a cost escalation factor of \SI{2.6}{\percent} was applied to account for inflation in China (Statista 21). This is reflected on Nitroma’s financial statements in Section \ref{sec:economics-supporting}.
+The following sections detail the annual operating expenditure (OPEX) incurred by Nitroma. The unit prices of all items were obtained from the negotiated price agreement with DEdwards Corp plc found in Section \ref{sec:price-agreement}.
+%For all future OPEX projections, a cost escalation factor of \SI{2.6}{\percent} was applied to account for inflation in China (Statista 21). This is reflected on Nitroma’s financial statements in Section \ref{sec:economics-supporting}.
 
 \subsection{Raw material cost}
 \label{sec:opex-raw-material}
@@ -57,7 +58,7 @@ Electricity          & \$/kWh        & 0.104               & 11,280,192         
 
 \subsection{Labour cost}
 As a continuous process, the plant must operate for 24 hours every day. Based on guidance from Towler \& Sinnott, three 8-hour shifts are planned, and five shift teams will be hired to account for weekends and holidays \cite{sinnott_chemical_2020}. Each shift team will be made up of 4 process operators (mixed solids-fluids processing) and 1 general foreman to overlook affairs within the team. 2 process engineers will be hired – one will be trained to oversee OTOL production and the other will be trained to oversee PABH production. Both share joint responsibility over PABA production. 2 quality engineers and 2 area supervisors will also be hired with the same breakdown of responsibilities.The area supervisors will report to 1 plant manager who will be responsible for overseeing the entire plant. A managerial support team of 6 admin staff will be hired with individual responsibilities including human resource management, finance, procurement, and sales. A team of 2 R\&D engineers will also be hired to prepare for 5-yearly plant expansions.
-Table XX summarises Nitroma's labour costs. A \SI{12.4}{\percent} loading factor was applied to the total labour cost to account for pensions, health insurance and other employee benefits in China based on data from UHY (UHY 2021).
+Table \ref{tab:opex-labour} summarises Nitroma's labour costs. A \SI{12.4}{\percent} loading factor was applied to the total labour cost to account for pensions, health insurance and other employee benefits in China based on data from UHY \cite{uhy_employers_2021}.
 
 \begin{table}[H]
 \centering
@@ -80,26 +81,26 @@ Admin staff      & 6                        & 16,600.00                         
 \end{table}
 
 \subsection{Additional operating costs}
-Table XX details additional costs incurred by Nitroma in operating the plant along with a brief note on the method of calculation, based on guidance from Towler \& Sinnott \cite{sinnott_chemical_2020}.
+Table \ref{tab:opex-add} details additional costs incurred by Nitroma in operating the plant along with a brief note on the method of calculation, based on guidance from Towler \& Sinnott \cite{sinnott_chemical_2020}.
 
 \begin{table}[H]
 \centering
 \caption{OPEX: Additional}
 \label{tab:opex-add}
-\begin{tabular}{l|ll}
+\begin{tabular}{lll}
 \toprule
 \textbf{Item}          & \textbf{Notes}                                                          & \textbf{Cost (\$/year)} \\
 \midrule
-Supervision            & This is taken to be 25\% of operating labour.                           & 224,547                 \\
-Labour overheads       & This is taken to be 60\% of operating labour and supervision.           & 673,641                 \\
-General plant overhead & This is taken to be 65\% of total labour, labour overheads              & 1,454,961               \\
-                       & and maintenance. It includes corporate functions such as                &                         \\
-                       & marketing, human resources and research \& development.                 &                         \\
-Maintenance            & This is taken as 5\% of ISBL since there is solids handling   involved. & 442,024                 \\
-Insurance              & This is taken to be 1\% of ISBL.                                        & 88,405                  \\
-Depreciation           & This is determined by applying straight-line depcreiation to the        & 1,128,640               \\
-                       & ISBL over the 20 year plant lifetime period, as guided by               &                         \\
-                       & Coulson \& Richardson \cite{sinnott_coulson_2005}.                                             &                         \\
+Supervision            & This is taken to be 25\% of operating labour.                           & 224,547                 \\ \midrule
+Labour overheads       & This is taken to be 60\% of operating labour and supervision.           & 673,641                 \\ \midrule
+General plant          & This is taken to be 65\% of total labour, labour overheads              & 1,454,961               \\ 
+overhead               & and maintenance. It includes corporate functions such as                &                         \\ 
+                       & marketing, human resources and research \& development.                 &                         \\ \midrule
+Maintenance            & This is taken as 5\% of ISBL since there is solids handling   involved. & 442,024                 \\ \midrule
+Insurance              & This is taken to be 1\% of ISBL.                                        & 88,405                  \\ \midrule
+Depreciation           & This is determined by applying straight-line depcreiation to the        & 1,128,640               \\ 
+                       & ISBL over the 20 year plant lifetime period, as guided by               &                         \\ 
+                       & Coulson \& Richardson \cite{sinnott_coulson_2005}.                                             &                         \\ \midrule
 \textbf{Total}         & \textbf{}                                                               & \textbf{4,012,218}
 \\\bottomrule
 \end{tabular}
@@ -115,8 +116,8 @@ Depreciation           & This is determined by applying straight-line depcreiati
 
 \begin{wrapfigure}{r}{8cm}
     \vspace{-1.1cm}
-    \caption{OPEX Summary}
     \label{fig:OPEXSummary}
-v    \includegraphics[width=0.47\textwidth]{chapters/6-economics/figures/OPEX_summary.jpg}
+    \includegraphics[width=0.47\textwidth]{chapters/6-economics/figures/OPEX_summary.jpg}
+    \caption{OPEX Summary}
 \end{wrapfigure}
-The OPEX of the project was calculated to be \$18.2 million per annum based on current prices, comparatively lower than traditional batch nitration processes (general kinematics). A categorical breakdown of the OPEX can be seen in Figure XX. Moreover, Nitroma's cost of production was found to be \$15.81 per kg of output generated (detailed in Section \ref{sec:COP}), which is lesser than the speciality chemical industry average of \$24.54 per kg (maroulis 2016).
+The OPEX of the project was calculated to be \$18.2 million per annum based on current prices, comparatively lower than traditional batch nitration processes \cite{general_kinematics_how_2019}. A categorical breakdown of the OPEX can be seen in Figure \ref{fig:OPEXSummary}. Moreover, Nitroma's cost of production was found to be \$15.81 per kg of output generated (detailed in Section \ref{sec:COP}), which is lesser than the speciality chemical industry average of \$24.54 per kg \cite{maroulis_cumulative_2017}.
