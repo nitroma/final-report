@@ -38,7 +38,7 @@ Shell-and-tube HEX                 & Low pressure drop and high heat transfer co
 \end{tabularx}
 \end{table}
 
-Based on these considerations, a final reactor design of \textbf{shell-and-tube heat exchanger reactor (HEX) }was chosen as it provides exceptional heat transfer without significant pressure drop. This is particularly important for the nitration reaction as any hotspot formation will lead to a thermal runaway. Although it does not provide the same degree of mixing as a slurry reactor — which is key to achieving high conversion in the nitration process — steps are taken in Since the mixing between the aqueous and organic phase of the nitration reaction is key to achieving high conversion, steps are taken in Section The absence of physical agitation also reduces the attrition of catalyst, increasing the lifetime of the catalyst and reducing the catalyst regeneration required.
+Based on these considerations, a final reactor design of \textbf{shell-and-tube heat exchanger reactor (HEX) }was chosen as it provides exceptional heat transfer without significant pressure drop. This is particularly important for the nitration reaction as any hotspot formation will lead to a thermal runaway. Although it does not provide the same degree of mixing as a slurry reactor — which is key to achieving high conversion in the nitration process — steps are taken in \cref{sec:catalyst support} to enhance mixing of the reactants. Since the mixing between the aqueous and organic phase of the nitration reaction is key to achieving high conversion, steps are taken in Section The absence of physical agitation also reduces the attrition of catalyst, increasing the lifetime of the catalyst and reducing the catalyst regeneration required.
 
 
 Detailed discussion of the choice of reactors can be found in \cref{sec:reactorchoices}.
@@ -112,6 +112,7 @@ As seen in Figure 2.3, it is infeasible to operate the reactor without controlli
 
 \subsection{Catalyst specification}
 \subsubsection{Catalyst support}
+\label{sec:catalyst support}
 Silicon carbide (SiC) was chosen as the catalyst support owing to its high thermal conductivity (\SI{120}{\W\per\m\per\K} in the bulk, as compared to \SI{3}{\W\per\m\per\K} for H-Mordenite). To immobilise the catalyst, a porous sintered SiC support was selected, with a porosity of 0.30 and thermal conductivity of \SI{40}{\W\per\m\per\K} \cite{jang_thermophysical_2007}. This helps to lower the overall temperature in the reactor by enhancing heat removal from the catalyst surface to the cooling zones \cite{ledoux_silicon_2001}. Although as a result, the rate of reaction and conversion are relatively lower, using SiC keeps the temperature below the critical temperature at which thermal runaway initiates.
 
 Besides, an important feature of the sintered SiC catalyst support is that the tortuosity of the structure promotes homogeneous mixing of the reactants, much like a static mixer \cite{duong-viet_silicon_2016}. As the nitration of toluene is a multiphase reaction, the SiC catalyst ensures well-mixed flow, which increases the interphase contact area between the aqueous and organic phase, and subsequently increases the rate of reaction. Having the SiC catalyst support allows the reaction to be modelled as a single phase reaction in \cref{sec: modelimplementation}.
