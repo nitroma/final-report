@@ -84,24 +84,26 @@ The values of $D_{ab}$ was calculated using the Wilke-Chang correlation \cite{wi
 \end{equation}
 where $D_z$ is the axial dispersion model, $D_{ab}$ is the diffusion coefficient, $u$ is the superficial velocity, $\phi$ is the association parameter which is estimated to be 1 for toluene, $M_2$ is the molecular weight of the solvent which is weighted based on the molar ratio of \ch{HNO3} and water, $V_1$ is the molar volume of toluene at boiling point.
 
-The relationship between axial dispersion coefficient ($D_z$) and diameter was investigated in \cref{fig:dispersion}. Dispersion coefficient decreases exponentially, with \SI{75}{\%} decrease from \SIrange{1e-1}{2e-1}{\m} diameter. Beyond that, the decrease in axial dispersion per unit diameter length plateaus. Although having a larger diameter would decrease axial dispersion further, the drawback of higher CAPEX and larger floor space required does not warrant any further significant increase in channel diameter. A final diameter of \SI{23}{\cm} was selected for each channel, giving an axial dispersion of \SI{1.78}{\metre \squared \per \second}. 
+The relationship between axial dispersion coefficient ($D_z$) and diameter was investigated in \cref{fig:dispersion}. Dispersion coefficient decreases exponentially, with \SI{75}{\%} decrease from \SIrange{1e-1}{2e-1}{\m} diameter. Beyond that, the decrease in axial dispersion per unit diameter length plateaus. Although having a larger diameter would decrease axial dispersion further, the drawback of higher CAPEX and larger floor space required does not warrant any further significant increase in channel diameter. A final diameter of \SI{0.23}{\metre} was selected for each channel, giving an axial dispersion of \SI{1.78}{\metre \squared \per \second}. 
 
 \subsection{Adiabatic temperature profile}
 
 \label{sec:adiabatic}
 
-Nitration is a dangerous process due to its highly exothermic nature. \textcite{di_miceli_raimondi_safety_2015} reported that decomposition of nitric acid begins at \SI{393}{\K}. At temperatures higher than that, thermal decomposition of nitric acid accelerates. This produces a build-up of heat, which increases the rate of reaction, leading to thermal runaway. The reaction also releases poisonous nitrogen oxides as well as other safety risks, which are covered in \cref{sec:NOx}. 
+Nitration is a dangerous process due to its highly exothermic nature. It is reported that decomposition of nitric acid begins at \SI{393}{\K} \cite{di_miceli_raimondi_safety_2015}. At temperatures higher than that, thermal decomposition of nitric acid accelerates. This produces a build-up of heat, which increases the rate of reaction, leading to thermal runaway. The reaction also releases poisonous nitrogen oxides and other safety risks, which are covered in \cref{sec:NOx}. 
+\begin{wrapfigure}{r}{0.3\linewidth}
+\label{fig:Adiabatic-with-cooling}
+    \centering
+        \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
+        
+        \caption{Temperature profile with external cooling}
+\end{wrapfigure} 
 
 Therefore, to prevent thermal runaway, nitration reactors in industry are typically operated between \si{10} – \SI{50}{°C} below the temperature of runaway reaction \cite{noauthor_lees_2012}. Taking an average temperature between those numbers gives a maximum operating temperature of \SI{30}{\K} below the thermal decomposition of nitric acid of \SI{393}{\K}. Subsequent modelling and safety considerations will aim to keep operating temperature of the nitration process below the safe limit of \SI{363}{\K}. This assumption is in agreement with literature, where most nitration reactions are operated below \SI{373}{\K} as reported by \textcite{chen_experimental_1998}.
 
-As seen in \cref{fig:Adiabatic-with-cooling}, it is infeasible to operate the reactor without controlling its temperature. Even with an external cooling jacket, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns due to the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
+As seen in Figure 2.3, it is infeasible to operate the reactor without controlling its temperature. Even with an external cooling jacket supplying cooling water at \SI{2.3}{\kilogram \per \second}, the cooling system is insufficient to keep the temperature below \SI{363}{\K}. The temperature quickly spikes above \SI{370}{\K} within the first \SI{0.5}{\m}, and hotspot can be seen at the radial centre of the pipe. The hotspot will speed up the deactivation of catalyst, but more importantly, it will pose significant safety concerns due to the risk of thermal runaway \cite{nguyen_flow_1994}. Therefore, to maintain the safety of the plant, the temperature of the reactor needs to be well-controlled using various methods explained below.
 
-\begin{wrapfigure}{r}{0.2\linewidth}
-    \centering
-        \includegraphics[width=\linewidth]{figures/simple-tube-temperature.png}
-        \label{fig:Adiabatic-with-cooling}
-        \caption{Temperature profile with external cooling}
-\end{wrapfigure}   
+  
 
 %the other 2 plots should suffice
     %\begin{subfigure}{0.32\linewidth}
