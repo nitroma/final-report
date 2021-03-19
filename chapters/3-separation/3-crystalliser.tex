@@ -285,7 +285,7 @@ The overall heat transfer coefficient consists of 4 resistance terms; $R_1$, $R_
 \noindent where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer of the pipe material of the cooling coil, $R_2$ is the service side convective heat transfer, and $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into account, but the effects are investigated in depth in \cref{sec:fouling}. 
 
 Accounting for all these resistances in series, the overall heat transfer coefficient is obtained as 
-\begin{equation} \label{eq:energy balance}
+\begin{equation} \label{eq:overall ht coefft}
     U = \left(\frac{1}{h_1} + \frac{l}{k}   + \frac{1}{h_2 } \right)^{-1}
 \end{equation}
 where $l$ is the thickness of the half coil pipe and $k$ is the thermal conductivity of pipe material (steel).
@@ -369,13 +369,12 @@ Fouling can pose a big challenge for continuous melt crystallisation, as nucleat
     R_f = R_{fs} + R_{fp}
 \end{equation}
 where $R_{fp}$ is the process side fouling and $R_{fs}$ is the service side fouling computed as 
-
-\begin{equation} \label{eq:fouling}
+\begin{equation} \label{eq:fouling-service}
     R_{fp} = \frac{l_f}{k_{PNT}}
 \end{equation}
 whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivity of solid PNT. 
 
-A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{noauthor_fouling_2021}. This resistance can be considered to have a negligible impact on the vessel design. 
+A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be \SI{0.000352}{\per\W\square\m\K} \cite{noauthor_fouling_2021}. This resistance can be considered to have a negligible impact on the vessel design. 
 
 \begin{wrapfigure}{r}{0pt}
     \centering

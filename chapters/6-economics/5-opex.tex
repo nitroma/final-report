@@ -9,7 +9,7 @@ The following sections detail the annual operating expenditure (OPEX) incurred b
  \begin{table}[H]
 \centering
 \caption{OPEX: raw material}
-\label{tab:Expansion}
+\label{tab:opex-raw}
 \begin{tabular}{llll}
 \toprule
 \textbf{}      & \textbf{\begin{tabular}[c]{@{}l@{}}Unit price \\ (\$/kg)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Quantity \\ (kg/year)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Total cost \\ (\$)\end{tabular}} \\\midrule
@@ -57,28 +57,34 @@ Electricity          & \$/kWh        & 0.104               & 11,280,192         
 \end{table}
 
 \subsection{Labour cost}
-As a continuous process, the plant must operate for 24 hours every day. Based on guidance from Towler \& Sinnott, three 8-hour shifts are planned, and five shift teams will be hired to account for weekends and holidays \cite{sinnott_chemical_2020}. Each shift team will be made up of 4 process operators (mixed solids-fluids processing) and 1 general foreman to overlook affairs within the team. 2 process engineers will be hired – one will be trained to oversee OTOL production and the other will be trained to oversee PABH production. Both share joint responsibility over PABA production. 2 quality engineers and 2 area supervisors will also be hired with the same breakdown of responsibilities.The area supervisors will report to 1 plant manager who will be responsible for overseeing the entire plant. A managerial support team of 6 admin staff will be hired with individual responsibilities including human resource management, finance, procurement, and sales. A team of 2 R\&D engineers will also be hired to prepare for 5-yearly plant expansions.
+As a continuous process, the plant must operate for 24 hours per day. Based on guidance from Towler \& Sinnott, three 8-hour shifts are planned, and five shift teams will be hired to account for weekends and holidays \cite{sinnott_chemical_2020}. Each shift team will be made up of 4 process operators (mixed solids-fluids processing) and 1 general foreman to overlook affairs within the team. 
+
+    \begin{wraptable}{r}{0.65\linewidth}
+    \centering
+    \caption{OPEX: Labour}
+    \label{tab:opex-labour}
+    \begin{tabular}{llll}
+    \toprule
+    \textbf{}        & \textbf{Total} & \textbf{Base salary}              & \textbf{Total salary} \\
+    \textbf{}        & \textbf{employees} & \textbf{(\$/year)}              & \textbf{(\$/year)} \\\midrule
+    Process operator & 20                       & 14,100.00                                   & 282,000.00                      \\
+    Process engineer & 2                        & 26,600.00                                   & 53,200.00                       \\
+    Quality engineer & 2                        & 27,200.00                                   & 54,400.00                       \\
+    Foreman          & 5                        & 28,200.00                                   & 141,000.00                      \\
+    Area supervisor  & 2                        & 31,300.00                                   & 62,600.00                       \\
+    R\&D engineer    & 2                        & 30,400.00                                   & 60,800.00                       \\
+    Plant manager    & 1                        & 45,500.00                                   & 45,500.00                       \\
+    Admin staff      & 6                        & 16,600.00                                   & 99,600.00                       \\
+    \textbf{Total}   & \textbf{40}              & \textbf{}                                   & \textbf{799,100.00}             \\
+                     &                          & \multicolumn{1}{r}{\textit{12.4\% loading}} & \textbf{898,188.40} \\\bottomrule           
+    \end{tabular}
+    \end{wraptable}
+
+2 process engineers will be hired – one will be trained to oversee OTOL production and the other will be trained to oversee PABH production. Both share joint responsibility over PABA production. 2 quality engineers and 2 area supervisors will also be hired with the same breakdown of responsibilities. The area supervisors will report to 1 plant manager who will be responsible for overseeing the entire plant. 
+
+A support team of 6 admin staff will be hired with individual responsibilities including human resource management, finance, procurement, and sales. A team of 2 R\&D engineers will also be hired to prepare for 5-yearly plant expansions.
 Table \ref{tab:opex-labour} summarises Nitroma's labour costs. A \SI{12.4}{\percent} loading factor was applied to the total labour cost to account for pensions, health insurance and other employee benefits in China based on data from UHY \cite{uhy_employers_2021}.
 
-\begin{table}[H]
-\centering
-\caption{OPEX: Labour}
-\label{tab:opex-labour}
-\begin{tabular}{llll}
-\toprule
-\textbf{}        & \textbf{Total employees} & \textbf{Base salary (\$/year)}              & \textbf{Total salary (\$/year)} \\\midrule
-Process operator & 20                       & 14,100.00                                   & 282,000.00                      \\
-Process engineer & 2                        & 26,600.00                                   & 53,200.00                       \\
-Quality engineer & 2                        & 27,200.00                                   & 54,400.00                       \\
-Foreman          & 5                        & 28,200.00                                   & 141,000.00                      \\
-Area supervisor  & 2                        & 31,300.00                                   & 62,600.00                       \\
-R\&D engineer    & 2                        & 30,400.00                                   & 60,800.00                       \\
-Plant manager    & 1                        & 45,500.00                                   & 45,500.00                       \\
-Admin staff      & 6                        & 16,600.00                                   & 99,600.00                       \\
-\textbf{Total}   & \textbf{40}              & \textbf{}                                   & \textbf{799,100.00}             \\
-                 &                          & \multicolumn{1}{r}{\textit{12.4\% loading}} & \textbf{898,188.40} \\\bottomrule           
-\end{tabular}
-\end{table}
 
 \subsection{Additional operating costs}
 Table \ref{tab:opex-add} details additional costs incurred by Nitroma in operating the plant along with a brief note on the method of calculation, based on guidance from Towler \& Sinnott \cite{sinnott_chemical_2020}.
@@ -96,9 +102,9 @@ Labour overheads       & This is taken to be 60\% of operating labour and superv
 General plant          & This is taken to be 65\% of total labour, labour overheads              & 1,454,961               \\ 
 overhead               & and maintenance. It includes corporate functions such as                &                         \\ 
                        & marketing, human resources and research \& development.                 &                         \\ \midrule
-Maintenance            & This is taken as 5\% of ISBL since there is solids handling   involved. & 442,024                 \\ \midrule
+Maintenance            & This is taken as 5\% of ISBL since there is solid handling   involved. & 442,024                 \\ \midrule
 Insurance              & This is taken to be 1\% of ISBL.                                        & 88,405                  \\ \midrule
-Depreciation           & This is determined by applying straight-line depcreiation to the        & 1,128,640               \\ 
+Depreciation           & This is determined by applying straight-line depreciation to the        & 1,128,640               \\ 
                        & ISBL over the 20 year plant lifetime period, as guided by               &                         \\ 
                        & Coulson \& Richardson \cite{sinnott_coulson_2005}.                                             &                         \\ \midrule
 \textbf{Total}         & \textbf{}                                                               & \textbf{4,012,218}
