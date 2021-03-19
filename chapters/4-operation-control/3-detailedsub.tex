@@ -98,14 +98,10 @@ The composition of the gas feed to the reactor is controlled via the purge fract
 The liquid level at the bottom of the reactor operating co-currently and with downhill flows is controlled with a cascaded feedback loop. The master level controller infers a set point to the slave flow control which acts on the flow control valve installed on the reactor outlet. The controller block diagram is found in Figure \ref{fig:R201-LC}. By increasing the liquid take-off from the reactor, the level of the liquid hold-up at the bottom of the reactor will reduce. Level control in the reactor is critical since liquid could reach the gas outlet stream and contaminate the gas recycle, while simultaneously decreasing the productivity of the reactor.
 
 \subsubsection{Hydrogen feed flowrate control} %R201-HFC
-The flowrate of hydrogen feed to the reactor R201 is adjusted by the speed of the fan F201. A feedback control loop acts on the motor of the fan to change this power and thus the fan speed according to the gas flowrate measured downstream of the fan with a flow transmitter, as shown in . The main identified disturbances are the pressure of the fresh hydrogen and the flowrate of recycled gas. Those disturbances are already accounted for in the reactor pressure control loop and the hydrogen recycle control. 
-
-
-
+The flowrate of hydrogen feed to the reactor R201 is adjusted by the speed of the fan F201. A feedback control loop acts on the motor of the fan to change this power and thus the fan speed according to the gas flowrate measured downstream of the fan with a flow transmitter, as shown in Figure \ref{fig:R201-HFC}. The main identified disturbances are the pressure of the fresh hydrogen and the flowrate of recycled gas. Those disturbances are already accounted for in the reactor pressure control loop and the hydrogen recycle control. 
 
 \subsubsection{Reactor R201 feed temperature control}%H201 and H202-TC 
-%no graph
-The reactor gas and liquid feeds are heated by electric heaters, numbered respectively H201 and H202. Feedback control loops are installed to adjust the power of the electric heater to meet the required feed temperature. Feedforward control to account for disturbances in the temperature of the streams before entering the heaters was judged unnecessary since the electric heaters can quickly adjust the heat duty, usually in the order of seconds \cite{wattco_flanged_nodate}. This is one of the advantage of using electric heaters instead of heat exchangers with high or low  pressure steam.
+The reactor gas and liquid feeds are heated by electric heaters, numbered respectively H201 and H202. Feedback control loops are installed to adjust the power of the electric heater to meet the required feed temperature, shown in Figure \ref{}. Feedforward control to account for disturbances in the temperature of the streams before entering the heaters was judged unnecessary since the electric heaters can quickly adjust the heat duty, usually in the order of seconds \cite{wattco_flanged_nodate}. This is one of the advantage of using electric heaters instead of heat exchangers with high or low  pressure steam.
 
 
 \subsubsection{Distillation column S201 pressure control} %S201-PC
