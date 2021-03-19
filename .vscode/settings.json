@@ -1,0 +1,6 @@
+{
+    "search.exclude": {
+        "*.bib": true,
+        "*.svg": true
+    }
+}
