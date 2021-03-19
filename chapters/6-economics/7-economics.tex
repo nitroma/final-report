@@ -8,23 +8,26 @@ An economic appraisal was conducted to assess the financial feasibility of Nitro
 \label{sec:KPIs}
 
 \subsubsection{Net present value (NPV)}
-NPV is the value of all future cash flows over the lifetime of an investment discounted to the present value. NPV is commonly used as an indicator of the profitability of a business and gives the present value of total profits. Equation XX displays the calculation of NPV (XX):
+NPV is the value of all future cash flows over the lifetime of a project discounted to the present value. NPV is commonly used as an indicator of the profitability of a business and gives the present value of total profits. Equation XX displays the calculation of NPV (XX):
 
 \begin{equation}
 \label{eqn:npv}
-    \sum_t^n\frac{R_{t}}{(1+i)^{t}}
+    NPV = \sum_t^n\frac{R_{t}}{(1+i)^{t}}
 \end{equation}
 
-NPV is a comprehensive metric as it considers all revenue, expenses and capital costs associated with a project in the project’s free cash flow. Moreover, cash flows are discounted to adjust for the risk associated with the project and to account for the time value of money. The NPV for Nitroma’s plant was calculated to be \$84.4 million for a discount rate of \SI{8.28}{\percent} (WACC). This large value provides confidence that the forecasted earnings of this project will exceed its anticipated cost at the present value of currency. However, the main limitation of NPV arises from the inability to predict all future cash flows as many expenses arise only after a project starts. The agrochemical, dye and pharmaceutical sectors are mature industries so it not expected that any disruptive forces would threaten Nitroma’s projected cash flows over the plant’s lifetime, as discussed in Section XX. A sensitivity analysis on NPV is detailed in Section XX. 
+Here, $R_{t}$ is the net cash flow at time $t$ and $i$ is the discount rate.
+
+NPV is a comprehensive metric as it considers all revenue, expenses and capital costs associated with a project. Moreover, cash flows are discounted to adjust for the risk associated with the project and to account for the time value of money. The NPV for Nitroma’s plant was calculated to be \$84.4 million for a discount rate of \SI{8.28}{\percent} (WACC). This large value provides confidence that the projected earnings of this project will exceed its anticipated cost at the present value of currency. However, the main limitation of NPV arises from the inability to predict all future cash flows as many expenses arise only after a project starts. The herbicide, dye and pharmaceutical sectors are mature industries so it not expected that any disruptive forces would threaten Nitroma’s projected cash flows over the plant’s lifetime, as discussed in Section \ref{sec:five-forces}. A sensitivity analysis on NPV is detailed in Section \ref{sec:sensitivities-kpis}. 
 
 \subsubsection{Internal rate of return}
-IRR is the discount rate that makes the NPV of a project equal to zero. Therefore, it is the annual rate of growth a project can expect to achieve. To calculate IRR, \cref{eqn:npv} must be set to zero as displayed in \cref{eqn:irr}:
-\begin{equation}
-\label{eqn:irr}
-    \sum_t^n\frac{R_{t}}{(1+IRR)^{t}}=NPV=0
-\end{equation}
+IRR is the discount rate that makes the NPV of a project equal to zero. Therefore, it is the annual rate of growth a project can expect to achieve. To calculate IRR, \cref{eqn:npv} must be set to zero. Nitroma’s IRR was found to be \SI{31}{\percent}. This is almost 4x greater than the project’s hurdle rate project, indicating a safe investment – even with significant market shifts, Nitroma’s business can be expected to remain profitable. A sensitivity analysis on IRR is summarised in Appendix \ref{app:irr-sensitivity}.
 
-Nitroma’s IRR was found to be \SI{31}{\percent}. This is almost 4x greater than the project’s hurdle rate project, indicating a safe investment – even with significant market shifts, Nitroma’s business can be expected to remain profitable. A sensitivity analysis on IRR is summarised in Appendix XX.
+%as displayed in \cref{eqn:irr}:
+%\begin{equation}
+%\label{eqn:irr}
+%    \sum_t^n\frac{R_{t}}{(1+IRR)^{t}}=NPV=0
+%\end{equation}
+
 
 \subsubsection{Payback period}
 \label{sec:pby}
@@ -35,11 +38,12 @@ Payback period is the amount of time it takes to recover the cost of an investme
     Payback\:period = \frac{Initial\:investment}{Annual\:net\:cash\:flow}
 \end{equation}
 
-Naturally, a shorter payback period is more attractive to investors. However, a major limitation of payback period is that it does not account for the time value of money. This makes the metric more inaccurate as its value becomes larger since future cash flows are subject to greater fluctuation. Nitroma’s payback period is estimated to be 5.29 years, which is lower than the industry average of 8.4 years (XX).  The short payback period is also more reliable because Nitroma’s projected cash flows over the next 5 years are less prone to inaccuracies. This makes Nitroma an attractive investment. 
+Naturally, a shorter payback period is more attractive to investors. A major limitation of payback period is that it does not account for the time value of money. This makes the metric more inaccurate as its value becomes larger since future cash flows are subject to greater fluctuation. Nitroma’s payback period is estimated to be 5.3 years, which is lower than the industry average of 8.4 years (XX).  The short payback period is also more reliable because Nitroma’s projected cash flows over the next 5 years are less prone to inaccuracies. This makes Nitroma an attractive investment. 
 
 
 \subsection{Cash flow analysis}
 \label{sec:cash-flows}
-Nitroma’s cash flow projections till 2043 can be found in Section XX. In 2021 and 2022, Nitroma generates a financial loss as registration, construction and trialling of the nitration plant takes place. Sales and distribution commence in 2023 and Nitroma reports its first positive cash flow in 2024. It should be noted that a cost escalation factor of \SI{2.6}{\percent} (XX) and an income escalation factor of \SI{2.8}{\percent} (XX) has been modelled into the cash flow statement to reflect the rise in Nitroma’s operating costs and product prices in line with the inflation rate and Consumer Price Index of China. 5-yearly capacity expansions of 10 days per year have also been factored into the cash flow statement. However, any additional investment that may be required to increase plant capacity has not been included in the financial statements as it is believed to have a minimal effect on Nitroma’s financial position.
+Nitroma’s cash flow projections till 2043 can be found in Section XX. In 2021 and 2022, Nitroma generates a financial loss as registration, construction and trialling of the nitration plant takes place. Sales and distribution commence in 2023 and Nitroma reports its first positive cash flow in 2024. It should be noted that a cost escalation factor of \SI{2.6}{\percent} (XX) and an income escalation factor of \SI{2.8}{\percent} (XX) have been modelled into the cash flow statement to reflect the rise in Nitroma’s operating costs and product prices in line with the inflation rate and Consumer Price Index of China. 5-yearly capacity expansions of 10 days per year have also been factored into the cash flow statement. However, any additional investment that may be required to increase plant capacity has not been included in the financial statements as it is believed to have a minimal effect on Nitroma’s financial position.
 
 \subsection{Additional KPIs}
+Table XX summarises all KPIs found related to the project. 
