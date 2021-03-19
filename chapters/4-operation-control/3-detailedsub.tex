@@ -126,33 +126,30 @@ The liquid level in the reboiler H204 is an important inventory to control to pr
 
 \subsubsection{Reflux drum S204 level control}%S204-LC
 \label{sec:S204-LC}
-Similar to the level control in the reboiler, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. In order to account for disturbances to the column performance because of variations in feed flowrate, a feedforward controller was implemented to adjust the tops product flowrate based on the feed flowrate (see Figure \ref{fig:s. This prevents material and energy buildup in the column. 
-
+Similar to the level control in the reboiler, controlling the level of liquid in the reflux drum is required for stable operation of the column. Letting the drum run dry would lead to no reflux returning to the column, which would affect the separation efficiency of the light and heavy components. The manipulated variable for the liquid level was chosen to be the tops product flowrate, as it was desirable to maintain a constant reflux ratio to the column in order that the energy required to achieve the desired degree of separation would remain constant. In order to account for disturbances to the column performance because of variations in feed flowrate, a feedforward controller was implemented to adjust the tops product flowrate based on the feed flowrate (see Figure \ref{fig:S204-LC}. This prevents material and energy buildup in the column. 
 
 \subsubsection{Condenser H203 heat duty control}%H203-TC
-\begin{wrapfigure}{r}{0.6\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
-    \caption{Heat duty control loop for condenser H203}
-    \label{fig:S203C-TC}
-\end{wrapfigure}
+    \begin{wrapfigure}{r}{0.6\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/H203-TC.pdf}
+        \caption{Heat duty control loop for condenser H203}
+        \label{fig:S203C-TC}
+    \end{wrapfigure}
 The condenser in a distillation column provides cooling to condense the vapour exiting from the top of the column. It is usually desirable to operate the condenser at maximum duty, as reflux to the column has to be in a liquid state. Thus it is important to ensure that any disturbances to the cooling water flowrate and temperature are mitigated with a control loop. A cascade control was proposed, with the slower temperature loop as the master control and flowrate as the slave (see \cref{fig:S203C-TC}). This way, any disturbances in the flow can be quickly rectified by the flow controller (FIC-208), while the temperature controller (TIC-208) gradually modifies the overall setpoint for the flow to account for disturbances in temperature.
 
 \subsection{Process and control loop interactions}
-The established controls so far have assumed that one manipulated variable (mv) only affects one control variable (cv). In reality, it is likely that manipulating one variable will affect multiple controlled variables and we have a multiple-input, multiple-output (MIMO) system. For example, reducing reboiler duty would directly reduce column temperature because of reduced vapour flow, but this would also indirectly affect the temperature of the reflux that gets sent back to the column. 
+The established controls so far have assumed that one manipulated variable (MV) only affects one control variable (CV). In reality, it is likely that manipulating one variable will affect multiple controlled variables and we have a multiple-input, multiple-output (MIMO) system. For example, reducing reboiler duty would directly reduce column temperature because of reduced vapour flow, but this would also indirectly affect the temperature of the reflux that gets sent back to the column. 
 
-In principle, good control of MIMO systems requires quantitative information about the dynamics of the system to choose the best mv-cv pairings and minimise control loop interactions. This was beyond the scope of this report, however a more advanced controller design would be feasible once experimental work on a pilot scale plant was carried out to determine the dynamic responses of various mvs to the cvs \cite{seborg_process_2011}.
+In principle, good control of MIMO systems requires quantitative information about the dynamics of the system to choose the best MV-CV pairings and minimise control loop interactions. This was beyond the scope of this report, however a more advanced controller design would be feasible once experimental work on a pilot scale plant was carried out to determine the dynamic responses of various mvs to the cvs \cite{seborg_process_2011}.
 
 \subsubsection{Relative Gain Array}
-
-\begin{wrapfigure}{r}{0.5\linewidth}
-    \vspace{-\intextsep}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
-    \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path. Image adapted from \textcite{thornhill_process_2009}}
-    \label{fig:RGA-block-di}
-\end{wrapfigure}
-
+    \begin{wrapfigure}{r}{0.5\linewidth}
+        \vspace{-\intextsep}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/RGA-Thornhill-2013.png}
+        \caption{Block diagram showing the effect of changing mv1 on cv1. The direct effect of mv1 is shown via the pink path, while the indirect effect of mv1 is shown via the blue path. Image adapted from \textcite{thornhill_process_2009}}
+        \label{fig:RGA-block-di}
+    \end{wrapfigure}
 The Relative Gain Array (RGA) method decides the best control loop pairings based on the steady state gains of each mv-cv pair. This is determined by the relative gain, which is the ratio of the direct effect to the total effect of changing mv on cv (see \cref{fig:RGA-block-di}). A good controller is one with the highest relative gain, because it means that the direct effect dominates over the indirect effect which allows for the fastest controller response and minimal disturbance to other cvs \cite{seborg_process_2011}. However, while RGA analysis does suggest the best loop pairings, it does not present a solution to interactions between control loops due to the indirect effects of mvs on cvs.
 
 \subsubsection{Controller Decoupling}
