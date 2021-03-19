@@ -22,7 +22,7 @@ According to \cref{sec:adiabatic}, the reactor must operate below \SI{363}{\K} a
 \end{equation}
 
 \subsubsection{Shell}
-Similarly, using the \cref{eqn:designpressure}, $p_d$ for the cooling water vessel was calculated to be \SI{1.1}{\bar} from an operating pressure ($p_o$) of 1 bar. The design temperature for the cooling water vessel is set as 328K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
+Similarly, using the \cref{eqn:designpressure}, $p_d$ for the cooling water vessel was calculated to be \SI{1.1}{\bar} from an operating pressure ($p_o$) of \SI{1}{\bar}. The design temperature for the cooling water vessel is set as 328K, as it is the upper bound of the ambient temperature range of the cooling water stream. 
 
 \subsection{Reactor dimension design}
 \label{sec:reactordimensions}
@@ -36,7 +36,7 @@ The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated
     e_\mathrm{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = \SI{0.145}{\mm}
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from \cref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
+where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from \cref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -80,7 +80,7 @@ A hemispherical head was chosen as the preferred head as the pressure in the ves
     e_\mathrm{head} = \frac{pD_i}{2f-0.2p} = \frac{0.14 \times 1500}{2 \times 143 - 0.2 \times 0.14} = \SI{0.73}{\mm}
     \label{eqn:hemisphericalend}
 \end{equation}
-with $p$ set as 1.4 bar, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as \SI{143}{\N\per\square\mm}.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
+with $p$ set as \SI{1.4}{\bar}, $D_i$ set as \SI{1500}{\milli \metre}, $f$ value set as \SI{143}{\N\per\square\mm}.  The minimum thickness of the hemispherical end was calculated to be \SI{0.73}{\milli \metre}, but a final head thickness of \SI{5}{\milli \metre} was chosen to complement the thickness of the shell for ease of welding. 
 %-refer BS5500 page 78 of the pdf
 
 The minimum distance ($L_{im}$) between ports were calculated using \cref{eqn:mindistance} below,
@@ -114,7 +114,7 @@ Similarly, the outer diameter pipe diameter of both primary and secondary coolin
 \subsubsection{Pressure relief valve design}
 PRV was included as a safety device to protect the vessel and relief pressure in case of a overpressure event. An overpressure event will occur when the pressure is beyond the design pressure (also known as maximum allowable working pressure, MAWP) \cite{marsha_lecture_nodate}. Detailed calculation based on API 250 standard \cite{api_standard_520_sizing_2013} of the sizing of safety relief valves for liquid can be viewed in \ref{app:PRV}.
 
-Due to highly flammable nature of nitration reaction, the maximum allowable accumulated pressure was designed for fire exposure at 1.21 times the maximum allowable working pressure (MAWP), which is then calculated to be 1.74 bar. The final PRV size for schedule 40 steel was calculated to have an OD of \SI{101.6}{\milli \metre} (3 $\frac{1}{2}$" NPS) and a wall thickness of \SI{5.74}{\milli \metre}.
+Due to highly flammable nature of nitration reaction, the maximum allowable accumulated pressure was designed for fire exposure at 1.21 times the maximum allowable working pressure (MAWP), which is then calculated to be \SI{1.74}{\bar}. The final PRV size for schedule 40 steel was calculated to have an OD of \SI{101.6}{\milli \metre} (3 $\frac{1}{2}$" NPS) and a wall thickness of \SI{5.74}{\milli \metre}.
 %- Inlet of water on top, outlet of water at the bottom. Size the water
 
 %what is the arramgement of the piping? are we looking at all 19 stacked into one huge tube of diameter 100+cm? 
