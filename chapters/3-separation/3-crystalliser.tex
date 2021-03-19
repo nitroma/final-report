@@ -229,7 +229,9 @@ The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is
 %    V = \frac{\pi D^3}{2} 
 %\end{equation}
 
-In the end, Equations \ref{eq:amount solid A equilibrium} to  \ref{eq:crystalliser volume} form a system of algebraic equations and can be solved simultaneously. For each value of $V$, the mass flow rate of solid PNT that will form $\dot{M}_{\mathrm{liquid}}$, can be computed. A crystalliser recovery, $r_c$, can be defined where
+In the end, Equations \ref{eq:amount solid A equilibrium} to 3.30 form a system of algebraic equations and can be solved simultaneously. For each value of $V$, the mass flow rate of solid PNT that will form $\dot{M}_{\mathrm{liquid}}$, can be computed. A crystalliser recovery, $r_c$, can be defined where:
+
+%\ref{eq:crystalliser volume}
 
 \begin{equation} \label{eq:definition of recovery}
     r_c = \frac{\dot{M}_{\mathrm{liquid}}}{x_{\mathrm{eq}} \dot{M}_{\mathrm{total}}}
@@ -358,7 +360,7 @@ A stream table for the crystalliser is available in \cref{tab:crystalliser strea
 
 The kinetic rate constants employed in Sections \ref{sec:secondary nucleation} and \ref{sec: crystal growth} were estimates and should have been scrutinised in greater detail; specifically, sensitivity analyses are performed for $K_B$ and $K_G$ in Equations \ref{eq:secondary nucleation final expression} and \ref{eq:ratio of growth kinetics}.
 
-Figures \ref{fig:sensitivity kinetics}(a) and \ref{fig:sensitivity kinetics}(b) are sensitivity plots for $K_B$ and $K_G$ respectively. Here, the volume is fixed at the design value of 0.1885 m$^3$, and the kinetic constants $K_B$ and $K_G$ are allowed to change with respect to their design values of 10$^{13}$ and 8.36 $\cdot$ 10$^{-6}$ m/s. Deviations of the crystalliser recovery, $r_c$, and modal size of crystals, $L_M$, from their design values are plotted against deviations in $K_B$ and $K_G$. For both cases, it can be seen that changes in $r_c$ is negligible. This is because of the large volume designed for the crystalliser, where the crystalliser is operated close to the thermodynamic equilibrium. The value of $L_M$ does change sizeably with deviations in $K_B$ and $K_G$. This is because $L_M$ is impacted by $G$ which is directly affected by $K_B$ and $K_G$ through Equations \ref{eq:magma density} to \ref{eq:KG Ste g}. However, the deviation in $L_M$ is not significant enough to impact the design of the wash column. 
+Figures \ref{fig:sensitivity kinetics}(a) and \ref{fig:sensitivity kinetics}(b) are sensitivity plots for $K_B$ and $K_G$ respectively. Here, the volume is fixed at the design value of 0.1885 m$^3$, and the kinetic constants $K_B$ and $K_G$ are allowed to change with respect to their design values of 10$^{13}$ and 8.36 $\cdot$ 10$^{-6}$ m/s. Deviations of the crystalliser recovery, $r_c$, and modal size of crystals, $L_M$, from their design values are plotted against deviations in $K_B$ and $K_G$. For both cases, it can be seen that changes in $r_c$ is negligible. This is because of the large volume designed for the crystalliser, where the crystalliser is operated close to the thermodynamic equilibrium. The value of $L_M$ does change sizeably with deviations in $K_B$ and $K_G$, for $L_M$ is impacted by $G$ which is directly affected by $K_B$ and $K_G$ through Equations \ref{eq:magma density} to \ref{eq:KG Ste g}. However, the deviation in $L_M$ is not significant enough to impact the design of the wash column. 
 
 \begin{figure}[h]
     \centering
@@ -382,7 +384,7 @@ where $R_{fp}$ is the process side fouling and $R_{fs}$ is the service side foul
 \end{equation}
 whence $l_f$ is the thickness of fouling and $k_{PNT}$ is the thermal conductivity of solid PNT. 
 
-A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{noauthor_fouling_2021}. This resistance is too small to make an impact on the vessel design. 
+A suitable estimate for the service side fouling resistance due to the ethylene glycol solution has been found to be 0.000352 W$^{-1}$ m$^2$ K \cite{noauthor_fouling_2021}. This resistance can be consid impact on the vessel design. 
 
 \begin{wrapfigure}{r}{0pt}
     \centering
