@@ -61,7 +61,7 @@ Primary nucleation involves nucleation occurring in absence of crystals \cite{se
 \begin{equation}
      J = F\exp\left(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (\ln S)^2}\right)
 \end{equation}
-where $J$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in Equation \ref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson \cite{randolph_theory_1971}. Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations \cite{randolph_theory_1971}. 
+where $J$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in \cref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson \cite{randolph_theory_1971}. Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations \cite{randolph_theory_1971}. 
 
 \subsubsection{Secondary nucleation}\label{sec:secondary nucleation}
 
@@ -69,7 +69,7 @@ Secondary nucleation takes place with the presence of other crystals \cite{richa
 \begin{equation} \label{eq:secondary nucleation general}
     B = K_{\mathrm{B}} \rho^j_{\mathrm{m}} N^l (\Delta C)^b 
 \end{equation}
-where $B$ is the secondary nucleation rate or birth rate in \si{\cubic\m\per\s}, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in Equation \ref{eq:magma density} in \cref{sec: crystal growth} later, and $N$ is the term that gives measure of the intensity of agitation in the system such as the rotating speed of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
+where $B$ is the secondary nucleation rate or birth rate in \si{\cubic\m\per\s}, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in \cref{eq:magma density} in \cref{sec: crystal growth} later, and $N$ is the term that gives measure of the intensity of agitation in the system such as the rotating speed of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
 From the work of Ottens and de Jong \cite{ottens_model_1974}, the kinetic rate of secondary nucleation can be expressed in the form of 
 \begin{equation}
@@ -80,7 +80,7 @@ From the work of Ottens and de Jong \cite{ottens_model_1974}, the kinetic rate o
     J_{\mathrm{c-c}} &= k_{\mathrm{c-c}} \varepsilon \rho_m^2 (\Delta C)^b \\
     J_{\mathrm{c-s}} &= k_{\mathrm{c-s}} \varepsilon \rho_m (\Delta C)^b
 \end{align}
-where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for the individual contributions, and $\varepsilon$ is the quantity corresponding to the $N$ in Equation \ref{eq:secondary nucleation general} such that 
+where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for the individual contributions, and $\varepsilon$ is the quantity corresponding to the $N$ in \cref{eq:secondary nucleation general} such that 
 
 \begin{equation}
     \varepsilon = P_0 \frac{\omega_r^3 D_r^5}{V} 
@@ -92,7 +92,7 @@ where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for t
     B = K_B \varepsilon (\Delta C)^b \rho_m^2
 \end{equation}
 
-\noindent where the value of $K_B$ has been estimated to be in the order of 10$^{13}$, provided that all the quantities in Equation \ref{eq:secondary nucleation final expression} are in SI units \cite{bauer_contact_1974}. Sensitivity analysis for value of $K_B$ is available in \Cref{sec:kinetics sensitivity}. The exponent, $b$, has been taken as 1. 
+\noindent where the value of $K_B$ has been estimated to be in the order of 10$^{13}$, provided that all the quantities in \cref{eq:secondary nucleation final expression} are in SI units \cite{bauer_contact_1974}. Sensitivity analysis for value of $K_B$ is available in \Cref{sec:kinetics sensitivity}. The exponent, $b$, has been taken as 1. 
 
 \subsubsection{Crystal growth} \label{sec: crystal growth}
 
@@ -122,7 +122,7 @@ To describe the kinetics of crystal growth, a population balance must be perform
     n_0 = \frac{B}{G}
 \end{equation}
 
-\noindent where $B$ is the rate of nucelation defined in Equation \ref{eq:secondary nucleation final expression}, and $\tau$ is the residence time of the crystalliser defined as 
+\noindent where $B$ is the rate of nucelation defined in \cref{eq:secondary nucleation final expression}, and $\tau$ is the residence time of the crystalliser defined as 
 
 \begin{equation}
     \tau = \frac{V}{Q}
@@ -158,7 +158,7 @@ The rate of crystal growth, $G$, is commonly expressed as a function of supersat
     Ste = \frac{C_{\mathrm{P,S}}}{H_{\mathrm{f}}} \Delta T
 \end{equation}
 
-\noindent whence $C_{P,S}$ is the heat capacity of the solid crystal, $\Delta T$ is the degree of super-cooling as defined in Equation \ref{eq:deltaT}, and $H_{f}$ is the heat of fusion as in Equation \ref{eq:vantHoff}. The correlation directly relates $G$ to $\Delta T$ and has an $R^2$ of 0.9833.
+\noindent whence $C_{P,S}$ is the heat capacity of the solid crystal, $\Delta T$ is the degree of super-cooling as defined in \cref{eq:deltaT}, and $H_{f}$ is the heat of fusion as in \cref{eq:vantHoff}. The correlation directly relates $G$ to $\Delta T$ and has an $R^2$ of 0.9833.
 
 The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of the system. The growth rate of the (PNT + MNT) system can thus be estimated from Wilke-Chang's correlation \cite{miyabe_estimation_2011},
 
@@ -166,7 +166,7 @@ The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of
     D_m = \frac{7.4 \cdot 10^{-8} T_{\mathrm{eq}} \sqrt{\alpha M_A}}{\mu_A V_{m,B}^0.6}
 \end{equation}
 
-\noindent whence $T_{\mathrm{eq}}$ is the temperature whereat the system has been operated as defined in Equation \ref{eq:deltaT}, $\alpha$ is taken as 0.7 for mixtures of aromatics, $M_A$ is the molecular weight of the solute, $\mu_A$ is the viscosity of the solute, and $V_{m,B}$ is the molar volume of the solvent at normal boiling point. Therefore, $K_G$ for the (PNT + MNT) system can be obtained as 
+\noindent whence $T_{\mathrm{eq}}$ is the temperature whereat the system has been operated as defined in \cref{eq:deltaT}, $\alpha$ is taken as 0.7 for mixtures of aromatics, $M_A$ is the molecular weight of the solute, $\mu_A$ is the viscosity of the solute, and $V_{m,B}$ is the molar volume of the solvent at normal boiling point. Therefore, $K_G$ for the (PNT + MNT) system can be obtained as 
 
 \begin{equation} \label{eq:ratio of growth kinetics}
     \frac{K_{G\mathrm{(PNT + MNT)}}}{K_{G\mathrm{(ONT + MNT)}}} = \frac{D_{m\mathrm{(PNT + MNT)}}}{D_{m\mathrm{(ONT + MNT)}}}
@@ -176,7 +176,7 @@ The kinetic constant $K_G$ is determined by the diffusive coefficient, $D_m$, of
 
 \subsection{Mass balance and crystalliser specifications} \label{sec: crystalliser mass balance}
 
-The output of Equation \ref{eq:magma density}, the magma density, $\rho_m$, is given as 
+The output of \cref{eq:magma density}, the magma density, $\rho_m$, is given as 
 
 \begin{equation}
     \rho_m = \frac{\dot{M}_{\mathrm{solid}}}{Q}
@@ -188,7 +188,7 @@ The output of Equation \ref{eq:magma density}, the magma density, $\rho_m$, is g
     \dot{M}_{\mathrm{solid}} = \frac{\dot{M}_{\mathrm{total}} (x_{\mathrm{in}} - x)}{1 - x}
 \end{equation}
 
-\noindent where $x_{\mathrm{in}}$ is the fraction of PNT at the inlet of the crystalliser; $x$ is the fraction of PNT in the liquid in the crystalliser, and due to the MSMPR mode of operation, it is also the fraction of PNT in the liquid at the outlet of the crystalliser. The fraction of PNT in the liquid, $x$, has a one-to-one correspondence to $C$, the concentration of PNT in the liquid, which was defined in Equation \ref{eq:deltaC}. The relation is 
+\noindent where $x_{\mathrm{in}}$ is the fraction of PNT at the inlet of the crystalliser; $x$ is the fraction of PNT in the liquid in the crystalliser, and due to the MSMPR mode of operation, it is also the fraction of PNT in the liquid at the outlet of the crystalliser. The fraction of PNT in the liquid, $x$, has a one-to-one correspondence to $C$, the concentration of PNT in the liquid, which was defined in \cref{eq:deltaC}. The relation is 
 
 \begin{equation}
     C = \frac{\dot{M}_{\mathrm{liquid}} x}{Q}
@@ -206,7 +206,7 @@ The output of Equation \ref{eq:magma density}, the magma density, $\rho_m$, is g
     C_{\mathrm{eq}} = \frac{\dot{M}_{\mathrm{liquid}} x_{\mathrm{eq}}}{Q}
 \end{equation}
 
-\noindent Values of $T_{\mathrm{eq}}$, $T$, and $\Delta T$ in Equation \ref{eq:deltaT} can be computed by invoking the fitted van't Hoff-type correlation in Equation \ref{eq:fittedvantHoffcorrelation}. 
+\noindent Values of $T_{\mathrm{eq}}$, $T$, and $\Delta T$ in \cref{eq:deltaT} can be computed by invoking the fitted van't Hoff-type correlation in \cref{eq:fittedvantHoffcorrelation}. 
 
 The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be 280 K. As can be seen in \cref{fig:eutectic schematic}, the eutectic point is roughly around 270 K. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid MNT forms when there is process fluctuation. The composition of liquid at the inlet is such that the fraction of PNT, $x_{\mathrm{in}}$, is 0.8839, as given in \cref{tab:inlet crystalliser}. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
 
@@ -293,7 +293,7 @@ Accounting for all these resistances in series, the overall heat transfer coeffi
 \end{equation}
 where $l$ is the thickness of the half coil pipe and $k$ is the thermal conductivity of pipe material (steel).
 
-To determine the heat transfer coefficients on both the process side, Equation \ref{eq:processsideht}, and service side, Equation \ref{eq:servicesideht}, the Nusselt number, $\mathrm{Nu}$, for a jacketed vessel with impeller agitator can be obtained as \cite{carpenter_agitated_2011}
+To determine the heat transfer coefficients on both the process side, \cref{eq:processsideht}, and service side, \cref{eq:servicesideht}, the Nusselt number, $\mathrm{Nu}$, for a jacketed vessel with impeller agitator can be obtained as \cite{carpenter_agitated_2011}
 \begin{align} 
     \mathrm{Nu} &= A\mathrm{Re}^{\frac{2}{3}}\mathrm{Pr}^{\frac{1}{3}}\left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:processsideht} \\
     \mathrm{Nu} &= 0.023\mathrm{Re}^{0.8}\mathrm{Pr}^{\frac{1}{3}} \left( \frac{\eta}{\eta_w} \right)^{0.14} \label{eq:servicesideht}
@@ -322,7 +322,7 @@ The equation for the heat transfer area has been formulated using the length of 
     \label{fig:recovery vs volume crystalliser}
 \end{figure}
 
-\noindent The crystalliser recovery, $r_c$, and the modal size of crystal, $L_M$, have been calculated using the Equations \ref{eq:amount solid A equilibrium} to \ref{eq:definition of recovery} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curves in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. As can be seen on \cref{fig:recovery vs volume crystalliser}a, the larger the vessel is, the more PNT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by Equation \ref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of PNT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at \SI{90.5724}{\percent}, which is about the same as the theoretical maximum.
+\noindent The crystalliser recovery, $r_c$, and the modal size of crystal, $L_M$, have been calculated using the Equations \ref{eq:amount solid A equilibrium} to \ref{eq:definition of recovery} for a range of values of the crystalliser volume, $V$; the results have been plotted as the blue curves in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. As can be seen on \cref{fig:recovery vs volume crystalliser}a, the larger the vessel is, the more PNT can be recovered from the liquid as solid. However, after a certain threshold, the recovery plateaus and would not increase further with a larger crystalliser. This is due to the fact that the recovery is limited by a theoretical maximum set by the thermodynamics as described by \cref{eq:amount solid A equilibrium}. Since the crystalliser is well-mixed, it is operated at the outlet conditions, and with larger volume and higher recovery at the outlet, the concentration of PNT in the crystalliser and at the outlet, $C$, would approach the thermodynamic equilibrium, $C_{\mathrm{eq}}$; this means that the driving force for crystallisation, the supersaturation, $\Delta C$, decreases and approaches nil. Thus, at volumes above 0.01 m$^{3}$, the recovery would stay at \SI{90.5724}{\percent}, which is about the same as the theoretical maximum.
 
 \begin{wraptable}{r}{0.4\linewidth}
 \centering
@@ -342,7 +342,7 @@ PNT (kmol/day)          &    21.99      & 21.99 \\ \bottomrule
 \end{tabular}
 \end{wraptable}
 
-As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. This is because with a larger volume, the system operates nearer to equilibrium; $G$ becomes smaller yet $\tau$ becomes higher. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in \cref{section: hydraulic wash column}. However, at larger volumes, the change of $L_M$ is not enough to have an impact on the hydraulic wash column design. 
+As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by \cref{eq:LM G tau}. This is because with a larger volume, the system operates nearer to equilibrium; $G$ becomes smaller yet $\tau$ becomes higher. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in \cref{section: hydraulic wash column}. However, at larger volumes, the change of $L_M$ is not enough to have an impact on the hydraulic wash column design. 
 
 To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. From calculations introduced in \cref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient, $U$, has been calculated as \SI{1452.64}{\W\per\square\m\per\K}, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
 
@@ -367,7 +367,7 @@ Figures \ref{fig:sensitivity kinetics}(a) and \ref{fig:sensitivity kinetics}(b) 
 
 % due to the higher heat transfer resistance caused by the layer of fouling coated on the cooling pipe surface
 
-Fouling can pose a big challenge for continuous melt crystallisation, as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency. The cooling fluid side can also exhibit fouling. To account for this in the design, an additional resistance, $R_f$, will be added to the aforementioned resistances in series relation of Equation \ref{eq:resistht},
+Fouling can pose a big challenge for continuous melt crystallisation, as nucleation sites can form on the inner wall of the crystalliser, leading to a layer of crystallised solid product on the vessel wall. Not only does this lead to reduced recovery of solid PNT, but importantly it results in lower heat transfer efficiency. The cooling fluid side can also exhibit fouling. To account for this in the design, an additional resistance, $R_f$, will be added to the aforementioned resistances in series relation of \cref{eq:resistht},
 \begin{equation} \label{eq:fouling}
     R_f = R_{fs} + R_{fp}
 \end{equation}
