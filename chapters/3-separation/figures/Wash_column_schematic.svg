@@ -24,18 +24,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="854.82544"
-     inkscape:cy="340.21011"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="737.42434"
+     inkscape:cy="222.11252"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
-     inkscape:window-width="1267"
-     inkscape:window-height="1040"
-     inkscape:window-x="2024"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0">
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid10" />
@@ -66,7 +66,7 @@
          id="tspan40"
          x="4.7624898"
          y="189.59285"
-         style="stroke-width:0.264583">(a)</tspan></text>
+         style="stroke-width:0.264583">(i)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -77,27 +77,27 @@
          id="tspan40-7"
          x="103.03632"
          y="188.91251"
-         style="stroke-width:0.264583">(b)</tspan></text>
+         style="stroke-width:0.264583">(ii)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="4.9892774"
-       y="18.029463"
+       x="6.0476108"
+       y="19.087795"
        id="text42-1"><tspan
          sodipodi:role="line"
          id="tspan40-2"
-         x="4.9892774"
-         y="18.029463"
+         x="6.0476108"
+         y="19.087795"
          style="font-size:7.05556px;stroke-width:0.264583">Inlet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="190.42194"
+       x="191.21568"
        y="139.36174"
        id="text42-1-3"><tspan
          sodipodi:role="line"
          id="tspan40-2-2"
-         x="190.42194"
+         x="191.21568"
          y="139.36174"
          style="font-size:7.05556px;stroke-width:0.264583">Knives</tspan></text>
     <image
@@ -154,7 +154,7 @@
        r="0.11815049" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 148.16666,164.04166 182.5625,137.58333"
+       d="m 148.16666,164.04166 39.68751,-26.45833"
        id="path107"
        sodipodi:nodetypes="cc" />
     <path
@@ -164,17 +164,17 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 76.729167,171.97917 100.54167,161.39583"
+       d="M 76.729167,171.97917 103.1875,158.75"
        id="path111"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 26.458333,52.916666 15.875,23.8125"
+       d="M 29.104167,60.854167 23.105657,43.696807 15.875,23.8125"
        id="path113"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 76.729167,44.979167 92.604167,23.8125"
+       d="M 76.729167,44.979167 108.47917,23.8125"
        id="path115"
        sodipodi:nodetypes="cc" />
     <path
@@ -189,23 +189,27 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 142.875,68.791666 185.20833,31.75"
-       id="path121" />
+       d="M 142.875,68.791666 177.27083,31.75"
+       id="path121"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 158.75,95.249999 190.5,42.333333"
-       id="path123" />
+       d="M 158.75,95.249999 187.85417,31.75"
+       id="path123"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 238.125,84.666666 201.08333,42.333333"
-       id="path125" />
+       d="M 238.125,84.666666 193.14583,31.75"
+       id="path125"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 254,68.791666 201.08333,31.75"
-       id="path127" />
+       d="M 254,68.791666 206.375,31.75"
+       id="path127"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 52.916667,31.75 58.208333,13.229167"
+       d="m 52.916667,31.75 15.875,-13.229167"
        id="path129"
        sodipodi:nodetypes="cc" />
     <path
@@ -223,7 +227,7 @@
          id="tspan40-7-2"
          x="195.11133"
          y="189.97084"
-         style="stroke-width:0.264583">(c)</tspan></text>
+         style="stroke-width:0.264583">(iii)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -234,7 +238,7 @@
          id="tspan40-7-0"
          x="272.89883"
          y="189.44167"
-         style="stroke-width:0.264583">(d)</tspan></text>
+         style="stroke-width:0.264583">(iv)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -245,32 +249,32 @@
          id="tspan40-7-0-5"
          x="362.328"
          y="189.44167"
-         style="stroke-width:0.264583">(e)</tspan></text>
+         style="stroke-width:0.264583">(v)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="59.57967"
-       y="7.8216448"
+       x="60.108837"
+       y="7.9539361"
        id="text42-1-5"><tspan
          sodipodi:role="line"
          id="tspan40-2-4"
-         x="59.57967"
-         y="7.8216448"
+         x="60.108837"
+         y="7.9539361"
          style="font-size:7.05556px;stroke-width:0.264583">Filter</tspan><tspan
          sodipodi:role="line"
-         x="59.57967"
-         y="16.641094"
+         x="60.108837"
+         y="16.773386"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan195">outlet</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.535919"
-       y="155.45915"
+       x="91.594254"
+       y="154.40082"
        id="text42-1-5-2"><tspan
          sodipodi:role="line"
-         x="90.535919"
-         y="155.45915"
+         x="91.594254"
+         y="154.40082"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan195-6">Sightholes</tspan></text>
     <text
@@ -287,61 +291,99 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="90.185112"
-       y="20.14613"
+       x="91.243446"
+       y="18.823214"
        id="text42-1-1"><tspan
          sodipodi:role="line"
          id="tspan40-2-45"
-         x="90.185112"
-         y="20.14613"
+         x="91.243446"
+         y="18.823214"
          style="font-size:7.05556px;stroke-width:0.264583">Top recycle</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="103.94344"
-       y="65.919044"
+       x="102.88511"
+       y="66.183624"
        id="text42-1-6"><tspan
          sodipodi:role="line"
          id="tspan40-2-0"
-         x="103.94344"
-         y="65.919044"
+         x="102.88511"
+         y="66.183624"
          style="font-size:7.05556px;stroke-width:0.264583">Safety</tspan><tspan
          sodipodi:role="line"
-         x="103.94344"
-         y="74.738495"
+         x="102.88511"
+         y="75.003075"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan274">relief</tspan><tspan
          sodipodi:role="line"
-         x="103.94344"
-         y="83.557945"
+         x="102.88511"
+         y="83.822525"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan276">valve</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="103.94345"
+       x="102.09137"
        y="111.1628"
        id="text42-1-1-6"><tspan
          sodipodi:role="line"
          id="tspan40-2-45-0"
-         x="103.94345"
+         x="102.09137"
          y="111.1628"
          style="font-size:7.05556px;stroke-width:0.264583">Bottom</tspan><tspan
          sodipodi:role="line"
-         x="103.94345"
+         x="102.09137"
          y="119.98225"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan296">recycle</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="174.14426"
-       y="25.019562"
+       x="174.67342"
+       y="26.077894"
        id="text42-1-5-6"><tspan
          sodipodi:role="line"
-         x="174.14426"
-         y="25.019562"
+         x="174.67342"
+         y="26.077894"
          style="font-size:7.05556px;stroke-width:0.264583"
          id="tspan195-3">Filter tubes</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 169.33333,15.875 h 47.625 V 31.75 h -47.625 z"
+       id="path883" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 58.208333,1.3229167 0,17.1979163 h 23.812499 l 10e-7,-17.1979163 z"
+       id="path885"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 5.2916666,10.583333 V 23.8125 H 23.8125 V 10.583333 Z"
+       id="path887" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2.6458333,127 v 10.58333 H 26.458333 V 127 Z"
+       id="path889" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 100.54167,58.208333 V 87.312499 H 127 V 58.208333 h -26.45833"
+       id="path891" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 89.958332,10.583333 V 23.8125 H 132.29166 V 10.583333 Z"
+       id="path893" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 100.54167,103.1875 v 21.16667 h 29.10416 V 103.1875 h -29.10416"
+       id="path895" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 89.958332,145.52083 V 158.75 h 39.687498 v -13.22917 z"
+       id="path897" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 187.85417,132.29167 0,10.58333 h 29.10416 v -10.58333 h -29.10416"
+       id="path899"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
