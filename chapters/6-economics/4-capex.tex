@@ -11,29 +11,29 @@ Where, a, b and n are constants depending on the equipment type and S is the key
 \centering
 \caption{Equipment purchase cost}
 \label{tab:equipment purchase}
-\begin{tabular}{lll}
+\begin{tabular}{llS[table-format=7.2,round-mode=figures,round-precision=3]}
 \toprule
 \textbf{Equipment Type}    & \textbf{Number of Equipments} & \textbf{Purchase Cost (\$)} \\\midrule
-Heat Exchangers            & 20                            & 143,784.99                  \\
-Electric Heaters           & 13                            & 640,728.64                  \\
-Reactors                   & 6                             & 271,879.49                  \\
-Packed Columns             & 10                            & 99,443.17                   \\
-Flash Vessels              & 3                             & 2,305.55                    \\
-Gravitational Decanters    & 1                             & 4,493.06                    \\
-Crystallizer               & 2                             & 42,503.76                   \\
-Wash column                & 1                             & 16,668.24                   \\
-Refregiration system       & 1                             & 37,935.77                   \\
-Storage (Buffer) Tanks     & 12                            & 879,434.57                  \\
-Mixers                     & 5                             & 82,320.88                   \\
-Pumps                      & 10                            & 47,430.51                   \\
-Fan                        & 4                             & 33,157.33                   \\
-Granualtor                 & 2                             & 49,241.20                   \\
-Waste Treatment Equipments & 3                             & 50,978.91                   \\ \midrule
-\textbf{Total}             & 93                            & \textbf{2,402,306.05}       \\ \bottomrule
+Heat Exchangers            & 20                            & 143784.99                  \\
+Electric Heaters           & 13                            & 640728.64                  \\
+Reactors                   & 6                             & 271879.49                  \\
+Packed Columns             & 10                            & 99443.17                   \\
+Flash Vessels              & 3                             & 2305.55                    \\
+Gravitational Decanters    & 1                             & 4493.06                    \\
+Crystallizer               & 2                             & 42503.76                   \\
+Wash column                & 1                             & 16668.24                   \\
+Refregiration system       & 1                             & 37935.77                   \\
+Storage (Buffer) Tanks     & 12                            & 879434.57                  \\
+Mixers                     & 5                             & 82320.88                   \\
+Pumps                      & 10                            & 47430.51                   \\
+Fan                        & 4                             & 33157.33                   \\
+Granualtor                 & 2                             & 49241.20                   \\
+Waste Treatment Equipments & 3                             & 50978.91                   \\ \midrule
+\textbf{Total}             & 93                            & 2402306.05                 \\ \bottomrule
 \end{tabular}
 \end{table}
 
-Table \ref{tab:equipment purchase} summarized all major units purchased by Nitroma. Due to the variety of equipment types, detail breakdown of individual equipment cost is not discussed here but can be found in Supplementary Information.
+\cref{tab:equipment purchase} summarized all major units purchased by Nitroma. Due to the variety of equipment types, detail breakdown of individual equipment cost is not discussed here but can be found in Supplementary Information.
 
 The inside battery limits (ISBL) investment is the cost of purchasing and installing all equipment. Lang has proposed ISBL is a function of the installation factor and the purchase cost calculated above.
 \begin{equation}
@@ -52,25 +52,25 @@ Values of each installation factor can be found in \textbf{Appendix}. Using this
 \centering
 \caption{Additional CAPEX cost}
 \label{tab:CAPEXadditional}
-\begin{tabular}{lll}
+\begin{tabular}{llS[table-format=7.0]}
 \toprule
 \textbf{Item}        & \textbf{Description }                                                                      & \textbf{USD}       \\\midrule
-OSBL        & Outside Battery Limits, this is cost that is addition to the                      & 3,536,195 \\
+OSBL        & Outside Battery Limits, this is cost that is addition to the                      & 3536195 \\
             & equipment cost and accounts for site infrastructure. OSBL                         &           \\
-            & is estimated to be 40\% of ISBL.                                                  &           \\\midrule
-Land        & Industial land price is \$24.33/m\textsuperscript{2} in Nanjing. & 2,920,000 \\
+            & is estimated to be \SI{40}{\percent} of ISBL.                                                  &           \\\midrule
+Land        & Industial land price is \$24.33/m\textsuperscript{2} in Nanjing. & 2920000 \\
             & Plant size is 0.12km\textsuperscript{2}.                         &           \\\midrule
-Design \&   & Cost spent designing and constructing the plant, typically paid to                & 3,094,170 \\
-Engineering & contractor. This is approximately 25\% of the sum of ISBL and OSBL.               &           \\\midrule
-Contingency & Extra costs added into the project to allow flucation of the                      & 1,237,668 \\
+Design \&   & Cost spent designing and constructing the plant, typically paid to                & 3094170 \\
+Engineering & contractor. This is approximately \SI{25}{\percent} of the sum of ISBL and OSBL.               &           \\\midrule
+Contingency & Extra costs added into the project to allow flucation of the                      & 1237668 \\
             & cost estimate since the number of equipments is uncertain                         &           \\
-            & until the of construction phase. Approximated to 10\%                             &           \\
+            & until the of construction phase. Approximated to \SI{10}{\percent}                             &           \\
             & of the sum of ISBL and OSBL                                                       &           \\\midrule
-One-off     & The plant has installed a refrigeration cycle to lower the                        & 9,315     \\
+One-off     & The plant has installed a refrigeration cycle to lower the                        & 9315     \\
 chemicals   & operating temperature of one of the crystallizers. Given                          &           \\
             & that the refrigerant does not need to be replaced,                                &           \\
             & it is categorized as CAPEX.                                                       &           \\\midrule
-Working     & Funds to purchase raw materials and utitlies for start-up prior to .              & 2,944,278 \\
+Working     & Funds to purchase raw materials and utitlies for start-up prior to .              & 2944278 \\
 Captial     & earning profit                                                                    &       \\\bottomrule   
 \end{tabular}
 \end{table}

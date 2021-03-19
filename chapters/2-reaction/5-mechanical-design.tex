@@ -15,7 +15,7 @@ Stainless steel type 304 have higher levels of carbon that are not stabilised wi
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
 \subsubsection{Reactor tube}
-According to Section \ref{sec:adiabatic}, the reactor must operate below \SI{363}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
+According to \cref{sec:adiabatic}, the reactor must operate below \SI{363}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
@@ -36,7 +36,7 @@ The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated
     e_\mathrm{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = \SI{0.145}{\mm}
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from Section \ref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
+where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from \cref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -55,7 +55,7 @@ where $n$ represents the sequence of hexagonal number.
 The tube bundle was arranged such that a clearance of \SI{230}{\milli \metre}, which satisfies the minimum clearance of 0.25 times tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer coefficient. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}. The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 \subsubsection{Secondary cooling tube dimensions}
-As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tube was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production with the shell and head vessel. 
+As mentioned in \cref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tube was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production with the shell and head vessel. 
 The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section \cref{fig:concentriccoolingwater}. 
 \begin{figure}[H]
     \centering
@@ -128,7 +128,7 @@ Based on JPI 75-48-73 standard, the nominal pipe size (NPS) for the flange was s
 Gasket is a sealing material placed between flanges to create a leak-proof sealing \cite{varun_piping_nodate}. A narrow-faced, ring joint gasket type was chosen due to the suitability of design when corrosive agents are presented \cite{noauthor_ring_nodate}. The octagonal soft steel gasket was chosen to complement ring joint gasket as it is softer than the flange material, to ensure sufficient deformation of the gasket without damaging the flange facing. The chosen gasket has a gasket factor (m) of 5.5 and minimum design seating stress (y) of \SI{124}{\N\per\mm} \cite{noauthor_unfired_nodate}.
 
 \subsubsection{Bolt types and dimension}
-The bolting material was selected as mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding \SI{174}{\N\per\square\mm} design stress for temperature not exceeding 100°C. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as \SI{1492}{\milli \metre}, with 56 bolts of \SI{32}{\milli \metre} diameter each for 54" NPS flanges. 
+The bolting material was selected as mild and carbon steel (BS 3692 grade 8.8), which is capable of withstanding \SI{174}{\N\per\square\mm} design stress for temperature not exceeding \SI{100}{\celsius}. Based on JPI 7S-48-73 standard for large diameter flanges, the diameter of bolt circle was defined as \SI{1492}{\milli \metre}, with 56 bolts of \SI{32}{\milli \metre} diameter each for 54" NPS flanges. 
 
 \subsection{Overall design}
 The overall cross section design of the reactor can be seen in \cref{fig:mainreactor} below. Additional mechanical design drawings from SolidWorks are included in \cref{app:engineeringdesign}.
