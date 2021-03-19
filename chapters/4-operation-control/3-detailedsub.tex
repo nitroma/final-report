@@ -109,40 +109,17 @@ Pressure in distillation columns is one of the most important parameters to cont
 An optimal feedback control was designed with the vapour flowrate from the reflux drum as the manipulated variable, as shown in Figure \ref{fig:S201-PC}.
 
 \subsubsection{S201 feed pressure control} %V201-PC
-To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the feed pressure of the column.
-
-%no graph
-%\begin{figure}[H]
- %   \centering
-  %  \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/V201-PC.pdf}
-   % \caption{}
-    %\label{fig:V201-PC}
-%\end{figure}
-
+To further ensure tight control of pressure in the column, a feedback control loop controls a pressure control valve on the feed to the column to minimise disturbances to the feed pressure of the column, as shown in Figure \ref{fig:PCV201-PC}.
 
 \subsubsection{Bottom stream composition control} %S201-CC
-\begin{wrapfigure}{r}{0.6\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
-    \caption{Composition control loop for bottoms stream of distillation column S201}
-    \label{fig:S201-CC}
-\end{wrapfigure}
+    \begin{wrapfigure}{r}{0.6\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S201-CC.pdf}
+        \caption{Composition control loop for bottoms stream of distillation column S201}
+        \label{fig:S201-CC}
+    \end{wrapfigure}
 A composition control loop in the distillation column is also necessary to ensure a high recovery of \ortho-toluidine. Since \ortho-toluidine is found in the bottoms stream, reboiler duty was chosen as the manipulated variable in order to reduce the lag time of the controller. A composition analyser (AT-205) measures the concentration of \ortho-toluidine in the bottoms stream and a composition controller (AIC-205) controls the reboiler duty by manipulating a flow control valve (FCV-207) on the saturated steam. 
 A composition analyser was chosen to allow direct online measurements of the concentration of \ortho-toluidine, one of the end products of our plant. However, composition analysers often have a slow dynamic response because of long measurement times. There would be delays in the controller response that would lead to a poor control of product quality \cite{kister_distillation_1990}. To mitigate this, the temperature of the column is used as an inferential measurement to control the product composition. Temperature sensors have quicker dynamic responses, and the temperature profile in the column directly affects product compositions. A calibration curve can be established using phase equilibrium data of methanol and \ortho-toluidine to allow temperature to act as a proxy for composition control \cite{kister_distillation_1990}. An added benefit of controlling temperature is to also prevent accumulation of thermal energy in the column that would be a safety hazard. \Cref{fig:S201-CC} shows the temperature controller (TIC-207) that receives its setpoint from the master composition controller (AIC-205), and outputs a signal to the flow control valve FCV-207.
-
-
-
-
-%\subsubsection{Distillation column S201 level control}
-%The liquid level at the bottom of the distillation column S201 is an important inventory to control to prevent the reboiler from drying up. This would also result in weeping in the column and decreased performance. Since the reboiler duty is used for composition control, the most direct way of controlling the level is the bottoms flowrate out of the reboiler. Due to the reboiler being able to store a certain amount of liquid inventory, a lag between the response of the actuator and the level is expected. While in most cases a simple feedback controller is sufficient (see \cref{fig:S203-LC}, experimental data would confirm if more advanced systems are needed to compensate for a large time delay. 
-
-%\begin{figure}[H]
-   % \centering
-   % \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/S203-LC.pdf}
-  %  \caption{}
-  %  \label{fig:S203-LC}
-%\end{figure}
-
 
 \subsubsection{Reboiler H204 level control} %H204-LC
 %no graph
