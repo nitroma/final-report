@@ -1,27 +1,30 @@
 \section{Detailed control design for agreed plant section}
 \label{sec:subsec}
 
+
 \subsection{Description of sub-section}
 The agreed sub-section has a trickle bed reactor (R201) that reduces liquid \ortho-nitrotoluene (ONT) to \ortho-toluidine using hydrogen gas. Two electric heaters (H201 and H202) preheat the feed streams. The sub-section also has a packed distillation column (S201) that separates the liquid effluent from R201 into methanol-rich vapour and an \ortho-toluidine rich product stream which is sent to downstream purification units to meet purity specifications for the \ortho-toluidine product.
 
+
 \subsection{Degree of freedom analysis}
 
-\begin{wraptable}{r}{0.55\linewidth}
-\vspace{-\intextsep}
-\centering
-    \caption{Degree of freedom analysis}
-    \label{tab:dof}
-\begin{tabular}{@{}lllll@{}}
-\toprule
-Total number of process streams (+) & 28 &  &  &  \\ \midrule
-Sum of restraining numbers (-)      & 11 &  &  &  \\
-Sum of mechanical agitators (+)     & 2  &  &  &  \\
-Redundancies (-)                    & 3  &  &  &  \\
-Control degrees of freedom          & 16 &  &  &  \\ \bottomrule
-\end{tabular}
-\end{wraptable}
+    \begin{wraptable}{r}{0.55\linewidth}
+    \vspace{-\intextsep}
+    \centering
+        \caption{Degree of freedom analysis}
+        \label{tab:dof}
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    Total number of process streams (+) & 28 &  &  &  \\ \midrule
+    Sum of restraining numbers (-)      & 11 &  &  &  \\
+    Sum of mechanical agitators (+)     & 2  &  &  &  \\
+    Redundancies (-)                    & 3  &  &  &  \\
+    Control degrees of freedom          & 16 &  &  &  \\ \bottomrule
+    \end{tabular}
+    \end{wraptable}
 
 To determine the number of variables that can be simultaneously manipulated to maintain stable operation, a degree of freedom analysis was carried out. A thorough analysis involves subtracting the total number of process variables from the total number of equations in a dynamic model of the process, however creating such models are often impractical and error-prone for complex plants with specialised units \cite{larsson_studies_2000}. Instead, the simpler and straightforward method presented by \textcite{murthy_konda_simple_2006} showed that there are a maximum of 16 variables that could be manipulated for control (see \cref{tab:dof}).
+
 
 \subsection{Key control loops}
 \Cref{tab:controls} shows a summary of the control loops in the plant sub-section. A total of 14 variables were controlled using feedback, feedforward, cascade, ratio and inferential control in order to ensure stable operation of the units in the sub-section.
@@ -56,18 +59,13 @@ Partial Condenser (H203)                    & Condenser duty                    
 
 
 \subsubsection{Reactor R201 temperature control} %R201-TC
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
-    \caption{Temperature control loop for reactor R201}
-    \label{fig:R201-TC}
-\end{figure}
-
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-TC.pdf}
+        \caption{Temperature control loop for reactor R201}
+        \label{fig:R201-TC}
+    \end{figure}
 Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate through the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed and shown in Figure \ref{fig:R201-TC}. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the latter two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. To smoothen out other potential disturbances coming from flowrate and electric heater duty variations, flow and temperature control loops on the feed streams were added. Those for the gas stream require more robust control because any disturbance could have larger effects on the reactor temperature. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
-
-
-
 
 
 \subsubsection{Reactor R201 pressure control} %R201-PC
