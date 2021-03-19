@@ -46,7 +46,7 @@ To select the suitable catalyst size, the Weisz-Prater criterion is used. This c
 \label{tab:Heat enthalpy table}
 \begin{tabularx}{\linewidth}{l|XXX}
 \toprule
-                                                                & Standard enthalpy of formation (298K, 1 atm) [kJ/mol] & Heat Capacity [J/mol K] & Enthalpy of formation (330K, 1 atm) [kJ/mol] \\ \midrule
+                                                                & Standard enthalpy of formation (\SI{298}{\K}, \SI{1}{\atm}) [kJ/mol] & Heat Capacity [J/mol K] & Enthalpy of formation (\SI{330}{\K}, \SI{1}{\atm}) [kJ/mol] \\ \midrule
 Toluene                        & 12.0              & 157.1              & 17.0                     \\
 Nitric acid                      & -207.4              & 109.9              & -203.9                       \\
 O-nitrotoluene & -21.7             & 202.5              & -15.3              \\ 
@@ -65,9 +65,9 @@ Water                     & -285.8              & 75.3              & -283.4    
 \caption{Cooling water sources for R101}
 \label{tab:cwtable}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}cccccc@{}}
+\begin{tabular}{@{}ccccS[table-format=5]c@{}}
 \toprule
-Stream & Source & T (K) & Mass flow available (kg/hr) & Flow used (kg/hr) & Fraction of total flow used \\ \midrule
+Stream & Source & T (K) & Mass flow available (\si{\kg\per\hour}) & {Flow used (\si{\kg\per\hour})} & Fraction of total flow used \\ \midrule
 1 & River & 289 & 1000 & 530 & \SI{3}{\percent} \\
 2 & R201 & 323 & 3529 & 3529 & \SI{22}{\percent} \\
 3 & S301 & 323 & 2953 & 2953 & \SI{19}{\percent} \\
@@ -82,8 +82,8 @@ Mixed &  & 325 &  & 15840 &  \\ \bottomrule
 \label{app:PRV}
 The equations for the sizing of the PRV port is as below,
 \begin{align}
-    A_r = \frac{11.78 \times Q}{K_d K_w K_c} \cdot \sqrt{\frac{G}{p_1-p_2}} \\
-    K_v = (0.9935 + \frac{2.878}{Re^{0.5}} + \frac{342.75}{Re^{1.5}})^{-1} \\
-    \mathrm{Re} = \frac{Q(18800 \times G)}{\mu \sqrt{A_R}}
+    A_r &= \frac{11.78 \times Q}{K_d K_w K_c} \cdot \sqrt{\frac{G}{p_1-p_2}} \\
+    K_v &= (0.9935 + \frac{2.878}{Re^{0.5}} + \frac{342.75}{Re^{1.5}})^{-1} \\
+    \mathrm{Re} &= \frac{Q(18800 \times G)}{\mu \sqrt{A_R}}
 \end{align}
 where the $A_r$ is the required effective discharge area assuming no viscosity correction, Q is the required volumetric flowrate, $K_d$ is the discharge coefficient, $K_w$ is the backpressure correction factor, $K_c$ is the bursting disc factor, $G$ is the specific gravity of fluid at flowing conditions relative to water at STP, $p_1$ is the relieving pressure and $p_2$ is the backpressure. 

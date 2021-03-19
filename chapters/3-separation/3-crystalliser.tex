@@ -3,7 +3,7 @@
 
 This section details the design of the MSMPR crystalliser S104. 
 
-\subsection{(p-Nitrotoluene + m-nitrotoluene) phase behaviour}
+\subsection{(\para-Nitrotoluene + \meta-nitrotoluene) phase behaviour}
 
 The (PNT + MNT) system exhibits a eutectic-forming solid-liquid phase behaviour. In such system, one of the two components is able to crystallise out from the homogeneous liquid as pure solid when the mixture is cooled below thermodynamic equilibrium \cite{seader_separation_2011}. \Cref{fig:eutectic schematic}a is a schematic of this process. Starting from point 1 on the solid-liquid phase boundary, the temperature is at $T_1$ with the fraction of component A at $x_1$. When the mixture is cooled down to $T_2$, at equilibrium, the liquid phase composition will become $x_2$. Since $x_2$ is lower than $x_1$, this means pure solid A would crystallise out from the liquid. The amount of solid A would be given by
 \begin{equation}\label{eq:amount solid A equilibrium}
@@ -61,7 +61,7 @@ Primary nucleation involves nucleation occurring in absence of crystals \cite{se
 \begin{equation}
      J = F\exp\left(-\frac{16 \pi \sigma^3 \nu^2}{3 k^3 T^3 (\ln S)^2}\right)
 \end{equation}
-where $J$ is the rate of primary nucleation in m$^{-3}$ s$^{-1}$, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in \cref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation. It is estimated to be in the order of magnitude of 10$^{30}$ cm$^{-3}$s$^{-1}$ by Randolph and Larson \cite{randolph_theory_1971}. Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations \cite{randolph_theory_1971}. 
+where $J$ is the rate of primary nucleation in \si{\per\cubic\m\per\s}, $F$ is a pre-exponential factor, $\sigma$ is the interfacial tension between the crystal and the surrounding supersaturated liquid, $T$ is the temperature, $\nu$ is the molar volume, $k$ is the Boltzmann constant, and $S$ is the supersaturation ratio defined in \cref{eq: supersaturation ratio}. The pre-exponential factor, $F$, is a function of supersaturation. It is estimated to be in the order of magnitude of \SI{1e30}{\per\cubic\cm\per\s} by Randolph and Larson \cite{randolph_theory_1971}. Compared to secondary nucleation, primary nucleation is numerically negligible for industrial applications and hence is not included in design calculations \cite{randolph_theory_1971}. 
 
 \subsubsection{Secondary nucleation}\label{sec:secondary nucleation}
 
@@ -92,11 +92,11 @@ where $k_{\mathrm{c-c}}$ and $k_{\mathrm{c-s}}$ are the rate law constants for t
     B = K_B \varepsilon (\Delta C)^b \rho_m^2
 \end{equation}
 
-\noindent where the value of $K_B$ has been estimated to be in the order of 10$^{13}$, provided that all the quantities in \cref{eq:secondary nucleation final expression} are in SI units \cite{bauer_contact_1974}. Sensitivity analysis for value of $K_B$ is available in \Cref{sec:kinetics sensitivity}. The exponent, $b$, has been taken as 1. 
+\noindent where the value of $K_B$ has been estimated to be in the order of 10$^{13}$, provided that all the quantities in \cref{eq:secondary nucleation final expression} are in SI units \cite{bauer_contact_1974}. Sensitivity analysis for value of $K_B$ is available in \cref{sec:kinetics sensitivity}. The exponent, $b$, has been taken as 1. 
 
 \subsubsection{Crystal growth} \label{sec: crystal growth}
 
-To describe the kinetics of crystal growth, a population balance must be performed. For an unseeded continuous MSMPR crystalliser operated under steady state, the following underlying assumptions are made \cite{richardson_chemical_2006} \cite{randolph_theory_1971},
+To describe the kinetics of crystal growth, a population balance must be performed. For an unseeded continuous MSMPR crystalliser operated under steady state, the following underlying assumptions are made \cite{richardson_chemical_2006,randolph_theory_1971},
 
 \begin{itemize}
     \item All crystals are of the same shape
@@ -146,7 +146,7 @@ To describe the kinetics of crystal growth, a population balance must be perform
     \label{fig:ONT + MNT kinetics}
 \end{wrapfigure}
 
-The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Kinetic rate data of crystal growth for the (PNT + MNT) system cannot be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (MNT + ONT) system at 292.15 K, which is close to the (PNT + MNT) system \cite{radhakrishnan_kinetics_1999}. Here, MNT is the species that crystallises from the liquid. \Cref{fig:ONT + MNT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in \cref{fig:ONT + MNT kinetics},
+The rate of crystal growth, $G$, is commonly expressed as a function of supersaturation. Kinetic rate data of crystal growth for the (PNT + MNT) system cannot be found in the current literature. Nevertheless, Radhakrishnan and Balakrishnan measured the crystal growth rate for the (MNT + ONT) system at \SI{292.15}{\K}, which is close to the (PNT + MNT) system \cite{radhakrishnan_kinetics_1999}. Here, MNT is the species that crystallises from the liquid. \Cref{fig:ONT + MNT kinetics} is a plot of the experimentally obtained growth rates against the Stephen number, $Ste$. A power-law correlation has also been fitted for these data and plotted as the red curve in \cref{fig:ONT + MNT kinetics},
 
 \begin{equation}  \label{eq:KG Ste g}
     G = K_G \cdot {Ste}^{g}
@@ -208,7 +208,7 @@ The output of \cref{eq:magma density}, the magma density, $\rho_m$, is given as
 
 \noindent Values of $T_{\mathrm{eq}}$, $T$, and $\Delta T$ in \cref{eq:deltaT} can be computed by invoking the fitted van't Hoff-type correlation in \cref{eq:fittedvantHoffcorrelation}. 
 
-The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be 280 K. As can be seen in \cref{fig:eutectic schematic}, the eutectic point is roughly around 270 K. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid MNT forms when there is process fluctuation. The composition of liquid at the inlet is such that the fraction of PNT, $x_{\mathrm{in}}$, is 0.8839, as given in \cref{tab:inlet crystalliser}. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
+The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is designed to be \SI{280}{\K}. As can be seen in \cref{fig:eutectic schematic}, the eutectic point is roughly around \SI{270}{\K}. The choice of $T_{\mathrm{eq}}$ is thus to ensure that the operating temperature of the crystalliser is well above the eutectic point, lest solid MNT forms when there is process fluctuation. The composition of liquid at the inlet is such that the fraction of PNT, $x_{\mathrm{in}}$, is 0.8839, as given in \cref{tab:inlet crystalliser}. For design calculations, the crystalliser vessel has been modelled as a cylinder with an aspect ratio of 1:2, i.e. 
 
 \begin{align}
         H &= 2D &
@@ -235,7 +235,7 @@ In the end, Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystallise
 
 \subsection{Heat transfer}\label{sec:heat transfer crystalliser}
 
-Cooling for the crystallisation can be implemented in many different ways and must be chosen based on the conditions of the crystalliser. \cref{tab:heatransfermethodstype} outlines the advantages and disadvantages of a few heat transfer methods. \SI{10}{\percent} ethylene glycol aqueous solution at 274 K acts as the cooling medium and is generated by a TurboChill FreeCool TCC11R04G refrigerator made by Airedale. R1234ze has been selected as the refrigerant, and the energy efficiency ratio (EER) of this refrigerator is 3.47. A half pipe coil jacketed vessel has been chosen to be implemented, as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid. Despite usually costing \SIrange{30}{35}{\percent} more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect for MSMPR operations, to have uniform temperature distribution within the crystalliser. 
+Cooling for the crystallisation can be implemented in many different ways and must be chosen based on the conditions of the crystalliser. \Cref{tab:heatransfermethodstype} outlines the advantages and disadvantages of a few heat transfer methods. \SI{10}{\percent} ethylene glycol aqueous solution at \SI{274}{\K} acts as the cooling medium and is generated by a TurboChill FreeCool TCC11R04G refrigerator made by Airedale. R1234ze has been selected as the refrigerant, and the energy efficiency ratio (EER) of this refrigerator is 3.47. A half pipe coil jacketed vessel has been chosen to be implemented, as this method exhibits excellent heat transfer capability, especially when the service side fluid is a liquid. Despite usually costing \SIrange{30}{35}{\percent} more than conventional jackets, this is outweighed by the decreased operating cost and improved heat transfer. An impeller would also ensure good mixing, assumed to be perfect for MSMPR operations, to have uniform temperature distribution within the crystalliser. 
 
 \begin{table}[h]
 \caption{Comparison of heat transfer methods \cite{myerson_handbook_2019} }
@@ -346,7 +346,7 @@ As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size
 
 To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. From calculations introduced in \cref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient, $U$, has been calculated as \SI{1452.64}{\W\per\square\m\per\K}, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
 
-A stream table for the crystalliser is available in \cref{tab:crystalliser stream table}. 5.2 kW of power is required for the compresser P102 in the refrigerator to remove 18 kW of heat from the crystalliser. 
+A stream table for the crystalliser is available in \cref{tab:crystalliser stream table}. \SI{5.2}{\kW} of power is required for the compresser P102 in the refrigerator to remove \SI{18}{\kW} of heat from the crystalliser. 
 
 \subsection{Sensitivity analyses}
 
