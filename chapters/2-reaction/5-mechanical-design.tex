@@ -15,7 +15,7 @@ Stainless steel type 304 have higher levels of carbon that are not stabilised wi
 %-chosen material to be stainless steel 304L based on paper
 \subsection{Design pressure and temperature}
 \subsubsection{Reactor tube}
-According to Section \ref{sec:adiabatic}, the reactor must operate below \SI{363}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
+According to \cref{sec:adiabatic}, the reactor must operate below \SI{363}{\K} and pressure gradient of \SIrange{1}{1.3}{\bar}. The design temperature is set as \SI{378}{\K} and design pressure ($p_d$) is calculated to be \SI{1.44}{\bar}, using \cref{eqn:designpressure} below:
 \begin{equation}
     p_d = \frac{P_o}{0.9} = \frac{1.3}{0.9} = \SI{1.44}{\bar}
     \label{eqn:designpressure}
@@ -36,7 +36,7 @@ The minimum thickness of the reactor tubes ($e_\mathrm{reactor}$) was calculated
     e_\mathrm{reactor} = \frac{p_dD_i}{2f-p_d} = \frac{0.14 \times 230}{2 \times 111 - 0.14} = \SI{0.145}{\mm}
     \label{eqn:minthicknessreactor}
 \end{equation}
-where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from Section \ref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
+where inner reactor diameter ($D_i$) is defined as \SI{0.23}{\metre} from \cref{sec:axialdispersion}, design pressure ($p_d$) is calculated to be 1.44 bar, nominal design stress ($f$) is defined \SI{111}{\N\per\square\mm} for design temperature not exceeding \SI{423}{\K} based on BS5500 standards , yield stress ($\delta_y$) is defined as \SI{215}{\N\per\square\mm} \cite{noauthor_unfired_nodate}.
 
 
 \begin{wrapfigure}{r}{0.4\linewidth}
@@ -55,7 +55,7 @@ where $n$ represents the sequence of hexagonal number.
 The tube bundle was arranged such that a clearance of \SI{230}{\milli \metre}, which satisfies the minimum clearance of 0.25 times tube diameter based on Primo et al \cite{primo_shell_2012} to maximise cooling heat transfer coefficient. 2 tube sheets were fitted at each ends of the shell to fix the tubes in position. A triangular pattern pitch layout was selected to complement the hexagonal tube arrangement and for a more robust tube sheet construction \cite{primo_shell_2012}. The arrangement of 7 tubes held by the tube sheet is shown in \cref{fig:reactortubearrangement}.
 
 \subsubsection{Secondary cooling tube dimensions}
-As mentioned in Section \ref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tube was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production with the shell and head vessel. 
+As mentioned in \cref{sec:tripleconctube}, the secondary cooling water system was implemented in a triple concentric tube (TCTHE) manner within the reactor tubes to prevent thermal runaway and hotspots. Each secondary cooling water tube was designed to have a diameter of \SI{20}{\milli \metre} with a flowrate of \SI{2.1e-4}{\cubic\m\per\s}. The wall thickness was also set as \SI{5}{\milli \metre} for a standardised production with the shell and head vessel. 
 The arrangement of the secondary cooling tube within the reactor tubes can be visualised in the cross section \cref{fig:concentriccoolingwater}. 
 \begin{figure}[H]
     \centering

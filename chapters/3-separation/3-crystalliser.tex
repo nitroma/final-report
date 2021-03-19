@@ -69,7 +69,7 @@ Secondary nucleation takes place with the presence of other crystals \cite{richa
 \begin{equation} \label{eq:secondary nucleation general}
     B = K_{\mathrm{B}} \rho^j_{\mathrm{m}} N^l (\Delta C)^b 
 \end{equation}
-where $B$ is the secondary nucleation rate or birth rate in \si{\cubic\m\per\s}, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in Equation \ref{eq:magma density} in Section \ref{sec: crystal growth} later, and $N$ is the term that gives measure of the intensity of agitation in the system such as the rotating speed of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
+where $B$ is the secondary nucleation rate or birth rate in \si{\cubic\m\per\s}, $K_B$ is the rate law constant, $\rho_m$ is the slurry concentration or magma density that would be given in Equation \ref{eq:magma density} in \cref{sec: crystal growth} later, and $N$ is the term that gives measure of the intensity of agitation in the system such as the rotating speed of the stirrer. The exponents, $j$, $l$, and $b$ vary depending on the system.
 
 From the work of Ottens and de Jong \cite{ottens_model_1974}, the kinetic rate of secondary nucleation can be expressed in the form of 
 \begin{equation}
@@ -219,7 +219,7 @@ The temperature whereat the crystalliser is to be operated, $T_{\mathrm{eq}}$ is
 %    H = 2D
 %\end{equation}
 
-\noindent where $D$ is the diameter of the vessel, $H$ is the height, and $V$, is volume. The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall to minimise fouling. Details of this will be elaborated in Section \ref{sec:fouling}.
+\noindent where $D$ is the diameter of the vessel, $H$ is the height, and $V$, is volume. The diameter of the stirrer, $D_r$, has been designed to be just touching the vessel wall to minimise fouling. Details of this will be elaborated in \cref{sec:fouling}.
 
 %\begin{equation} \label{eq:crystalliser volume}
 %    V = \frac{\pi D^3}{2} 
@@ -231,7 +231,7 @@ In the end, Equations \ref{eq:amount solid A equilibrium} to \ref{eq:crystallise
     r_c = \frac{\dot{M}_{\mathrm{liquid}}}{x_{\mathrm{eq}} \dot{M}_{\mathrm{total}}}
 \end{equation}
 
-\noindent This is the ratio of the mass of PNT that would be recovered as solid to the total mass of PNT at the inlet. Modelling results can be found in Section \ref{sec:modelling results crystalliser}.
+\noindent This is the ratio of the mass of PNT that would be recovered as solid to the total mass of PNT at the inlet. Modelling results can be found in \cref{sec:modelling results crystalliser}.
 
 \subsection{Heat transfer}\label{sec:heat transfer crystalliser}
 
@@ -285,7 +285,7 @@ The overall heat transfer coefficient consists of 4 resistance terms; $R_1$, $R_
     R_O = R_1 + R_w + R_2 + R_f
 \end{equation}
 
-\noindent where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer of the pipe material of the cooling coil, $R_2$ is the service side convective heat transfer, and $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into account, but the effects are investigated in depth in Section \ref{sec:fouling}. 
+\noindent where $R_1$ is the process side convective heat transfer term, $R_w$ is the conductive heat transfer of the pipe material of the cooling coil, $R_2$ is the service side convective heat transfer, and $R_f$ the additional resistance due to fouling. In these calculations, any resistance due to fouling is not taken into account, but the effects are investigated in depth in \cref{sec:fouling}. 
 
 Accounting for all these resistances in series, the overall heat transfer coefficient is obtained as 
 \begin{equation} \label{eq:energy balance}
@@ -311,7 +311,7 @@ The equation for the heat transfer area has been formulated using the length of 
     L = N \sqrt{p^2 + \delta^2}
 \end{equation}
 
-\noindent where $L$ is the total length of the half pipe, $N$ is the number of revolutions in the helix, $p$ is the circumference of the helix, and $\delta$ is the pitch length. Like in Section \ref{sec: Crystallisation kinetics}, a set of algebraic equations can be solved simultaneously. Modelling results are available in Section \ref{sec:modelling results crystalliser}.
+\noindent where $L$ is the total length of the half pipe, $N$ is the number of revolutions in the helix, $p$ is the circumference of the helix, and $\delta$ is the pitch length. Like in \cref{sec: Crystallisation kinetics}, a set of algebraic equations can be solved simultaneously. Modelling results are available in \cref{sec:modelling results crystalliser}.
 
 \subsection{Modelling results}\label{sec:modelling results crystalliser}
 
@@ -342,9 +342,9 @@ PNT (kmol/day)          &    21.99      & 21.99 \\ \bottomrule
 \end{tabular}
 \end{wraptable}
 
-As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. This is because with a larger volume, the system operates nearer to equilibrium; $G$ becomes smaller yet $\tau$ becomes higher. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in Section \ref{section: hydraulic wash column}. However, at larger volumes, the change of $L_M$ is not enough to have an impact on the hydraulic wash column design. 
+As can be seen on \cref{fig:recovery vs volume crystalliser}b, the dominant size of crystals, $L_M$ initially drops with larger volume and then increases after a turning point. This is because $L_M$ is proportional to both $G$, the growth rate, and $\tau$, the residence time, as given by Equation \ref{eq:LM G tau}. This is because with a larger volume, the system operates nearer to equilibrium; $G$ becomes smaller yet $\tau$ becomes higher. The value of $L_M$ affects the design of the hydraulic wash column as would be outlined in \cref{section: hydraulic wash column}. However, at larger volumes, the change of $L_M$ is not enough to have an impact on the hydraulic wash column design. 
 
-To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. From calculations introduced in Section \ref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient, $U$, has been calculated as \SI{1452.64}{\W\per\square\m\per\K}, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
+To achieve the required heat transfer for the operation, a large enough volume is needed, as the crystalliser must have enough area of heat exchange with the cooling liquid so that it can be cooled to the desired operating temperature, $T_{\mathrm{eq}}$. From calculations introduced in \cref{sec:heat transfer crystalliser}, the volume should be 0.1885 m$^3$ and has been marked as the red points in \cref{fig:recovery vs volume crystalliser}a and \cref{fig:recovery vs volume crystalliser}b. The overall heat transfer coefficient, $U$, has been calculated as \SI{1452.64}{\W\per\square\m\per\K}, and total heat exchange area, $A_s$, is 2.070 m$^2$. 
 
 A stream table for the crystalliser is available in \cref{tab:crystalliser stream table}. 5.2 kW of power is required for the compresser P102 in the refrigerator to remove 18 kW of heat from the crystalliser. 
 
@@ -441,5 +441,5 @@ Austenitic stainless steel 304L-S71 has been chosen from Table 2.3-5 of \textbf{
 Four ports are needed on the crystalliser vessel, namely the inlet, the outlet, and two sightholes. Per requirement of \textbf{BS470: 1984}, a minimum of two sightholes with diameter no smaller than \SI{30}{\mm} are needed. For liquid phase operations, the desirable operating velocity should be between \SIrange{0.1}{1}{\m\per\s}, and schedule 80 pipes with nominal pipe size (NPS) of 2 inch as given in Table 1 of \textbf{BS1600: 1991} have been found to fit the requirements. Class 300 weld-neck ring-type joint flanges from \textbf{BS1560-3.1: 1989} have been chosen for these ports, and blind flanges are needed to cover the sightholes. 
 
 
-Helical cooling coils as described in Section \ref{sec:heat transfer crystalliser} are to be implemented. Wall thickness of the coils are designed to be \SI{6}{\mm} just like for the shells and ends. Stirrers are designed such that they are about-to-touch the coils to minimise fouling. Schematic and general arrangement (GA) drawings are available in Figures \ref{fig:crystalliser schematic} and \ref{fig:crystalliser GA}. A physical design summary is available in Table \ref{tab:crystalliser mech design summary}. 
+Helical cooling coils as described in \cref{sec:heat transfer crystalliser} are to be implemented. Wall thickness of the coils are designed to be \SI{6}{\mm} just like for the shells and ends. Stirrers are designed such that they are about-to-touch the coils to minimise fouling. Schematic and general arrangement (GA) drawings are available in Figures \ref{fig:crystalliser schematic} and \ref{fig:crystalliser GA}. A physical design summary is available in Table \ref{tab:crystalliser mech design summary}. 
 
