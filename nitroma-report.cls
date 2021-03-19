@@ -86,7 +86,7 @@
 \titleformat{\subsubsection}{\color{color1}\bfseries\headingfont}{\thesubsubsection}{1em}{}
 % because people want to cram as much 
 \newcommand\normalchapterspacing{\titlespacing*{\chapter}{0pt}{50pt}{40pt}}
-\newcommand\compactchapterspacing{\titlespacing*{\chapter}{0pt}{*2}{*1}}
+\newcommand\compactchapterspacing{\titlespacing*{\chapter}{0pt}{0}{*1}}
 % original spacing values can be found here https://tex.stackexchange.com/a/48754/135479
 \titlespacing*{\section}{0pt}{*1}{*1}
 \titlespacing*{\subsection}{0pt}{2pt plus 4pt}{*0}
