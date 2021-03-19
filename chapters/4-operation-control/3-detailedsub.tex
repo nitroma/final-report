@@ -65,17 +65,14 @@ Partial Condenser (H203)                    & Condenser duty                    
     \end{figure}
 Robust control of the reactor temperature is essential to minimise the risk of thermal runaway of the highly exothermic hydrogenation reaction. The temperature of R201 is controlled using the cooling water flowrate through the cooling jacket. A control system encompassing a feedback control loop, two feedforward controllers and cascade control was designed and shown in Figure \ref{fig:R201-TC}. The master temperature controller infers a set point to the slave flow controller which acts on the flow control valve installed on the cooling water inlet stream. Three major disturbances where identified: the cooling water pressure, the cooling water temperature and the temperature of the gas feed to the reactor. For the latter two, additional feedforward control was implemented in order for the system to adjust before it is reached by the disturbances. The temperature of the gas feed was deemed a more major disturbance than the temperature of the liquid feed since they are fed to the reactor in a 4 to 1 molar ratio. To smoothen out other potential disturbances coming from flowrate and electric heater duty variations, flow and temperature control loops on the feed streams were added. Those for the gas stream require more robust control because any disturbance could have larger effects on the reactor temperature. The disturbances in the cooling water feed pressure, originating from the high demand for cooling water on the plant, are accounted for by the cascade control loop.
 
-
 \subsubsection{Reactor R201 pressure control} %R201-PC
-\begin{wrapfigure}{r}{0.6\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
-    \caption{Pressure control loop for reactor R201}
-    \label{fig:R201-PC}
-\end{wrapfigure}
-The ONT reduction reactor is operated under pressure at \SI{5}{\atm}. To maintain this optimum operating condition and most importantly reduce the risk of overpressure and explosion, the pressure within the reactor is closely monitored and controlled. The manipulated variable is the pressure of the gas feed to the reactor, which should also be maintained at \SI{5}{\atm}. A pressure control is installed onto the fresh hydrogen feed line. To account for disturbances in the pressure of the recycled gas and in the pressure of the hydrogen coming from a pressurized storage tank, feedforward control was added. 
-
-
+    \begin{wrapfigure}{r}{0.6\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapters/4-operation-control/4-Figures/R201-PC.pdf}
+        \caption{Pressure control loop for reactor R201}
+        \label{fig:R201-PC}
+    \end{wrapfigure}
+The ONT reduction reactor is operated under pressure at \SI{5}{\atm}. To maintain this optimum operating condition and most importantly reduce the risk of overpressure and explosion, the pressure within the reactor is closely monitored and controlled. The manipulated variable is the pressure of the gas feed to the reactor, which should also be maintained at \SI{5}{\atm}. A pressure control is installed onto the fresh hydrogen feed line as shown in Figure \ref{fig:R201-PC}. To account for disturbances in the pressure of the recycled gas and in the pressure of the hydrogen coming from a pressurized storage tank, feedforward control was added. 
 
 \subsubsection{Ratio control of reactants} %R201-CC
     \begin{figure}[h]
